@@ -1,0 +1,90 @@
+{
+  "latency": 8,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 7.7,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.0
+  },
+  "candidates": {
+    "total": 51,
+    "by_origin": {
+      "structural": 30,
+      "call-requires": 2,
+      "call-frame": 1,
+      "loop-invariant": 12,
+      "loop-variant": 4,
+      "loop-assigns": 2
+    },
+    "loops": 1,
+    "loop_invariants": 3,
+    "skipped": []
+  },
+  "houdini": {
+    "candidates": 51,
+    "base_dropped": 25,
+    "ind_dropped": 0,
+    "rounds": 2,
+    "status": "inductive",
+    "base_depth": 12,
+    "k": 16,
+    "secs": 37.8,
+    "invariants": 26,
+    "by_origin": {
+      "structural": 9,
+      "call-requires": 2,
+      "call-frame": 1,
+      "loop-invariant": 8,
+      "loop-variant": 4,
+      "loop-assigns": 2
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant bound: 0 <= i <= n",
+      "loop 1: loop invariant increment: IotaGenerate ( a , i , \\at ( v , Pre ) )"
+    ],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "PASS",
+    "secs": 6.5,
+    "k": 16
+  },
+  "ablation": {
+    "hls": {
+      "candidates": 30,
+      "invariants": 9,
+      "houdini": "inductive",
+      "k": 16,
+      "status": "PASS",
+      "secs": 7.8
+    },
+    "hls+contract": {
+      "candidates": 33,
+      "invariants": 12,
+      "houdini": "inductive",
+      "k": 16,
+      "status": "PASS",
+      "secs": 7.6
+    }
+  },
+  "unbounded": true,
+  "proved_by": [
+    "kind+inv"
+  ],
+  "deep_cex": [],
+  "secs": 380.1
+}

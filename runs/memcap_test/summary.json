@@ -1,0 +1,104 @@
+{
+  "by_tool_config": [
+    {
+      "tool": "vitis",
+      "config": "base",
+      "designs": 3,
+      "frontend_ok": 3,
+      "hls_ok": 3,
+      "checked": 3,
+      "pass_full": 3,
+      "pass_partial": 0,
+      "fail": 0,
+      "bounded": 0,
+      "vacuous": 0,
+      "agree": 3,
+      "disagree": 0,
+      "clauses": "21/21",
+      "clause_rate": 100.0,
+      "access_speculative": 2,
+      "access_out_of_memory": 0,
+      "overlap_mode": 2,
+      "mutants": 0,
+      "mutants_checked": 0,
+      "killed": 0,
+      "mutation_score": null,
+      "survivors": 0,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 0,
+      "median_total_s": 23.5
+    }
+  ],
+  "details": {
+    "vitis/base": {
+      "original_outcomes": {
+        "pass": 3
+      },
+      "failure_replay": {},
+      "kill_replay": {},
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 1.0,
+        "wp": 1.6,
+        "hls": 12.6,
+        "latency": 0.3,
+        "bmc": 4.1,
+        "access": 0.9,
+        "cover": 0.8,
+        "total": 23.5
+      }
+    }
+  },
+  "not_checked_reasons": [],
+  "untranslated_clause_reasons": [],
+  "translation_strategies": [
+    [
+      "cell of a outside 0..3",
+      2
+    ],
+    [
+      "holds by construction",
+      2
+    ],
+    [
+      "\\forall i_3,j_4",
+      1
+    ],
+    [
+      "\\forall i_5",
+      1
+    ],
+    [
+      "\\forall i_6",
+      1
+    ],
+    [
+      "\\forall i",
+      1
+    ]
+  ],
+  "disagreements": [],
+  "access_violations": [
+    {
+      "case": "lower_bound/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "max_element/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    }
+  ],
+  "latency": {
+    "established": 3,
+    "report_undefined": 1,
+    "not_established": 0
+  }
+}

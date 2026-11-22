@@ -1,0 +1,79 @@
+{
+  "latency": 8,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "candidates": {
+    "total": 270,
+    "by_origin": {
+      "structural": 46,
+      "call-requires": 3,
+      "contract-persist": 1,
+      "call-frame": 1,
+      "loop-invariant": 36,
+      "loop-invariant-store": 96,
+      "loop-invariant-lag": 72,
+      "loop-variant": 12,
+      "loop-assigns": 3
+    },
+    "loops": 1,
+    "loop_invariants": 3,
+    "skipped": []
+  },
+  "houdini": {
+    "candidates": 270,
+    "base_dropped": 123,
+    "ind_dropped": 1,
+    "rounds": 3,
+    "status": "inductive",
+    "base_depth": 12,
+    "k": 12,
+    "secs": 93.2,
+    "invariants": 146,
+    "by_origin": {
+      "structural": 13,
+      "call-requires": 3,
+      "call-frame": 1,
+      "loop-invariant": 12,
+      "loop-invariant-store": 54,
+      "loop-invariant-lag": 48,
+      "loop-variant": 12,
+      "loop-assigns": 3
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant 0 <= i <= n",
+      "loop 1: loop invariant \\forall integer j ; 0 <= j < i ==> * ( a + j ) == \\at ( * ( a + j ) , Pre ) + 1",
+      "loop 1: loop invariant \\forall integer j ; i <= j < n ==> * ( a + j ) == \\at ( * ( a + j ) , Pre )"
+    ],
+    "c_invariants_lagged": [
+      "loop 1: loop invariant \\forall integer j ; 0 <= j < i ==> * ( a + j ) == \\at ( * ( a + j ) , Pre ) + 1",
+      "loop 1: loop invariant \\forall integer j ; i <= j < n ==> * ( a + j ) == \\at ( * ( a + j ) , Pre )"
+    ],
+    "k_tried": [
+      4,
+      8,
+      12
+    ]
+  },
+  "kind+inv": {
+    "status": "PASS",
+    "secs": 3.9,
+    "k": 12
+  },
+  "kmin": {
+    "none": null,
+    "hls": 12,
+    "hls+contract": 12,
+    "all": 12,
+    "all+progress": 6
+  },
+  "unbounded": true,
+  "proved_by": [
+    "kind+inv"
+  ],
+  "deep_cex": [],
+  "secs": 461.6
+}

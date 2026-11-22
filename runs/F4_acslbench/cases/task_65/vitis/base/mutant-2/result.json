@@ -1,0 +1,95 @@
+{
+  "design": "task_65",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "10/13",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures * ( \\old ( a ) + 0 ) == \\old ( * ( a + ( len - 1 ) ) )"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P6: requires \\valid ( a + ( 0 .. len - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "10/10",
+  "translated": 10,
+  "total_clauses": 10,
+  "skipped": [],
+  "times": {
+    "frontend": 0.6,
+    "wp": 2.3,
+    "hls": 19.7,
+    "latency": 1.0,
+    "bmc": 2.0,
+    "access": 1.0,
+    "phys": 1.0,
+    "cover": 1.0,
+    "total": 33.6
+  },
+  "error": null,
+  "top": "SwapFirstAndLast",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "len": 3
+      },
+      "pre": {
+        "a": [
+          268173312,
+          0,
+          267911168,
+          0
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          268173312,
+          0,
+          268173312,
+          0
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Assertion",
+        "SwapFirstAndLast",
+        "rte/mem_access: \\valid_read(a + (size_t)(len + 1))."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-runtime-error"
+  },
+  "engine": "yices",
+  "width": 136,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall k: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a"
+  ],
+  "latency_report": [
+    2,
+    2
+  ],
+  "interval_report": 3,
+  "depth": 6,
+  "cex_step": 4,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

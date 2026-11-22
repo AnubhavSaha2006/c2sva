@@ -1,0 +1,96 @@
+{
+  "latency": 16,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 24.2,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 600.0
+  },
+  "candidates": {
+    "total": 326,
+    "by_origin": {
+      "structural": 97,
+      "call-requires": 1,
+      "pipeline-copy": 75,
+      "contract-persist": 5,
+      "call-frame": 1,
+      "loop-invariant": 119,
+      "loop-variant": 21,
+      "loop-assigns": 7
+    },
+    "loops": 1,
+    "loop_invariants": 4,
+    "skipped": []
+  },
+  "houdini": {
+    "candidates": 326,
+    "base_dropped": 249,
+    "ind_dropped": 1,
+    "rounds": 3,
+    "status": "inductive",
+    "base_depth": 20,
+    "k": 16,
+    "secs": 712.7,
+    "invariants": 76,
+    "by_origin": {
+      "structural": 41,
+      "call-requires": 1,
+      "pipeline-copy": 3,
+      "contract-persist": 5,
+      "call-frame": 1,
+      "loop-invariant": 15,
+      "loop-variant": 3,
+      "loop-assigns": 7
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant bound: start <= i + 1 <= start + p",
+      "loop 1: loop invariant match: AllEqual ( a , start , i , v )",
+      "loop 1: loop invariant no_match: ! HasConstantSubRange ( a , i , v , p )",
+      "loop 1: loop invariant start: 0 < start ==> * ( a + ( start - 1 ) ) != v"
+    ],
+    "c_invariants_lagged": [],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "TIMEOUT",
+    "secs": 300.0,
+    "k": 16
+  },
+  "latency_proof": {
+    "bound": 16,
+    "established_by_bmc": "established",
+    "kind": {
+      "status": "UNKNOWN",
+      "secs": 0.6,
+      "k": 16
+    },
+    "candidates": 282,
+    "kind+inv": {
+      "status": "UNKNOWN",
+      "secs": 2.5,
+      "k": 16,
+      "progress_invariants": 166,
+      "houdini": "inductive",
+      "houdini_secs": 356.7
+    },
+    "proved": false
+  },
+  "unbounded": false,
+  "proved_by": [],
+  "deep_cex": [],
+  "secs": 2004.0
+}

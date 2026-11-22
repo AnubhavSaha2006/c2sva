@@ -1,0 +1,36 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_191.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_191.c (with preprocessing)
+[kernel:ghost:bad-use] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_191.c:116: User Error: 
+  Call to non-ghost function from ghost code is not allowed
+[kernel:ghost:bad-use] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_191.c:117: User Error: 
+  Call to non-ghost function from ghost code is not allowed
+[kernel:ghost:bad-use] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_191.c:143: User Error: 
+  Call to non-ghost function from ghost code is not allowed
+[kernel:ghost:bad-use] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_191.c:145: User Error: 
+  Call to non-ghost function from ghost code is not allowed
+[kernel:ghost:bad-use] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_191.c:193: User Error: 
+  Call to non-ghost function from ghost code is not allowed
+[kernel:ghost:bad-use] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_191.c:285: User Error: 
+  Call to non-ghost function from ghost code is not allowed
+[kernel:ghost:bad-use] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_191.c:295: User Error: 
+  Call to non-ghost function from ghost code is not allowed
+[kernel:ghost:bad-use] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_191.c:300: User Error: 
+  Call to non-ghost function from ghost code is not allowed
+[kernel:ghost:bad-use] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_191.c:303: User Error: 
+  Call to non-ghost function from ghost code is not allowed
+[kernel:ghost:bad-use] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_191.c:308: User Error: 
+  Call to non-ghost function from ghost code is not allowed
+[kernel:ghost:bad-use] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_191.c:317: User Error: 
+  Call to non-ghost function from ghost code is not allowed
+[kernel:ghost:bad-use] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_191.c:320: User Error: 
+  Call to non-ghost function from ghost code is not allowed
+[kernel:ghost:bad-use] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_191.c:337: User Error: 
+  Call to non-ghost function from ghost code is not allowed
+[kernel:ghost:bad-use] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_191.c:345: User Error: 
+  Call to non-ghost function from ghost code is not allowed
+[kernel:ghost:bad-use] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_191.c:353: User Error: 
+  Call to non-ghost function from ghost code is not allowed
+[kernel] Deferred error: warning as error ghost:bad-use:
+  /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_191.c:116: Call to non-ghost function from ghost code is not allowed
+[kernel] Frama-C aborted: invalid user input.

@@ -1,0 +1,52 @@
+{
+  "design": "task_343",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "39/39",
+  "c_ok": true,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "speculative",
+  "access_failed": [
+    "P3: requires strlen ( x0 ) >= 0 && \\valid ( x0 + ( 0 .. strlen ( x0 ) ) )  [access in range: x0 bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 32,
+  "latency_status": "established",
+  "clauses": "6/6",
+  "translated": 6,
+  "total_clauses": 6,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 6.4,
+    "hls": 13.5,
+    "latency": 3.1,
+    "bmc": 1.1,
+    "access": 0.5,
+    "phys": 1.1,
+    "cover": 0.6,
+    "total": 26.7
+  },
+  "error": null,
+  "top": "matcher_ab_dot_star_ab",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "yices",
+  "width": 64,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "cell of x0 outside 0..3: solver-chosen value"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 36,
+  "cex_step": null,
+  "outcome": "pass"
+}

@@ -1,0 +1,93 @@
+{
+  "design": "task_316",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "8/9",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures valid_account ( \\old ( account ) ) && \\old ( account ) -> balance == 0 && \\old ( account ) -> lower_limit == \\old ( lower_limit ) && \\old ( account ) -> upper_limit == \\old ( upper_limit )"
+  ],
+  "access": null,
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "3/3",
+  "translated": 3,
+  "total_clauses": 3,
+  "skipped": [],
+  "times": {
+    "frontend": 0.5,
+    "wp": 1.2,
+    "hls": 15.2,
+    "latency": 0.5,
+    "bmc": 0.5,
+    "cover": 0.5,
+    "total": 23.0
+  },
+  "error": null,
+  "top": "init_account",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "lower_limit": -2147483648,
+        "upper_limit": 1073741824
+      },
+      "pre": {
+        "account": [
+          {
+            "lower_limit": 0,
+            "balance": 0,
+            "upper_limit": 0
+          }
+        ]
+      },
+      "rtl_post": {
+        "account": [
+          {
+            "lower_limit": -2147483648,
+            "balance": 1,
+            "upper_limit": 1073741824
+          }
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "init_account",
+        "valid_account(\\old(account)) \u2227 \\old(account)->balance \u2261 0 \u2227 \\old(account)->lower_limit \u2261 \\old(lower_limit) \u2227"
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 200,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\valid inside an expression: range empty or within the 1 cells",
+    "exact frame over all 1 element(s) of account (per field)"
+  ],
+  "latency_report": [
+    0,
+    0
+  ],
+  "interval_report": 1,
+  "depth": 6,
+  "cex_step": 2,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

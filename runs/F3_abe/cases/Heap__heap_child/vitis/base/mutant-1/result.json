@@ -1,0 +1,106 @@
+{
+  "design": "Heap/heap_child",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "24/27",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P10: ensures \\result == \\old ( n ) ==> \\old ( n ) <= HeapLeft ( \\old ( p ) )",
+    "P6: ensures HeapLeft ( \\old ( p ) ) < \\old ( n ) ==> \\result < \\old ( n )"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P15: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+  ],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "17/17",
+  "translated": 17,
+  "total_clauses": 17,
+  "skipped": [],
+  "times": {
+    "frontend": 1.0,
+    "wp": 7.3,
+    "hls": 24.6,
+    "latency": 1.5,
+    "bmc": 1.5,
+    "access": 1.0,
+    "phys": 1.0,
+    "cover": 1.5,
+    "total": 48.2
+  },
+  "error": null,
+  "top": "heap_child",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 2,
+        "p": 0
+      },
+      "pre": {
+        "a": [
+          0,
+          0,
+          1073741824,
+          0
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          0,
+          0,
+          1073741824,
+          0
+        ]
+      },
+      "rtl_result": 2,
+      "completed": true
+    },
+    "c_result": 2,
+    "c_post": {
+      "a": [
+        0,
+        0,
+        1073741824,
+        0
+      ]
+    },
+    "eacsl": [],
+    "checker": "native+sanitizers (E-ACSL stopped at unsigned wrap-around)",
+    "oracle": {
+      "requires_violated": [],
+      "violated": [
+        "ensures HeapLeft ( \\old ( p ) ) < \\old ( n ) ==> \\result < \\old ( n )",
+        "ensures \\result == \\old ( n ) ==> \\old ( n ) <= HeapLeft ( \\old ( p ) )"
+      ],
+      "unknown": [],
+      "checked": 13
+    },
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 80,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "cell of a outside 0..3: solver-chosen value",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": [
+    1,
+    1
+  ],
+  "interval_report": 2,
+  "depth": 6,
+  "cex_step": 3,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

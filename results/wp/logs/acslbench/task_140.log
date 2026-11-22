@@ -1,0 +1,18 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_140.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_140.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function bubbleinnerloop
+[wp] 28 goals scheduled
+[wp] [Cache] updated:12
+[wp] Proved goals:   30 / 30
+  Terminating:       1
+  Unreachable:       1
+  Qed:              19 (9ms-11ms-60ms)
+  Alt-Ergo 2.6.4:    8 (113ms-151ms-229ms)
+  CVC5 :             1 (308ms)
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_140.c:15: Warning: 
+  No 'assigns' specification for function 'bubbleinnerloop'.
+  Callers assumptions might be imprecise.

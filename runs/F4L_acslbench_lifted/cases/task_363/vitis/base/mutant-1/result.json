@@ -1,0 +1,80 @@
+{
+  "design": "task_363",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "13/15",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P3: ensures \\result == gcd ( \\old ( a ) , \\old ( b ) )"
+  ],
+  "access": null,
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "3/3",
+  "translated": 3,
+  "total_clauses": 3,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 0.8,
+    "hls": 12.5,
+    "latency": 0.5,
+    "bmc": 3.0,
+    "cover": 2.5,
+    "total": 22.6
+  },
+  "error": null,
+  "top": "euclid",
+  "mode": "overlapping calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "a": 1073741824,
+        "b": 1610612736
+      },
+      "pre": {},
+      "rtl_post": {},
+      "rtl_result": 1073741824,
+      "completed": true
+    },
+    "c_result": 1073741824,
+    "c_post": {},
+    "eacsl": [],
+    "checker": "e-acsl",
+    "oracle": {
+      "requires_violated": [],
+      "violated": [
+        "ensures \\result == gcd ( \\old ( a ) , \\old ( b ) )"
+      ],
+      "unknown": [],
+      "checked": 3
+    },
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "lifted": [
+    "gcd"
+  ],
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "recursive logic cut off: free value"
+  ],
+  "latency_report": null,
+  "interval_report": 0,
+  "depth": 20,
+  "cex_step": 2,
+  "failed_cutoff": [
+    "P3"
+  ],
+  "outcome": "fail"
+}

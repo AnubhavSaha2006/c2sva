@@ -1,0 +1,187 @@
+{
+  "latency": 8,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "TIMEOUT",
+    "secs": 300.1,
+    "k": 12
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.0
+  },
+  "candidates": {
+    "total": 600,
+    "by_origin": {
+      "structural": 284,
+      "call-requires": 8,
+      "call-frame": 3,
+      "loop-invariant": 305
+    },
+    "loops": 2,
+    "loop_invariants": 11,
+    "skipped": [
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy; i=tv_0, j=tv_7]",
+        "reason": "candidate too large (27754 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy & grp_merge_Pipeline_VITIS_LOOP_14_11_fu_84.ap_start; i=tv_0, j=tv_7]",
+        "reason": "candidate too large (27764 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy & grp_merge_Pipeline_VITIS_LOOP_14_11_fu_84.ap_CS_fsm_pp0_stage0; i=tv_0, j=tv_7]",
+        "reason": "candidate too large (27763 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy & grp_merge_Pipeline_VITIS_LOOP_14_11_fu_84.ap_start & grp_merge_Pipeline_VITIS_LOOP_14_11_fu_84.ap_CS_fsm_pp0_stage0; i=tv_0, j=tv_7]",
+        "reason": "candidate too large (27771 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy & grp_merge_Pipeline_VITIS_LOOP_14_1_fu_95.ap_start; i=tv_0, j=tv_7]",
+        "reason": "candidate too large (27764 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy & grp_merge_Pipeline_VITIS_LOOP_14_1_fu_95.ap_CS_fsm_pp0_stage0; i=tv_0, j=tv_7]",
+        "reason": "candidate too large (27763 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy & grp_merge_Pipeline_VITIS_LOOP_14_1_fu_95.ap_start & grp_merge_Pipeline_VITIS_LOOP_14_1_fu_95.ap_CS_fsm_pp0_stage0; i=tv_0, j=tv_7]",
+        "reason": "candidate too large (27771 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy & grp_merge_Pipeline_VITIS_LOOP_29_1_fu_66.ap_start; i=tv_0, j=tv_7]",
+        "reason": "candidate too large (27764 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy & grp_merge_Pipeline_VITIS_LOOP_29_1_fu_66.ap_CS_fsm_pp0_stage0; i=tv_0, j=tv_7]",
+        "reason": "candidate too large (27763 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy & grp_merge_Pipeline_VITIS_LOOP_29_1_fu_66.ap_start & grp_merge_Pipeline_VITIS_LOOP_29_1_fu_66.ap_CS_fsm_pp0_stage0; i=tv_0, j=tv_7]",
+        "reason": "candidate too large (27771 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy; i=tv_0, j=tv_8]",
+        "reason": "candidate too large (27763 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy & grp_merge_Pipeline_VITIS_LOOP_14_11_fu_84.ap_start; i=tv_0, j=tv_8]",
+        "reason": "candidate too large (27773 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy & grp_merge_Pipeline_VITIS_LOOP_14_11_fu_84.ap_CS_fsm_pp0_stage0; i=tv_0, j=tv_8]",
+        "reason": "candidate too large (27772 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy & grp_merge_Pipeline_VITIS_LOOP_14_11_fu_84.ap_start & grp_merge_Pipeline_VITIS_LOOP_14_11_fu_84.ap_CS_fsm_pp0_stage0; i=tv_0, j=tv_8]",
+        "reason": "candidate too large (27780 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy & grp_merge_Pipeline_VITIS_LOOP_14_1_fu_95.ap_start; i=tv_0, j=tv_8]",
+        "reason": "candidate too large (27773 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy & grp_merge_Pipeline_VITIS_LOOP_14_1_fu_95.ap_CS_fsm_pp0_stage0; i=tv_0, j=tv_8]",
+        "reason": "candidate too large (27772 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy & grp_merge_Pipeline_VITIS_LOOP_14_1_fu_95.ap_start & grp_merge_Pipeline_VITIS_LOOP_14_1_fu_95.ap_CS_fsm_pp0_stage0; i=tv_0, j=tv_8]",
+        "reason": "candidate too large (27780 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy & grp_merge_Pipeline_VITIS_LOOP_29_1_fu_66.ap_start; i=tv_0, j=tv_8]",
+        "reason": "candidate too large (27773 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy & grp_merge_Pipeline_VITIS_LOOP_29_1_fu_66.ap_CS_fsm_pp0_stage0; i=tv_0, j=tv_8]",
+        "reason": "candidate too large (27772 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy & grp_merge_Pipeline_VITIS_LOOP_29_1_fu_66.ap_start & grp_merge_Pipeline_VITIS_LOOP_29_1_fu_66.ap_CS_fsm_pp0_stage0; i=tv_0, j=tv_8]",
+        "reason": "candidate too large (27780 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy; i=tv_0, j=tv_9]",
+        "reason": "candidate too large (27763 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy & grp_merge_Pipeline_VITIS_LOOP_14_11_fu_84.ap_start; i=tv_0, j=tv_9]",
+        "reason": "candidate too large (27773 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy & grp_merge_Pipeline_VITIS_LOOP_14_11_fu_84.ap_CS_fsm_pp0_stage0; i=tv_0, j=tv_9]",
+        "reason": "candidate too large (27772 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy & grp_merge_Pipeline_VITIS_LOOP_14_11_fu_84.ap_start & grp_merge_Pipeline_VITIS_LOOP_14_11_fu_84.ap_CS_fsm_pp0_stage0; i=tv_0, j=tv_9]",
+        "reason": "candidate too large (27780 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy & grp_merge_Pipeline_VITIS_LOOP_14_1_fu_95.ap_start; i=tv_0, j=tv_9]",
+        "reason": "candidate too large (27773 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy & grp_merge_Pipeline_VITIS_LOOP_14_1_fu_95.ap_CS_fsm_pp0_stage0; i=tv_0, j=tv_9]",
+        "reason": "candidate too large (27772 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy & grp_merge_Pipeline_VITIS_LOOP_14_1_fu_95.ap_start & grp_merge_Pipeline_VITIS_LOOP_14_1_fu_95.ap_CS_fsm_pp0_stage0; i=tv_0, j=tv_9]",
+        "reason": "candidate too large (27780 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy & grp_merge_Pipeline_VITIS_LOOP_29_1_fu_66.ap_start; i=tv_0, j=tv_9]",
+        "reason": "candidate too large (27773 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy & grp_merge_Pipeline_VITIS_LOOP_29_1_fu_66.ap_CS_fsm_pp0_stage0; i=tv_0, j=tv_9]",
+        "reason": "candidate too large (27772 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant multiset: MultisetUnion ( a , i , b , j , c )  [busy & grp_merge_Pipeline_VITIS_LOOP_29_1_fu_66.ap_start & grp_merge_Pipeline_VITIS_LOOP_29_1_fu_66.ap_CS_fsm_pp0_stage0; i=tv_0, j=tv_9]",
+        "reason": "candidate too large (27780 chars)"
+      }
+    ]
+  },
+  "houdini": {
+    "candidates": 600,
+    "base_dropped": 489,
+    "ind_dropped": 6,
+    "rounds": 3,
+    "status": "inductive",
+    "base_depth": 12,
+    "k": 16,
+    "secs": 4630.6,
+    "invariants": 105,
+    "by_origin": {
+      "structural": 72,
+      "call-requires": 8,
+      "call-frame": 3,
+      "loop-invariant": 22
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant bound: 0 <= i <= m",
+      "loop 1: loop invariant upper: i < m ==> UpperBound ( c , 0 , x , * ( a + i ) )"
+    ],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "TIMEOUT",
+    "secs": 300.1,
+    "k": 16
+  },
+  "unbounded": false,
+  "proved_by": [],
+  "deep_cex": [],
+  "secs": 5546.5
+}

@@ -1,0 +1,16 @@
+1 designs -> 3 cases (tools vitis, configs base, mutants 2) -> /home/anubhavsaha/cbv/runs/E4_lifted_fact
+[1/3] task_564                         mutant-2  base     C 17/18   fail-inconclusive clauses 3/3    access None      lat 2 undetermined
+[2/3] task_564                         original  base     C 18/18   fail-inconclusive clauses 3/3    access None      lat 16 translation-error
+[3/3] task_564                         mutant-1  base     C 17/18   fail-inconclusive clauses 3/3    access None      lat 16 translation-error
+                                                              Summary per tool / HLS configuration                                                              
+┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ acce… ┃       ┃       ┃       ┃       ┃       ┃       ┃
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ out   ┃       ┃       ┃       ┃       ┃       ┃ kills ┃
+┃       ┃       ┃       ┃       ┃ pass  ┃ pass  ┃      ┃       ┃       ┃       ┃       ┃ clau… ┃ acce… ┃ of    ┃ over… ┃ muta… ┃       ┃ muta… ┃ equi… ┃ conf… ┃
+┃ tool  ┃ conf… ┃ desi… ┃ chec… ┃ full  ┃ part… ┃ fail ┃ boun… ┃ vacu… ┃ agree ┃ disa… ┃ rate  ┃ spec… ┃ memo… ┃ mode  ┃ chec… ┃ kill… ┃ score ┃ pass  ┃ in C  ┃
+┡━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ vitis │ base  │ 1     │ 1     │ 0     │ 0     │ 1    │ 0     │ 0     │ 0     │ 0     │ 100.0 │ 0     │ 0     │ 1     │ 2     │ 2     │ 100.0 │ 0     │ 0     │
+└───────┴───────┴───────┴───────┴───────┴───────┴──────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┘
+vitis/base failures on originals (C replay): {'translation-error': 1}; mutant kills (C replay): {'translation-error': 1, 'undetermined': 1}
+Details: /home/anubhavsaha/cbv/runs/E4_lifted_fact/summary.md, /home/anubhavsaha/cbv/runs/E4_lifted_fact/results.csv, 
+/home/anubhavsaha/cbv/runs/E4_lifted_fact/table.tex

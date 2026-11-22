@@ -1,0 +1,3 @@
+[submodule "benchmarks/raw/acsl-by-example"]
+	path = benchmarks/raw/acsl-by-example
+	url = https://github.com/fraunhoferfokus/acsl-by-example

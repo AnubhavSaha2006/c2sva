@@ -1,0 +1,18 @@
+/*
+ * Task 268 Natural Language:
+ * Write an ACSL-annotated C function that calculates the sum of two integers a and b. The function
+ * requires that the sum of a and b does not cause integer overflow (must be between INT_MIN and
+ * INT_MAX). The function ensures the result equals a + b and assigns no external variables.
+ */
+
+#define INT_MIN (-2147483648)
+#define INT_MAX 2147483647
+
+/*@ requires INT_MIN <= a + b <= INT_MAX;
+    assigns \nothing;
+    ensures \result == a + b;
+ */
+int sum(int a, int b)
+{
+	return a + b;
+}

@@ -1,0 +1,129 @@
+{
+  "design": "Sorting/merge",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "132/134",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P7: ensures MultisetUnion ( \\old ( a ) , \\old ( m ) , \\old ( b ) , \\old ( n ) , \\old ( c ) )"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P14: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "21/21",
+  "translated": 21,
+  "total_clauses": 21,
+  "skipped": [],
+  "times": {
+    "frontend": 0.6,
+    "wp": 13.9,
+    "hls": 19.7,
+    "latency": 2.5,
+    "bmc": 9.5,
+    "access": 1.5,
+    "phys": 1.5,
+    "cover": 2.5,
+    "total": 63.0
+  },
+  "error": null,
+  "top": "merge",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "m": 1,
+        "n": 0
+      },
+      "pre": {
+        "a": [
+          -1,
+          0,
+          0,
+          0
+        ],
+        "b": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "c": [
+          2147483647,
+          7,
+          0,
+          0
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -1,
+          0,
+          0,
+          0
+        ],
+        "b": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "c": [
+          2147483647,
+          7,
+          0,
+          0
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Assertion",
+        "merge",
+        "index: x \u2261 i + j."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-runtime-error"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 2,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_63043,j_63044: enumerated over 0..4 (weaker assumption)",
+    "\\forall i_63045,j_63046: enumerated over 0..4 (weaker assumption)",
+    "\\forall i_63047,j_63048: symbolic (solver-chosen) value, exact",
+    "\\forall i_63053: symbolic (solver-chosen) value, exact",
+    "\\forall i_63054: symbolic (solver-chosen) value, exact",
+    "\\forall v_63049: symbolic (solver-chosen) value, exact",
+    "\\separated holds by construction (separate RTL memories/registers)",
+    "cell of a outside 0..3: solver-chosen value",
+    "cell of b outside 0..3: solver-chosen value",
+    "cell of c outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of c",
+    "holds by construction: the RTL cannot write this object",
+    "recursive logic cut off: free value"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 12,
+  "cex_step": 6,
+  "failed_cutoff": [
+    "P7"
+  ],
+  "outcome": "fail"
+}

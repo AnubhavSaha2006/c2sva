@@ -1,0 +1,33 @@
+{
+  "design": "task_378",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "hls",
+  "status": "error",
+  "c_proof": "8/8",
+  "c_ok": true,
+  "rtl": null,
+  "failed": [],
+  "access": null,
+  "access_failed": [],
+  "cover": null,
+  "latency": null,
+  "latency_status": null,
+  "clauses": null,
+  "translated": null,
+  "total_clauses": null,
+  "skipped": [],
+  "times": {
+    "frontend": 0.2,
+    "wp": 0.3,
+    "total": 11.0
+  },
+  "error": "hls: Vitis synthesis failed: ERROR: [HLS 214-133] Global variable 'a' must have definition (../src/hls_src/task_378.c:13:0) | ERROR: [HLS 214-135] Syn check fail!",
+  "top": "abs_int",
+  "mode": null,
+  "bounded_to": null,
+  "replay": null,
+  "engine": null,
+  "outcome": "error"
+}

@@ -1,0 +1,33 @@
+{
+  "design": "task_362",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "hls",
+  "status": "error",
+  "c_proof": "10/11",
+  "c_ok": false,
+  "rtl": null,
+  "failed": [],
+  "access": null,
+  "access_failed": [],
+  "cover": null,
+  "latency": null,
+  "latency_status": null,
+  "clauses": null,
+  "translated": null,
+  "total_clauses": null,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 11.0,
+    "total": 23.9
+  },
+  "error": "hls: Vitis synthesis failed: ERROR: [HLS 200-103] Top function name 'loop' is not a legal name for synthesis as it is a reserved keyword in HDLs.",
+  "top": "loop",
+  "mode": null,
+  "bounded_to": null,
+  "replay": null,
+  "engine": null,
+  "outcome": "error"
+}

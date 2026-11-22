@@ -1,0 +1,90 @@
+{
+  "design": "task_303",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "22/24",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P4: ensures \\forall integer k ; 0 <= k < \\old ( n ) ==> * ( \\old ( t ) + k ) >= * ( \\old ( t ) + \\result )"
+  ],
+  "access": "undecided",
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "10/10",
+  "translated": 10,
+  "total_clauses": 10,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 11.2,
+    "hls": 12.7,
+    "latency": 0.3,
+    "bmc": 0.4,
+    "access": 0.4,
+    "cover": 0.3,
+    "total": 29.3
+  },
+  "error": null,
+  "top": "min",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 4
+      },
+      "pre": {
+        "t": [
+          -1,
+          0,
+          -4,
+          0
+        ]
+      },
+      "rtl_post": {
+        "t": [
+          -1,
+          0,
+          -4,
+          0
+        ]
+      },
+      "rtl_result": 0,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "min",
+        "not_empty: \u2200 \u2124 k; 0 \u2264 k < \\old(n) \u21d2 *(\\old(t) + k) \u2265 *(\\old(t) + \\result)."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall k: symbolic (solver-chosen) value, exact",
+    "cell of t outside 0..3: solver-chosen value"
+  ],
+  "latency_report": [
+    0,
+    0
+  ],
+  "interval_report": 1,
+  "depth": 6,
+  "cex_step": 2,
+  "outcome": "fail"
+}

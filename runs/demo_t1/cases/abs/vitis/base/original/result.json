@@ -1,0 +1,37 @@
+{
+  "design": "abs",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "8/8",
+  "c_ok": true,
+  "rtl": "PASS",
+  "failed": [],
+  "access": null,
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "proven",
+  "clauses": "4/4",
+  "skipped": [],
+  "times": {
+    "frontend": 0.5,
+    "wp": 0.7,
+    "hls": 19.3,
+    "latency": 0.4,
+    "bmc": 0.4,
+    "cover": 0.4,
+    "total": 21.8
+  },
+  "error": null,
+  "top": "spec_abs",
+  "discharged": 0,
+  "pre_dropped": 0,
+  "latency_report": [
+    0,
+    0
+  ],
+  "cex_step": null
+}

@@ -1,0 +1,27 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_375.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_375.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function max_array
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_375.c:17: Warning: 
+  Generalized invariant not yet supported (skipped).
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_375.c:10: Warning: 
+  Lambda-functions not yet implemented
+[wp] Use -wp-msg-key 'driver' for debugging drivers
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_375.c:10: Warning: 
+  Builtin \max undefined with signature (int,int,_)
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_375.c:16: User Error: 
+  Non-natural loop detected in function 'max_array'.
+  This case is not supported yet (skipped verification).
+[wp] Warning: No goal generated
+[wp] Proved goals:    1 / 1
+  Unreachable:     1
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_375.c:12: Warning: 
+  No 'assigns' specification for function 'max_array'.
+  Callers assumptions might be imprecise.
+[wp] Deferred error message was emitted during execution:
+  /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_375.c:16: Non-natural loop detected in function 'max_array'.
+  This case is not supported yet (skipped verification).
+[kernel] Plug-in wp aborted: invalid user input.

@@ -1,0 +1,146 @@
+{
+  "design": "task_232",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "11/19",
+  "c_ok": false,
+  "rtl": "PASS",
+  "failed": [],
+  "access": null,
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 35,
+  "latency_status": "established",
+  "clauses": "0/13",
+  "translated": 0,
+  "total_clauses": 13,
+  "skipped": [
+    {
+      "id": "P1",
+      "kind": "assume",
+      "origin": "requires",
+      "source": "requires 0 <= c . seconds < 60 && 0 <= c . minutes < 60 && 0 <= c . hours < 24",
+      "reason": "global variable c: global state is not modelled"
+    },
+    {
+      "id": "P2",
+      "kind": "assume",
+      "origin": "requires",
+      "source": "requires 0 <= c . seconds < 60 && 0 <= c . minutes < 60 && 0 <= c . hours < 24",
+      "reason": "global variable c: global state is not modelled"
+    },
+    {
+      "id": "P3",
+      "kind": "assume",
+      "origin": "requires",
+      "source": "requires 0 <= c . seconds < 60 && 0 <= c . minutes < 60 && 0 <= c . hours < 24",
+      "reason": "global variable c: global state is not modelled"
+    },
+    {
+      "id": "P4",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures c . seconds == \\old ( c . seconds ) + 1",
+      "reason": "global variable c: global state is not modelled"
+    },
+    {
+      "id": "P5",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures c . seconds == 0",
+      "reason": "global variable c: global state is not modelled"
+    },
+    {
+      "id": "P6",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures c . minutes == \\old ( c . minutes ) + 1",
+      "reason": "global variable c: global state is not modelled"
+    },
+    {
+      "id": "P7",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures c . seconds == \\old ( c . seconds ) + 1",
+      "reason": "global variable c: global state is not modelled"
+    },
+    {
+      "id": "P8",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures c . seconds == 0",
+      "reason": "global variable c: global state is not modelled"
+    },
+    {
+      "id": "P9",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures c . minutes == 0",
+      "reason": "global variable c: global state is not modelled"
+    },
+    {
+      "id": "P10",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures c . hours == \\old ( c . hours ) + 1",
+      "reason": "global variable c: global state is not modelled"
+    },
+    {
+      "id": "P11",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures c . seconds == 0",
+      "reason": "global variable c: global state is not modelled"
+    },
+    {
+      "id": "P12",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures c . minutes == 0",
+      "reason": "global variable c: global state is not modelled"
+    },
+    {
+      "id": "P13",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures c . hours == 0",
+      "reason": "global variable c: global state is not modelled"
+    }
+  ],
+  "times": {
+    "frontend": 0.5,
+    "wp": 1.9,
+    "hls": 16.8,
+    "latency": 1.0,
+    "bmc": 1.0,
+    "cover": 0.5,
+    "total": 21.8
+  },
+  "error": null,
+  "top": "tick",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "yices",
+  "width": 64,
+  "fifo_depth": 20,
+  "discharged": 0,
+  "pre_dropped": 3,
+  "notes": [],
+  "latency_report": [
+    1,
+    35
+  ],
+  "interval_report": 2,
+  "depth": 39,
+  "cex_step": null,
+  "failed_cutoff": [],
+  "outcome": "pass-partial",
+  "survivor": {
+    "class": "analysis-error",
+    "detail": "no input satisfies the preconditions"
+  }
+}

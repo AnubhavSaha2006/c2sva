@@ -1,0 +1,121 @@
+{
+  "design": "task_193",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "25/26",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P8: ensures \\forall int i ; 0 <= i < \\old ( n ) ==> ( * ( \\old ( o ) + i ) != 0 ) == ( * ( \\old ( m ) + ( \\old ( n ) * i + 0 ) ) != 0 && * ( \\old ( v ) + 0 ) != 0 ) || ( * ( \\old ( m ) + ( \\old ( n ) * i + 1 ) ) != 0 && * ( \\old ( v ) + 1 ) != 0 )"
+  ],
+  "access": "undecided",
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "24/24",
+  "translated": 24,
+  "total_clauses": 24,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 1.4,
+    "hls": 13.8,
+    "latency": 0.7,
+    "bmc": 1.2,
+    "access": 1.4,
+    "cover": 0.9,
+    "total": 27.3
+  },
+  "error": null,
+  "top": "mv_mult2s_bool",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 2
+      },
+      "pre": {
+        "m": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "v": [
+          -1,
+          0,
+          -1,
+          -1
+        ],
+        "o": [
+          0,
+          -2147483648,
+          -1,
+          -1
+        ]
+      },
+      "rtl_post": {
+        "m": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "v": [
+          -1,
+          0,
+          -1,
+          -1
+        ],
+        "o": [
+          0,
+          0,
+          -1,
+          -1
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "mv_mult2s_bool",
+        "\u2200 int i; 0 \u2264 i < \\old(n) \u21d2"
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 80,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i: enumerated over 0..4 (weaker assumption)",
+    "\\forall i: symbolic (solver-chosen) value, exact",
+    "\\forall j: enumerated over 0..4 (weaker assumption)",
+    "\\separated holds by construction (separate RTL memories/registers)",
+    "cell of m outside 0..3: solver-chosen value",
+    "cell of o outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of m",
+    "exact frame over all 4 element(s) of o",
+    "exact frame over all 4 element(s) of v"
+  ],
+  "latency_report": [
+    0,
+    0
+  ],
+  "interval_report": 1,
+  "depth": 6,
+  "cex_step": 2,
+  "outcome": "fail"
+}

@@ -1,0 +1,124 @@
+{
+  "design": "task_259",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "59/62",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P7: ensures \\forall integer i ; 0 <= i < \\result - 1 ==> monotone_slice ( \\old ( a ) , * ( \\old ( cutpoints ) + i ) , * ( \\old ( cutpoints ) + ( i + 1 ) ) )"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P9: requires \\valid ( a + ( 0 .. length - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 16,
+  "latency_status": "established",
+  "clauses": "17/17",
+  "translated": 17,
+  "total_clauses": 17,
+  "skipped": [],
+  "times": {
+    "frontend": 0.5,
+    "wp": 10.2,
+    "hls": 18.7,
+    "latency": 3.0,
+    "bmc": 20.0,
+    "access": 1.0,
+    "phys": 1.5,
+    "cover": 1.5,
+    "total": 57.4
+  },
+  "error": null,
+  "top": "monotonic",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "length": 3
+      },
+      "pre": {
+        "a": [
+          -25632682,
+          2121138182,
+          2113929286,
+          -33554353
+        ],
+        "cutpoints": [
+          0,
+          3,
+          18446744073709551611,
+          18446726481523507117
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -25632682,
+          2121138182,
+          2113929286,
+          -33554353
+        ],
+        "cutpoints": [
+          0,
+          3,
+          18446744073709551611,
+          18446726481523507117
+        ]
+      },
+      "rtl_result": 2,
+      "completed": true
+    },
+    "c_result": 2,
+    "c_post": {
+      "a": [
+        -25632682,
+        2121138182,
+        2113929286,
+        -33554353
+      ],
+      "cutpoints": [
+        0,
+        3,
+        -5,
+        -17592186044499
+      ]
+    },
+    "eacsl": [],
+    "checker": "native+sanitizers",
+    "oracle": {
+      "requires_violated": [],
+      "violated": [
+        "ensures \\forall integer i ; 0 <= i < \\result - 1 ==> monotone_slice ( \\old ( a ) , * ( \\old ( cutpoints ) + i ) , * ( \\old ( cutpoints ) + ( i + 1 ) ) )"
+      ],
+      "unknown": [],
+      "checked": 10
+    },
+    "class": "rtl-c-divergence"
+  },
+  "engine": "yices",
+  "width": 136,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i: symbolic (solver-chosen) value, exact",
+    "\\forall i_159,j_160: symbolic (solver-chosen) value, exact",
+    "\\forall i_161,j_162: symbolic (solver-chosen) value, exact",
+    "\\separated holds by construction (separate RTL memories/registers)",
+    "cell of a outside 0..3: solver-chosen value",
+    "cell of cutpoints outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of cutpoints",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 20,
+  "cex_step": 14,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

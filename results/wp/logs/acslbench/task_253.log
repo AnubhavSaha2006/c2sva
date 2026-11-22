@@ -1,0 +1,22 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_253.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_253.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function cummilativeSum
+[wp] 15 goals scheduled
+[wp] [Timeout] typed_cummilativeSum_assert_rte_mem_access (Qed 14ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_cummilativeSum_assert_rte_signed_overflow (Qed 27ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_cummilativeSum_assert_rte_signed_overflow_2 (Qed 19ms) (Alt-Ergo) (Cached)
+[wp] [Cache] updated:13
+[wp] Proved goals:   14 / 17
+  Terminating:       1
+  Unreachable:       1
+  Qed:               8 (10ms-10ms-40ms)
+  Alt-Ergo 2.6.4:    1 (90ms)
+  CVC5 :             3 (69ms-135ms-255ms)
+  Timeout:           3
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_253.c:14: Warning: 
+  No 'assigns' specification for function 'cummilativeSum'.
+  Callers assumptions might be imprecise.

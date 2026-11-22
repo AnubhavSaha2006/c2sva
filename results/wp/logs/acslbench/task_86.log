@@ -1,0 +1,23 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_86.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_86.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function area
+[rte:annot] annotating function main
+[wp] 7 goals scheduled
+[wp] [Timeout] typed_area_assert_rte_signed_overflow_2 (Qed 1ms) (Z3) (Cached)
+[wp] [Cache] updated:4
+[wp] Proved goals:    8 / 9
+  Terminating:     1
+  Unreachable:     1
+  Qed:             5 (1ms-0.68ms-3ms)
+  CVC5 :           1 (76ms)
+  Timeout:         1
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_86.c:13: Warning: 
+  No 'assigns' specification for function 'area'.
+  Callers assumptions might be imprecise.
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_86.c:18: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.

@@ -1,0 +1,79 @@
+{
+  "latency": 8,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 53.4,
+    "k": 16
+  },
+  "candidates": {
+    "total": 222,
+    "by_origin": {
+      "structural": 51,
+      "call-requires": 2,
+      "pipeline-copy": 90,
+      "contract-persist": 3,
+      "call-frame": 1,
+      "loop-invariant": 45,
+      "loop-variant": 27,
+      "loop-assigns": 3
+    },
+    "loops": 1,
+    "loop_invariants": 3,
+    "skipped": []
+  },
+  "houdini": {
+    "candidates": 222,
+    "base_dropped": 125,
+    "ind_dropped": 0,
+    "rounds": 2,
+    "status": "inductive",
+    "base_depth": 12,
+    "k": 12,
+    "secs": 852.2,
+    "invariants": 97,
+    "by_origin": {
+      "structural": 16,
+      "call-requires": 2,
+      "contract-persist": 3,
+      "call-frame": 1,
+      "loop-invariant": 45,
+      "loop-variant": 27,
+      "loop-assigns": 3
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant bound: 0 <= left <= right <= n",
+      "loop 1: loop invariant left: StrictUpperBound ( a , 0 , left , v )",
+      "loop 1: loop invariant right: LowerBound ( a , right , n , v )"
+    ],
+    "c_invariants_lagged": [],
+    "k_tried": [
+      4,
+      8,
+      12
+    ]
+  },
+  "kind+inv": {
+    "status": "PASS",
+    "secs": 4.4,
+    "k": 12
+  },
+  "kmin": {
+    "none": null,
+    "hls": 12,
+    "hls+contract": 12,
+    "all": 12,
+    "all+progress": 12
+  },
+  "unbounded": true,
+  "proved_by": [
+    "kind+inv"
+  ],
+  "deep_cex": [],
+  "secs": 6909.5
+}

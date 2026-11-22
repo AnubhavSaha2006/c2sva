@@ -1,0 +1,98 @@
+{
+  "design": "Nonmutating/find2",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "25/27",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P4: ensures NoneEqual ( \\old ( a ) , \\result , \\old ( v ) )"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "11/11",
+  "translated": 11,
+  "total_clauses": 11,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 1.7,
+    "hls": 13.5,
+    "latency": 0.5,
+    "bmc": 1.0,
+    "access": 0.5,
+    "phys": 0.5,
+    "cover": 1.0,
+    "total": 22.6
+  },
+  "error": null,
+  "top": "find2",
+  "mode": "overlapping calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 1,
+        "v": -536870913
+      },
+      "pre": {
+        "a": [
+          -536870913,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -536870913,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "rtl_result": 1,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "find2",
+        "some/first: NoneEqual(\\old(a), \\result, \\old(v))."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "\\exists i_29: symbolic (solver-chosen) value, exact",
+    "\\exists i_30: symbolic (solver-chosen) value, exact",
+    "\\exists i_31: symbolic (solver-chosen) value, exact",
+    "\\forall i_32: symbolic (solver-chosen) value, exact",
+    "\\forall i_33: enumerated over 0..4 (stronger assertion)",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": 0,
+  "depth": 20,
+  "cex_step": 3,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

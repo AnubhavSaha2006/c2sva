@@ -1,0 +1,47 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_56.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_56.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function GetFirstElements
+[kernel:annot:missing-spec] FRAMAC_SHARE/libc/stdlib.h:626: Warning: 
+  Neither code nor explicit exits and terminates for function malloc,
+  generating default clauses. See -generated-spec-* options for more info.
+[wp] FRAMAC_SHARE/libc/stdlib.h:614: Warning: 
+  Allocation, initialization and danglingness not yet implemented
+  (allocation: \fresh{Old, Here}(\at(\result,wp:post),\at(size,wp:pre)))
+[wp] FRAMAC_SHARE/libc/stdlib.h:615: Warning: \aligned not yet implemented
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_56.c:21: Warning: 
+  Cast with incompatible pointers types (source: sint8*) (target: sint32*)
+[wp] 29 goals scheduled
+[wp] [Timeout] typed_GetFirstElements_ensures_part1 (Qed 34ms) (Alt-Ergo) (Cached) (Stronger, 3 warnings)
+[wp] [Timeout] typed_GetFirstElements_ensures_2_part1 (Qed 19ms) (Alt-Ergo) (Cached) (Stronger, 3 warnings)
+[wp] [Timeout] typed_GetFirstElements_ensures_2_part2 (Qed 38ms) (CVC5) (Cached) (Stronger, 3 warnings)
+[wp] [Timeout] typed_GetFirstElements_ensures_3_part1 (Qed 26ms) (Alt-Ergo) (Cached) (Stronger, 3 warnings)
+[wp] [Timeout] typed_GetFirstElements_assert_rte_unsigned_overflow_2 (Qed 16ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_GetFirstElements_loop_invariant_2_preserved (Qed 47ms) (Z3) (Cached) (Stronger, 3 warnings)
+[wp] [Timeout] typed_GetFirstElements_assigns_normal_part1 (Qed 14ms) (Alt-Ergo) (Cached) (Stronger, 3 warnings)
+[wp] [Timeout] typed_GetFirstElements_assert_rte_mem_access (Qed 37ms) (CVC5) (Cached) (Stronger, 3 warnings)
+[wp] [Timeout] typed_GetFirstElements_assigns_normal_part4 (Qed 22ms) (Alt-Ergo) (Cached) (Stronger, 3 warnings)
+[wp] [Cache] found:3, updated:28
+[wp] Proved goals:   20 / 29
+  Qed:              16 (14ms-17ms-82ms)
+  Alt-Ergo 2.6.4:    4 (85ms-137ms)
+  Timeout:           9
+[wp] FRAMAC_SHARE/libc/stdlib.h:626: Warning: 
+  Memory model hypotheses for function 'malloc':
+  /*@ behavior wp_typed:
+        ensures \separated(\result, &__fc_errno); */
+  extern void *malloc(size_t size);
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_56.c:20: Warning: 
+  No 'assigns \result \from ...' specification for function 'GetFirstElements'returning pointer type.
+  Callers assumptions might be imprecise.
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_56.c:20: Warning: 
+  Memory model hypotheses for function 'GetFirstElements':
+  /*@
+     behavior wp_typed:
+       requires \separated(lst + (..), &__fc_errno);
+       ensures \separated(\result, &__fc_errno);
+     */
+  int *GetFirstElements(int **lst, size_t n);

@@ -1,0 +1,57 @@
+Project 4: Automatic Generation of RTL Assertions (LTL/SVA) from C-Level Preconditions and Postconditions for HLS Designs 
+
+Many of the C code is already annoted with many safety, security and correctness properties. If we synthesize the C code to RTl, how do we take those C properties into RTL? Write a tool with the help of LLM for this.  
+
+Questions to address. 
+
+How can untimed C contracts be mapped to timed RTL properties?  
+
+How can source variables be related to HLS-generated RTL signals?  
+
+How should variable and dynamic latency be handled?  
+
+How can array and memory properties be translated?  
+
+How robust is the method across different HLS optimizations?  
+
+Can an LLM assist the translation while formal analysis validates the generated assertions? 
+
+Use the following C benchmarks or find a better benchmarks 
+
+Benchmarks:  
+
+https://huggingface.co/datasets/yzrsdad/ACSLBench 
+
+https://github.com/fraunhoferfokus/acsl-by-example/tree/master 
+
+https://frama-c.com/index.html 
+
+Start from ACSL by Example + ACSLBench, then automatically filter for the Vitis HLS-synthesizable subset. HLS to get the RTL.  
+
+Then perform  
+
+(C,  Pre,  Post,  HLS metadata,  RTL)→ Assertion for RTL. 
+
+and checks if RTL satisfies the properties. 
+
+Common resources for all projects: 
+
+HLS Tools: 
+
+1. Commercial Vitis HLS tool - https://www.amd.com/en/products/software/adaptive-socs-and-fpgas/vitis/vitis-hls.html 
+
+ 
+
+2. Open source XLS HLS tool: https://google.github.io/xls/ 
+
+3. Bambu: https://panda.deib.polimi.it/?page_id=31 
+
+ 
+
+HLS benchmarks: 
+
+1. HLS Factory: https://github.com/sharc-lab/HLSFactory 
+
+2. MachSuite: https://github.com/breagen/MachSuite 
+
+3. Chstone: https://github.com/ferrandi/CHStone

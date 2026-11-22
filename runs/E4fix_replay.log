@@ -1,0 +1,15 @@
+5 designs -> 14 cases (tools vitis, configs base, mutants 2) -> /home/anubhavsaha/cbv/runs/E4fix_replay
+[1/14] task_156                         mutant-2  base     C 36/37   bounded(no call completes within the explored depth) clauses 10/10  access ok        lat 
+128 
+[2/14] task_178                         original  base     C 7/7     pass             clauses 3/3    access None      lat 2 
+[3/14] task_178                         mutant-1  base     C 6/7     fail             clauses 3/3    access None      lat 2 c-contract-violation
+[4/14] task_178                         mutant-2  base     C 6/7     fail             clauses 3/3    access None      lat 2 c-contract-violation
+[5/14] task_300                         original  base     C 4/4     pass             clauses 2/2    access None      lat 2 
+[6/14] task_300                         mutant-1  base     C 3/4     fail             clauses 2/2    access None      lat 2 c-contract-violation
+[7/14] task_372                         original  base     C 4/4     pass             clauses 1/1    access None      lat 2 
+[8/14] task_372                         mutant-1  base     C None    unsupported      clauses None   access None      lat None 
+[9/14] task_372                         mutant-2  base     C 3/4     fail             clauses 1/1    access None      lat 2 c-contract-violation
+[10/14] task_498                         original  base     C 8/8     pass             clauses 3/3    access None      lat 2 
+[11/14] task_498                         mutant-1  base     C 7/8     fail             clauses 3/3    access None      lat 2 c-contract-violation
+[12/14] task_498                         mutant-2  base     C 7/8     fail             clauses 3/3    access None      lat 2 c-contract-violation
+[13/14] task_156                         mutant-1  base     C 36/37   fail             clauses 8/8    access timeout   lat 128 rtl-c-divergence

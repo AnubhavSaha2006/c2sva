@@ -1,0 +1,27 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_286.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_286.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function arrayinc
+[rte:annot] annotating function main
+[wp] 19 goals scheduled
+[wp] [Timeout] typed_arrayinc_terminates (Qed 9ms) (Z3) (Cached)
+[wp] [Timeout] typed_arrayinc_loop_invariant_2_preserved (Qed 40ms) (CVC5) (Cached)
+[wp] [Timeout] typed_arrayinc_assert_rte_mem_access (Qed 19ms) (Z3) (Cached)
+[wp] [Timeout] typed_arrayinc_assert_rte_signed_overflow (Qed 20ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_arrayinc_assert_rte_signed_overflow_2 (Qed 14ms) (Alt-Ergo) (Cached)
+[wp] [Cache] updated:18
+[wp] Proved goals:   15 / 20
+  Unreachable:       1
+  Qed:              11 (9ms-9ms-40ms)
+  Alt-Ergo 2.6.4:    2 (75ms-155ms)
+  CVC5 :             1 (139ms)
+  Timeout:           5
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_286.c:17: Warning: 
+  No 'assigns' specification for function 'arrayinc'.
+  Callers assumptions might be imprecise.
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_286.c:28: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.

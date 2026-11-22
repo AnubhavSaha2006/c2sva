@@ -1,0 +1,95 @@
+{
+  "design": "Heap/heap_sift_down",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "76/80",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P3: ensures HeapForest ( \\old ( a ) , \\old ( root ) , \\old ( n ) )"
+  ],
+  "access": "out-of-memory",
+  "access_failed": [
+    "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+  ],
+  "cover": "reached",
+  "latency": 16,
+  "latency_status": "established",
+  "clauses": "10/10",
+  "translated": 10,
+  "total_clauses": 10,
+  "skipped": [],
+  "times": {
+    "frontend": 0.5,
+    "wp": 33.5,
+    "hls": 16.8,
+    "latency": 2.7,
+    "bmc": 10.2,
+    "access": 1.1,
+    "phys": 9.5,
+    "cover": 1.0,
+    "total": 80.1
+  },
+  "error": null,
+  "top": "heap_sift_down",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 3,
+        "root": 0
+      },
+      "pre": {
+        "a": [
+          589286278,
+          93274743,
+          -1469049189,
+          1662337830
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          93274743,
+          589286278,
+          -1469049189,
+          1662337830
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Assertion",
+        "heap_sift_down",
+        "compatible: HeapForestCompatible(a, n, root, p, v)."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-runtime-error"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall c_36812: enumerated over 0..4 (weaker assumption)",
+    "\\forall c_36813: symbolic (solver-chosen) value, exact",
+    "\\forall v_36814: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a",
+    "recursive logic cut off: free value"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 20,
+  "cex_step": 10,
+  "outcome": "fail"
+}

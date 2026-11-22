@@ -1,0 +1,33 @@
+{
+  "design": "Sorting/merge_sort",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "nopipe",
+  "stage": "hls",
+  "status": "error",
+  "c_proof": "62/62",
+  "c_ok": true,
+  "rtl": null,
+  "failed": [],
+  "access": null,
+  "access_failed": [],
+  "cover": null,
+  "latency": null,
+  "latency_status": null,
+  "clauses": null,
+  "translated": null,
+  "total_clauses": null,
+  "skipped": [],
+  "times": {
+    "frontend": 0.5,
+    "wp": 18.3,
+    "total": 36.4
+  },
+  "error": "hls: Vitis synthesis failed: ERROR: [HLS 200-1715] Encountered problem during source synthesis",
+  "top": "merge_sort",
+  "mode": null,
+  "bounded_to": null,
+  "replay": null,
+  "engine": null,
+  "outcome": "error"
+}

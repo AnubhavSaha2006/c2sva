@@ -1,0 +1,119 @@
+{
+  "latency": 8,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 56.8,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 600.0
+  },
+  "candidates": {
+    "total": 134,
+    "by_origin": {
+      "structural": 61,
+      "call-requires": 3,
+      "pipeline-copy": 10,
+      "contract-persist": 3,
+      "call-frame": 2,
+      "loop-invariant": 35,
+      "loop-variant": 10,
+      "loop-assigns": 10
+    },
+    "loops": 1,
+    "loop_invariants": 5,
+    "skipped": [
+      {
+        "source": "requires AccumulateDefaultBounds ( a , n ) [captured inputs, during the call]",
+        "reason": "candidate too large (20329 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant bounds: AccumulateDefaultBounds ( a , n )  [busy]",
+        "reason": "candidate too large (20323 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant bounds: AccumulateDefaultBounds ( a , n )  [busy & ap_CS_fsm_state1]",
+        "reason": "candidate too large (20332 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant bounds: AccumulateDefaultBounds ( a , n )  [busy & ap_CS_fsm_state2]",
+        "reason": "candidate too large (20332 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant bounds: AccumulateDefaultBounds ( a , n )  [busy & ap_CS_fsm_state3]",
+        "reason": "candidate too large (20332 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant bounds: AccumulateDefaultBounds ( a , n )  [busy & ap_CS_fsm_state4]",
+        "reason": "candidate too large (20332 chars)"
+      }
+    ]
+  },
+  "houdini": {
+    "candidates": 134,
+    "base_dropped": 74,
+    "ind_dropped": 0,
+    "rounds": 2,
+    "status": "inductive",
+    "base_depth": 12,
+    "k": 16,
+    "secs": 713.5,
+    "invariants": 60,
+    "by_origin": {
+      "structural": 32,
+      "call-requires": 3,
+      "pipeline-copy": 2,
+      "contract-persist": 3,
+      "call-frame": 2,
+      "loop-invariant": 9,
+      "loop-variant": 4,
+      "loop-assigns": 5
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant bound: 1 <= i <= n",
+      "loop 1: loop invariant unchanged: Unchanged { Pre , Here } ( a , n )"
+    ],
+    "c_invariants_lagged": [],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "TIMEOUT",
+    "secs": 300.0,
+    "k": 16
+  },
+  "latency_proof": {
+    "bound": 8,
+    "established_by_bmc": "established",
+    "kind": {
+      "status": "UNKNOWN",
+      "secs": 0.6,
+      "k": 16
+    },
+    "candidates": 82,
+    "kind+inv": {
+      "status": "PASS",
+      "secs": 1.0,
+      "k": 12,
+      "progress_invariants": 82,
+      "houdini": "inductive",
+      "houdini_secs": 33.0
+    },
+    "proved": true
+  },
+  "unbounded": false,
+  "proved_by": [],
+  "deep_cex": [],
+  "secs": 1733.6
+}

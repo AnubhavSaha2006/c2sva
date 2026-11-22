@@ -1,0 +1,14 @@
+2 designs -> 2 cases (tools vitis, configs base, mutants 0) -> /home/anubhavsaha/cbv/runs/E4fix_names
+[1/2] task_360                         original  base     C 5/5     pass             clauses 3/3    access None      lat 2 
+[2/2] task_223                         original  base     C 50/50   pass-partial     clauses 0/2    access None      lat 2 
+                                                              Summary per tool / HLS configuration                                                              
+┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ acce… ┃       ┃       ┃       ┃       ┃       ┃       ┃
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ out   ┃       ┃       ┃       ┃       ┃       ┃ kills ┃
+┃       ┃       ┃       ┃       ┃ pass  ┃ pass  ┃      ┃       ┃       ┃       ┃       ┃ clau… ┃ acce… ┃ of    ┃ over… ┃ muta… ┃       ┃ muta… ┃ equi… ┃ conf… ┃
+┃ tool  ┃ conf… ┃ desi… ┃ chec… ┃ full  ┃ part… ┃ fail ┃ boun… ┃ vacu… ┃ agree ┃ disa… ┃ rate  ┃ spec… ┃ memo… ┃ mode  ┃ chec… ┃ kill… ┃ score ┃ pass  ┃ in C  ┃
+┡━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ vitis │ base  │ 2     │ 2     │ 1     │ 1     │ 0    │ 0     │ 0     │ 2     │ 0     │ 60.0  │ 0     │ 0     │ 0     │ 0     │ 0     │ None  │ 0     │ 0     │
+└───────┴───────┴───────┴───────┴───────┴───────┴──────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┘
+vitis/base failures on originals (C replay): {}; mutant kills (C replay): {}
+Details: /home/anubhavsaha/cbv/runs/E4fix_names/summary.md, /home/anubhavsaha/cbv/runs/E4fix_names/results.csv, /home/anubhavsaha/cbv/runs/E4fix_names/table.tex

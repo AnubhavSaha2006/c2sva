@@ -1,0 +1,90 @@
+{
+  "design": "task_411",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "12/14",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures \\forall integer res ; 0 <= res < \\old ( n ) ==> \\result >= * ( \\old ( arr ) + res )"
+  ],
+  "access": "out-of-memory",
+  "access_failed": [
+    "P4: requires \\valid_read ( arr + ( 0 .. n - 1 ) )  [access in range: arr bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "5/5",
+  "translated": 5,
+  "total_clauses": 5,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 11.1,
+    "hls": 13.8,
+    "latency": 0.4,
+    "bmc": 0.5,
+    "access": 0.4,
+    "phys": 0.5,
+    "cover": 0.4,
+    "total": 30.3
+  },
+  "error": null,
+  "top": "checkPrime",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 1
+      },
+      "pre": {
+        "arr": [
+          0,
+          -1073741824,
+          0,
+          0
+        ]
+      },
+      "rtl_post": {
+        "arr": [
+          0,
+          -1073741824,
+          0,
+          0
+        ]
+      },
+      "rtl_result": -1073741824,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "checkPrime",
+        "\u2200 \u2124 res; 0 \u2264 res < \\old(n) \u21d2 \\result \u2265 *(\\old(arr) + res). With values at failure point:"
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall res: symbolic (solver-chosen) value, exact",
+    "cell of arr outside 0..3: solver-chosen value"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 12,
+  "cex_step": 6,
+  "outcome": "fail"
+}

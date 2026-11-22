@@ -1,0 +1,31 @@
+{
+  "design": "Stack/stack_equal",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "frontend",
+  "status": "unsupported",
+  "c_proof": null,
+  "c_ok": null,
+  "rtl": null,
+  "failed": [],
+  "access": null,
+  "access_failed": [],
+  "cover": null,
+  "latency": null,
+  "latency_status": null,
+  "clauses": null,
+  "translated": null,
+  "total_clauses": null,
+  "skipped": [],
+  "times": {
+    "total": 0.7
+  },
+  "error": "struct Stack: array/pointer member data",
+  "top": null,
+  "mode": null,
+  "bounded_to": null,
+  "replay": null,
+  "engine": null,
+  "outcome": "unsupported"
+}

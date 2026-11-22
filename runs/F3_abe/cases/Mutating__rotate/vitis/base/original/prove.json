@@ -1,0 +1,92 @@
+{
+  "latency": 32,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 40.5,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 600.0
+  },
+  "candidates": {
+    "total": 600,
+    "by_origin": {
+      "structural": 598,
+      "call-requires": 2
+    },
+    "loops": 1,
+    "loop_invariants": 4,
+    "skipped": [
+      {
+        "source": "loop 1 (reverse): loop invariant bound: 0 <= i <= half <= n - i",
+        "reason": "no RTL signal found for C variable half"
+      },
+      {
+        "source": "loop 1 (reverse): loop invariant middle: Unchanged { Pre , Here } ( a , i , n - i )",
+        "reason": "unknown logic function/predicate Unchanged"
+      },
+      {
+        "source": "loop 1 (reverse): loop variant half - i >= 0",
+        "reason": "no RTL signal found for C variable half"
+      }
+    ]
+  },
+  "houdini": {
+    "candidates": 600,
+    "base_dropped": 519,
+    "ind_dropped": 39,
+    "rounds": 14,
+    "status": "inductive",
+    "base_depth": 36,
+    "k": 16,
+    "secs": 336.9,
+    "invariants": 42,
+    "by_origin": {
+      "structural": 40,
+      "call-requires": 2
+    },
+    "c_invariants_survived": [],
+    "c_invariants_lagged": [],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "UNKNOWN",
+    "secs": 49.3,
+    "k": 16
+  },
+  "latency_proof": {
+    "bound": 32,
+    "established_by_bmc": "established",
+    "kind": {
+      "status": "UNKNOWN",
+      "secs": 1.5,
+      "k": 16
+    },
+    "candidates": 800,
+    "kind+inv": {
+      "status": "UNKNOWN",
+      "secs": 0.9,
+      "k": 16,
+      "progress_invariants": 0,
+      "houdini": "empty",
+      "houdini_secs": 3293.0
+    },
+    "proved": false
+  },
+  "unbounded": false,
+  "proved_by": [],
+  "deep_cex": [],
+  "secs": 4344.4
+}

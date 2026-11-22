@@ -1,0 +1,64 @@
+{
+  "latency": 64,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 123.1,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.0
+  },
+  "candidates": {
+    "total": 407,
+    "by_origin": {
+      "structural": 139,
+      "call-requires": 2,
+      "call-frame": 2,
+      "loop-invariant": 132,
+      "loop-variant": 88,
+      "loop-assigns": 44
+    },
+    "loops": 2,
+    "loop_invariants": 4,
+    "skipped": [
+      {
+        "source": "loop 2 (find2): loop invariant none: NoneEqual ( a , i , v )",
+        "reason": "no RTL signal found for C variable v"
+      }
+    ]
+  },
+  "houdini": {
+    "candidates": 407,
+    "base_dropped": 233,
+    "ind_dropped": 1,
+    "rounds": 5,
+    "status": "induction timeout",
+    "base_depth": 16,
+    "k": 16,
+    "secs": 3416.0,
+    "invariants": 0,
+    "by_origin": {},
+    "c_invariants_survived": [],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "no invariants",
+    "k": 16
+  },
+  "unbounded": false,
+  "proved_by": [],
+  "deep_cex": [],
+  "secs": 3867.5
+}

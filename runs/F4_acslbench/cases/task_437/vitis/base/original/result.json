@@ -1,0 +1,33 @@
+{
+  "design": "task_437",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "hls",
+  "status": "error",
+  "c_proof": "15/15",
+  "c_ok": true,
+  "rtl": null,
+  "failed": [],
+  "access": null,
+  "access_failed": [],
+  "cover": null,
+  "latency": null,
+  "latency_status": null,
+  "clauses": null,
+  "translated": null,
+  "total_clauses": null,
+  "skipped": [],
+  "times": {
+    "frontend": 0.6,
+    "wp": 1.5,
+    "total": 16.1
+  },
+  "error": "hls: Vitis synthesis failed: ERROR: [HLS 214-139] Recursive function calls are not supported: submatcher_0 -> submatcher_0 | ERROR: [HLS 200-1715] Encountered problem during source synthesis",
+  "top": "matcher_star_a",
+  "mode": null,
+  "bounded_to": null,
+  "replay": null,
+  "engine": null,
+  "outcome": "error"
+}

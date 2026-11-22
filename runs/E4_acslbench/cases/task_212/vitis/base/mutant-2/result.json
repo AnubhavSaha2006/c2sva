@@ -1,0 +1,113 @@
+{
+  "design": "task_212",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "20/21",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P14: ensures inv_matrix_Boolean ( \\old ( x204 ) , \\old ( x205 ) , \\old ( x206 ) ) && inv_matrix_Boolean ( \\old ( x207 ) , \\old ( x208 ) , \\old ( x209 ) ) && ( \\forall int x274 ; 0 <= x274 < \\old ( x208 ) * \\old ( x209 ) ==> ( * ( \\old ( x207 ) + x274 ) != 0 ) == ( \\old ( x203 ) != 0 && * ( \\old ( x204 ) + x274 ) != 0 ) ) && ( ( \\old ( x203 ) != 0 ) == \\false ==> ( \\forall int x289 ; 0 <= x289 < \\old ( x208 ) ==> ( \\forall int x292 ; 0 <= x292 < \\old ( x209 ) ==> ( * ( \\old ( x207 ) + ( x289 * \\old ( x209 ) + x292 ) ) != 0 ) == \\false ) ) )"
+  ],
+  "access": "out-of-memory",
+  "access_failed": [
+    "P16: requires inv_matrix_Boolean ( x204 , x205 , x206 ) && inv_matrix_Boolean ( x207 , x208 , x209 ) && x208 == x205 && x209 == x206 && ( \\forall int x248 ; \\forall int x249 ; 0 <= x248 < x208 * x209 && 0 <= x249 < x205 * x206 ==> \\separated ( x207 + x248 , x204 + x249 ) )  [access in range: x204 bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "20/20",
+  "translated": 20,
+  "total_clauses": 20,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 2.4,
+    "hls": 14.8,
+    "latency": 6.4,
+    "bmc": 1.4,
+    "access": 1.4,
+    "phys": 1.4,
+    "cover": 1.1,
+    "total": 33.9
+  },
+  "error": null,
+  "top": "scalar_mult",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "x203": -2147483648,
+        "x205": 1,
+        "x206": 1,
+        "x208": 1,
+        "x209": 1
+      },
+      "pre": {
+        "x204": [
+          -2147483648,
+          0,
+          0,
+          0
+        ],
+        "x207": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "rtl_post": {
+        "x204": [
+          -2147483648,
+          0,
+          0,
+          0
+        ],
+        "x207": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "scalar_mult",
+        "inv_matrix_Boolean(\\old(x204), \\old(x205), \\old(x206)) \u2227 inv_matrix_Boolean(\\old(x207), \\old(x208), \\old(x209)) \u2227"
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 80,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall x248: enumerated over 0..4 (weaker assumption)",
+    "\\forall x249: enumerated over 0..4 (weaker assumption)",
+    "\\forall x274: symbolic (solver-chosen) value, exact",
+    "\\forall x289: symbolic (solver-chosen) value, exact",
+    "\\forall x292: symbolic (solver-chosen) value, exact",
+    "\\separated holds by construction (separate RTL memories/registers)",
+    "\\valid inside an expression holds for RTL memories",
+    "cell of x204 outside 0..3: solver-chosen value",
+    "cell of x207 outside 0..3: solver-chosen value"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 12,
+  "cex_step": 3,
+  "outcome": "fail"
+}

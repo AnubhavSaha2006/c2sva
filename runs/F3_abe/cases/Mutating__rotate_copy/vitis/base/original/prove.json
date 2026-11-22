@@ -1,0 +1,81 @@
+{
+  "latency": 8,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "TIMEOUT",
+    "secs": 300.1,
+    "k": 8
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 600.0
+  },
+  "candidates": {
+    "total": 349,
+    "by_origin": {
+      "structural": 153,
+      "call-requires": 4,
+      "pipeline-copy": 10,
+      "contract-persist": 2,
+      "call-frame": 2,
+      "loop-invariant": 120,
+      "loop-variant": 40,
+      "loop-assigns": 18
+    },
+    "loops": 1,
+    "loop_invariants": 3,
+    "skipped": []
+  },
+  "houdini": {
+    "candidates": 349,
+    "base_dropped": 204,
+    "ind_dropped": 0,
+    "rounds": 2,
+    "status": "induction timeout",
+    "base_depth": 12,
+    "k": 16,
+    "secs": 1242.0,
+    "invariants": 0,
+    "by_origin": {},
+    "c_invariants_survived": [],
+    "c_invariants_lagged": [],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "no invariants",
+    "k": 16
+  },
+  "latency_proof": {
+    "bound": 8,
+    "established_by_bmc": "established",
+    "kind": {
+      "status": "UNKNOWN",
+      "secs": 1.6,
+      "k": 16
+    },
+    "candidates": 578,
+    "kind+inv": {
+      "status": "UNKNOWN",
+      "secs": 0.8,
+      "k": 16,
+      "progress_invariants": 0,
+      "houdini": "empty",
+      "houdini_secs": 734.2
+    },
+    "proved": false
+  },
+  "unbounded": false,
+  "proved_by": [],
+  "deep_cex": [],
+  "secs": 2882.4
+}

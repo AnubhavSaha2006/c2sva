@@ -1,0 +1,7 @@
+15 designs -> 15 cases (tools vitis, configs unsafe_dep, mutants 0) -> /home/anubhavsaha/cbv/runs/E8_unsafe_dep
+[1/15] Mutating/copy_backward           original  unsafe_dep C 19/19   pass             clauses 10/10  access speculative lat 8 
+[2/15] Mutating/reverse                 original  unsafe_dep C 26/26   pass             clauses 7/7    access speculative lat 8 
+[3/15] Mutating/remove_copy             original  unsafe_dep C 24/24   pass             clauses 13/13  access speculative lat 8 
+[4/15] Mutating/remove                  original  unsafe_dep C 40/40   pass-partial     clauses 10/11  access speculative lat 8 
+[5/15] Numeric/iota                     original  unsafe_dep C 19/19   pass             clauses 6/6    access speculative lat 8 
+[6/15] Numeric/accumulate               original  unsafe_dep C 16/16   pass             clauses 6/6    access speculative lat 8 

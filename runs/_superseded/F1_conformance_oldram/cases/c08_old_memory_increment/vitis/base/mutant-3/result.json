@@ -1,0 +1,102 @@
+{
+  "design": "c08_old_memory_increment",
+  "variant": "mutant-3",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "17/19",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P3: ensures \\forall integer i ; 0 <= i < \\old ( n ) ==> * ( \\old ( a ) + i ) == \\old ( * ( a + i ) ) + 1"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "9/9",
+  "translated": 9,
+  "total_clauses": 9,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 1.3,
+    "hls": 11.4,
+    "latency": 1.0,
+    "bmc": 0.5,
+    "access": 0.5,
+    "phys": 0.5,
+    "cover": 0.5,
+    "total": 17.8
+  },
+  "error": null,
+  "top": "incr_all",
+  "mode": "sequential calls (overlap possible but memories are written: checked sequentially)",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 1
+      },
+      "pre": {
+        "a": [
+          1870672816,
+          -268435458,
+          8388606,
+          8388606
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          1870672815,
+          -268435458,
+          8388606,
+          8388606
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {
+      "a": [
+        1870672815,
+        -268435458,
+        8388606,
+        8388606
+      ]
+    },
+    "eacsl": [],
+    "checker": "e-acsl",
+    "oracle": {
+      "requires_violated": [],
+      "violated": [
+        "ensures \\forall integer i ; 0 <= i < \\old ( n ) ==> * ( \\old ( a ) + i ) == \\old ( * ( a + i ) ) + 1"
+      ],
+      "unknown": [],
+      "checked": 5
+    },
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i: enumerated over 0..4 (weaker assumption)",
+    "\\forall i: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a"
+  ],
+  "latency_report": null,
+  "interval_report": 0,
+  "depth": 12,
+  "cex_step": 3,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

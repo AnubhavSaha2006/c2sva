@@ -1,0 +1,84 @@
+{
+  "latency": 64,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 269.9,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.0
+  },
+  "candidates": {
+    "total": 600,
+    "by_origin": {
+      "structural": 598,
+      "call-requires": 2
+    },
+    "loops": 5,
+    "loop_invariants": 32,
+    "skipped": [
+      {
+        "source": "loop 2 (heap_sift_down): loop invariant ancestor: HeapAncestor ( root , p )",
+        "reason": "unknown logic function/predicate HeapAncestor"
+      },
+      {
+        "source": "loop 2 (heap_sift_down): loop invariant unchanged: Unchanged { LoopEntry , Here } ( a , p , n )",
+        "reason": "memory label LoopEntry"
+      },
+      {
+        "source": "loop 2 (heap_sift_down): loop invariant reorder: MultisetParity { Pre , Here } ( a , n , a [ p ] , v )",
+        "reason": "unknown logic function/predicate MultisetParity"
+      },
+      {
+        "source": "loop 2 (heap_sift_down): loop invariant forest: HeapForest ( a , root , n )",
+        "reason": "unknown logic function/predicate HeapForest"
+      },
+      {
+        "source": "loop 3 (make_heap): loop invariant forest: HeapForest ( a , root , n )",
+        "reason": "unknown logic function/predicate HeapForest"
+      },
+      {
+        "source": "loop 4 (push_heap): loop invariant reorder: MultisetParity { Pre , Here } ( a , n , a [ c ] , v )",
+        "reason": "unknown logic function/predicate MultisetParity"
+      }
+    ]
+  },
+  "houdini": {
+    "candidates": 600,
+    "base_dropped": 380,
+    "ind_dropped": 118,
+    "rounds": 71,
+    "status": "inductive",
+    "base_depth": 18,
+    "k": 16,
+    "secs": 8014.4,
+    "invariants": 102,
+    "by_origin": {
+      "structural": 100,
+      "call-requires": 2
+    },
+    "c_invariants_survived": [],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "UNKNOWN",
+    "secs": 66.4,
+    "k": 16
+  },
+  "unbounded": false,
+  "proved_by": [],
+  "deep_cex": [],
+  "secs": 8714.2
+}

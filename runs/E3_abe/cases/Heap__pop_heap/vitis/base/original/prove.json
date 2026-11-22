@@ -1,0 +1,86 @@
+{
+  "latency": 16,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 278.8,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.0
+  },
+  "candidates": {
+    "total": 600,
+    "by_origin": {
+      "structural": 295,
+      "call-requires": 3,
+      "call-frame": 1,
+      "loop-invariant": 301
+    },
+    "loops": 1,
+    "loop_invariants": 12,
+    "skipped": [
+      {
+        "source": "loop 1 (heap_sift_down): loop invariant bounds: root <= p < c <= n",
+        "reason": "no RTL signal found for C variable root"
+      },
+      {
+        "source": "loop 1 (heap_sift_down): loop invariant ancestor: HeapAncestor ( root , p )",
+        "reason": "no RTL signal found for C variable root"
+      },
+      {
+        "source": "loop 1 (heap_sift_down): loop invariant unchanged: Unchanged { LoopEntry , Here } ( a , p , n )",
+        "reason": "memory label LoopEntry"
+      },
+      {
+        "source": "loop 1 (heap_sift_down): loop invariant reorder: MultisetParity { Pre , Here } ( a , n , a [ p ] , v )",
+        "reason": "unknown logic function/predicate MultisetParity"
+      },
+      {
+        "source": "loop 1 (heap_sift_down): loop invariant forest: HeapForest ( a , root , n )",
+        "reason": "no RTL signal found for C variable root"
+      }
+    ]
+  },
+  "houdini": {
+    "candidates": 600,
+    "base_dropped": 308,
+    "ind_dropped": 205,
+    "rounds": 41,
+    "status": "inductive",
+    "base_depth": 20,
+    "k": 16,
+    "secs": 3937.7,
+    "invariants": 87,
+    "by_origin": {
+      "structural": 70,
+      "call-requires": 3,
+      "loop-invariant": 14
+    },
+    "c_invariants_survived": [
+      "loop 1 (heap_sift_down): loop invariant child: c < n ==> HeapLeft ( p ) < n",
+      "loop 1 (heap_sift_down): loop invariant parent: c < n ==> p == HeapParent ( c )"
+    ],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "TIMEOUT",
+    "secs": 300.0,
+    "k": 16
+  },
+  "unbounded": false,
+  "proved_by": [],
+  "deep_cex": [],
+  "secs": 4941.8
+}

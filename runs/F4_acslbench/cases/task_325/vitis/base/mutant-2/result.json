@@ -1,0 +1,96 @@
+{
+  "design": "task_325",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "11/15",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P3: ensures \\result == 0"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P6: requires \\valid_read ( arr + ( 0 .. n - 1 ) )  [access in range: arr bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 128,
+  "latency_status": "established",
+  "clauses": "7/7",
+  "translated": 7,
+  "total_clauses": 7,
+  "skipped": [],
+  "times": {
+    "frontend": 0.5,
+    "wp": 1.6,
+    "hls": 16.5,
+    "latency": 54.6,
+    "bmc": 1.0,
+    "access": 1.0,
+    "phys": 7.5,
+    "cover": 1.0,
+    "total": 87.6
+  },
+  "error": null,
+  "top": "Linear",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 1,
+        "val": 1
+      },
+      "pre": {
+        "arr": [
+          -2147483647,
+          1,
+          -2147483648,
+          -2147483648
+        ]
+      },
+      "rtl_post": {
+        "arr": [
+          -2147483647,
+          1,
+          -2147483648,
+          -2147483648
+        ]
+      },
+      "rtl_result": 1,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "Linear",
+        "notfound: \\result \u2261 0."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 64,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\exists f: symbolic (solver-chosen) value, exact",
+    "\\forall nf: enumerated over 0..4 (stronger assertion)",
+    "cell of arr outside 0..3: solver-chosen value"
+  ],
+  "latency_report": [
+    1,
+    4294967300
+  ],
+  "interval_report": 2,
+  "depth": 132,
+  "cex_step": 6,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

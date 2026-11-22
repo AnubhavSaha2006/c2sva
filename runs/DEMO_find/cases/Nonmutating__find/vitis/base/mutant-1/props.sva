@@ -1,0 +1,26 @@
+// SVA view of the find contract on vitis RTL (helper signals as in harness.sv)
+default clocking @(posedge ap_clk); endclocking
+// P1 ensures 0 <= \result <= \old ( n )
+assert property (h_done_d |-> ((72'sd0 <= h_res_c) && (h_res_c <= n_c)));
+// P2 ensures 0 <= \result < \old ( n )   [\exists i: symbolic (solver-chosen) value, exact; cell of a outside 0..3: solver-chosen value]
+assert property (h_done_d |-> (!((((72'sd0 <= q_i_1) && (q_i_1 < n_c)) && ((((q_i_1) == 72'sd0 ? a_o0 : ((q_i_1) == 72'sd1 ? a_o1 : ((q_i_1) == 72'sd2 ? a_o2 : ((q_i_1) == 72'sd3 ? a_o3 : a_xddf37a180)))) == v_c)))) || (((72'sd0 <= h_res_c) && (h_res_c < n_c)))));
+// P3 ensures * ( \old ( a ) + \result ) == \old ( v )   [\exists i: symbolic (solver-chosen) value, exact; cell of a outside 0..3: solver-chosen value]
+assert property (h_done_d |-> (!((((72'sd0 <= q_i_2) && (q_i_2 < n_c)) && ((((q_i_2) == 72'sd0 ? a_o0 : ((q_i_2) == 72'sd1 ? a_o1 : ((q_i_2) == 72'sd2 ? a_o2 : ((q_i_2) == 72'sd3 ? a_o3 : a_xdb9bb0f93)))) == v_c)))) || (((((h_res_c) == 72'sd0 ? a_e0 : ((h_res_c) == 72'sd1 ? a_e1 : ((h_res_c) == 72'sd2 ? a_e2 : ((h_res_c) == 72'sd3 ? a_e3 : a_xdfe23f930)))) == v_c)))));
+// P4 ensures \forall integer i ; 0 <= i < \result ==> * ( \old ( a ) + i ) != \old ( v )   [\exists i: symbolic (solver-chosen) value, exact; cell of a outside 0..3: solver-chosen value; \forall i: symbolic (solver-chosen) value, exact]
+assert property (h_done_d |-> (!((((72'sd0 <= q_i_3) && (q_i_3 < n_c)) && ((((q_i_3) == 72'sd0 ? a_o0 : ((q_i_3) == 72'sd1 ? a_o1 : ((q_i_3) == 72'sd2 ? a_o2 : ((q_i_3) == 72'sd3 ? a_o3 : a_xd8f60325c)))) == v_c)))) || ((!(((72'sd0 <= q_i_4) && (q_i_4 < h_res_c))) || (((((q_i_4) == 72'sd0 ? a_e0 : ((q_i_4) == 72'sd1 ? a_e1 : ((q_i_4) == 72'sd2 ? a_e2 : ((q_i_4) == 72'sd3 ? a_e3 : a_xd462d28e8)))) != v_c)))))));
+// P5 ensures \result == \old ( n )   [\forall i: enumerated over 0..4 (stronger assertion); cell of a outside 0..3: solver-chosen value]
+assert property (h_done_d |-> (!(((!(((72'sd0 <= 72'sd0) && (72'sd0 < n_c))) || (((a_o0 != v_c)))) && (!(((72'sd0 <= 72'sd1) && (72'sd1 < n_c))) || (((a_o1 != v_c)))) && (!(((72'sd0 <= 72'sd2) && (72'sd2 < n_c))) || (((a_o2 != v_c)))) && (!(((72'sd0 <= 72'sd3) && (72'sd3 < n_c))) || (((a_o3 != v_c)))) && (!(((72'sd0 <= 72'sd4) && (72'sd4 < n_c))) || (((a_x4 != v_c)))))) || (((h_res_c == n_c)))));
+// P6 requires \valid_read ( a + ( 0 .. n - 1 ) )  [range fits the 4-cell memory]
+assume property (h_start_evt |-> ((((n_now - 72'sd1) < 72'sd0)) || (((72'sd0 <= 72'sd0)) && (((n_now - 72'sd1) < 72'sd4)))));
+// P7 requires \valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]
+assert property ((h_busy || h_start_evt) |-> !a_ce0 || (((72'sd0 <= (($signed({{70{1'b0}}, a_address0}) >>> 0))) && ((($signed({{70{1'b0}}, a_address0}) >>> 0)) <= (n_now - 72'sd1)))));  // access check
+// P8 physical memory bound: a bank 0 port 0 address < 4
+assert property ((h_busy || h_start_evt) |-> !a_ce0 || ((($signed({{70{1'b0}}, a_address0}) >>> 0)) < 72'sd4));  // physical bound
+// P9 assigns \nothing  [frame of a]   [holds by construction: the RTL cannot write this object]
+// discharged by construction (no property needed)
+// P10 assigns \nothing  [frame of a]   [exact frame over all 4 element(s) of a]
+assert property (h_done_d |-> (((!(((72'sd0 <= q_i_5) && (q_i_5 < n_c)) && ((((q_i_5) == 72'sd0 ? a_o0 : ((q_i_5) == 72'sd1 ? a_o1 : ((q_i_5) == 72'sd2 ? a_o2 : ((q_i_5) == 72'sd3 ? a_o3 : a_xd9a9d02a4)))) == v_c))))) || ((a_e0 == a_o0) && (a_e1 == a_o1) && (a_e2 == a_o2) && (a_e3 == a_o3))));
+// P11 assigns \nothing  [frame of a]   [exact frame over all 4 element(s) of a]
+assert property (h_done_d |-> (((!((!(((72'sd0 <= 72'sd0) && (72'sd0 < n_c))) || (((a_o0 != v_c)))) && (!(((72'sd0 <= 72'sd1) && (72'sd1 < n_c))) || (((a_o1 != v_c)))) && (!(((72'sd0 <= 72'sd2) && (72'sd2 < n_c))) || (((a_o2 != v_c)))) && (!(((72'sd0 <= 72'sd3) && (72'sd3 < n_c))) || (((a_o3 != v_c)))) && (!(((72'sd0 <= 72'sd4) && (72'sd4 < n_c))) || (((a_x4 != v_c))))))) || ((a_e0 == a_o0) && (a_e1 == a_o1) && (a_e2 == a_o2) && (a_e3 == a_o3))));
+// P12 termination: every call eventually completes (checked bounded by the latency search)
+assert property (h_start_evt |-> s_eventually ap_done);   // checked bounded

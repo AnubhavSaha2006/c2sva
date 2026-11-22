@@ -1,0 +1,102 @@
+{
+  "tool": "vitis",
+  "module": "find",
+  "control": {
+    "protocol": "ap_ctrl_hs",
+    "clk": "ap_clk",
+    "rst": "ap_rst",
+    "clk_port": true,
+    "rst_active_low": false,
+    "start": "ap_start",
+    "done": "ap_done",
+    "idle": "ap_idle",
+    "ready": "ap_ready",
+    "cont": null,
+    "overlap": true,
+    "pipeline_type": "loop auto-rewind stp (delay=0 cycle(s))"
+  },
+  "ret": "ap_return",
+  "ret_width": 32,
+  "scalars": {
+    "n": "n",
+    "v": "v"
+  },
+  "memories": {
+    "a": {
+      "name": "a",
+      "size": 4,
+      "width": 32,
+      "signed": true,
+      "protocol": "ap_memory",
+      "banks": [
+        {
+          "ports": {
+            "address0": "a_address0",
+            "ce0": "a_ce0",
+            "q0": "a_q0"
+          },
+          "aw": 2,
+          "word_width": 32,
+          "byte_addr": false,
+          "wen_bits": 1
+        }
+      ],
+      "cells": [],
+      "partition": null,
+      "reshape": null
+    }
+  },
+  "objects": {},
+  "ports": {
+    "ap_clk": [
+      "input",
+      1
+    ],
+    "ap_rst": [
+      "input",
+      1
+    ],
+    "ap_start": [
+      "input",
+      1
+    ],
+    "ap_done": [
+      "output",
+      1
+    ],
+    "ap_idle": [
+      "output",
+      1
+    ],
+    "ap_ready": [
+      "output",
+      1
+    ],
+    "a_address0": [
+      "output",
+      2
+    ],
+    "a_ce0": [
+      "output",
+      1
+    ],
+    "a_q0": [
+      "input",
+      32
+    ],
+    "n": [
+      "input",
+      32
+    ],
+    "v": [
+      "input",
+      32
+    ],
+    "ap_return": [
+      "output",
+      32
+    ]
+  },
+  "latency": null,
+  "interval": 0
+}

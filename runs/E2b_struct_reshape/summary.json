@@ -1,0 +1,136 @@
+{
+  "by_tool_config": [
+    {
+      "tool": "vitis",
+      "config": "reshape2",
+      "designs": 1,
+      "frontend_ok": 1,
+      "hls_ok": 1,
+      "checked": 1,
+      "pass_full": 1,
+      "pass_partial": 0,
+      "fail": 0,
+      "bounded": 0,
+      "vacuous": 0,
+      "agree": 1,
+      "disagree": 0,
+      "clauses": "8/8",
+      "clause_rate": 100.0,
+      "access_speculative": 1,
+      "access_out_of_memory": 0,
+      "overlap_mode": 1,
+      "mutants": 0,
+      "mutants_checked": 0,
+      "killed": 0,
+      "mutation_score": null,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 0,
+      "median_total_s": 40.1
+    },
+    {
+      "tool": "vitis",
+      "config": "reshapeb2",
+      "designs": 1,
+      "frontend_ok": 1,
+      "hls_ok": 1,
+      "checked": 1,
+      "pass_full": 1,
+      "pass_partial": 0,
+      "fail": 0,
+      "bounded": 0,
+      "vacuous": 0,
+      "agree": 1,
+      "disagree": 0,
+      "clauses": "8/8",
+      "clause_rate": 100.0,
+      "access_speculative": 1,
+      "access_out_of_memory": 0,
+      "overlap_mode": 1,
+      "mutants": 0,
+      "mutants_checked": 0,
+      "killed": 0,
+      "mutation_score": null,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 0,
+      "median_total_s": 44.4
+    }
+  ],
+  "details": {
+    "vitis/reshape2": {
+      "original_outcomes": {
+        "pass": 1
+      },
+      "failure_replay": {},
+      "kill_replay": {},
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.4,
+        "wp": 1.0,
+        "hls": 19.7,
+        "latency": 5.0,
+        "bmc": 10.2,
+        "access": 0.7,
+        "cover": 0.6,
+        "total": 40.1
+      }
+    },
+    "vitis/reshapeb2": {
+      "original_outcomes": {
+        "pass": 1
+      },
+      "failure_replay": {},
+      "kill_replay": {},
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.4,
+        "wp": 1.0,
+        "hls": 19.6,
+        "latency": 5.0,
+        "bmc": 15.4,
+        "access": 0.5,
+        "cover": 0.6,
+        "total": 44.4
+      }
+    }
+  },
+  "not_checked_reasons": [],
+  "untranslated_clause_reasons": [],
+  "translation_strategies": [
+    [
+      "\\forall i",
+      2
+    ],
+    [
+      "cell of a outside 0..3",
+      2
+    ],
+    [
+      "holds by construction",
+      2
+    ],
+    [
+      "word holds several elements",
+      2
+    ]
+  ],
+  "disagreements": [],
+  "access_violations": [
+    {
+      "case": "c16_struct_array/vitis/reshape2/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c16_struct_array/vitis/reshapeb2/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    }
+  ],
+  "latency": {
+    "established": 2,
+    "report_undefined": 2,
+    "not_established": 0
+  }
+}

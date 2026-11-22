@@ -1,0 +1,72 @@
+{
+  "design": "task_597",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "11/14",
+  "c_ok": false,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "speculative",
+  "access_failed": [
+    "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "5/5",
+  "translated": 5,
+  "total_clauses": 5,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 0.9,
+    "hls": 11.4,
+    "latency": 0.5,
+    "bmc": 1.0,
+    "access": 0.5,
+    "phys": 0.5,
+    "cover": 0.5,
+    "total": 15.6
+  },
+  "error": null,
+  "top": "max",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall k: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value"
+  ],
+  "latency_report": null,
+  "interval_report": 3,
+  "depth": 12,
+  "cex_step": null,
+  "failed_cutoff": [],
+  "outcome": "pass",
+  "survivor": {
+    "class": "memory-safety-only",
+    "tested": 1000,
+    "detail": "ERROR: AddressSanitizer: stack-buffer-overflow",
+    "vector": [
+      {
+        "n": 4
+      },
+      {
+        "a": [
+          3,
+          -2147483648,
+          0,
+          -1
+        ]
+      }
+    ]
+  }
+}

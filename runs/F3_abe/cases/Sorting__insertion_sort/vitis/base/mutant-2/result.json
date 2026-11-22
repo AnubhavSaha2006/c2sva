@@ -1,0 +1,95 @@
+{
+  "design": "Sorting/insertion_sort",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "43/47",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures Increasing ( \\old ( a ) , \\old ( n ) )"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 64,
+  "latency_status": "established",
+  "clauses": "8/8",
+  "translated": 8,
+  "total_clauses": 8,
+  "skipped": [],
+  "times": {
+    "frontend": 1.4,
+    "wp": 24.4,
+    "hls": 35.0,
+    "latency": 81.7,
+    "bmc": 495.4,
+    "access": 1.5,
+    "phys": 12.0,
+    "cover": 1.5,
+    "total": 661.7
+  },
+  "error": null,
+  "top": "insertion_sort",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 3
+      },
+      "pre": {
+        "a": [
+          -1073741826,
+          128671824,
+          -946252784,
+          -1073741826
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -1073741826,
+          128671824,
+          -946252784,
+          -1073741826
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Precondition",
+        "rotate",
+        "valid: \\valid(a + (0 .. n - 1))."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation",
+    "detail": "callee rotate called outside its precondition"
+  },
+  "engine": "bitwuzla",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_303,j_304: symbolic (solver-chosen) value, exact",
+    "\\forall v_300: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a",
+    "recursive logic cut off: free value"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 68,
+  "cex_step": 29,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

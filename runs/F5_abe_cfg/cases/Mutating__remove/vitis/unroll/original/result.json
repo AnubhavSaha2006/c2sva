@@ -1,0 +1,62 @@
+{
+  "design": "Mutating/remove",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "unroll",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "40/40",
+  "c_ok": true,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "ok",
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "8/9",
+  "translated": 8,
+  "total_clauses": 9,
+  "skipped": [
+    {
+      "id": "P3",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures Remove { Old , Here } ( \\old ( a ) , \\old ( n ) , \\old ( v ) )",
+      "reason": "clause too large after inlining (node budget exceeded)"
+    }
+  ],
+  "times": {
+    "frontend": 0.5,
+    "wp": 10.9,
+    "hls": 14.5,
+    "latency": 0.5,
+    "bmc": 65.0,
+    "access": 1.0,
+    "cover": 1.0,
+    "total": 94.4
+  },
+  "error": null,
+  "top": "remove",
+  "mode": "sequential calls (overlap possible but memories are written: checked sequentially)",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_73703: symbolic (solver-chosen) value, exact",
+    "\\forall i_73704: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a",
+    "recursive logic cut off: free value"
+  ],
+  "latency_report": null,
+  "interval_report": 0,
+  "depth": 12,
+  "cex_step": null,
+  "failed_cutoff": [],
+  "outcome": "pass-partial"
+}

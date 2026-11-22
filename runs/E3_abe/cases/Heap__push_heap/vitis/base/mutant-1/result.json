@@ -1,0 +1,94 @@
+{
+  "design": "Heap/push_heap",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "70/71",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P3: ensures Heap ( \\old ( a ) , \\old ( n ) )"
+  ],
+  "access": "out-of-memory",
+  "access_failed": [
+    "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+  ],
+  "cover": "reached",
+  "latency": 16,
+  "latency_status": "established",
+  "clauses": "10/10",
+  "translated": 10,
+  "total_clauses": 10,
+  "skipped": [],
+  "times": {
+    "frontend": 0.5,
+    "wp": 18.9,
+    "hls": 18.3,
+    "latency": 1.9,
+    "bmc": 1.2,
+    "access": 1.0,
+    "phys": 1.2,
+    "cover": 0.8,
+    "total": 48.8
+  },
+  "error": null,
+  "top": "push_heap",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 2
+      },
+      "pre": {
+        "a": [
+          -1069547521,
+          2132803584,
+          -4194305,
+          6291455
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -1069547521,
+          2132803584,
+          -4194305,
+          6291455
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "push_heap",
+        "heap: Heap(\\old(a), \\old(n))."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_36792: enumerated over 0..4 (weaker assumption)",
+    "\\forall i_36793: symbolic (solver-chosen) value, exact",
+    "\\forall v_36794: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a",
+    "recursive logic cut off: free value"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 20,
+  "cex_step": 3,
+  "outcome": "fail"
+}

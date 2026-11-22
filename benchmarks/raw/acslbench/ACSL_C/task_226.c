@@ -1,0 +1,31 @@
+/*
+ * Task 226 Natural Language:
+ * Write an ACSL-annotated C function that ensures the last element of an integer array `a` of size
+ * `n` is the largest element after a single pass of adjacent comparisons and swaps. The function
+ * requires a valid array of size `n > 0` and modifies the array in-place.
+ */
+
+/*@
+	requires n>0;
+	requires\valid(a+ (0..n-1));
+	ensures\forall integer i;
+	0<= i<n-1 ==>a[n-1]>=a[i];
+*/
+void q1(int a[],int n)
+{
+/*@
+	loop invariant\forall integer i;
+	0<= i<j ==> a[j]>=a[i];loop invariant 0<=j<=n-1;
+	loop assigns j,a[0..j+1];
+	loop variant n-1-j;
+*/
+	for (int j=0;j<n-1;j++)
+	{
+		if(a[j]>a[j+1])
+		{
+			int t=a[j];
+			a[j]=a[j+1];
+			a[j+1]=t;
+		}
+	}
+} 

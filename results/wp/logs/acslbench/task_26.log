@@ -1,0 +1,16 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_26.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_26.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function reverse_in_place
+[kernel:annot:missing-spec] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_26.c:15: Warning: 
+  Neither code nor explicit exits and terminates for function swap, generating
+  default clauses. See -generated-spec-* options for more info.
+[wp] 28 goals scheduled
+[wp] [Cache] updated:15
+[wp] Proved goals:   28 / 28
+  Qed:              14 (18ms-16ms-58ms)
+  Alt-Ergo 2.6.4:   13 (83ms-179ms-532ms)
+  CVC5 :             1 (74ms)

@@ -1,0 +1,85 @@
+{
+  "kind": {
+    "status": "PASS",
+    "secs": 0.8,
+    "k": 4
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.1
+  },
+  "candidates": {
+    "total": 10,
+    "by_origin": {
+      "structural": 8,
+      "contract-persist": 2
+    },
+    "loops": 0,
+    "loop_invariants": 0,
+    "skipped": []
+  },
+  "houdini": {
+    "candidates": 10,
+    "base_dropped": 2,
+    "ind_dropped": 0,
+    "rounds": 4,
+    "status": "inductive",
+    "base_depth": 6,
+    "k": 4,
+    "secs": 1.5,
+    "invariants": 8,
+    "by_origin": {
+      "structural": 6,
+      "contract-persist": 2
+    },
+    "c_invariants_survived": [],
+    "c_invariants_lagged": [],
+    "k_tried": [
+      4
+    ]
+  },
+  "kind+inv": {
+    "status": "PASS",
+    "secs": 0.3,
+    "k": 4
+  },
+  "ablation": {
+    "hls": {
+      "candidates": 6,
+      "invariants": 3,
+      "houdini": "inductive",
+      "k": 4,
+      "status": "PASS",
+      "secs": 0.8
+    },
+    "hls+contract": {
+      "candidates": 6,
+      "invariants": 3,
+      "houdini": "inductive",
+      "k": 4,
+      "status": "PASS",
+      "secs": 0.7
+    }
+  },
+  "latency": 2,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kmin": {
+    "none": 2,
+    "hls": 2,
+    "hls+contract": 2,
+    "all": 2,
+    "all+progress": 2
+  },
+  "unbounded": true,
+  "proved_by": [
+    "kind",
+    "kind+inv"
+  ],
+  "deep_cex": [],
+  "secs": 7.2
+}

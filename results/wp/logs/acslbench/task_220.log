@@ -1,0 +1,18 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_220.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_220.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function countSameConsecutive
+[wp] 64 goals scheduled
+[wp] [Cache] updated:29
+[wp] Proved goals:   66 / 66
+  Terminating:       1
+  Unreachable:       1
+  Qed:              41 (13ms-18ms-100ms)
+  Alt-Ergo 2.6.4:   20 (76ms-651ms-4.1s)
+  CVC5 :             3 (116ms-143ms-195ms)
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_220.c:32: Warning: 
+  No 'assigns' specification for function 'countSameConsecutive'.
+  Callers assumptions might be imprecise.

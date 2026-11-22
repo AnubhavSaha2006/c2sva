@@ -1,0 +1,118 @@
+{
+  "latency": 16,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 47.0,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 600.0
+  },
+  "candidates": {
+    "total": 600,
+    "by_origin": {
+      "structural": 286,
+      "call-requires": 6,
+      "pipeline-copy": 60,
+      "contract-persist": 1,
+      "call-frame": 2,
+      "loop-invariant": 187,
+      "loop-variant": 40,
+      "loop-assigns": 18
+    },
+    "loops": 2,
+    "loop_invariants": 8,
+    "skipped": [
+      {
+        "source": "loop 2 (partial_sum): loop invariant bounds: AccumulateDefaultBounds ( a , n )  [busy]",
+        "reason": "candidate too large (20321 chars)"
+      },
+      {
+        "source": "loop 2 (partial_sum): loop invariant bounds: AccumulateDefaultBounds ( a , n )  [busy & ap_CS_fsm_state1]",
+        "reason": "candidate too large (20330 chars)"
+      },
+      {
+        "source": "loop 2 (partial_sum): loop invariant bounds: AccumulateDefaultBounds ( a , n )  [busy & ap_CS_fsm_state2]",
+        "reason": "candidate too large (20330 chars)"
+      },
+      {
+        "source": "loop 2 (partial_sum): loop invariant bounds: AccumulateDefaultBounds ( a , n )  [busy & ap_CS_fsm_state3]",
+        "reason": "candidate too large (20330 chars)"
+      },
+      {
+        "source": "loop 2 (partial_sum): loop invariant bounds: AccumulateDefaultBounds ( a , n )  [busy & ap_CS_fsm_state4]",
+        "reason": "candidate too large (20330 chars)"
+      },
+      {
+        "source": "loop 2 (partial_sum): loop invariant bounds: AccumulateDefaultBounds ( a , n )  [busy & ap_CS_fsm_state5]",
+        "reason": "candidate too large (20330 chars)"
+      },
+      {
+        "source": "loop 2 (partial_sum): loop invariant bounds: AccumulateDefaultBounds ( a , n )  [busy & ap_CS_fsm_state6]",
+        "reason": "candidate too large (20331 chars)"
+      }
+    ]
+  },
+  "houdini": {
+    "candidates": 600,
+    "base_dropped": 442,
+    "ind_dropped": 119,
+    "rounds": 35,
+    "status": "inductive",
+    "base_depth": 16,
+    "k": 16,
+    "secs": 2951.6,
+    "invariants": 39,
+    "by_origin": {
+      "structural": 23,
+      "call-requires": 6,
+      "loop-invariant": 10
+    },
+    "c_invariants_survived": [
+      "loop 1 (adjacent_difference): loop invariant unchanged: Unchanged { Pre , Here } ( a , n )",
+      "loop 2 (partial_sum): loop invariant unchanged: Unchanged { Pre , Here } ( a , n )"
+    ],
+    "c_invariants_lagged": [],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "UNKNOWN",
+    "secs": 48.1,
+    "k": 16
+  },
+  "latency_proof": {
+    "bound": 16,
+    "established_by_bmc": "established",
+    "kind": {
+      "status": "UNKNOWN",
+      "secs": 0.9,
+      "k": 16
+    },
+    "candidates": 800,
+    "kind+inv": {
+      "status": "UNKNOWN",
+      "secs": 1.0,
+      "k": 16,
+      "progress_invariants": 0,
+      "houdini": "empty",
+      "houdini_secs": 1058.2
+    },
+    "proved": false
+  },
+  "unbounded": false,
+  "proved_by": [],
+  "deep_cex": [],
+  "secs": 4716.3
+}

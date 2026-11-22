@@ -1,0 +1,89 @@
+{
+  "design": "task_212",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "17/21",
+  "c_ok": false,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "speculative",
+  "access_failed": [
+    "P16: requires inv_matrix_Boolean ( x204 , x205 , x206 ) && inv_matrix_Boolean ( x207 , x208 , x209 ) && x208 == x205 && x209 == x206 && ( \\forall int x248 ; \\forall int x249 ; 0 <= x248 < x208 * x209 && 0 <= x249 < x205 * x206 ==> \\separated ( x207 + x248 , x204 + x249 ) )  [access in range: x204 bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "20/20",
+  "translated": 20,
+  "total_clauses": 20,
+  "skipped": [],
+  "times": {
+    "frontend": 0.6,
+    "wp": 2.9,
+    "hls": 17.5,
+    "latency": 8.5,
+    "bmc": 41.0,
+    "access": 2.0,
+    "phys": 2.5,
+    "cover": 2.0,
+    "total": 77.2
+  },
+  "error": null,
+  "top": "scalar_mult",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "yices",
+  "width": 80,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall x248: enumerated over 0..4 (weaker assumption)",
+    "\\forall x249: enumerated over 0..4 (weaker assumption)",
+    "\\forall x274: symbolic (solver-chosen) value, exact",
+    "\\forall x289: symbolic (solver-chosen) value, exact",
+    "\\forall x292: symbolic (solver-chosen) value, exact",
+    "\\separated holds by construction (separate RTL memories/registers)",
+    "\\valid inside an expression: range empty or within the 4 cells",
+    "cell of x204 outside 0..3: solver-chosen value",
+    "cell of x207 outside 0..3: solver-chosen value"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 12,
+  "cex_step": null,
+  "failed_cutoff": [],
+  "outcome": "pass",
+  "survivor": {
+    "class": "memory-safety-only",
+    "tested": 1000,
+    "detail": "ERROR: AddressSanitizer: stack-buffer-overflow",
+    "vector": [
+      {
+        "x203": -1180729261,
+        "x205": 4,
+        "x206": 6,
+        "x208": 4,
+        "x209": 6
+      },
+      {
+        "x204": [
+          -3,
+          -2079172941,
+          2,
+          2147483646
+        ],
+        "x207": [
+          4,
+          2147483647,
+          1431413655,
+          -2
+        ]
+      }
+    ]
+  }
+}

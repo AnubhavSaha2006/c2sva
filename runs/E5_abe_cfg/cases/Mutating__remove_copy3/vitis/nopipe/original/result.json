@@ -1,0 +1,68 @@
+{
+  "design": "Mutating/remove_copy3",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "nopipe",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "46/46",
+  "c_ok": true,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "speculative",
+  "access_failed": [
+    "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 16,
+  "latency_status": "established",
+  "clauses": "14/15",
+  "translated": 14,
+  "total_clauses": 15,
+  "skipped": [
+    {
+      "id": "P4",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures Remove { Old , Here } ( \\old ( a ) , \\old ( n ) , \\old ( b ) , \\old ( v ) )",
+      "reason": "clause too large after inlining (node budget exceeded)"
+    }
+  ],
+  "times": {
+    "frontend": 0.7,
+    "wp": 19.0,
+    "hls": 16.3,
+    "latency": 1.3,
+    "bmc": 421.3,
+    "access": 1.2,
+    "phys": 338.0,
+    "cover": 0.7,
+    "total": 799.6
+  },
+  "error": null,
+  "top": "remove_copy3",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_32016: symbolic (solver-chosen) value, exact",
+    "\\forall i_32017: symbolic (solver-chosen) value, exact",
+    "\\forall i_32018: symbolic (solver-chosen) value, exact",
+    "\\separated holds by construction (separate RTL memories/registers)",
+    "cell of a outside 0..3: solver-chosen value",
+    "cell of b outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of b",
+    "holds by construction: the RTL cannot write this object",
+    "recursive logic cut off: free value"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 20,
+  "cex_step": null,
+  "outcome": "pass-partial"
+}

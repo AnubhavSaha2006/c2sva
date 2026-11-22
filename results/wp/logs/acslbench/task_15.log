@@ -1,0 +1,23 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_15.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_15.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function fib_rec
+[wp] 48 goals scheduled
+[wp] [Timeout] typed_lemma_fib_negative_positive_1 (Qed 0.97ms) (Z3) (Cached)
+[wp] [Timeout] typed_lemma_fib_negative_positive_2 (Qed 0.67ms) (CVC5) (Cached)
+[wp] [Timeout] typed_lemma_fib_non_negative (Qed 0.68ms) (Z3) (Cached)
+[wp] [Timeout] typed_lemma_fib_non_negative_increasing (Qed 2ms) (CVC5) (Cached)
+[wp] [Timeout] typed_lemma_power_monotonic (Qed 1ms) (Z3) (Cached)
+[wp] [Timeout] typed_lemma_power_mult_1 (Qed 0.81ms) (Z3) (Cached)
+[wp] [Timeout] typed_lemma_power_mult_2 (Qed 0.75ms) (Z3) (Cached)
+[wp] [Timeout] typed_lemma_power_non_negative (Qed 2ms) (Z3) (Cached)
+[wp] [Timeout] typed_lemma_power_sum (Qed 1ms) (CVC5) (Cached)
+[wp] [Cache] updated:46
+[wp] Proved goals:   39 / 48
+  Qed:              20 (0.67ms-8ms-39ms)
+  Alt-Ergo 2.6.4:   18 (43ms-98ms-328ms)
+  CVC5 :             1 (225ms)
+  Timeout:           9

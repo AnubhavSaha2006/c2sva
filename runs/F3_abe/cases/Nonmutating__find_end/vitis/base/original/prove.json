@@ -1,0 +1,90 @@
+{
+  "latency": 32,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 77.2,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 600.0
+  },
+  "candidates": {
+    "total": 355,
+    "by_origin": {
+      "structural": 134,
+      "call-requires": 2,
+      "contract-persist": 5,
+      "call-frame": 2,
+      "loop-invariant": 132,
+      "loop-variant": 36,
+      "loop-assigns": 44
+    },
+    "loops": 2,
+    "loop_invariants": 6,
+    "skipped": []
+  },
+  "houdini": {
+    "candidates": 355,
+    "base_dropped": 213,
+    "ind_dropped": 38,
+    "rounds": 18,
+    "status": "inductive",
+    "base_depth": 18,
+    "k": 16,
+    "secs": 3112.9,
+    "invariants": 104,
+    "by_origin": {
+      "structural": 52,
+      "call-requires": 2,
+      "call-frame": 2,
+      "loop-invariant": 4,
+      "loop-assigns": 44
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant bound: r <= n - p || r == n",
+      "loop 1: loop invariant found: r < n ==> Equal { Here , Here } ( a + r , p , b )"
+    ],
+    "c_invariants_lagged": [],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "UNKNOWN",
+    "secs": 58.5,
+    "k": 16
+  },
+  "latency_proof": {
+    "bound": 32,
+    "established_by_bmc": "established",
+    "kind": {
+      "status": "UNKNOWN",
+      "secs": 0.8,
+      "k": 16
+    },
+    "candidates": 626,
+    "kind+inv": {
+      "status": "UNKNOWN",
+      "secs": 2.8,
+      "k": 16,
+      "progress_invariants": 64,
+      "houdini": "inductive",
+      "houdini_secs": 892.2
+    },
+    "proved": false
+  },
+  "unbounded": false,
+  "proved_by": [],
+  "deep_cex": [],
+  "secs": 4778.3
+}

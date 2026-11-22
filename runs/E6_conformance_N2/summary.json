@@ -1,0 +1,187 @@
+{
+  "by_tool_config": [
+    {
+      "tool": "vitis",
+      "config": "base",
+      "designs": 17,
+      "frontend_ok": 17,
+      "hls_ok": 17,
+      "checked": 16,
+      "pass_full": 16,
+      "pass_partial": 0,
+      "fail": 0,
+      "bounded": 1,
+      "vacuous": 0,
+      "agree": 16,
+      "disagree": 0,
+      "clauses": "111/111",
+      "clause_rate": 100.0,
+      "access_speculative": 8,
+      "access_out_of_memory": 0,
+      "overlap_mode": 2,
+      "mutants": 0,
+      "mutants_checked": 0,
+      "killed": 0,
+      "mutation_score": null,
+      "survivors": 0,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_untranslated": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 0,
+      "median_total_s": 18.2
+    }
+  ],
+  "details": {
+    "vitis/base": {
+      "original_outcomes": {
+        "pass": 16,
+        "bounded": 1
+      },
+      "failure_replay": {},
+      "kill_replay": {},
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.4,
+        "wp": 1.2,
+        "hls": 14.1,
+        "latency": 0.3,
+        "bmc": 0.7,
+        "access": 0.5,
+        "cover": 0.4,
+        "total": 18.2
+      }
+    }
+  },
+  "not_checked_reasons": [],
+  "untranslated_clause_reasons": [],
+  "translation_strategies": [
+    [
+      "cell of a outside 0..1",
+      9
+    ],
+    [
+      "holds by construction",
+      7
+    ],
+    [
+      "\\forall i",
+      7
+    ],
+    [
+      "\\separated holds by construction (separate RTL memories/registers)",
+      3
+    ],
+    [
+      "exact frame over all 2 element(s) of a",
+      3
+    ],
+    [
+      "\\exists i",
+      2
+    ],
+    [
+      "recursive logic cut off",
+      2
+    ],
+    [
+      "\\forall i,j",
+      2
+    ],
+    [
+      "exact frame over all 1 element(s) of p",
+      1
+    ],
+    [
+      "exact frame over all 1 element(s) of q",
+      1
+    ],
+    [
+      "cell of b outside 0..1",
+      1
+    ],
+    [
+      "cell of c outside 0..1",
+      1
+    ],
+    [
+      "exact frame over all 2 element(s) of c",
+      1
+    ],
+    [
+      "exact frame over all 1 element(s) of out",
+      1
+    ],
+    [
+      "\\forall i_6",
+      1
+    ],
+    [
+      "\\forall i_7",
+      1
+    ],
+    [
+      "exact frame over all 1 element(s) of p (per field)",
+      1
+    ]
+  ],
+  "disagreements": [],
+  "access_violations": [
+    {
+      "case": "c02_exists_has_zero/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c03_recursive_logic/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c05_typedef_three_arrays/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) ) && \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P8: requires \\valid_read ( a + ( 0 .. n - 1 ) ) && \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c07_frame_prefix_fill/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c08_old_memory_increment/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "c12_void_out_sum/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c14_predicate_in_requires/vitis/base/original",
+      "detail": [
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "c16_struct_array/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    }
+  ],
+  "latency": {
+    "established": 17,
+    "report_undefined": 9,
+    "not_established": 0
+  }
+}

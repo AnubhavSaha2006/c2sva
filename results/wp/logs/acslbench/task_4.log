@@ -1,0 +1,22 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_4.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_4.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function max_in_array
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_4.c:27: Warning: 
+  Missing assigns clause (assigns 'everything' instead)
+[wp] 30 goals scheduled
+[wp] [Timeout] typed_max_in_array_ensures (Qed 17ms) (Z3) (Cached)
+[wp] [Timeout] typed_max_in_array_ensures_2 (Qed 37ms) (Z3) (Cached)
+[wp] [Timeout] typed_max_in_array_assert_rte_mem_access_2 (Qed 39ms) (Z3) (Cached)
+[wp] [Timeout] typed_max_in_array_assigns (Qed 12ms) (Z3) (Cached)
+[wp] [Cache] updated:18
+[wp] Proved goals:   28 / 32
+  Terminating:       1
+  Unreachable:       1
+  Qed:              20 (8ms-13ms-79ms)
+  Alt-Ergo 2.6.4:    5 (77ms-150ms)
+  CVC5 :             1 (108ms)
+  Timeout:           4

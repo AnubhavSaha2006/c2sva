@@ -1,0 +1,22 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_181.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_181.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function f
+[rte:annot] annotating function main
+[wp] 5 goals scheduled
+[wp] [Cache] updated:3
+[wp] Proved goals:    7 / 7
+  Terminating:       1
+  Unreachable:       1
+  Qed:               2 (2ms-2ms-4ms)
+  Alt-Ergo 2.6.4:    1 (85ms)
+  CVC5 :             2 (85ms-168ms)
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_181.c:22: Warning: 
+  No 'assigns' specification for function 'f'.
+  Callers assumptions might be imprecise.
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_181.c:26: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.

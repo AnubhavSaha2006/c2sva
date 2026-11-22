@@ -1,0 +1,70 @@
+{
+  "design": "task_167",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "24/26",
+  "c_ok": false,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "speculative",
+  "access_failed": [
+    "P5: requires 0 <= p <= r && \\valid ( A + ( p .. r ) )  [access in range: A bank 0 port 1]"
+  ],
+  "cover": "reached",
+  "latency": 16,
+  "latency_status": "established",
+  "clauses": "6/6",
+  "translated": 6,
+  "total_clauses": 6,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 1.5,
+    "hls": 15.2,
+    "latency": 2.5,
+    "bmc": 1.0,
+    "access": 1.0,
+    "phys": 1.0,
+    "cover": 1.0,
+    "total": 23.7
+  },
+  "error": null,
+  "top": "partition",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 20,
+  "cex_step": null,
+  "failed_cutoff": [],
+  "outcome": "pass",
+  "survivor": {
+    "class": "memory-safety-only",
+    "tested": 1000,
+    "detail": "ERROR: AddressSanitizer: stack-buffer-overflow",
+    "vector": [
+      {
+        "p": 2,
+        "r": 2
+      },
+      {
+        "A": [
+          5,
+          5,
+          1460680657,
+          -2147483648
+        ]
+      }
+    ]
+  }
+}

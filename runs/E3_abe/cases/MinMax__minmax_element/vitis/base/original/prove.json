@@ -1,0 +1,92 @@
+{
+  "latency": 8,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "TIMEOUT",
+    "secs": 300.1,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.0
+  },
+  "candidates": {
+    "total": 149,
+    "by_origin": {
+      "structural": 66,
+      "call-requires": 1,
+      "call-frame": 1,
+      "loop-invariant": 72,
+      "loop-variant": 6,
+      "loop-assigns": 3
+    },
+    "loops": 1,
+    "loop_invariants": 7,
+    "skipped": []
+  },
+  "houdini": {
+    "candidates": 149,
+    "base_dropped": 79,
+    "ind_dropped": 1,
+    "rounds": 26,
+    "status": "inductive",
+    "base_depth": 12,
+    "k": 4,
+    "secs": 288.8,
+    "invariants": 69,
+    "by_origin": {
+      "structural": 20,
+      "call-requires": 1,
+      "call-frame": 1,
+      "loop-invariant": 38,
+      "loop-variant": 6,
+      "loop-assigns": 3
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant bound: 0 <= i <= n",
+      "loop 1: loop invariant first: StrictLowerBound ( a , min , * ( a + min ) )",
+      "loop 1: loop invariant last: StrictUpperBound ( a , max + 1 , i , * ( a + max ) )",
+      "loop 1: loop invariant lower: LowerBound ( a , i , * ( a + min ) )",
+      "loop 1: loop invariant max: 0 <= max < n",
+      "loop 1: loop invariant min: 0 <= min < n",
+      "loop 1: loop invariant upper: UpperBound ( a , i , * ( a + max ) )"
+    ],
+    "k_tried": [
+      4
+    ]
+  },
+  "kind+inv": {
+    "status": "PASS",
+    "secs": 21.6,
+    "k": 4
+  },
+  "ablation": {
+    "hls": {
+      "candidates": 66,
+      "invariants": 20,
+      "houdini": "inductive",
+      "k": 4,
+      "status": "UNKNOWN",
+      "secs": 1.1
+    },
+    "hls+contract": {
+      "candidates": 68,
+      "invariants": 22,
+      "houdini": "inductive",
+      "k": 4,
+      "status": "UNKNOWN",
+      "secs": 1.0
+    }
+  },
+  "unbounded": true,
+  "proved_by": [
+    "kind+inv"
+  ],
+  "deep_cex": [],
+  "secs": 1007.6
+}

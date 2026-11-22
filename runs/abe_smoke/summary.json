@@ -1,0 +1,67 @@
+{
+  "by_tool_config": [
+    {
+      "tool": "vitis",
+      "config": "base",
+      "designs": 7,
+      "frontend_ok": 7,
+      "hls_ok": 7,
+      "checked": 4,
+      "rtl_pass": 4,
+      "rtl_fail": 0,
+      "agree": 4,
+      "disagree": 0,
+      "vacuous": 0,
+      "access_violations": 5,
+      "clauses": "58/58",
+      "mutants": 0,
+      "mutants_checked": 0,
+      "killed": 0,
+      "killed_c_unproven": 0,
+      "survived_c_proven": 0,
+      "survived_c_unproven": 0,
+      "killed_c_proven": 0
+    }
+  ],
+  "not_checked_reasons": [],
+  "untranslated_clause_reasons": [],
+  "disagreements": [],
+  "access_violations": [
+    {
+      "case": "BinarySearch__lower_bound/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [read address in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__reverse_copy/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [read address in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__swap_ranges/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [read address in range: a bank 0 port 1]",
+        "P9: requires \\valid ( b + ( 0 .. n - 1 ) )  [read address in range: b bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_end/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [read address in range: a bank 0 port 0]",
+        "P9: requires \\valid_read ( b + ( 0 .. p - 1 ) )  [read address in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__insertion_sort/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [read address in range: a bank 0 port 0]"
+      ]
+    }
+  ],
+  "latency": {
+    "proven": 6,
+    "report_undefined": 6
+  }
+}

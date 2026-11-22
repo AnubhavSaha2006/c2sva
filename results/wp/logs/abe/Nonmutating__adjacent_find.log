@@ -1,0 +1,15 @@
+frama-c -pp-annot -cpp-extra-args=-I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Logic -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Nonmutating -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/MinMax -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/BinarySearch -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Mutating -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Numeric -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Heap -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Sorting -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Stack -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Nonmutating/adjacent_find.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Nonmutating/adjacent_find.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function adjacent_find
+[wp] 41 goals scheduled
+[wp] [Cache] updated:12
+[wp] Proved goals:   43 / 43
+  Terminating:       1
+  Unreachable:       1
+  Qed:              29 (9ms-6ms-43ms)
+  Alt-Ergo 2.6.4:   11 (71ms-176ms)
+  CVC5 :             1 (90ms)

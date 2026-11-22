@@ -1,0 +1,108 @@
+<title>c2sva Additions for find</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a code-review page. Summary figures, file list, then one diff block per file. */
+:root {
+  --bg: #F7F8FA; --panel: #FFFFFF; --fg: #1C2430; --muted: #5E6B7C; --line: #D9DEE6;
+  --accent: #2B5BA8;
+  --add-bg: #E3F6E8; --add-ln: #C9EED3; --add-fg: #1A7F37;
+  --del-bg: #FDECEC; --del-ln: #F8D3D3; --del-fg: #C0362C;
+  --ref-bg: #EEF1F5; --hunk-bg: #E8EEF8; --note-bg: #FFF7E0; --note-bd: #E5C66A;
+  --kw: #8A3FB0; --cm: #6A7787;
+  --sans: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F141B; --panel: #161C24; --fg: #E4E9F0; --muted: #96A3B4; --line: #2A3340;
+  --accent: #7FA8E8;
+  --add-bg: #12301D; --add-ln: #18402A; --add-fg: #5CD27F;
+  --del-bg: #3A1A1C; --del-ln: #4A2124; --del-fg: #F08A80;
+  --ref-bg: #1D2530; --hunk-bg: #1B2638; --note-bg: #2E2814; --note-bd: #8A7330;
+  --kw: #C99BE6; --cm: #8492A4; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F141B; --panel: #161C24; --fg: #E4E9F0; --muted: #96A3B4; --line: #2A3340;
+  --accent: #7FA8E8;
+  --add-bg: #12301D; --add-ln: #18402A; --add-fg: #5CD27F;
+  --del-bg: #3A1A1C; --del-ln: #4A2124; --del-fg: #F08A80;
+  --ref-bg: #1D2530; --hunk-bg: #1B2638; --note-bg: #2E2814; --note-bd: #8A7330;
+  --kw: #C99BE6; --cm: #8492A4; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 15px/1.55 var(--sans); }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 20px; padding-block: 28px 56px; display: grid; gap: 22px; }
+header { display: grid; gap: 6px; }
+.eyebrow { font: 600 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+h1 { font-size: 28px; line-height: 1.2; margin: 0; text-wrap: balance; font-weight: 600; }
+.lead { margin: 0; color: var(--muted); max-width: 70ch; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.stat { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; display: grid; gap: 2px; min-width: 0; }
+.stat b { font: 600 30px var(--mono); font-variant-numeric: tabular-nums; }
+.stat b.g { color: var(--add-fg); } .stat b.z { color: var(--muted); }
+.stat span { color: var(--muted); font-size: 13.5px; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 13px; color: var(--muted); }
+.legend i { display: inline-block; width: 14px; height: 14px; border-radius: 3px; vertical-align: -2px; margin-right: 6px; border: 1px solid var(--line); }
+.files { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; margin: 0; padding: 4px 0; list-style: none; }
+.files li a { display: grid; grid-template-columns: 92px 1fr auto auto; gap: 12px; align-items: center; padding: 7px 14px; color: inherit; text-decoration: none; font: 13px var(--mono); }
+.files li + li a { border-top: 1px solid var(--line); }
+.files li a:hover, .files li a:focus-visible { background: var(--hunk-bg); outline: none; }
+.p { min-width: 0; overflow-wrap: anywhere; }
+.st { font: 600 11px var(--mono); text-transform: uppercase; letter-spacing: .05em; padding: 2px 7px; border-radius: 10px; text-align: center; white-space: nowrap; }
+.st.added { background: var(--add-ln); color: var(--add-fg); }
+.st.unchanged { background: var(--ref-bg); color: var(--muted); border: 1px solid var(--line); }
+.st.modified { background: var(--note-bg); color: var(--fg); border: 1px solid var(--note-bd); }
+.cnt { white-space: nowrap; font: 600 13px var(--mono); font-variant-numeric: tabular-nums; }
+.cnt em { font-style: normal; } .cnt .a { color: var(--add-fg); } .cnt .d { color: var(--del-fg); } .cnt .u { color: var(--muted); font-weight: 400; }
+.bar { display: inline-flex; gap: 2px; } .bar i { width: 9px; height: 9px; border-radius: 1px; }
+.bar .g { background: var(--add-fg); } .bar .r { background: var(--del-fg); } .bar .z { background: var(--line); }
+.file { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; scroll-margin-top: 12px; }
+.file summary { cursor: pointer; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding: 10px 14px; background: var(--ref-bg); border-bottom: 1px solid var(--line); font: 600 13.5px var(--mono); }
+.file summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.file:not([open]) summary { border-bottom: 0; }
+.desc { margin: 0; padding: 10px 14px 0; color: var(--muted); font-size: 14px; }
+.md5 { padding: 4px 14px 0; font: 12.5px var(--mono); color: var(--muted); overflow-wrap: anywhere; }
+.scroll { overflow-x: auto; margin-top: 10px; border-top: 1px solid var(--line); }
+table.diff { border-collapse: collapse; width: 100%; font: 12.5px/1.6 var(--mono); }
+.diff td { padding: 0 10px; vertical-align: top; }
+.diff .ln { width: 1%; text-align: right; color: var(--muted); user-select: none; font-variant-numeric: tabular-nums; padding: 0 8px; }
+.diff .sg { width: 1%; user-select: none; padding: 0 4px; }
+.diff .tx { white-space: pre; }
+tr.add { background: var(--add-bg); } tr.add .ln { background: var(--add-ln); } tr.add .sg { color: var(--add-fg); }
+tr.del { background: var(--del-bg); } tr.del .ln { background: var(--del-ln); } tr.del .sg { color: var(--del-fg); }
+tr.ref { background: var(--ref-bg); } tr.ref .tx { font-style: italic; }
+tr.hunk td { background: var(--hunk-bg); color: var(--muted); padding: 3px 10px; }
+tr.note td { padding: 4px 10px 6px; background: var(--panel); }
+tr.note .n { font: 13px/1.45 var(--sans); background: var(--note-bg); border: 1px solid var(--note-bd); border-radius: 6px; padding: 6px 10px; max-width: 72ch; white-space: normal; }
+.kw { color: var(--kw); font-weight: 600; } .cm { color: var(--cm); }
+.where { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; display: grid; gap: 6px; font-size: 14px; }
+.where h2 { margin: 0; font-size: 16px; }
+.where code { font: 12.5px var(--mono); background: var(--ref-bg); padding: 1px 5px; border-radius: 4px; overflow-wrap: anywhere; }
+.where pre { margin: 0; font: 12.5px/1.6 var(--mono); background: var(--ref-bg); padding: 10px 12px; border-radius: 6px; overflow-x: auto; }
+@media (max-width: 640px) { .files li a { grid-template-columns: 1fr auto; } .files li a .st, .files li a .bar { display: none; } h1 { font-size: 23px; } }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+<div class="wrap">
+<header>
+  <div class="eyebrow">c2sva · design: find (Nonmutating) · Vitis HLS 2026.1</div>
+  <h1>What c2sva adds around the Vitis RTL</h1>
+  <p class="lead">Green lines are files c2sva generates. The Vitis Verilog is shown in grey and has zero changed lines: the harness instantiates it and reads its registers from outside. The only edit before synthesis is one line of C.</p>
+</header>
+<div class="stats">
+  <div class="stat"><b class="z">0</b><span>lines changed in the Vitis RTL (%%RTL%% lines, 2 files)</span></div>
+  <div class="stat"><b class="g">+%%ADD%%</b><span>lines generated by c2sva (harness, properties, scripts)</span></div>
+  <div class="stat"><b>1</b><span>line changed in the C source (pointer → sized array)</span></div>
+</div>
+<div class="legend">
+  <span><i style="background:var(--add-bg)"></i>added by c2sva</span>
+  <span><i style="background:var(--del-bg)"></i>line of harness.sv that a variant replaces</span>
+  <span><i style="background:var(--ref-bg)"></i>Vitis RTL or a reference to it, unchanged</span>
+  <span><i style="background:var(--note-bg)"></i>explanation</span>
+</div>
+<ul class="files">%%LIST%%</ul>
+%%BLOCKS%%
+<section class="where">
+  <h2>Check it yourself</h2>
+  <p style="margin:0">All paths are relative to <code>~/cbv/%%REL%%</code>. The Vitis file and the copy the solver read are byte-identical:</p>
+  <pre>md5sum hls/proj/sol/syn/verilog/find.v formal/check_yices_bmc/src/find.v
+# both: %%MD5%%</pre>
+  <p style="margin:0">Generators: <code>src/c2sva/harness.py</code> (harness.sv), <code>src/c2sva/translate.py</code> (properties), <code>src/c2sva/formal.py</code> (check_*.sby), <code>src/c2sva/invariants.py</code> and <code>prove.py</code> (A1 files). Rebuild everything with <code>scripts/demo_monday.sh</code>.</p>
+</section>
+</div>

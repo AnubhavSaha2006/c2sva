@@ -1,0 +1,75 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_152.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_152.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function builtin_and_stdlib
+[rte:annot] annotating function implem
+[rte:annot] annotating function logic
+[rte:annot] annotating function main
+[kernel:annot:missing-spec] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_152.c:35: Warning: 
+  Neither code nor explicit exits, assigns and terminates for function f,
+  generating default clauses. See -generated-spec-* options for more info.
+[rte:annot] annotating function my_func
+[rte:annot] annotating function test_func
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_152.c:79: Warning: 
+  In 'test_func', no 'calls' specification for statement(s) at /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_152.c:79
+  and
+  /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_152.c:79, 
+  Assuming that they can call 'test_func'
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_152.c:79: Warning: 
+  Missing 'calls' for default behavior
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_152.c:79: Warning: 
+  Unknown callee, considering non-terminating call
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_152.c:79: Warning: 
+  Missing decreases clause on recursive function test_func, call must be unreachable
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_152.c:79: Warning: 
+  Missing 'calls' for default behavior
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_152.c:79: Warning: 
+  Unknown callee, considering non-terminating call
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_152.c:79: Warning: 
+  Missing decreases clause on recursive function test_func, call must be unreachable
+[wp] 24 goals scheduled
+[wp] [Timeout] typed_my_func_assert_rte_signed_overflow (Qed 3ms) (Z3) (Cached)
+[wp] [Timeout] typed_test_func_terminates_part1 (Qed 2ms) (Z3) (Cached)
+[wp] [Timeout] typed_test_func_terminates_part2 (Qed 3ms) (Z3) (Cached)
+[wp] [Timeout] typed_test_func_terminates_part3 (Qed 2ms) (Z3) (Cached)
+[wp] [Timeout] typed_test_func_terminates_part4 (Qed 2ms) (Z3) (Cached)
+[wp] [Timeout] typed_test_func_assert_rte_mem_access (Qed 2ms) (Z3) (Cached)
+[wp] [Cache] found:5, updated:13
+[wp] Proved goals:   26 / 32
+  Terminating:     3
+  Unreachable:     5
+  Qed:            18 (2ms-0.53ms-3ms)
+  Timeout:         6
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_152.c:22: Warning: 
+  No 'assigns' specification for function 'my_func'.
+  Callers assumptions might be imprecise.
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_152.c:41: Warning: 
+  No 'assigns' specification for function 'logic'.
+  - in complete behaviors: {bhv}
+    No assigns for (at least) 'bhv'
+  Callers assumptions might be imprecise.
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_152.c:52: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_152.c:52: Warning: 
+  Memory model hypotheses for function 'main':
+  /*@ behavior wp_typed:
+        requires \separated(p, &my_var, &example_struct); */
+  int main(int *p);
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_152.c:62: Warning: 
+  No 'assigns' specification for function 'builtin_and_stdlib'.
+  Callers assumptions might be imprecise.
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_152.c:75: Warning: 
+  No 'assigns' specification for function 'implem'.
+  Callers assumptions might be imprecise.
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_152.c:79: Warning: 
+  No 'assigns' specification for function 'test_func'.
+  Callers assumptions might be imprecise.
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_152.c:79: Warning: 
+  Memory model hypotheses for function 'test_func':
+  /*@ behavior wp_typed:
+        requires \separated(s, &example_struct); */
+  void test_func(struct S *s);

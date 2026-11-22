@@ -1,0 +1,69 @@
+{
+  "by_tool_config": [
+    {
+      "tool": "bambu",
+      "config": "base",
+      "designs": 3,
+      "frontend_ok": 3,
+      "hls_ok": 3,
+      "checked": 3,
+      "rtl_pass": 3,
+      "rtl_fail": 0,
+      "agree": 3,
+      "disagree": 0,
+      "vacuous": 0,
+      "access_violations": 0,
+      "clauses": "19/19",
+      "mutants": 7,
+      "mutants_checked": 7,
+      "killed": 5,
+      "killed_c_unproven": 5,
+      "survived_c_proven": 2,
+      "survived_c_unproven": 0,
+      "killed_c_proven": 0
+    },
+    {
+      "tool": "vitis",
+      "config": "base",
+      "designs": 3,
+      "frontend_ok": 3,
+      "hls_ok": 3,
+      "checked": 3,
+      "rtl_pass": 3,
+      "rtl_fail": 0,
+      "agree": 3,
+      "disagree": 0,
+      "vacuous": 0,
+      "access_violations": 2,
+      "clauses": "18/18",
+      "mutants": 7,
+      "mutants_checked": 7,
+      "killed": 5,
+      "killed_c_unproven": 5,
+      "survived_c_proven": 2,
+      "survived_c_unproven": 0,
+      "killed_c_proven": 0
+    }
+  ],
+  "not_checked_reasons": [],
+  "untranslated_clause_reasons": [],
+  "disagreements": [],
+  "access_violations": [
+    {
+      "case": "lower_bound/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [read address in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "max_element/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [read address in range: a bank 0 port 0]"
+      ]
+    }
+  ],
+  "latency": {
+    "proven": 6,
+    "report_undefined": 4
+  }
+}

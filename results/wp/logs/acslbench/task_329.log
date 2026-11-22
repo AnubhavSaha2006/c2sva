@@ -1,0 +1,19 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_329.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_329.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function matcher_a_end
+[wp] Computing [100 goals...]
+[wp] 152 goals scheduled
+[wp] [Cache] updated:7
+[wp] Proved goals:  154 / 154
+  Terminating:       1
+  Unreachable:       1
+  Qed:             146 (56ms-3ms-126ms)
+  Alt-Ergo 2.6.4:    3 (61ms-137ms)
+  CVC5 :             3 (146ms-395ms)
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_329.c:15: Warning: 
+  No 'assigns' specification for function 'matcher_a_end'.
+  Callers assumptions might be imprecise.

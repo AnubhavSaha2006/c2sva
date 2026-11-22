@@ -1,0 +1,93 @@
+{
+  "design": "lower_bound",
+  "variant": "mutant-3",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "19/21",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures 0 <= \\result <= \\old ( n )",
+    "P3: ensures StrictUpperBound ( \\old ( a ) , 0 , \\result , \\old ( v ) )"
+  ],
+  "access": "violated",
+  "access_failed": [
+    "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 128,
+  "latency_status": "not established within cap",
+  "clauses": "7/7",
+  "translated": 7,
+  "total_clauses": 7,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 11.6,
+    "hls": 12.2,
+    "latency": 161.9,
+    "bmc": 0.4,
+    "access": 0.3,
+    "cover": 0.3,
+    "total": 188.7
+  },
+  "error": null,
+  "top": "lower_bound",
+  "mode": "overlapping calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 0,
+        "v": 0
+      },
+      "pre": {
+        "a": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "rtl_result": 4294967295,
+      "completed": true
+    },
+    "c_result": 0,
+    "c_post": {
+      "a": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "eacsl": [],
+    "class": "rtl-c-divergence"
+  },
+  "engine": "yices",
+  "width": 72,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_13,j_14: enumerated over 0..4 (weaker assumption)",
+    "\\forall i_15: symbolic (solver-chosen) value, exact",
+    "\\forall i_16: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": 0,
+  "depth": 135,
+  "cex_step": 3,
+  "outcome": "fail"
+}

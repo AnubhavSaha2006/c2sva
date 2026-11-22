@@ -1,0 +1,81 @@
+{
+  "latency": 8,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "TIMEOUT",
+    "secs": 300.1,
+    "k": 4
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 600.0
+  },
+  "candidates": {
+    "total": 76,
+    "by_origin": {
+      "structural": 44,
+      "call-requires": 3,
+      "contract-persist": 3,
+      "call-frame": 2,
+      "loop-invariant": 12,
+      "loop-variant": 6,
+      "loop-assigns": 6
+    },
+    "loops": 1,
+    "loop_invariants": 2,
+    "skipped": [
+      {
+        "source": "requires InnerProductBounds ( a , b , n , init ) [captured inputs, during the call]",
+        "reason": "candidate too large (31417 chars)"
+      }
+    ]
+  },
+  "houdini": {
+    "candidates": 76,
+    "base_dropped": 37,
+    "ind_dropped": 0,
+    "rounds": 7,
+    "status": "base timeout",
+    "k": 4,
+    "secs": 619.3,
+    "invariants": 0,
+    "by_origin": {},
+    "c_invariants_survived": [],
+    "c_invariants_lagged": [],
+    "k_tried": [
+      4
+    ]
+  },
+  "kind+inv": {
+    "status": "no invariants",
+    "k": 4
+  },
+  "latency_proof": {
+    "bound": 8,
+    "established_by_bmc": "established",
+    "kind": {
+      "status": "UNKNOWN",
+      "secs": 4.2,
+      "k": 16
+    },
+    "candidates": 50,
+    "kind+inv": {
+      "status": "UNKNOWN",
+      "secs": 4.2,
+      "k": 16,
+      "progress_invariants": 0,
+      "houdini": "empty",
+      "houdini_secs": 81.2
+    },
+    "proved": false
+  },
+  "unbounded": false,
+  "proved_by": [],
+  "deep_cex": [],
+  "secs": 1610.5
+}

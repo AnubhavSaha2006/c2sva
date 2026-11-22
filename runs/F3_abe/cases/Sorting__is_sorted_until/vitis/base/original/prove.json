@@ -1,0 +1,109 @@
+{
+  "latency": 8,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 1.9,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 600.1
+  },
+  "candidates": {
+    "total": 83,
+    "by_origin": {
+      "structural": 48,
+      "call-requires": 1,
+      "contract-persist": 3,
+      "call-frame": 1,
+      "loop-invariant": 18,
+      "loop-variant": 9,
+      "loop-assigns": 3
+    },
+    "loops": 1,
+    "loop_invariants": 2,
+    "skipped": []
+  },
+  "houdini": {
+    "candidates": 83,
+    "base_dropped": 33,
+    "ind_dropped": 1,
+    "rounds": 11,
+    "status": "inductive",
+    "base_depth": 12,
+    "k": 4,
+    "secs": 9.0,
+    "invariants": 49,
+    "by_origin": {
+      "structural": 20,
+      "call-requires": 1,
+      "contract-persist": 3,
+      "call-frame": 1,
+      "loop-invariant": 18,
+      "loop-variant": 3,
+      "loop-assigns": 3
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant bound: 1 <= i <= n + 1",
+      "loop 1: loop invariant increasing: WeaklyIncreasing ( a , i )"
+    ],
+    "c_invariants_lagged": [],
+    "k_tried": [
+      4
+    ]
+  },
+  "kind+inv": {
+    "status": "PASS",
+    "secs": 0.6,
+    "k": 4
+  },
+  "ablation": {
+    "hls": {
+      "candidates": 48,
+      "invariants": 20,
+      "houdini": "inductive",
+      "k": 4,
+      "status": "UNKNOWN",
+      "secs": 0.5
+    },
+    "hls+contract": {
+      "candidates": 53,
+      "invariants": 23,
+      "houdini": "inductive",
+      "k": 4,
+      "status": "UNKNOWN",
+      "secs": 0.5
+    }
+  },
+  "latency_proof": {
+    "bound": 8,
+    "established_by_bmc": "established",
+    "kind": {
+      "status": "UNKNOWN",
+      "secs": 0.5,
+      "k": 16
+    },
+    "candidates": 74,
+    "kind+inv": {
+      "status": "PASS",
+      "secs": 0.8,
+      "k": 8,
+      "progress_invariants": 74,
+      "houdini": "inductive",
+      "houdini_secs": 667.5
+    },
+    "proved": true
+  },
+  "unbounded": true,
+  "proved_by": [
+    "kind+inv"
+  ],
+  "deep_cex": [],
+  "secs": 1289.4
+}

@@ -1,0 +1,151 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_158.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_158.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function comp_turn
+[rte:annot] annotating function coordTurn
+[rte:annot] annotating function diag_check
+[rte:annot] annotating function end_game
+[rte:annot] annotating function gridTurn
+[rte:annot] annotating function initialize
+[rte:annot] annotating function main
+[rte:annot] annotating function maxNum
+[rte:annot] annotating function minNum
+[rte:annot] annotating function minimax
+[rte:annot] annotating function new_board_check
+[rte:annot] annotating function player_turn
+[rte:annot] annotating function print_board
+[rte:annot] annotating function tie_check
+[rte:annot] annotating function win_check
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_158.c:247: Warning: 
+  Statement specifications not yet supported (skipped).
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_158.c:259: Warning: 
+  Statement specifications not yet supported (skipped).
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_158.c:550: Warning: 
+  Statement specifications not yet supported (skipped).
+[wp] Computing [100 goals...]
+[wp] Computing [200 goals...]
+[wp] Computing [300 goals...]
+[wp] Computing [400 goals...]
+[wp] Computing [500 goals...]
+[wp] Computing [600 goals...]
+[wp] Computing [700 goals...]
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_158.c:460: Warning: 
+  Missing decreases clause on recursive function minNum, call must be unreachable
+[wp] Computing [800 goals...]
+[wp] Computing [900 goals...]
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_158.c:509: Warning: 
+  Missing decreases clause on recursive function maxNum, call must be unreachable
+[wp] Computing [1000 goals...]
+[wp] Computing [1100 goals...]
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_158.c:105: Warning: 
+  Missing assigns clause (assigns 'everything' instead)
+[wp] 1139 goals scheduled
+[wp] [Timeout] typed_player_turn_terminates_part2 (Qed 5ms) (Z3) (Cached)
+[wp] [Timeout] typed_coordTurn_assert_rte_mem_access_part5 (Qed 14ms) (Z3) (Cached)
+[wp] [Timeout] typed_coordTurn_assert_rte_mem_access_2_part09 (Qed 19ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_minNum_terminates_part2 (Qed 378ms) (CVC5) (Cached)
+[wp] [Timeout] typed_minNum_terminates_part5 (Qed 164ms) (Z3) (Cached)
+[wp] [Timeout] typed_maxNum_terminates_part2 (Qed 273ms) (CVC5) (Cached)
+[wp] [Timeout] typed_maxNum_terminates_part3 (Qed 149ms) (CVC5) (Cached)
+[wp] [Timeout] typed_new_board_check_ensures (Qed 81ms) (CVC5) (Cached)
+[wp] [Timeout] typed_minimax_terminates_part2 (Qed 71ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_minimax_exits_part4 (Qed 43ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_minimax_assigns_normal_part3 (Qed 48ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_minimax_assigns_exit_part11 (Qed 53ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_main_terminates_part2 (Qed 22ms) (Z3) (Cached)
+[wp] [Timeout] typed_main_call_player_turn_requires (Qed 68ms) (Z3) (Cached)
+[wp] [Cache] found:21, updated:143
+[wp] Proved goals: 1141 / 1155
+  Terminating:       8
+  Unreachable:       8
+  Qed:            1011 (5ms-8ms-378ms)
+  Alt-Ergo 2.6.4:   98 (66ms-163ms-732ms)
+  CVC5 :            16 (86ms-150ms-255ms)
+  Timeout:          14
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_158.c:186: Warning: 
+  Memory model hypotheses for function 'comp_turn':
+  /*@
+     behavior wp_typed:
+       requires
+         \separated(
+           &open_spot, &game_result, &(*(board + (0 .. 3 - 1)))[0 .. 2]
+           );
+       requires \separated(board + (..), &open_spot, &game_result);
+     */
+  int comp_turn(char board[3][3], char player);
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_158.c:203: Warning: 
+  Memory model hypotheses for function 'player_turn':
+  /*@
+     behavior wp_typed:
+       requires
+         \separated(
+           &open_spot, &game_result, &(*(board + (0 .. 3 - 1)))[0 .. 2]
+           );
+       requires \separated(board + (..), &open_spot, &game_result);
+     */
+  int player_turn(char board[3][3], char player);
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_158.c:281: Warning: 
+  No 'assigns' specification for function 'coordTurn'.
+  - in complete behaviors: {validCoord, emptyBox, return_false}
+    No assigns for (at least) 'validCoord'
+  Callers assumptions might be imprecise.
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_158.c:311: Warning: 
+  Memory model hypotheses for function 'win_check':
+  /*@ behavior wp_typed:
+        requires \separated(board + (..), &open_spot); */
+  int win_check(char board[3][3], char player);
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_158.c:366: Warning: 
+  Memory model hypotheses for function 'diag_check':
+  /*@ behavior wp_typed:
+        requires \separated(board + (..), &open_spot); */
+  int diag_check(char board[3][3], char player);
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_158.c:392: Warning: 
+  Memory model hypotheses for function 'tie_check':
+  /*@ behavior wp_typed:
+        requires \separated(board + (..), &open_spot); */
+  int tie_check(char board[3][3]);
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_158.c:436: Warning: 
+  Memory model hypotheses for function 'minNum':
+  /*@
+     behavior wp_typed:
+       requires
+         \separated(
+           &playerX, &playerO, &open_spot, &game_result,
+           &(*(board + (0 .. 3 - 1)))[0 .. 2]
+           );
+       requires
+         \separated(board + (..), &playerX, &playerO, &open_spot, &game_result);
+     */
+  int minNum(char board[3][3], char player);
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_158.c:486: Warning: 
+  Memory model hypotheses for function 'maxNum':
+  /*@
+     behavior wp_typed:
+       requires
+         \separated(
+           &playerX, &playerO, &open_spot, &game_result,
+           &(*(board + (0 .. 3 - 1)))[0 .. 2]
+           );
+       requires
+         \separated(board + (..), &playerX, &playerO, &open_spot, &game_result);
+     */
+  int maxNum(char board[3][3], char player);
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_158.c:547: Warning: 
+  Memory model hypotheses for function 'minimax':
+  /*@
+     behavior wp_typed:
+       requires
+         \separated(
+           &playerX, &playerO, &open_spot, &game_result,
+           &(*(board + (0 .. 3 - 1)))[0 .. 2]
+           );
+       requires
+         \separated(board + (..), &playerX, &playerO, &open_spot, &game_result);
+     */
+  void minimax(char board[3][3], char player);
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_158.c:100: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.

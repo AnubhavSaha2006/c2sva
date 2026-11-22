@@ -1,0 +1,88 @@
+{
+  "design": "task_322",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "17/21",
+  "c_ok": false,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "speculative",
+  "access_failed": [
+    "P16: requires inv_matrix_Boolean ( x172 , x173 , x174 ) && inv_matrix_Boolean ( x175 , x176 , x177 ) && x176 == x173 && x177 == x174 && ( \\forall int x213 ; \\forall int x214 ; 0 <= x213 < x176 * x177 && 0 <= x214 < x173 * x174 ==> \\separated ( x175 + x213 , x172 + x214 ) )  [access in range: x172 bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "20/20",
+  "translated": 20,
+  "total_clauses": 20,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 15.4,
+    "hls": 14.2,
+    "latency": 3.2,
+    "bmc": 24.8,
+    "access": 1.4,
+    "phys": 25.1,
+    "cover": 1.7,
+    "total": 86.2
+  },
+  "error": null,
+  "top": "scalar_mult",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "yices",
+  "width": 80,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall x213: enumerated over 0..4 (weaker assumption)",
+    "\\forall x214: enumerated over 0..4 (weaker assumption)",
+    "\\forall x233: symbolic (solver-chosen) value, exact",
+    "\\forall x247: symbolic (solver-chosen) value, exact",
+    "\\forall x250: symbolic (solver-chosen) value, exact",
+    "\\separated holds by construction (separate RTL memories/registers)",
+    "\\valid inside an expression holds for RTL memories",
+    "cell of x172 outside 0..3: solver-chosen value",
+    "cell of x175 outside 0..3: solver-chosen value"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 12,
+  "cex_step": null,
+  "outcome": "pass",
+  "survivor": {
+    "class": "memory-safety-only",
+    "tested": 1000,
+    "detail": "ERROR: AddressSanitizer: stack-buffer-overflow",
+    "vector": [
+      {
+        "x171": -1180729261,
+        "x173": 4,
+        "x174": 6,
+        "x176": 4,
+        "x177": 6
+      },
+      {
+        "x172": [
+          -3,
+          -2079172941,
+          2,
+          2147483646
+        ],
+        "x175": [
+          4,
+          2147483647,
+          1431413655,
+          -2
+        ]
+      }
+    ]
+  }
+}

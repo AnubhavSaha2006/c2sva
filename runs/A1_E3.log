@@ -1,0 +1,83 @@
+prove: 72 cases, strategies ['kind', 'pdr', 'houdini', 'kind+inv', 'pdr+inv', 'ablation']
+BinarySearch__binary_search/vitis/base/original                        unbounded=True by=['kind+inv'] inv=37/59 c-inv=0 
+BinarySearch__equal_range/vitis/base/original                          unbounded=False by=[] inv=39/92 c-inv=0 
+prove: 70 cases, strategies ['kind', 'pdr', 'houdini', 'kind+inv', 'pdr+inv', 'ablation']
+BinarySearch__lower_bound/vitis/base/original                          unbounded=True by=['kind+inv'] inv=65/93 c-inv=3 
+BinarySearch__upper_bound/vitis/base/original                          unbounded=True by=['kind+inv'] inv=65/93 c-inv=3 
+Heap__heap_child/vitis/base/original                                   unbounded=True by=['kind+inv'] inv=11/14 c-inv=0 
+Heap__heap_parent/vitis/base/original                                  unbounded=True by=['kind', 'kind+inv', 'pdr'] inv=2/5 c-inv=0 
+BinarySearch__equal_range2/vitis/base/original                         unbounded=False by=[] inv=157/317 c-inv=3 
+Heap__is_heap/vitis/base/original                                      unbounded=True by=['kind+inv'] inv=18/40 c-inv=0 
+Heap__is_heap_until/vitis/base/original                                unbounded=True by=['kind+inv'] inv=78/139 c-inv=2 
+Heap__heap_sift_down/vitis/base/original                               unbounded=False by=[] inv=88/600 c-inv=2 
+Heap__pop_heap/vitis/base/original                                     unbounded=False by=[] inv=52/95 c-inv=0 
+Heap__push_heap/vitis/base/original                                    unbounded=False by=[] inv=0/587 c-inv=0 
+Heap__make_heap/vitis/base/original                                    unbounded=False by=[] inv=0/211 c-inv=0 
+MinMax__clamp/vitis/base/original                                      unbounded=True by=['kind', 'kind+inv'] inv=5/8 c-inv=0 
+MinMax__make_pair/vitis/base/original                                  unbounded=True by=['kind', 'kind+inv', 'pdr'] inv=1/4 c-inv=0 
+prove: 63 cases, strategies ['kind', 'pdr', 'houdini', 'kind+inv', 'pdr+inv', 'ablation']
+BinarySearch__equal_range/vitis/base/original                          unbounded=False by=[] inv=46/600 c-inv=0 
+Heap__heap_sift_down/vitis/base/original                               unbounded=False by=[] inv=89/600 c-inv=2 
+BinarySearch__equal_range2/vitis/base/original                         unbounded=False by=[] inv=159/600 c-inv=3 
+prove: 60 cases, strategies ['kind', 'pdr', 'houdini', 'kind+inv', 'ablation']
+Heap__push_heap/vitis/base/original                                    unbounded=True by=['kind+inv'] inv=144/509 c-inv=5 
+Heap__pop_heap/vitis/base/original                                     unbounded=False by=[] inv=87/600 c-inv=2 
+MinMax__max_element/vitis/base/original                                unbounded=True by=['kind+inv'] inv=41/78 c-inv=4 
+MinMax__max_element2/vitis/base/original                               unbounded=True by=['kind+inv'] inv=41/78 c-inv=4 
+MinMax__max_seq/vitis/base/original                                    unbounded=True by=['kind+inv'] inv=36/114 c-inv=0 
+MinMax__min_element/vitis/base/original                                unbounded=True by=['kind+inv'] inv=41/78 c-inv=4 
+MinMax__minmax_element/vitis/base/original                             unbounded=True by=['kind+inv'] inv=69/149 c-inv=7 
+Mutating__copy/vitis/base/original                                     unbounded=True by=['kind+inv', 'pdr'] inv=31/59 c-inv=2 
+Mutating__copy_backward/vitis/base/original                            unbounded=True by=['kind+inv'] inv=33/59 c-inv=2 
+Mutating__fill/vitis/base/original                                     unbounded=True by=['kind+inv', 'pdr'] inv=25/47 c-inv=2 
+Mutating__random_number/vitis/base/original                            unbounded=False by=[] inv=11/14 c-inv=0 
+Mutating__remove/vitis/base/original                                   unbounded=True by=['kind+inv'] inv=55/86 c-inv=5 
+Heap__make_heap/vitis/base/original                                    unbounded=False by=[] inv=0/600 c-inv=0 
+Mutating__remove_copy/vitis/base/original                              unbounded=True by=['kind+inv'] inv=33/58 c-inv=3 
+Heap__sort_heap/vitis/base/original                                    unbounded=False by=[] inv=0/600 c-inv=0 
+Mutating__replace/vitis/base/original                                  unbounded=True by=['kind+inv'] inv=30/58 c-inv=2 
+Mutating__replace_copy/vitis/base/original                             unbounded=True by=['kind+inv'] inv=31/59 c-inv=1 
+Mutating__remove_copy3/vitis/base/original                             unbounded=True by=['kind+inv'] inv=35/64 c-inv=4 
+Mutating__remove_copy2/vitis/base/original                             unbounded=True by=['kind+inv'] inv=33/62 c-inv=3 
+Mutating__rotate/vitis/base/original                                   unbounded=False by=[] inv=40/600 c-inv=0 
+Mutating__reverse/vitis/base/original                                  unbounded=True by=['kind+inv'] inv=58/130 c-inv=3 
+Mutating__reverse_copy/vitis/base/original                             unbounded=True by=['kind+inv', 'pdr'] inv=45/101 c-inv=1 
+Mutating__swap/vitis/base/original                                     unbounded=True by=['kind', 'kind+inv', 'pdr'] inv=3/6 c-inv=0 
+Mutating__swap_ranges/vitis/base/original                              unbounded=True by=['kind+inv'] inv=35/69 c-inv=3 
+Mutating__rotate_copy/vitis/base/original                              unbounded=False by=[] inv=145/375 c-inv=2 
+Nonmutating__adjacent_find/vitis/base/original                         unbounded=True by=['kind+inv'] inv=84/160 c-inv=2 
+Nonmutating__any_of/vitis/base/original                                unbounded=True by=['kind+inv'] inv=55/77 c-inv=2 
+Nonmutating__all_of/vitis/base/original                                unbounded=True by=['kind+inv'] inv=46/68 c-inv=1 
+Nonmutating__count/vitis/base/original                                 unbounded=True by=['kind+inv'] inv=28/57 c-inv=2 
+Nonmutating__equal/vitis/base/original                                 unbounded=True by=['kind+inv'] inv=61/85 c-inv=2 
+Nonmutating__find/vitis/base/original                                  unbounded=True by=['kind+inv'] inv=53/75 c-inv=2 
+Nonmutating__find2/vitis/base/original                                 unbounded=True by=['kind+inv'] inv=53/75 c-inv=2 
+Nonmutating__find3/vitis/base/original                                 unbounded=True by=['kind+inv'] inv=44/66 c-inv=1 
+Nonmutating__find4/vitis/base/original                                 unbounded=True by=['kind+inv'] inv=44/66 c-inv=1 
+Nonmutating__find5/vitis/base/original                                 unbounded=True by=['kind+inv'] inv=53/75 c-inv=2 
+Mutating__shuffle/vitis/base/original                                  unbounded=False by=[] inv=0/269 c-inv=0 
+Nonmutating__find_first_of/vitis/base/original                         unbounded=False by=[] inv=0/407 c-inv=0 
+Nonmutating__find_if_not/vitis/base/original                           unbounded=True by=['kind+inv'] inv=44/66 c-inv=1 
+Nonmutating__mismatch/vitis/base/original                              unbounded=True by=['kind+inv'] inv=59/83 c-inv=2 
+Nonmutating__find_last/vitis/base/original                             unbounded=True by=['kind+inv'] inv=41/74 c-inv=5 
+Nonmutating__none_of/vitis/base/original                               unbounded=True by=['kind+inv'] inv=55/77 c-inv=2 
+Nonmutating__search_n/vitis/base/original                              unbounded=True by=['kind+inv'] inv=54/216 c-inv=4 
+Nonmutating__find_end/vitis/base/original                              unbounded=False by=[] inv=126/468 c-inv=6 
+Numeric__accumulate/vitis/base/original                                unbounded=True by=['kind+inv'] inv=23/51 c-inv=1 
+Numeric__adjacent_difference/vitis/base/original                       unbounded=True by=['kind+inv'] inv=47/104 c-inv=2 
+Nonmutating__search/vitis/base/original                                unbounded=False by=[] inv=123/492 c-inv=4 
+Numeric__iota/vitis/base/original                                      unbounded=True by=['kind+inv'] inv=26/51 c-inv=2 
+Numeric__inner_product/vitis/base/original                             unbounded=False by=[] inv=0/57 c-inv=0 
+Numeric__partial_sum/vitis/base/original                               unbounded=False by=[] inv=52/111 c-inv=3 
+Numeric__adjacent_difference_inv/vitis/base/original                   unbounded=False by=[] inv=0/600 c-inv=0 
+Numeric__partial_sum_inv/vitis/base/original                           unbounded=False by=[] inv=0/600 c-inv=0 
+Sorting__bubble_sort/vitis/base/original                               unbounded=False by=[] inv=0/160 c-inv=0 
+Sorting__insertion_sort/vitis/base/original                            unbounded=False by=[] inv=0/581 c-inv=0 
+Sorting__is_sorted/vitis/base/original                                 unbounded=True by=['kind+inv'] inv=46/80 c-inv=2 
+Sorting__is_sorted_until/vitis/base/original                           unbounded=True by=['kind+inv'] inv=44/78 c-inv=2 
+Sorting__heap_sort/vitis/base/original                                 unbounded=False by=[] inv=39/600 c-inv=0 
+Sorting__merge/vitis/base/original                                     unbounded=False by=[] inv=105/600 c-inv=2 
+Sorting__inplace_merge/vitis/base/original                             unbounded=False by=[] inv=96/600 c-inv=1 
+Sorting__partial_sort/vitis/base/original                              unbounded=False by=[] inv=102/600 c-inv=0 
+Sorting__selection_sort/vitis/base/original                            unbounded=False by=[] inv=0/406 c-inv=0 
+unbounded: 39/60

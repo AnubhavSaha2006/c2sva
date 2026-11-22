@@ -1,0 +1,18 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_387.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_387.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function f
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_387.c:8: Warning: 
+  Cast with incompatible pointers types (source: float32*) (target: sint8*)
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_387.c:8: Warning: 
+  Builtin \pointer_comparable(_,_) not defined
+[wp] Warning: No goal generated
+[wp] Proved goals:    2 / 2
+  Terminating:     1
+  Unreachable:     1
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_387.c:9: Warning: 
+  No 'assigns' specification for function 'f'.
+  Callers assumptions might be imprecise.

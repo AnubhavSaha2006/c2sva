@@ -1,0 +1,52 @@
+{
+  "design": "task_237",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "10/10",
+  "c_ok": true,
+  "rtl": "PASS",
+  "failed": [],
+  "access": null,
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "6/6",
+  "translated": 6,
+  "total_clauses": 6,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 0.6,
+    "hls": 14.2,
+    "latency": 0.4,
+    "bmc": 0.4,
+    "cover": 0.4,
+    "total": 16.3
+  },
+  "error": null,
+  "top": "f",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "exact frame over all 1 element(s) of p",
+    "exact frame over all 1 element(s) of q"
+  ],
+  "latency_report": [
+    0,
+    0
+  ],
+  "interval_report": 1,
+  "depth": 6,
+  "cex_step": null,
+  "outcome": "pass"
+}

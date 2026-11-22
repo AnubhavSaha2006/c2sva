@@ -1,0 +1,93 @@
+{
+  "design": "Nonmutating/any_of",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "7/8",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P1: ensures \\result != 0 <==> SomeEqual ( \\old ( a ) , \\old ( n ) , \\old ( v ) )"
+  ],
+  "access": "out-of-memory",
+  "access_failed": [
+    "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 16,
+  "latency_status": "established",
+  "clauses": "5/5",
+  "translated": 5,
+  "total_clauses": 5,
+  "skipped": [],
+  "times": {
+    "frontend": 0.6,
+    "wp": 11.5,
+    "hls": 20.1,
+    "latency": 1.5,
+    "bmc": 0.7,
+    "access": 0.6,
+    "phys": 0.6,
+    "cover": 0.6,
+    "total": 41.6
+  },
+  "error": null,
+  "top": "any_of",
+  "mode": "overlapping calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 0,
+        "v": -2147483648
+      },
+      "pre": {
+        "a": [
+          -1073741824,
+          -2147483648,
+          -2147483648,
+          -2147483648
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -1073741824,
+          -2147483648,
+          -2147483648,
+          -2147483648
+        ]
+      },
+      "rtl_result": 1,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "any_of",
+        "result: \\result \u2262 0 \u21d4 SomeEqual(\\old(a), \\old(n), \\old(v))."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "\\exists i_613: enumerated over 0..4 (stronger assertion)",
+    "\\exists i_614: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": 0,
+  "depth": 28,
+  "cex_step": 3,
+  "outcome": "fail"
+}

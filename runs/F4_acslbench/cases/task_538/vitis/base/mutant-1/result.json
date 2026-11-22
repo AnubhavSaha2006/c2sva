@@ -1,0 +1,92 @@
+{
+  "design": "task_538",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "17/19",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures \\forall integer i ; 0 <= i < \\old ( size ) ==> * ( \\old ( t ) + i ) == 0"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P4: requires size >= 0 && \\valid ( t + ( 0 .. size - 1 ) )  [access in range: t bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "6/6",
+  "translated": 6,
+  "total_clauses": 6,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 1.7,
+    "hls": 13.5,
+    "latency": 0.5,
+    "bmc": 0.5,
+    "access": 0.5,
+    "phys": 0.5,
+    "cover": 0.5,
+    "total": 21.5
+  },
+  "error": null,
+  "top": "out_ecount",
+  "mode": "sequential calls (overlap possible but memories are written: checked sequentially)",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "size": 1
+      },
+      "pre": {
+        "t": [
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "rtl_post": {
+        "t": [
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Assertion",
+        "out_ecount",
+        "\u2200 \u2124 k; 0 \u2264 k < size \u21d2 *(t + k) \u2261 0. With values at failure point:"
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-runtime-error"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i: symbolic (solver-chosen) value, exact",
+    "cell of t outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of t"
+  ],
+  "latency_report": null,
+  "interval_report": 0,
+  "depth": 12,
+  "cex_step": 2,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

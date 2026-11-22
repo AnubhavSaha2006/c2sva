@@ -1,0 +1,37 @@
+{
+  "design": "lower_bound",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "21/21",
+  "c_ok": true,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "violated",
+  "access_failed": [
+    "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [read address in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "proven",
+  "clauses": "7/7",
+  "skipped": [],
+  "times": {
+    "frontend": 0.5,
+    "wp": 11.9,
+    "hls": 15.4,
+    "latency": 0.7,
+    "bmc": 4.0,
+    "access": 0.6,
+    "cover": 0.5,
+    "total": 33.7
+  },
+  "error": null,
+  "top": "lower_bound",
+  "discharged": 1,
+  "pre_dropped": 0,
+  "latency_report": null,
+  "cex_step": null
+}

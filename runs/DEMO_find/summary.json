@@ -1,0 +1,99 @@
+{
+  "by_tool_config": [
+    {
+      "tool": "vitis",
+      "config": "base",
+      "designs": 1,
+      "frontend_ok": 1,
+      "hls_ok": 1,
+      "checked": 1,
+      "pass_full": 1,
+      "pass_partial": 0,
+      "fail": 0,
+      "bounded": 0,
+      "vacuous": 0,
+      "agree": 1,
+      "disagree": 0,
+      "clauses": "11/11",
+      "clause_rate": 100.0,
+      "access_speculative": 1,
+      "access_out_of_memory": 0,
+      "overlap_mode": 1,
+      "mutants": 2,
+      "mutants_checked": 2,
+      "killed": 1,
+      "mutation_score": 50.0,
+      "survivors": 1,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_untranslated": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 1,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 1,
+      "median_total_s": 48.4
+    }
+  ],
+  "details": {
+    "vitis/base": {
+      "original_outcomes": {
+        "pass": 1
+      },
+      "failure_replay": {},
+      "kill_replay": {
+        "c-contract-violation": 1
+      },
+      "survived_c_unproven": [
+        "Nonmutating__find/vitis/base/mutant-2"
+      ],
+      "stage_median_s": {
+        "frontend": 1.3,
+        "wp": 1.9,
+        "hls": 17.7,
+        "latency": 2.0,
+        "bmc": 24.0,
+        "access": 0.5,
+        "cover": 0.5,
+        "total": 48.4
+      }
+    }
+  },
+  "not_checked_reasons": [],
+  "untranslated_clause_reasons": [],
+  "translation_strategies": [
+    [
+      "\\forall i",
+      2
+    ],
+    [
+      "\\exists i",
+      1
+    ],
+    [
+      "cell of a outside 0..3",
+      1
+    ],
+    [
+      "exact frame over all 4 element(s) of a",
+      1
+    ],
+    [
+      "holds by construction",
+      1
+    ]
+  ],
+  "disagreements": [],
+  "access_violations": [
+    {
+      "case": "Nonmutating__find/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    }
+  ],
+  "latency": {
+    "established": 1,
+    "report_undefined": 1,
+    "not_established": 0
+  }
+}

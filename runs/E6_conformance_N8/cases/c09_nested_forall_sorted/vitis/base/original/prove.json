@@ -1,0 +1,74 @@
+{
+  "latency": 8,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "candidates": {
+    "total": 302,
+    "by_origin": {
+      "structural": 111,
+      "call-requires": 2,
+      "contract-persist": 2,
+      "call-frame": 1,
+      "loop-invariant": 72,
+      "loop-invariant-lag": 72,
+      "loop-variant": 36,
+      "loop-assigns": 6
+    },
+    "loops": 1,
+    "loop_invariants": 2,
+    "skipped": []
+  },
+  "houdini": {
+    "candidates": 302,
+    "base_dropped": 136,
+    "ind_dropped": 25,
+    "rounds": 21,
+    "status": "inductive",
+    "base_depth": 12,
+    "k": 4,
+    "secs": 243.7,
+    "invariants": 141,
+    "by_origin": {
+      "structural": 38,
+      "call-requires": 2,
+      "contract-persist": 2,
+      "call-frame": 1,
+      "loop-invariant": 36,
+      "loop-invariant-lag": 40,
+      "loop-variant": 16,
+      "loop-assigns": 6
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant 1 <= i <= ( n > 0 ? n : 1 )",
+      "loop 1: loop invariant \\forall integer k , integer l ; 0 <= k <= l < i && l < n ==> * ( a + k ) <= * ( a + l )"
+    ],
+    "c_invariants_lagged": [
+      "loop 1: loop invariant \\forall integer k , integer l ; 0 <= k <= l < i && l < n ==> * ( a + k ) <= * ( a + l )"
+    ],
+    "k_tried": [
+      4
+    ]
+  },
+  "kind+inv": {
+    "status": "PASS",
+    "secs": 7.6,
+    "k": 4
+  },
+  "kmin": {
+    "none": null,
+    "hls": 12,
+    "hls+contract": 8,
+    "all": 4,
+    "all+progress": 4
+  },
+  "unbounded": true,
+  "proved_by": [
+    "kind+inv"
+  ],
+  "deep_cex": [],
+  "secs": 1301.4
+}

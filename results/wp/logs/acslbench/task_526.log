@@ -1,0 +1,19 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_526.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_526.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function find
+[wp] 25 goals scheduled
+[wp] [Cache] found:7
+[wp] Proved goals:   27 / 27
+  Terminating:       1
+  Unreachable:       1
+  Qed:              18 (15ms-6ms-28ms)
+  Alt-Ergo 2.6.4:    7 (62ms-103ms-158ms)
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_526.c:30: Warning: 
+  No 'assigns' specification for function 'find'.
+  - in complete behaviors: {some, none}
+    No assigns for (at least) 'some'
+  Callers assumptions might be imprecise.

@@ -1,0 +1,81 @@
+{
+  "latency": 32,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "TIMEOUT",
+    "secs": 300.0,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.0
+  },
+  "candidates": {
+    "total": 600,
+    "by_origin": {
+      "structural": 377,
+      "call-requires": 4,
+      "call-frame": 1,
+      "loop-invariant": 218
+    },
+    "loops": 2,
+    "loop_invariants": 11,
+    "skipped": [
+      {
+        "source": "loop 2 (reverse): loop invariant bound: 0 <= i <= half <= n - i",
+        "reason": "no RTL signal found for C variable half"
+      },
+      {
+        "source": "loop 2 (reverse): loop invariant left: Reverse { Pre , Here } ( a , 0 , i , n )",
+        "reason": "unknown logic function/predicate Reverse"
+      },
+      {
+        "source": "loop 2 (reverse): loop invariant right: Reverse { Pre , Here } ( a , n - i , n , i )",
+        "reason": "unknown logic function/predicate Reverse"
+      },
+      {
+        "source": "loop 2 (reverse): loop variant half - i >= 0",
+        "reason": "no RTL signal found for C variable half"
+      }
+    ]
+  },
+  "houdini": {
+    "candidates": 600,
+    "base_dropped": 343,
+    "ind_dropped": 161,
+    "rounds": 56,
+    "status": "inductive",
+    "base_depth": 18,
+    "k": 16,
+    "secs": 7333.9,
+    "invariants": 96,
+    "by_origin": {
+      "structural": 48,
+      "call-requires": 4,
+      "loop-invariant": 44
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant bound: 0 <= i <= j <= n"
+    ],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "UNKNOWN",
+    "secs": 209.8,
+    "k": 16
+  },
+  "unbounded": false,
+  "proved_by": [],
+  "deep_cex": [],
+  "secs": 8238.2
+}

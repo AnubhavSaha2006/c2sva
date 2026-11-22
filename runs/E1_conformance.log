@@ -1,0 +1,72 @@
+17 designs -> 59 cases (tools vitis, configs base, mutants 3) -> /home/anubhavsaha/cbv/runs/E1_conformance
+[1/59] c01_behaviors_clamp              original  base     C 10/10   pass             clauses 4/4    access None      lat 2 
+[2/59] c01_behaviors_clamp              mutant-2  base     C 10/10   pass             clauses 4/4    access None      lat 2 
+[3/59] c01_behaviors_clamp              mutant-1  base     C 10/10   pass             clauses 4/4    access None      lat 2 
+[4/59] c02_exists_has_zero              original  base     C 16/16   pass             clauses 7/7    access speculative lat 16 
+[5/59] c02_exists_has_zero              mutant-1  base     C 14/16   fail             clauses 7/7    access undecided lat 8 c-contract-violation
+[6/59] c03_recursive_logic              original  base     C 14/14   pass             clauses 6/6    access speculative lat 8 
+[7/59] c02_exists_has_zero              mutant-3  base     C 15/16   fail             clauses 7/7    access undecided lat 16 c-contract-violation
+[8/59] c02_exists_has_zero              mutant-2  base     C 13/16   fail             clauses 7/7    access out-of-memory lat 128 c-contract-violation
+[9/59] c04_single_pointers_swap         original  base     C 10/10   pass             clauses 5/5    access None      lat 2 
+[10/59] c03_recursive_logic              mutant-1  base     C 13/14   fail             clauses 6/6    access out-of-memory lat 8 c-contract-violation
+[11/59] c03_recursive_logic              mutant-3  base     C 13/14   fail             clauses 6/6    access out-of-memory lat 8 c-contract-violation
+[12/59] c05_typedef_three_arrays         original  base     C 20/21   pass             clauses 15/15  access speculative lat 8 
+[13/59] c03_recursive_logic              mutant-2  base     C 12/14   fail             clauses 6/6    access out-of-memory lat 8 c-contract-violation
+[14/59] c05_typedef_three_arrays         mutant-2  base     C 16/21   fail             clauses 15/15  access out-of-memory lat 8 c-contract-violation
+[15/59] c05_typedef_three_arrays         mutant-1  base     C 18/21   fail             clauses 15/15  access out-of-memory lat 8 c-contract-violation
+[16/59] c06_verilog_keywords             original  base     C 9/9     pass             clauses 8/8    access ok        lat 2 
+[17/59] c05_typedef_three_arrays         mutant-3  base     C 19/21   fail             clauses 15/15  access out-of-memory lat 8 c-runtime-error
+[18/59] c06_verilog_keywords             mutant-1  base     C 8/9     fail             clauses 8/8    access undecided lat 2 c-contract-violation
+[19/59] c06_verilog_keywords             mutant-2  base     C 8/9     fail             clauses 8/8    access undecided lat 2 c-contract-violation
+[20/59] c07_frame_prefix_fill            original  base     C 15/15   pass             clauses 6/6    access speculative lat 8 
+[21/59] c06_verilog_keywords             mutant-3  base     C 5/9     fail             clauses 8/8    access out-of-memory lat 2 c-contract-violation
+[22/59] c07_frame_prefix_fill            mutant-2  base     C 13/15   fail             clauses 6/6    access out-of-memory lat 8 c-contract-violation
+[23/59] c07_frame_prefix_fill            mutant-1  base     C 13/15   fail             clauses 6/6    access out-of-memory lat 8 c-contract-violation
+[24/59] c08_old_memory_increment         mutant-1  base     C 17/19   fail             clauses 9/9    access out-of-memory lat 8 c-contract-violation
+[25/59] c08_old_memory_increment         original  base     C 19/19   pass             clauses 9/9    access speculative lat 8 
+[26/59] c08_old_memory_increment         mutant-2  base     C 16/19   fail             clauses 9/9    access out-of-memory lat 8 c-contract-violation
+[27/59] c08_old_memory_increment         mutant-3  base     C 17/19   fail             clauses 9/9    access out-of-memory lat 8 c-contract-violation
+[28/59] c09_nested_forall_sorted         original  base     C 18/18   pass             clauses 9/9    access speculative lat 8 
+[29/59] c09_nested_forall_sorted         mutant-1  base     C 16/18   fail             clauses 9/9    access undecided lat 8 c-contract-violation
+[30/59] c09_nested_forall_sorted         mutant-3  base     C 15/18   fail             clauses 9/9    access out-of-memory lat 8 c-contract-violation
+[31/59] c09_nested_forall_sorted         mutant-2  base     C 15/18   fail             clauses 9/9    access out-of-memory lat 16 c-contract-violation
+[32/59] c11_builtins_minmax              original  base     C 11/11   pass             clauses 3/3    access None      lat 2 
+[33/59] c10_products_width               mutant-1  base     C 9/10    fail             clauses 4/4    access None      lat 2 c-contract-violation
+[34/59] c11_builtins_minmax              mutant-1  base     C 11/11   pass             clauses 3/3    access None      lat 2 
+[35/59] c10_products_width               mutant-2  base     C 9/10    fail             clauses 4/4    access None      lat 2 c-contract-violation
+[36/59] c10_products_width               mutant-3  base     C 9/10    fail             clauses 4/4    access None      lat 2 c-contract-violation
+[37/59] c11_builtins_minmax              mutant-2  base     C 11/11   pass             clauses 3/3    access None      lat 2 
+[38/59] c11_builtins_minmax              mutant-3  base     C 11/11   pass             clauses 3/3    access None      lat 2 
+[39/59] c13_shifts_casts                 original  base     C 5/5     pass             clauses 2/2    access None      lat 2 
+[40/59] c12_void_out_sum                 mutant-1  base     C 18/19   fail             clauses 9/9    access out-of-memory lat 8 c-contract-violation
+[41/59] c13_shifts_casts                 mutant-1  base     C 3/5     fail             clauses 2/2    access None      lat 2 c-contract-violation
+[42/59] c12_void_out_sum                 mutant-2  base     C 17/19   fail             clauses 9/9    access out-of-memory lat 8 c-contract-violation
+[43/59] c12_void_out_sum                 original  base     C 19/19   pass             clauses 9/9    access speculative lat 8 
+[44/59] c12_void_out_sum                 mutant-3  base     C 15/19   fail             clauses 9/9    access out-of-memory lat 8 c-contract-violation
+[45/59] c14_predicate_in_requires        original  base     C 21/21   pass             clauses 10/10  access speculative lat 8 
+[46/59] c14_predicate_in_requires        mutant-1  base     C 19/21   fail             clauses 10/10  access out-of-memory lat 8 c-contract-violation
+[47/59] c15_struct_pointer               original  base     C 10/10   pass             clauses 4/4    access None      lat 2 
+[48/59] c14_predicate_in_requires        mutant-2  base     C 17/21   fail             clauses 10/10  access out-of-memory lat 8 c-contract-violation
+[49/59] c14_predicate_in_requires        mutant-3  base     C 19/20   fail             clauses 10/10  access out-of-memory lat 8 c-contract-violation
+[50/59] c15_struct_pointer               mutant-1  base     C 9/10    fail             clauses 4/4    access None      lat 2 c-contract-violation
+[51/59] c15_struct_pointer               mutant-2  base     C 9/10    fail             clauses 4/4    access None      lat 2 c-contract-violation
+[52/59] c15_struct_pointer               mutant-3  base     C 9/10    fail             clauses 4/4    access None      lat 2 c-contract-violation
+[53/59] c17_struct_return                original  base     C 8/8     pass             clauses 2/2    access None      lat 2 
+[54/59] c16_struct_array                 original  base     C 17/17   pass             clauses 8/8    access speculative lat 16 
+[55/59] c16_struct_array                 mutant-1  base     C 15/17   fail             clauses 8/8    access out-of-memory lat 8 c-contract-violation
+[56/59] c17_struct_return                mutant-1  base     C 8/8     pass             clauses 2/2    access None      lat 2 
+[57/59] c16_struct_array                 mutant-2  base     C 14/17   fail             clauses 8/8    access out-of-memory lat 16 c-contract-violation
+[58/59] c16_struct_array                 mutant-3  base     C 16/17   fail             clauses 8/8    access out-of-memory lat 16 c-contract-violation
+[59/59] c10_products_width               original  base     C 10/10   bounded(3)       clauses 4/4    access None      lat 2 
+                                                              Summary per tool / HLS configuration                                                              
+┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ acce… ┃       ┃       ┃       ┃       ┃       ┃       ┃
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ out   ┃       ┃       ┃       ┃       ┃       ┃ kills ┃
+┃       ┃       ┃       ┃       ┃ pass  ┃ pass  ┃      ┃       ┃       ┃       ┃       ┃ clau… ┃ acce… ┃ of    ┃ over… ┃ muta… ┃       ┃ muta… ┃ equi… ┃ conf… ┃
+┃ tool  ┃ conf… ┃ desi… ┃ chec… ┃ full  ┃ part… ┃ fail ┃ boun… ┃ vacu… ┃ agree ┃ disa… ┃ rate  ┃ spec… ┃ memo… ┃ mode  ┃ chec… ┃ kill… ┃ score ┃ pass  ┃ in C  ┃
+┡━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ vitis │ base  │ 17    │ 16    │ 16    │ 0     │ 0    │ 1     │ 0     │ 16    │ 0     │ 100.0 │ 9     │ 0     │ 2     │ 42    │ 36    │ 100.0 │ 6     │ 36    │
+└───────┴───────┴───────┴───────┴───────┴───────┴──────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┘
+vitis/base failures on originals (C replay): {}; mutant kills (C replay): {'c-contract-violation': 35, 'c-runtime-error': 1}
+Details: /home/anubhavsaha/cbv/runs/E1_conformance/summary.md, /home/anubhavsaha/cbv/runs/E1_conformance/results.csv, 
+/home/anubhavsaha/cbv/runs/E1_conformance/table.tex

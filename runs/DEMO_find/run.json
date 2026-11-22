@@ -1,0 +1,47 @@
+{
+  "args": {
+    "cmd": "run",
+    "bench": "abe",
+    "include": [],
+    "select": "Nonmutating/find",
+    "ids": null,
+    "sample": null,
+    "seed": 0,
+    "proven_only": false,
+    "tool": "vitis",
+    "config": "base",
+    "mutants": 2,
+    "jobs": 3,
+    "array_size": 4,
+    "lat_cap": 128,
+    "engines": "yices,bitwuzla",
+    "no_replay": false,
+    "sby_timeout": 600,
+    "no_wp": false,
+    "no_access": false,
+    "name": "DEMO_find",
+    "resume": false,
+    "out": "/home/anubhavsaha/cbv/runs/DEMO_find",
+    "power_on": "fpga",
+    "lifted": null,
+    "func": "<function cmd_run at 0x729babf059e0>"
+  },
+  "settings": {
+    "array_size": 4,
+    "lat_start": 8,
+    "lat_cap": 128,
+    "engines": [
+      "yices",
+      "bitwuzla"
+    ],
+    "sby_timeout": 600,
+    "wp": true,
+    "wp_timeout": 300,
+    "access": true,
+    "replay": true,
+    "fifo_depth": 8
+  },
+  "designs": [
+    "Nonmutating/find"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "design": "task_222",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "hls",
+  "status": "error",
+  "c_proof": "3/5",
+  "c_ok": false,
+  "rtl": null,
+  "failed": [],
+  "access": null,
+  "access_failed": [],
+  "cover": null,
+  "latency": null,
+  "latency_status": null,
+  "clauses": null,
+  "translated": null,
+  "total_clauses": null,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 0.9,
+    "total": 14.7
+  },
+  "error": "hls: Vitis synthesis failed: ERROR: [HLS 214-323] Address computation on scalar port 'x20' is not supported (../src/hls_src/task_222.c:36:0) | ERROR: [HLS 200-1715] Encountered problem during source synthesis",
+  "top": "pick_first",
+  "mode": null,
+  "bounded_to": null,
+  "replay": null,
+  "engine": null,
+  "outcome": "error"
+}

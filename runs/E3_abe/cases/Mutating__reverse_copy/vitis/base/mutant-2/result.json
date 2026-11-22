@@ -1,0 +1,122 @@
+{
+  "design": "Mutating/reverse_copy",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "17/20",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures Reverse { Old , Here } ( \\old ( a ) , \\old ( n ) , \\old ( b ) )"
+  ],
+  "access": "out-of-memory",
+  "access_failed": [
+    "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "11/11",
+  "translated": 11,
+  "total_clauses": 11,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 13.5,
+    "hls": 19.1,
+    "latency": 0.5,
+    "bmc": 0.7,
+    "access": 0.6,
+    "phys": 0.7,
+    "cover": 0.5,
+    "total": 38.8
+  },
+  "error": null,
+  "top": "reverse_copy",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 1
+      },
+      "pre": {
+        "a": [
+          -1,
+          0,
+          -16777216,
+          0
+        ],
+        "b": [
+          0,
+          33554431,
+          33554431,
+          33554431
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -1,
+          0,
+          -16777216,
+          0
+        ],
+        "b": [
+          -16777216,
+          33554431,
+          33554431,
+          33554431
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {
+      "a": [
+        -1,
+        0,
+        -16777216,
+        0
+      ],
+      "b": [
+        -16777216,
+        33554431,
+        33554431,
+        33554431
+      ]
+    },
+    "eacsl": [],
+    "checker": "e-acsl",
+    "oracle": {
+      "requires_violated": [],
+      "violated": [
+        "ensures Reverse { Old , Here } ( \\old ( a ) , \\old ( n ) , \\old ( b ) )"
+      ],
+      "unknown": [],
+      "checked": 6
+    },
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_889: symbolic (solver-chosen) value, exact",
+    "\\forall i_890: symbolic (solver-chosen) value, exact",
+    "\\separated holds by construction (separate RTL memories/registers)",
+    "cell of a outside 0..3: solver-chosen value",
+    "cell of b outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of b",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 12,
+  "cex_step": 4,
+  "outcome": "fail"
+}

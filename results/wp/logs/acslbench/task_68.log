@@ -1,0 +1,22 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_68.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_68.c (with preprocessing)
+[kernel:parser:decimal-float] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_68.c:18: Warning: 
+  Floating-point constant 3.14159265358979323846 is not represented exactly. Will use 0x1.921fb54442d18p1.
+  (warn-once: no further messages from category 'parser:decimal-float' will be emitted)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function CircleCircumference
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_68.c:15: Warning: 
+  Unexpected constant literal "0x1.921fb54442d18p1"
+[wp] 4 goals scheduled
+[wp] [Timeout] typed_CircleCircumference_ensures (Qed 4ms) (Z3) (Cached) (Stronger)
+[wp] [Timeout] typed_CircleCircumference_assert_rte_is_nan_or_infinite_2 (Qed 3ms) (CVC5) (Cached)
+[wp] [Cache] updated:7
+[wp] Proved goals:    4 / 6
+  Terminating:       1
+  Unreachable:       1
+  Qed:               1 (3ms-3ms-4ms)
+  Alt-Ergo 2.6.4:    1 (218ms)
+  Timeout:           2

@@ -1,0 +1,89 @@
+{
+  "design": "c07_frame_prefix_fill",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "13/15",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures \\forall integer i ; 0 <= i < \\old ( k ) ==> * ( \\old ( a ) + i ) == \\old ( v )"
+  ],
+  "access": "violated",
+  "access_failed": [
+    "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "5/5",
+  "translated": 5,
+  "total_clauses": 5,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 11.2,
+    "hls": 18.8,
+    "latency": 0.4,
+    "bmc": 0.5,
+    "access": 0.5,
+    "cover": 0.4,
+    "total": 35.6
+  },
+  "error": null,
+  "top": "fill_prefix",
+  "mode": "sequential calls (overlap possible but memories are written: checked sequentially)",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 4,
+        "k": 1,
+        "v": -2147483648
+      },
+      "pre": {
+        "a": [
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "\u2200 \u2124 i; 0 \u2264 i < \\old(k) \u21d2 *(\\old(a) + i) \u2261 \\old(v)."
+      ]
+    ],
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a"
+  ],
+  "latency_report": null,
+  "interval_report": 0,
+  "depth": 12,
+  "cex_step": 2,
+  "outcome": "fail"
+}

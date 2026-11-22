@@ -1,0 +1,121 @@
+{
+  "latency": 16,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 0.7,
+    "k": 16
+  },
+  "pdr": {
+    "status": "PASS",
+    "secs": 175.3
+  },
+  "candidates": {
+    "total": 150,
+    "by_origin": {
+      "structural": 51,
+      "call-requires": 2,
+      "contract-persist": 3,
+      "call-frame": 1,
+      "loop-invariant": 36,
+      "loop-invariant-lag": 36,
+      "loop-variant": 18,
+      "loop-assigns": 3
+    },
+    "loops": 1,
+    "loop_invariants": 2,
+    "skipped": []
+  },
+  "houdini": {
+    "candidates": 150,
+    "base_dropped": 23,
+    "ind_dropped": 1,
+    "rounds": 8,
+    "status": "inductive",
+    "base_depth": 20,
+    "k": 4,
+    "secs": 29.2,
+    "invariants": 126,
+    "by_origin": {
+      "structural": 27,
+      "call-requires": 2,
+      "contract-persist": 3,
+      "call-frame": 1,
+      "loop-invariant": 36,
+      "loop-invariant-lag": 36,
+      "loop-variant": 18,
+      "loop-assigns": 3
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant 0 <= i <= n",
+      "loop 1: loop invariant \\forall integer j ; 0 <= j < i ==> ( a + j ) -> tag != t"
+    ],
+    "c_invariants_lagged": [
+      "loop 1: loop invariant \\forall integer j ; 0 <= j < i ==> ( a + j ) -> tag != t"
+    ],
+    "k_tried": [
+      4
+    ]
+  },
+  "kind+inv": {
+    "status": "PASS",
+    "secs": 0.8,
+    "k": 4
+  },
+  "ablation": {
+    "hls": {
+      "candidates": 51,
+      "invariants": 27,
+      "houdini": "inductive",
+      "k": 4,
+      "status": "UNKNOWN",
+      "secs": 0.5
+    },
+    "hls+contract": {
+      "candidates": 57,
+      "invariants": 32,
+      "houdini": "inductive",
+      "k": 4,
+      "status": "UNKNOWN",
+      "secs": 0.5
+    }
+  },
+  "kmin": {
+    "none": null,
+    "hls": 24,
+    "hls+contract": 12,
+    "all": 2,
+    "all+progress": 2
+  },
+  "latency_proof": {
+    "bound": 16,
+    "established_by_bmc": "established",
+    "kind": {
+      "status": "UNKNOWN",
+      "secs": 0.5,
+      "k": 16
+    },
+    "candidates": 146,
+    "kind+inv": {
+      "status": "PASS",
+      "secs": 1.7,
+      "k": 4,
+      "progress_invariants": 128,
+      "houdini": "inductive",
+      "houdini_secs": 13.1
+    },
+    "proved": true
+  },
+  "unbounded": true,
+  "proved_by": [
+    "kind+inv",
+    "pdr"
+  ],
+  "deep_cex": [],
+  "secs": 466.7
+}

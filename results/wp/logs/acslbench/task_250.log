@@ -1,0 +1,66 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_250.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_250.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function main
+[kernel:annot:missing-spec] FRAMAC_SHARE/libc/stdio.h:239: Warning: 
+  Neither code nor explicit exits and terminates for function printf_va_1,
+  generating default clauses. See -generated-spec-* options for more info.
+[kernel:annot:missing-spec] FRAMAC_SHARE/libc/stdio.h:240: Warning: 
+  Neither code nor explicit exits and terminates for function scanf_va_1,
+  generating default clauses. See -generated-spec-* options for more info.
+[kernel:annot:missing-spec] FRAMAC_SHARE/libc/stdio.h:239: Warning: 
+  Neither code nor explicit exits and terminates for function printf_va_2,
+  generating default clauses. See -generated-spec-* options for more info.
+[rte:annot] annotating function p2
+[wp] 27 goals scheduled
+[wp] [Timeout] typed_p2_terminates (Qed 3ms) (Z3) (Cached)
+[wp] [Timeout] typed_p2_loop_invariant_preserved (Qed 41ms) (Z3) (Cached)
+[wp] [Timeout] typed_p2_assert_rte_signed_overflow_2 (Qed 38ms) (Z3) (Cached)
+[wp] [Timeout] typed_main_assert_rte_signed_overflow_2 (Qed 27ms) (Z3) (Cached)
+[wp] [Timeout] typed_main_assert_rte_signed_overflow_3 (Qed 40ms) (Z3) (Cached)
+[wp] [Timeout] typed_main_assert_rte_signed_overflow_4 (Qed 59ms) (Z3) (Cached)
+[wp] [Timeout] typed_main_call_p2_requires (Qed 48ms) (Z3) (Cached)
+[wp] [Timeout] typed_main_call_printf_va_2_requires (Qed 45ms) (CVC5) (Cached)
+[wp] [Cache] found:2, updated:33
+[wp] Proved goals:   20 / 28
+  Unreachable:       1
+  Qed:              10 (3ms-22ms-59ms)
+  Alt-Ergo 2.6.4:    6 (89ms-161ms-187ms)
+  CVC5 :             2 (247ms-287ms)
+  Z3 5.1.0:          1 (44ms)
+  Timeout:           8
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_250.c:13: Warning: 
+  No 'assigns' specification for function 'p2'.
+  Callers assumptions might be imprecise.
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_250.c:29: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+[wp] FRAMAC_SHARE/libc/stdio.h:239: Warning: 
+  Memory model hypotheses for function 'printf_va_1':
+  /*@
+     behavior wp_typed:
+       requires \separated(&__fc_stdout, &__fc_stdout->__fc_FILE_data);
+       requires \separated(format + (..), &__fc_stdout);
+     */
+  int printf_va_1(char const * restrict format);
+[wp] FRAMAC_SHARE/libc/stdio.h:240: Warning: 
+  Memory model hypotheses for function 'scanf_va_1':
+  /*@
+     behavior wp_typed:
+       requires \separated(&__fc_stdin, &__fc_stdin->__fc_FILE_data);
+       requires \separated(format + (..), &__fc_stdin);
+       requires \separated(param0, &__fc_stdin);
+     */
+  int scanf_va_1(char const * restrict format, int *param0);
+[wp] FRAMAC_SHARE/libc/stdio.h:239: Warning: 
+  Memory model hypotheses for function 'printf_va_2':
+  /*@
+     behavior wp_typed:
+       requires \separated(&__fc_stdout, &__fc_stdout->__fc_FILE_data);
+       requires \separated(format + (..), &__fc_stdout);
+     */
+  int printf_va_2(char const * restrict format, int param0, int param1,
+                  int param2);

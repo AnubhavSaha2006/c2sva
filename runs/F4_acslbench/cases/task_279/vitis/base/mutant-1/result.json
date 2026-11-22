@@ -1,0 +1,61 @@
+{
+  "design": "task_279",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "84/84",
+  "c_ok": true,
+  "rtl": "ERROR",
+  "failed": [
+    "SBY 21:17:24 [check_yices_bmc] base: task failed. ERROR. | SBY 21:17:24 [check_yices_bmc] DONE (ERROR, rc=16)"
+  ],
+  "access": "error",
+  "access_failed": [],
+  "cover": "error",
+  "latency": 8,
+  "latency_status": "latency search error: SBY 21:15:53 [check_yices_lat] base: task failed. ERROR. | SBY 21:15:54 [check_yices_lat] DONE (ERROR, rc=16)",
+  "clauses": "6/7",
+  "translated": 6,
+  "total_clauses": 7,
+  "skipped": [
+    {
+      "id": "P3",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures \\result != 0 ==> re_0 ( \\old ( x877 ) , 0 , strlen ( \\old ( x877 ) ) )",
+      "reason": "clause too large to translate (enumeration budget exceeded)"
+    }
+  ],
+  "times": {
+    "frontend": 0.7,
+    "wp": 20.2,
+    "hls": 15.4,
+    "latency": 107.3,
+    "bmc": 71.9,
+    "access": 133.7,
+    "cover": 645.5,
+    "total": 996.7
+  },
+  "error": null,
+  "top": "dfa",
+  "mode": "overlapping calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "yices",
+  "width": 64,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "cell of x877 outside 0..3: solver-chosen value",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": 0,
+  "depth": 20,
+  "cex_step": null,
+  "failed_cutoff": [],
+  "outcome": "error"
+}

@@ -1,0 +1,90 @@
+{
+  "design": "c08_old_memory_increment",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "17/19",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P3: ensures \\forall integer i ; 0 <= i < \\old ( n ) ==> * ( \\old ( a ) + i ) == \\old ( * ( a + i ) ) + 1"
+  ],
+  "access": "violated",
+  "access_failed": [
+    "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "7/7",
+  "translated": 7,
+  "total_clauses": 7,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 11.3,
+    "hls": 13.1,
+    "latency": 0.4,
+    "bmc": 0.5,
+    "access": 0.6,
+    "cover": 1.8,
+    "total": 34.8
+  },
+  "error": null,
+  "top": "incr_all",
+  "mode": "sequential calls (overlap possible but memories are written: checked sequentially)",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 1
+      },
+      "pre": {
+        "a": [
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {
+      "a": [
+        -1,
+        -1,
+        -1,
+        -1
+      ]
+    },
+    "eacsl": [],
+    "class": "translation-error"
+  },
+  "engine": "yices",
+  "width": 72,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i: enumerated over 0..4 (weaker assumption)",
+    "\\forall i: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a"
+  ],
+  "latency_report": null,
+  "interval_report": 0,
+  "depth": 12,
+  "cex_step": 2,
+  "outcome": "fail"
+}

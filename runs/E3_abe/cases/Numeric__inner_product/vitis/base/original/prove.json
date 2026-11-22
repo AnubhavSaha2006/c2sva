@@ -1,0 +1,63 @@
+{
+  "latency": 8,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "TIMEOUT",
+    "secs": 300.1,
+    "k": 4
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.0
+  },
+  "candidates": {
+    "total": 57,
+    "by_origin": {
+      "structural": 36,
+      "call-requires": 3,
+      "call-frame": 2,
+      "loop-invariant": 8,
+      "loop-variant": 4,
+      "loop-assigns": 4
+    },
+    "loops": 1,
+    "loop_invariants": 2,
+    "skipped": [
+      {
+        "source": "requires InnerProductBounds ( a , b , n , init ) [captured inputs, during the call]",
+        "reason": "candidate too large (30649 chars)"
+      }
+    ]
+  },
+  "houdini": {
+    "candidates": 57,
+    "base_dropped": 30,
+    "ind_dropped": 0,
+    "rounds": 1,
+    "status": "base timeout",
+    "k": 16,
+    "secs": 1830.2,
+    "invariants": 0,
+    "by_origin": {},
+    "c_invariants_survived": [],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "no invariants",
+    "k": 16
+  },
+  "unbounded": false,
+  "proved_by": [],
+  "deep_cex": [],
+  "secs": 2430.3
+}

@@ -1,0 +1,72 @@
+{
+  "design": "task_426",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "9/10",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P3: ensures \\result == 2 * ( \\old ( x ) + 1 )"
+  ],
+  "access": null,
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "3/3",
+  "translated": 3,
+  "total_clauses": 3,
+  "skipped": [],
+  "times": {
+    "frontend": 0.5,
+    "wp": 11.3,
+    "hls": 14.4,
+    "latency": 0.3,
+    "bmc": 0.4,
+    "cover": 0.4,
+    "total": 31.3
+  },
+  "error": null,
+  "top": "plus_one",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "x": -536870912
+      },
+      "pre": {},
+      "rtl_post": {},
+      "rtl_result": -1073741820,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "plus_one",
+        "\\result \u2261 2 * (\\old(x) + 1). With values at failure point:"
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 80,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [],
+  "latency_report": [
+    0,
+    0
+  ],
+  "interval_report": 1,
+  "depth": 6,
+  "cex_step": 2,
+  "outcome": "fail"
+}

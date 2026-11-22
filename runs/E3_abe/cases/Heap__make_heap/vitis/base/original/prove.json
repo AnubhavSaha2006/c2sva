@@ -1,0 +1,71 @@
+{
+  "latency": 32,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 227.0,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.0
+  },
+  "candidates": {
+    "total": 600,
+    "by_origin": {
+      "structural": 365,
+      "call-requires": 1,
+      "call-frame": 1,
+      "loop-invariant": 200,
+      "loop-variant": 22,
+      "loop-assigns": 11
+    },
+    "loops": 2,
+    "loop_invariants": 15,
+    "skipped": [
+      {
+        "source": "loop 2 (heap_sift_down): loop invariant ancestor: HeapAncestor ( root , p )",
+        "reason": "inductive logic HeapAncestor"
+      },
+      {
+        "source": "loop 2 (heap_sift_down): loop invariant unchanged: Unchanged { LoopEntry , Here } ( a , p , n )",
+        "reason": "memory label LoopEntry"
+      },
+      {
+        "source": "loop 2 (heap_sift_down): loop invariant reorder: MultisetParity { Pre , Here } ( a , n , a [ p ] , v )",
+        "reason": "unknown logic function/predicate MultisetParity"
+      }
+    ]
+  },
+  "houdini": {
+    "candidates": 600,
+    "base_dropped": 345,
+    "ind_dropped": 0,
+    "rounds": 3,
+    "status": "base timeout",
+    "k": 16,
+    "secs": 10543.0,
+    "invariants": 0,
+    "by_origin": {},
+    "c_invariants_survived": [],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "no invariants",
+    "k": 16
+  },
+  "unbounded": false,
+  "proved_by": [],
+  "deep_cex": [],
+  "secs": 11116.1
+}

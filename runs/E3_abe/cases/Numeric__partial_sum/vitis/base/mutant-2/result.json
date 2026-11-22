@@ -1,0 +1,109 @@
+{
+  "design": "Numeric/partial_sum",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "36/40",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P4: ensures PartialSum ( \\old ( a ) , \\old ( n ) , \\old ( b ) )"
+  ],
+  "access": "out-of-memory",
+  "access_failed": [
+    "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "15/15",
+  "translated": 15,
+  "total_clauses": 15,
+  "skipped": [],
+  "times": {
+    "frontend": 0.5,
+    "wp": 17.6,
+    "hls": 15.5,
+    "latency": 0.6,
+    "bmc": 1.6,
+    "access": 0.8,
+    "phys": 1.6,
+    "cover": 0.7,
+    "total": 43.6
+  },
+  "error": null,
+  "top": "partial_sum",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 2
+      },
+      "pre": {
+        "a": [
+          1157134792,
+          -1862270588,
+          0,
+          0
+        ],
+        "b": [
+          1157265864,
+          620757380,
+          -1811939328,
+          264169402
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          1157134792,
+          -1862270588,
+          0,
+          0
+        ],
+        "b": [
+          1157134792,
+          620757380,
+          -1811939328,
+          264169402
+        ]
+      },
+      "rtl_result": 2,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Assertion",
+        "partial_sum",
+        "rte/signed_overflow: -2147483648 \u2264 *(b + (size_type)(i + 1u)) + *(a + i)."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-runtime-error"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_36756: enumerated over 0..4 (weaker assumption)",
+    "\\forall i_36758: symbolic (solver-chosen) value, exact",
+    "\\forall i_36760: symbolic (solver-chosen) value, exact",
+    "\\separated holds by construction (separate RTL memories/registers)",
+    "cell of a outside 0..3: solver-chosen value",
+    "cell of b outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of b",
+    "holds by construction: the RTL cannot write this object",
+    "recursive logic cut off: free value"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 12,
+  "cex_step": 6,
+  "outcome": "fail"
+}

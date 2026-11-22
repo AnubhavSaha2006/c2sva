@@ -1,0 +1,88 @@
+{
+  "design": "c03_recursive_logic",
+  "variant": "mutant-3",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "13/14",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures \\result == CountPos ( \\old ( a ) , \\old ( n ) )"
+  ],
+  "access": "out-of-memory",
+  "access_failed": [
+    "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "6/6",
+  "translated": 6,
+  "total_clauses": 6,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 0.9,
+    "hls": 12.2,
+    "latency": 0.5,
+    "bmc": 0.6,
+    "access": 0.5,
+    "phys": 0.6,
+    "cover": 0.5,
+    "total": 19.8
+  },
+  "error": null,
+  "top": "count_pos",
+  "mode": "overlapping calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 1
+      },
+      "pre": {
+        "a": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "rtl_result": 0,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "\\result \u2261 CountPos(\\old(a), \\old(n))."
+      ]
+    ],
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "cell of a outside 0..3: solver-chosen value",
+    "holds by construction: the RTL cannot write this object",
+    "recursive logic cut off: free value"
+  ],
+  "latency_report": null,
+  "interval_report": 0,
+  "depth": 15,
+  "cex_step": 3,
+  "outcome": "fail"
+}

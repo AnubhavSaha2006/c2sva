@@ -1,0 +1,585 @@
+{
+  "by_tool_config": [
+    {
+      "tool": "vitis",
+      "config": "base",
+      "designs": 82,
+      "frontend_ok": 73,
+      "hls_ok": 72,
+      "checked": 55,
+      "pass_full": 53,
+      "pass_partial": 2,
+      "fail": 0,
+      "bounded": 17,
+      "vacuous": 0,
+      "agree": 55,
+      "disagree": 0,
+      "clauses": "725/727",
+      "clause_rate": 99.7,
+      "access_speculative": 62,
+      "access_out_of_memory": 0,
+      "overlap_mode": 25,
+      "mutants": 128,
+      "mutants_checked": 110,
+      "killed": 98,
+      "mutation_score": 90.9,
+      "survivors": 9,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 5,
+      "survivors_untranslated": 0,
+      "survivors_no_violation": 4,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 3,
+      "kills_confirmed_in_C": 98,
+      "median_total_s": 66.4
+    }
+  ],
+  "details": {
+    "vitis/base": {
+      "original_outcomes": {
+        "pass": 53,
+        "bounded": 17,
+        "pass-partial": 2,
+        "error": 1,
+        "unsupported": 9
+      },
+      "failure_replay": {},
+      "kill_replay": {
+        "c-contract-violation": 76,
+        "c-runtime-error": 22
+      },
+      "survived_c_unproven": [
+        "Heap__is_heap_until/vitis/base/mutant-2",
+        "MinMax__max_element/vitis/base/mutant-2",
+        "MinMax__max_element2/vitis/base/mutant-2",
+        "MinMax__min_element/vitis/base/mutant-2",
+        "MinMax__minmax_element/vitis/base/mutant-2",
+        "Nonmutating__find/vitis/base/mutant-2",
+        "Nonmutating__find2/vitis/base/mutant-2",
+        "Nonmutating__find_if_not/vitis/base/mutant-2",
+        "Nonmutating__mismatch/vitis/base/mutant-2"
+      ],
+      "stage_median_s": {
+        "frontend": 0.5,
+        "wp": 2.7,
+        "hls": 16.8,
+        "latency": 1.5,
+        "bmc": 73.1,
+        "access": 1.0,
+        "cover": 1.0,
+        "total": 66.4
+      }
+    }
+  },
+  "not_checked_reasons": [
+    [
+      "unsupported: struct Stack: array/pointer member data",
+      9
+    ],
+    [
+      "error: hls: Vitis synthesis failed: ERROR: [HLS 200-1715] Encountered problem during source synthesis",
+      1
+    ]
+  ],
+  "untranslated_clause_reasons": [
+    [
+      "clause too large after inlining (node budget exceeded)",
+      2
+    ]
+  ],
+  "translation_strategies": [
+    [
+      "cell of a outside 0..3",
+      66
+    ],
+    [
+      "holds by construction",
+      46
+    ],
+    [
+      "exact frame over all 4 element(s) of a",
+      35
+    ],
+    [
+      "recursive logic cut off",
+      24
+    ],
+    [
+      "cell of b outside 0..3",
+      18
+    ],
+    [
+      "exact frame over all 4 element(s) of b",
+      17
+    ],
+    [
+      "\\separated holds by construction (separate RTL memories/registers)",
+      15
+    ],
+    [
+      "\\forall i",
+      4
+    ],
+    [
+      "\\forall i_11",
+      2
+    ],
+    [
+      "\\exists i_882",
+      1
+    ],
+    [
+      "\\exists i_883",
+      1
+    ],
+    [
+      "\\forall i_880,j_881",
+      1
+    ],
+    [
+      "\\forall i_850,j_851",
+      1
+    ],
+    [
+      "\\forall i_852",
+      1
+    ],
+    [
+      "\\forall i_853",
+      1
+    ],
+    [
+      "\\forall i_854",
+      1
+    ],
+    [
+      "\\forall i_859,j_860",
+      1
+    ],
+    [
+      "\\forall i_861",
+      1
+    ],
+    [
+      "\\forall i_862",
+      1
+    ],
+    [
+      "\\forall i_863",
+      1
+    ],
+    [
+      "\\forall i_816,j_817",
+      1
+    ],
+    [
+      "\\forall i_818",
+      1
+    ],
+    [
+      "\\forall i_819",
+      1
+    ],
+    [
+      "\\forall i_832,j_833",
+      1
+    ],
+    [
+      "\\forall i_834",
+      1
+    ]
+  ],
+  "disagreements": [],
+  "access_violations": [
+    {
+      "case": "BinarySearch__binary_search/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__equal_range/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__equal_range2/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__lower_bound/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__upper_bound/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Heap__heap_child/vitis/base/original",
+      "detail": [
+        "P15: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__heap_sift_down/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__is_heap/vitis/base/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__is_heap_until/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__make_heap/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__pop_heap/vitis/base/original",
+      "detail": [
+        "P10: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__push_heap/vitis/base/original",
+      "detail": [
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__sort_heap/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "MinMax__max_element/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "MinMax__max_element2/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "MinMax__max_seq/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid_read ( p + ( 0 .. n - 1 ) )  [access in range: p bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "MinMax__min_element/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "MinMax__minmax_element/vitis/base/original",
+      "detail": [
+        "P12: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P14: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Mutating__copy/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__copy_backward/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__fill/vitis/base/original",
+      "detail": [
+        "P3: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__remove_copy/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__remove_copy2/vitis/base/original",
+      "detail": [
+        "P8: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__remove_copy3/vitis/base/original",
+      "detail": [
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__replace/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Mutating__replace_copy/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__reverse_copy/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__rotate_copy/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__swap_ranges/vitis/base/original",
+      "detail": [
+        "P12: requires \\valid ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 1]",
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Nonmutating__adjacent_find/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__all_of/vitis/base/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__any_of/vitis/base/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__count/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__equal/vitis/base/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P6: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find2/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find3/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find4/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find5/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_end/vitis/base/original",
+      "detail": [
+        "P10: requires \\valid_read ( b + ( 0 .. p - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_first_of/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. m - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_if_not/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_last/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__mismatch/vitis/base/original",
+      "detail": [
+        "P10: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]",
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__none_of/vitis/base/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__search/vitis/base/original",
+      "detail": [
+        "P10: requires \\valid_read ( b + ( 0 .. p - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__search_n/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__accumulate/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__adjacent_difference/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__adjacent_difference_inv/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__inner_product/vitis/base/original",
+      "detail": [
+        "P10: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]",
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__iota/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__partial_sum/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__partial_sum_inv/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__heap_sort/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__inplace_merge/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__insertion_sort/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__is_sorted/vitis/base/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__is_sorted_until/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__merge/vitis/base/original",
+      "detail": [
+        "P14: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__partial_sort/vitis/base/original",
+      "detail": [
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__selection_sort/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    }
+  ],
+  "latency": {
+    "established": 72,
+    "report_undefined": 66,
+    "not_established": 0
+  }
+}

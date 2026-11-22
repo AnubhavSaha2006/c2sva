@@ -1,0 +1,62 @@
+{
+  "design": "task_13",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "13/13",
+  "c_ok": true,
+  "rtl": "PASS",
+  "failed": [],
+  "access": null,
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 128,
+  "latency_status": "not established within cap",
+  "clauses": "0/2",
+  "translated": 0,
+  "total_clauses": 2,
+  "skipped": [
+    {
+      "id": "P1",
+      "kind": "assume",
+      "origin": "requires",
+      "source": "requires factorial ( i ) <= 18446744073709551615UL",
+      "reason": "axiomatic logic factorial"
+    },
+    {
+      "id": "P2",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures \\result == factorial ( \\old ( i ) )",
+      "reason": "axiomatic logic factorial"
+    }
+  ],
+  "times": {
+    "frontend": 0.5,
+    "wp": 1.5,
+    "hls": 18.5,
+    "latency": 21.6,
+    "bmc": 6.5,
+    "cover": 0.5,
+    "total": 49.1
+  },
+  "error": null,
+  "top": "factorial",
+  "mode": "overlapping calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 1,
+  "notes": [],
+  "latency_report": null,
+  "interval_report": 0,
+  "depth": 140,
+  "cex_step": null,
+  "failed_cutoff": [],
+  "outcome": "pass-partial"
+}

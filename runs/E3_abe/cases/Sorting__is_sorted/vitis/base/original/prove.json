@@ -1,0 +1,87 @@
+{
+  "latency": 8,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 6.0,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.1
+  },
+  "candidates": {
+    "total": 80,
+    "by_origin": {
+      "structural": 48,
+      "call-requires": 1,
+      "call-frame": 1,
+      "loop-invariant": 18,
+      "loop-variant": 9,
+      "loop-assigns": 3
+    },
+    "loops": 1,
+    "loop_invariants": 2,
+    "skipped": []
+  },
+  "houdini": {
+    "candidates": 80,
+    "base_dropped": 33,
+    "ind_dropped": 1,
+    "rounds": 10,
+    "status": "inductive",
+    "base_depth": 12,
+    "k": 4,
+    "secs": 18.1,
+    "invariants": 46,
+    "by_origin": {
+      "structural": 20,
+      "call-requires": 1,
+      "call-frame": 1,
+      "loop-invariant": 18,
+      "loop-variant": 3,
+      "loop-assigns": 3
+    },
+    "c_invariants_survived": [
+      "loop 1 (is_sorted_until): loop invariant bound: 1 <= i <= n + 1",
+      "loop 1 (is_sorted_until): loop invariant increasing: WeaklyIncreasing ( a , i )"
+    ],
+    "k_tried": [
+      4
+    ]
+  },
+  "kind+inv": {
+    "status": "PASS",
+    "secs": 1.4,
+    "k": 4
+  },
+  "ablation": {
+    "hls": {
+      "candidates": 48,
+      "invariants": 20,
+      "houdini": "inductive",
+      "k": 4,
+      "status": "UNKNOWN",
+      "secs": 1.0
+    },
+    "hls+contract": {
+      "candidates": 50,
+      "invariants": 22,
+      "houdini": "inductive",
+      "k": 4,
+      "status": "UNKNOWN",
+      "secs": 1.2
+    }
+  },
+  "unbounded": true,
+  "proved_by": [
+    "kind+inv"
+  ],
+  "deep_cex": [],
+  "secs": 341.2
+}

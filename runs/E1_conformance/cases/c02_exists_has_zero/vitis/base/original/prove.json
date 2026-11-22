@@ -1,0 +1,103 @@
+{
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 1.4,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.0
+  },
+  "candidates": {
+    "total": 200,
+    "by_origin": {
+      "structural": 69,
+      "call-requires": 2,
+      "contract-persist": 2,
+      "call-frame": 1,
+      "loop-invariant": 48,
+      "loop-invariant-lag": 48,
+      "loop-variant": 24,
+      "loop-assigns": 6
+    },
+    "loops": 1,
+    "loop_invariants": 2,
+    "skipped": []
+  },
+  "houdini": {
+    "candidates": 200,
+    "base_dropped": 60,
+    "ind_dropped": 37,
+    "rounds": 10,
+    "status": "inductive",
+    "base_depth": 20,
+    "k": 12,
+    "secs": 170.6,
+    "invariants": 103,
+    "by_origin": {
+      "structural": 32,
+      "call-requires": 2,
+      "contract-persist": 2,
+      "call-frame": 1,
+      "loop-invariant": 24,
+      "loop-invariant-lag": 24,
+      "loop-variant": 12,
+      "loop-assigns": 6
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant 0 <= i <= n",
+      "loop 1: loop invariant \\forall integer j ; 0 <= j < i ==> * ( a + j ) != 0"
+    ],
+    "c_invariants_lagged": [
+      "loop 1: loop invariant \\forall integer j ; 0 <= j < i ==> * ( a + j ) != 0"
+    ],
+    "k_tried": [
+      4,
+      8,
+      12
+    ]
+  },
+  "kind+inv": {
+    "status": "PASS",
+    "secs": 1.8,
+    "k": 12
+  },
+  "ablation": {
+    "hls": {
+      "candidates": 67,
+      "invariants": 30,
+      "houdini": "inductive",
+      "k": 12,
+      "status": "UNKNOWN",
+      "secs": 1.0
+    },
+    "hls+contract": {
+      "candidates": 70,
+      "invariants": 33,
+      "houdini": "inductive",
+      "k": 12,
+      "status": "PASS",
+      "secs": 0.8
+    }
+  },
+  "latency": 16,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kmin": {
+    "none": null,
+    "hls": 24,
+    "hls+contract": 12,
+    "all": 12,
+    "all+progress": 12
+  },
+  "unbounded": true,
+  "proved_by": [
+    "kind+inv"
+  ],
+  "deep_cex": [],
+  "secs": 2155.2
+}

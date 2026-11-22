@@ -1,0 +1,90 @@
+{
+  "by_tool_config": [
+    {
+      "tool": "vitis",
+      "config": "base",
+      "designs": 3,
+      "frontend_ok": 3,
+      "hls_ok": 3,
+      "checked": 1,
+      "pass_full": 0,
+      "pass_partial": 0,
+      "fail": 1,
+      "bounded": 2,
+      "vacuous": 0,
+      "agree": 0,
+      "disagree": 1,
+      "clauses": "9/9",
+      "clause_rate": 100.0,
+      "access_speculative": 0,
+      "access_out_of_memory": 0,
+      "overlap_mode": 3,
+      "mutants": 6,
+      "mutants_checked": 5,
+      "killed": 5,
+      "mutation_score": 100.0,
+      "survivors": 0,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_untranslated": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 3,
+      "median_total_s": 1517.8
+    }
+  ],
+  "details": {
+    "vitis/base": {
+      "original_outcomes": {
+        "bounded": 2,
+        "fail": 1
+      },
+      "failure_replay": {
+        "translation-error": 1
+      },
+      "kill_replay": {
+        "c-contract-violation": 2,
+        "translation-error": 1,
+        "undetermined": 1,
+        "c-runtime-error": 1
+      },
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.7,
+        "wp": 2.6,
+        "hls": 19.5,
+        "latency": 291.6,
+        "bmc": 1200.3,
+        "access": null,
+        "cover": 3.3,
+        "total": 1517.8
+      }
+    }
+  },
+  "not_checked_reasons": [],
+  "untranslated_clause_reasons": [],
+  "translation_strategies": [
+    [
+      "recursive logic cut off",
+      3
+    ]
+  ],
+  "disagreements": [
+    {
+      "case": "task_564/vitis/base/original",
+      "outcome": "fail",
+      "ref": true,
+      "failed": [
+        "P3: ensures \\result == fact ( \\old ( n ) )"
+      ],
+      "replay": "translation-error"
+    }
+  ],
+  "access_violations": [],
+  "latency": {
+    "established": 1,
+    "report_undefined": 1,
+    "not_established": 2
+  }
+}

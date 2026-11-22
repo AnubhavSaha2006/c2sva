@@ -1,0 +1,94 @@
+{
+  "latency": 8,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 3.1,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.0
+  },
+  "candidates": {
+    "total": 114,
+    "by_origin": {
+      "structural": 79,
+      "call-requires": 2,
+      "call-frame": 1,
+      "loop-invariant": 20,
+      "loop-variant": 8,
+      "loop-assigns": 4
+    },
+    "loops": 1,
+    "loop_invariants": 4,
+    "skipped": [
+      {
+        "source": "loop 1 (max_element2): loop invariant upper: UpperBound ( a , i , a [ max ] )",
+        "reason": "no RTL signal found for C variable a"
+      },
+      {
+        "source": "loop 1 (max_element2): loop invariant first: StrictUpperBound ( a , max , a [ max ] )",
+        "reason": "no RTL signal found for C variable a"
+      }
+    ]
+  },
+  "houdini": {
+    "candidates": 114,
+    "base_dropped": 78,
+    "ind_dropped": 0,
+    "rounds": 2,
+    "status": "inductive",
+    "base_depth": 12,
+    "k": 16,
+    "secs": 23.8,
+    "invariants": 36,
+    "by_origin": {
+      "structural": 29,
+      "call-requires": 2,
+      "call-frame": 1,
+      "loop-assigns": 4
+    },
+    "c_invariants_survived": [],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "PASS",
+    "secs": 5.2,
+    "k": 16
+  },
+  "ablation": {
+    "hls": {
+      "candidates": 79,
+      "invariants": 29,
+      "houdini": "inductive",
+      "k": 16,
+      "status": "PASS",
+      "secs": 4.8
+    },
+    "hls+contract": {
+      "candidates": 82,
+      "invariants": 32,
+      "houdini": "inductive",
+      "k": 16,
+      "status": "PASS",
+      "secs": 6.3
+    }
+  },
+  "unbounded": true,
+  "proved_by": [
+    "kind+inv"
+  ],
+  "deep_cex": [],
+  "secs": 351.7
+}

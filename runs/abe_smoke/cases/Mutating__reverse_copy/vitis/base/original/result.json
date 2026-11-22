@@ -1,0 +1,37 @@
+{
+  "design": "Mutating/reverse_copy",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "20/20",
+  "c_ok": true,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "violated",
+  "access_failed": [
+    "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [read address in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "proven",
+  "clauses": "9/9",
+  "skipped": [],
+  "times": {
+    "frontend": 1.0,
+    "wp": 3.1,
+    "hls": 15.6,
+    "latency": 0.4,
+    "bmc": 1.9,
+    "access": 0.5,
+    "cover": 0.4,
+    "total": 22.9
+  },
+  "error": null,
+  "top": "reverse_copy",
+  "discharged": 1,
+  "pre_dropped": 0,
+  "latency_report": null,
+  "cex_step": null
+}

@@ -1,0 +1,7 @@
+16 designs -> 16 cases (tools vitis, configs base, mutants 0) -> /home/anubhavsaha/cbv/runs/E7_abe_N16
+[1/16] Nonmutating/find                 original  base     C 27/27   bounded(19)      clauses 11/11  access speculative?(timeout) lat 64 
+[2/16] Nonmutating/mismatch             original  base     C 28/28   bounded(19)      clauses 17/17  access speculative?(timeout) lat 64 
+[3/16] Nonmutating/adjacent_find        original  base     C 30/30   bounded(18)      clauses 13/13  access speculative?(timeout) lat 64 
+[4/16] Nonmutating/equal                original  base     C 9/9     bounded(29)      clauses 9/9    access speculative?(timeout) lat 64 
+[5/16] Nonmutating/any_of               original  base     C 8/8     bounded(28)      clauses 5/5    access speculative?(timeout) lat 64 
+[6/16] Nonmutating/count                original  base     C 17/17   bounded(18)      clauses 6/6    access speculative?(timeout) lat 16 

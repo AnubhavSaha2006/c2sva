@@ -1,0 +1,87 @@
+{
+  "design": "Nonmutating/mismatch",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "24/28",
+  "c_ok": false,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "speculative",
+  "access_failed": [
+    "P10: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]",
+    "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 16,
+  "latency_status": "established",
+  "clauses": "17/17",
+  "translated": 17,
+  "total_clauses": 17,
+  "skipped": [],
+  "times": {
+    "frontend": 0.6,
+    "wp": 11.9,
+    "hls": 18.2,
+    "latency": 2.0,
+    "bmc": 457.2,
+    "access": 1.0,
+    "phys": 1.0,
+    "cover": 1.0,
+    "total": 493.0
+  },
+  "error": null,
+  "top": "mismatch",
+  "mode": "overlapping calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 2,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_597: enumerated over 0..4 (stronger assertion)",
+    "\\forall i_598: symbolic (solver-chosen) value, exact",
+    "\\forall i_599: symbolic (solver-chosen) value, exact",
+    "\\forall i_600: symbolic (solver-chosen) value, exact",
+    "\\forall i_601: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "cell of b outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a",
+    "exact frame over all 4 element(s) of b",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": 0,
+  "depth": 28,
+  "cex_step": null,
+  "failed_cutoff": [],
+  "outcome": "pass",
+  "survivor": {
+    "class": "memory-safety-only",
+    "tested": 1000,
+    "detail": "ERROR: AddressSanitizer: stack-buffer-overflow",
+    "vector": [
+      {
+        "n": 4
+      },
+      {
+        "a": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "b": [
+          0,
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  }
+}

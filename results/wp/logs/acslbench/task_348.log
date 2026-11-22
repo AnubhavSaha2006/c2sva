@@ -1,0 +1,21 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_348.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_348.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function leftpad
+[kernel:annot:missing-spec] FRAMAC_SHARE/libc/string.h:178: Warning: 
+  Neither code nor explicit exits and terminates for function strlen,
+  generating default clauses. See -generated-spec-* options for more info.
+[wp] 58 goals scheduled
+[wp] [Timeout] typed_leftpad_loop_invariant_s_state_preserved (Qed 93ms) (CVC5) (Cached)
+[wp] [Timeout] typed_leftpad_assert_same_chars (Qed 152ms) (CVC5) (Cached)
+[wp] [Timeout] typed_leftpad_loop_invariant_valid_grows_preserved (Qed 180ms) (Z3) (Cached)
+[wp] [Cache] updated:35
+[wp] Proved goals:   55 / 58
+  Qed:              33 (14ms-45ms-185ms)
+  Alt-Ergo 2.6.4:   19 (84ms-503ms-2.8s)
+  CVC5 :             1 (198ms)
+  Z3 5.1.0:          2 (193ms-556ms)
+  Timeout:           3

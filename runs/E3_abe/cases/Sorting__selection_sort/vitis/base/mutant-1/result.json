@@ -1,0 +1,102 @@
+{
+  "design": "Sorting/selection_sort",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "34/37",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures Increasing ( \\old ( a ) , \\old ( n ) )"
+  ],
+  "access": "out-of-memory",
+  "access_failed": [
+    "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+  ],
+  "cover": "reached",
+  "latency": 32,
+  "latency_status": "established",
+  "clauses": "8/8",
+  "translated": 8,
+  "total_clauses": 8,
+  "skipped": [],
+  "times": {
+    "frontend": 0.6,
+    "wp": 14.0,
+    "hls": 21.5,
+    "latency": 5.0,
+    "bmc": 5.4,
+    "access": 1.5,
+    "phys": 5.6,
+    "cover": 0.8,
+    "total": 55.9
+  },
+  "error": null,
+  "top": "selection_sort",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 2
+      },
+      "pre": {
+        "a": [
+          945118681,
+          -794656761,
+          2885715,
+          684854808
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          945118681,
+          -794656761,
+          2885715,
+          684854808
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {
+      "a": [
+        945118681,
+        -794656761,
+        2885715,
+        684854808
+      ]
+    },
+    "eacsl": [],
+    "checker": "native+sanitizers",
+    "oracle": {
+      "requires_violated": [],
+      "violated": [
+        "ensures Increasing ( \\old ( a ) , \\old ( n ) )"
+      ],
+      "unknown": [],
+      "checked": 4
+    },
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_36929,j_36930: symbolic (solver-chosen) value, exact",
+    "\\forall v_36926: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a",
+    "recursive logic cut off: free value"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 36,
+  "cex_step": 9,
+  "outcome": "fail"
+}

@@ -1,0 +1,81 @@
+{
+  "design": "task_358",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "24/27",
+  "c_ok": false,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "speculative",
+  "access_failed": [
+    "P15: requires inv_matrix_Boolean ( x130 , x131 , x132 ) && inv_matrix_Boolean ( x133 , x134 , x135 ) && x131 == x134 && x132 == x135  [access in range: x130 bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 16,
+  "latency_status": "established",
+  "clauses": "19/19",
+  "translated": 19,
+  "total_clauses": 19,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 1.8,
+    "hls": 14.9,
+    "latency": 13.0,
+    "bmc": 87.1,
+    "access": 2.0,
+    "phys": 3.0,
+    "cover": 2.0,
+    "total": 124.2
+  },
+  "error": null,
+  "top": "scalar_mult",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "bitwuzla",
+  "width": 80,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\valid inside an expression: range empty or within the 4 cells"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 20,
+  "cex_step": null,
+  "failed_cutoff": [],
+  "outcome": "pass",
+  "survivor": {
+    "class": "memory-safety-only",
+    "tested": 1000,
+    "detail": "ERROR: AddressSanitizer: stack-buffer-overflow",
+    "vector": [
+      {
+        "x129": -1180729261,
+        "x131": 4,
+        "x132": 6,
+        "x134": 4,
+        "x135": 6
+      },
+      {
+        "x130": [
+          -3,
+          -2079172941,
+          2,
+          2147483646
+        ],
+        "x133": [
+          4,
+          2147483647,
+          1431413655,
+          -2
+        ]
+      }
+    ]
+  }
+}

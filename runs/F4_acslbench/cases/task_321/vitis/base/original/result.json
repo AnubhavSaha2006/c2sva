@@ -1,0 +1,63 @@
+{
+  "design": "task_321",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "43/43",
+  "c_ok": true,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "speculative",
+  "access_failed": [
+    "P5: requires \\valid ( a + ( 0 .. length - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 32,
+  "latency_status": "established",
+  "clauses": "6/7",
+  "translated": 6,
+  "total_clauses": 7,
+  "skipped": [
+    {
+      "id": "P3",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures same_elements { Pre , Here } ( \\old ( a ) , \\old ( length ) )",
+      "reason": "inductive logic same_elements"
+    }
+  ],
+  "times": {
+    "frontend": 0.4,
+    "wp": 3.1,
+    "hls": 15.8,
+    "latency": 4.5,
+    "bmc": 218.7,
+    "access": 1.0,
+    "phys": 1.5,
+    "cover": 1.0,
+    "total": 246.1
+  },
+  "error": null,
+  "top": "sort",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "bitwuzla",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_390,j_391: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 36,
+  "cex_step": null,
+  "failed_cutoff": [],
+  "outcome": "pass-partial"
+}

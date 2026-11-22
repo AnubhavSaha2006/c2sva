@@ -1,0 +1,90 @@
+{
+  "design": "Sorting/partial_sort",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "76/79",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P10: assigns * ( a + ( 0 .. n - 1 ) )  [frame of a]"
+  ],
+  "access": "out-of-memory",
+  "access_failed": [
+    "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+  ],
+  "cover": "reached",
+  "latency": 64,
+  "latency_status": "established",
+  "clauses": "10/10",
+  "translated": 10,
+  "total_clauses": 10,
+  "skipped": [],
+  "times": {
+    "frontend": 0.6,
+    "wp": 36.2,
+    "hls": 28.7,
+    "latency": 194.5,
+    "bmc": 62.1,
+    "access": 4.2,
+    "phys": 64.4,
+    "cover": 2.3,
+    "total": 395.3
+  },
+  "error": null,
+  "top": "partial_sort",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "m": 1,
+        "n": 2
+      },
+      "pre": {
+        "a": [
+          1675625055,
+          268436063,
+          8799,
+          118122043
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          1675625055,
+          8799,
+          268436063,
+          118122043
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [],
+    "checker": "native+sanitizers",
+    "class": "c-runtime-error",
+    "detail": "ERROR: AddressSanitizer: stack-buffer-underflow"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_36902,k_36903: symbolic (solver-chosen) value, exact",
+    "\\forall i_36904,j_36905: symbolic (solver-chosen) value, exact",
+    "\\forall v_36899: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a",
+    "recursive logic cut off: free value"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 68,
+  "cex_step": 12,
+  "outcome": "fail"
+}

@@ -1,0 +1,99 @@
+{
+  "design": "BinarySearch/equal_range2",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "56/58",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures 0 <= \\result . first <= \\result . second <= \\old ( n )"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 128,
+  "latency_status": "not established within cap",
+  "clauses": "9/9",
+  "translated": 9,
+  "total_clauses": 9,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 6.6,
+    "hls": 21.9,
+    "latency": 283.7,
+    "bmc": 1.5,
+    "access": 1.0,
+    "phys": 20.0,
+    "cover": 1.0,
+    "total": 342.1
+  },
+  "error": null,
+  "top": "equal_range2",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 4,
+        "v": 0
+      },
+      "pre": {
+        "a": [
+          -2147483648,
+          -2147483647,
+          -2147483647,
+          1
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -2147483648,
+          -2147483647,
+          -2147483647,
+          1
+        ]
+      },
+      "rtl_result": {
+        "first": 4294967295,
+        "second": 4294967295
+      },
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Assertion",
+        "equal_range2",
+        "rte/unsigned_overflow: 0 \u2264 first - (size_type)((size_type)(last - first) / 2u)."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-runtime-error"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_864,j_865: enumerated over 0..4 (weaker assumption)",
+    "\\forall i_866: symbolic (solver-chosen) value, exact",
+    "\\forall i_867: symbolic (solver-chosen) value, exact",
+    "\\forall i_868: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 132,
+  "cex_step": 11,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

@@ -1,0 +1,107 @@
+{
+  "design": "Heap/pop_heap",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "28/30",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P4: ensures * ( \\old ( a ) + ( \\old ( n ) - 1 ) ) == \\old ( * ( a + 0 ) )",
+    "P5: ensures MaxElement ( \\old ( a ) , \\old ( n ) , \\old ( n ) - 1 )"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 16,
+  "latency_status": "established",
+  "clauses": "12/12",
+  "translated": 12,
+  "total_clauses": 12,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 13.7,
+    "hls": 13.3,
+    "latency": 2.5,
+    "bmc": 1.5,
+    "access": 1.0,
+    "phys": 1.0,
+    "cover": 1.0,
+    "total": 36.2
+  },
+  "error": null,
+  "top": "pop_heap",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 2
+      },
+      "pre": {
+        "a": [
+          -1073741825,
+          -1610612737,
+          -1,
+          -1073741825
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -1073741825,
+          -1610612737,
+          -1,
+          -1073741825
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {
+      "a": [
+        -1073741825,
+        -1610612737,
+        -1,
+        -1073741825
+      ]
+    },
+    "eacsl": [],
+    "checker": "native+sanitizers",
+    "oracle": {
+      "requires_violated": [],
+      "violated": [
+        "ensures * ( \\old ( a ) + ( \\old ( n ) - 1 ) ) == \\old ( * ( a + 0 ) )",
+        "ensures MaxElement ( \\old ( a ) , \\old ( n ) , \\old ( n ) - 1 )"
+      ],
+      "unknown": [],
+      "checked": 8
+    },
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_62841: enumerated over 0..4 (weaker assumption)",
+    "\\forall i_62842: symbolic (solver-chosen) value, exact",
+    "\\forall i_62843: symbolic (solver-chosen) value, exact",
+    "\\forall v_62844: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a",
+    "recursive logic cut off: free value"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 20,
+  "cex_step": 3,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

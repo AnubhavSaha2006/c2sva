@@ -1,0 +1,107 @@
+{
+  "design": "Nonmutating/adjacent_find",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "26/30",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P4: ensures ! HasEqualNeighbors ( \\old ( a ) , \\result )"
+  ],
+  "access": "ok",
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "13/13",
+  "translated": 13,
+  "total_clauses": 13,
+  "skipped": [],
+  "times": {
+    "frontend": 0.9,
+    "wp": 12.2,
+    "hls": 21.2,
+    "latency": 1.0,
+    "bmc": 1.5,
+    "access": 1.0,
+    "cover": 1.0,
+    "total": 45.0
+  },
+  "error": null,
+  "top": "adjacent_find",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 2
+      },
+      "pre": {
+        "a": [
+          -805305345,
+          -805305345,
+          1610612735,
+          -1
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -805305345,
+          -805305345,
+          1610612735,
+          -1
+        ]
+      },
+      "rtl_result": 2,
+      "completed": true
+    },
+    "c_result": 2,
+    "c_post": {
+      "a": [
+        -805305345,
+        -805305345,
+        1610612735,
+        -1
+      ]
+    },
+    "eacsl": [],
+    "checker": "native+sanitizers (E-ACSL stopped at unsigned wrap-around)",
+    "oracle": {
+      "requires_violated": [],
+      "violated": [
+        "ensures 0 <= \\result < \\old ( n ) - 1",
+        "ensures * ( \\old ( a ) + \\result ) == * ( \\old ( a ) + ( \\result + 1 ) )",
+        "ensures ! HasEqualNeighbors ( \\old ( a ) , \\result )"
+      ],
+      "unknown": [],
+      "checked": 7
+    },
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\exists i_569: symbolic (solver-chosen) value, exact",
+    "\\exists i_570: symbolic (solver-chosen) value, exact",
+    "\\exists i_571: symbolic (solver-chosen) value, exact",
+    "\\exists i_572: symbolic (solver-chosen) value, exact",
+    "\\exists i_573: enumerated over 0..4 (stronger assertion)",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a"
+  ],
+  "latency_report": [
+    0,
+    0
+  ],
+  "interval_report": 1,
+  "depth": 6,
+  "cex_step": 2,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

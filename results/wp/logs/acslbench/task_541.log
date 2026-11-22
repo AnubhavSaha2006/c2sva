@@ -1,0 +1,20 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_541.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_541.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function in_ecount
+[rte:annot] annotating function in_ecount_test
+[wp] 10 goals scheduled
+[wp] [Timeout] typed_in_ecount_test_assert_2 (Qed 27ms) (Z3) (Cached)
+[wp] [Cache] found:3, updated:1
+[wp] Proved goals:   11 / 12
+  Terminating:       1
+  Unreachable:       1
+  Qed:               8 (8ms-3ms-27ms)
+  Alt-Ergo 2.6.4:    1 (83ms)
+  Timeout:           1
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_541.c:18: Warning: 
+  No 'assigns' specification for function 'in_ecount_test'.
+  Callers assumptions might be imprecise.

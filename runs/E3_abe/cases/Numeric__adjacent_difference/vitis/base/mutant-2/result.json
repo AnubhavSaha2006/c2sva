@@ -1,0 +1,108 @@
+{
+  "design": "Numeric/adjacent_difference",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "28/31",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P4: ensures AdjacentDifference ( \\old ( a ) , \\old ( n ) , \\old ( b ) )"
+  ],
+  "access": "out-of-memory",
+  "access_failed": [
+    "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "15/15",
+  "translated": 15,
+  "total_clauses": 15,
+  "skipped": [],
+  "times": {
+    "frontend": 0.6,
+    "wp": 16.2,
+    "hls": 14.4,
+    "latency": 0.6,
+    "bmc": 1.3,
+    "access": 0.8,
+    "phys": 1.2,
+    "cover": 0.6,
+    "total": 40.5
+  },
+  "error": null,
+  "top": "adjacent_difference",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 2
+      },
+      "pre": {
+        "a": [
+          -821100538,
+          821166074,
+          0,
+          0
+        ],
+        "b": [
+          1326383110,
+          65536,
+          8191,
+          8191
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -821100538,
+          821166074,
+          0,
+          0
+        ],
+        "b": [
+          -821100538,
+          65536,
+          8191,
+          8191
+        ]
+      },
+      "rtl_result": 2,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Assertion",
+        "adjacent_difference",
+        "difference: AdjacentDifference(a, i + 1, b)."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-runtime-error"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_36767: enumerated over 0..4 (weaker assumption)",
+    "\\forall i_36768: symbolic (solver-chosen) value, exact",
+    "\\forall i_36769: symbolic (solver-chosen) value, exact",
+    "\\separated holds by construction (separate RTL memories/registers)",
+    "cell of a outside 0..3: solver-chosen value",
+    "cell of b outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of b",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 12,
+  "cex_step": 6,
+  "outcome": "fail"
+}

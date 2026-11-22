@@ -1,0 +1,28 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_149.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_149.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function main
+[rte:annot] annotating function opa
+[rte:annot] annotating function opb
+[rte:annot] annotating function opc
+[wp] 8 goals scheduled
+[wp] [Cache] not used
+[wp] Proved goals:   14 / 14
+  Terminating:     3
+  Unreachable:     3
+  Qed:             8
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_149.c:18: Warning: 
+  No 'assigns' specification for function 'opa'.
+  Callers assumptions might be imprecise.
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_149.c:22: Warning: 
+  No 'assigns' specification for function 'opb'.
+  Callers assumptions might be imprecise.
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_149.c:26: Warning: 
+  No 'assigns' specification for function 'opc'.
+  Callers assumptions might be imprecise.
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_149.c:30: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.

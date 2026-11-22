@@ -1,0 +1,77 @@
+{
+  "by_tool_config": [
+    {
+      "tool": "vitis",
+      "config": "base",
+      "designs": 1,
+      "frontend_ok": 1,
+      "hls_ok": 1,
+      "checked": 1,
+      "pass_full": 0,
+      "pass_partial": 0,
+      "fail": 1,
+      "bounded": 0,
+      "vacuous": 0,
+      "agree": 0,
+      "disagree": 0,
+      "clauses": "3/3",
+      "clause_rate": 100.0,
+      "access_speculative": 0,
+      "access_out_of_memory": 0,
+      "overlap_mode": 1,
+      "mutants": 2,
+      "mutants_checked": 2,
+      "killed": 2,
+      "mutation_score": 100.0,
+      "survivors": 0,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_untranslated": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 0,
+      "median_total_s": 99.9
+    }
+  ],
+  "details": {
+    "vitis/base": {
+      "original_outcomes": {
+        "fail-inconclusive": 1
+      },
+      "failure_replay": {
+        "translation-error": 1
+      },
+      "kill_replay": {
+        "translation-error": 1,
+        "undetermined": 1
+      },
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.7,
+        "wp": 2.1,
+        "hls": 18.3,
+        "latency": 1.2,
+        "bmc": 72.1,
+        "access": null,
+        "cover": 2.2,
+        "total": 99.9
+      }
+    }
+  },
+  "not_checked_reasons": [],
+  "untranslated_clause_reasons": [],
+  "translation_strategies": [
+    [
+      "recursive logic cut off",
+      1
+    ]
+  ],
+  "disagreements": [],
+  "access_violations": [],
+  "latency": {
+    "established": 1,
+    "report_undefined": 1,
+    "not_established": 0
+  }
+}

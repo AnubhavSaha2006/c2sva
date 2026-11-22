@@ -1,0 +1,44 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_364.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_364.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function distance_abs
+[wp] 53 goals scheduled
+[wp] Warning: Goal Property (1/8):
+    running prover CVC5: failed ([Why3 Error] anomaly: Not_found)
+[wp] Warning: Goal Property (1/8):
+    running prover Alt-Ergo:2.6.4 failed ([Why3 Error] anomaly: Not_found)
+[wp] Warning: Goal Property (2/8):
+    running prover Alt-Ergo:2.6.4 failed ([Why3 Error] anomaly: Not_found)
+[wp] Warning: Goal Property (1/8):
+    running prover Z3:5.1.0 failed ([Why3 Error] anomaly: Not_found)
+[wp] [Failure] typed_distance_abs_ensures_part1 (Qed 19ms) (Alt-Ergo) (No Cache)
+[wp] Warning: Goal Property (2/8):
+    running prover Z3:5.1.0 failed ([Why3 Error] anomaly: Not_found)
+[wp] Warning: Goal Property (2/8):
+    running prover CVC5: failed ([Why3 Error] anomaly: Not_found)
+[wp] [Failure] typed_distance_abs_ensures_part2 (Qed 36ms) (Alt-Ergo) (No Cache)
+[wp] Warning: Goal Property (5/8):
+    running prover CVC5: failed ([Why3 Error] anomaly: Not_found)
+[wp] Warning: Goal Property (5/8):
+    running prover Alt-Ergo:2.6.4 failed ([Why3 Error] anomaly: Not_found)
+[wp] Warning: Goal Property (6/8):
+    running prover Alt-Ergo:2.6.4 failed ([Why3 Error] anomaly: Not_found)
+[wp] Warning: Goal Property (5/8):
+    running prover Z3:5.1.0 failed ([Why3 Error] anomaly: Not_found)
+[wp] [Failure] typed_distance_abs_ensures_part5 (Qed 21ms) (Alt-Ergo) (No Cache)
+[wp] Warning: Goal Property (6/8):
+    running prover Z3:5.1.0 failed ([Why3 Error] anomaly: Not_found)
+[wp] Warning: Goal Property (6/8):
+    running prover CVC5: failed ([Why3 Error] anomaly: Not_found)
+[wp] [Failure] typed_distance_abs_ensures_part6 (Qed 25ms) (Alt-Ergo) (No Cache)
+[wp] [Cache] found:13
+[wp] Proved goals:   51 / 55
+  Terminating:       1
+  Unreachable:       1
+  Qed:              37 (10ms-7ms-36ms)
+  Alt-Ergo 2.6.4:    8 (68ms-107ms)
+  CVC5 :             4 (63ms-96ms-119ms)
+  Failed:            4

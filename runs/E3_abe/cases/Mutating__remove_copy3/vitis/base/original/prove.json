@@ -1,0 +1,105 @@
+{
+  "latency": 8,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 214.2,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.0
+  },
+  "candidates": {
+    "total": 64,
+    "by_origin": {
+      "structural": 37,
+      "call-requires": 3,
+      "call-frame": 2,
+      "loop-invariant": 14,
+      "loop-variant": 4,
+      "loop-assigns": 4
+    },
+    "loops": 1,
+    "loop_invariants": 8,
+    "skipped": [
+      {
+        "source": "loop 1: loop invariant remove: Remove { Pre , Here } ( a , n , i , b , v )",
+        "reason": "clause too large after inlining (node budget exceeded)"
+      },
+      {
+        "source": "loop 1: loop invariant interval: IndexOfNotEqual { Pre } ( a , n , v , k - 1 ) <= i",
+        "reason": "clause too large after inlining (node budget exceeded)"
+      },
+      {
+        "source": "loop 1: loop invariant interval: i <= IndexOfNotEqual { Pre } ( a , n , v , k )",
+        "reason": "clause too large after inlining (node budget exceeded)"
+      }
+    ]
+  },
+  "houdini": {
+    "candidates": 64,
+    "base_dropped": 29,
+    "ind_dropped": 0,
+    "rounds": 2,
+    "status": "inductive",
+    "base_depth": 12,
+    "k": 16,
+    "secs": 483.2,
+    "invariants": 35,
+    "by_origin": {
+      "structural": 12,
+      "call-requires": 3,
+      "call-frame": 2,
+      "loop-invariant": 10,
+      "loop-variant": 4,
+      "loop-assigns": 4
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant bound: 0 <= k <= i <= n",
+      "loop 1: loop invariant discard: NoneEqual ( b , k , v )",
+      "loop 1: loop invariant unchanged: Unchanged { Pre , Here } ( a , n )",
+      "loop 1: loop invariant unchanged: Unchanged { Pre , Here } ( b , k , n )"
+    ],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "PASS",
+    "secs": 132.5,
+    "k": 16
+  },
+  "ablation": {
+    "hls": {
+      "candidates": 37,
+      "invariants": 12,
+      "houdini": "inductive",
+      "k": 16,
+      "status": "PASS",
+      "secs": 264.8
+    },
+    "hls+contract": {
+      "candidates": 42,
+      "invariants": 17,
+      "houdini": "inductive",
+      "k": 16,
+      "status": "PASS",
+      "secs": 187.0
+    }
+  },
+  "unbounded": true,
+  "proved_by": [
+    "kind+inv"
+  ],
+  "deep_cex": [],
+  "secs": 1761.6
+}

@@ -1,0 +1,226 @@
+82 designs -> 210 cases (tools vitis, configs base, mutants 2) -> /home/anubhavsaha/cbv/runs/E3_abe
+[1/210] Nonmutating/find2                mutant-1  base     C 25/27   fail             clauses 11/11  access out-of-memory lat 8 c-contract-violation
+[2/210] Nonmutating/find                 mutant-1  base     C 25/27   fail             clauses 11/11  access out-of-memory lat 8 c-contract-violation
+[3/210] Nonmutating/find_last            mutant-1  base     C 25/27   fail             clauses 11/11  access out-of-memory lat 8 c-contract-violation
+[4/210] Nonmutating/find_last            mutant-2  base     C 24/27   fail             clauses 11/11  access out-of-memory lat 8 c-contract-violation
+[5/210] Nonmutating/find_last            original  base     C 27/27   pass             clauses 11/11  access speculative lat 8 
+[6/210] Nonmutating/find3                mutant-1  base     C 15/17   fail             clauses 6/6    access out-of-memory lat 8 c-runtime-error
+[7/210] Nonmutating/find                 original  base     C 27/27   pass             clauses 11/11  access speculative lat 16 
+[8/210] Nonmutating/find2                original  base     C 27/27   pass             clauses 11/11  access speculative lat 16 
+[9/210] Nonmutating/find                 mutant-2  base     C 24/27   pass             clauses 11/11  access speculative lat 16 
+[10/210] Nonmutating/find4                original  base     C 19/19   pass             clauses 11/11  access speculative lat 16 
+[11/210] Nonmutating/find2                mutant-2  base     C 24/27   pass             clauses 11/11  access speculative lat 16 
+[12/210] Nonmutating/find_if_not          mutant-1  base     C 15/17   fail             clauses 6/6    access out-of-memory lat 8 c-runtime-error
+[13/210] Nonmutating/find_first_of        mutant-1  base     C 39/41   fail             clauses 17/17  access out-of-memory lat 64 c-contract-violation
+[14/210] Nonmutating/find_if_not          original  base     C 17/17   pass             clauses 6/6    access speculative lat 16 
+[15/210] Nonmutating/adjacent_find        mutant-1  base     C 27/30   fail             clauses 13/13  access undecided lat 16 c-contract-violation
+[16/210] Nonmutating/find_if_not          mutant-2  base     C 14/17   pass             clauses 6/6    access speculative lat 16 
+[17/210] Nonmutating/adjacent_find        mutant-2  base     C 26/30   fail             clauses 13/13  access undecided lat 2 c-runtime-error
+[18/210] Nonmutating/adjacent_find        original  base     C 30/30   pass             clauses 13/13  access speculative lat 16 
+[19/210] Nonmutating/mismatch             mutant-1  base     C 26/28   fail             clauses 17/17  access out-of-memory lat 8 c-contract-violation
+[20/210] Nonmutating/equal                original  base     C 9/9     pass             clauses 9/9    access speculative lat 16 
+[21/210] Nonmutating/equal                mutant-1  base     C 8/9     fail             clauses 9/9    access out-of-memory lat 16 c-contract-violation
+[22/210] Nonmutating/all_of               original  base     C 8/8     pass             clauses 5/5    access speculative lat 16 
+[23/210] Nonmutating/all_of               mutant-1  base     C 7/8     fail             clauses 5/5    access out-of-memory lat 16 c-contract-violation
+[24/210] Nonmutating/any_of               original  base     C 8/8     pass             clauses 5/5    access speculative lat 16 
+[25/210] Nonmutating/any_of               mutant-1  base     C 7/8     fail             clauses 5/5    access out-of-memory lat 16 c-contract-violation
+[26/210] Nonmutating/none_of              original  base     C 8/8     pass             clauses 5/5    access speculative lat 16 
+[27/210] Nonmutating/none_of              mutant-1  base     C 7/8     fail             clauses 5/5    access out-of-memory lat 16 c-contract-violation
+[28/210] Nonmutating/mismatch             mutant-2  base     C 24/28   bounded(25)      clauses 17/17  access speculative lat 16 
+[29/210] Nonmutating/search               mutant-1  base     C 44/45   fail             clauses 17/17  access out-of-memory lat 16 c-runtime-error
+[30/210] Nonmutating/find3                original  base     C 17/17   bounded(20)      clauses 6/6    access speculative?(timeout) lat 16 
+[31/210] Nonmutating/find3                mutant-2  base     C 14/17   bounded(19)      clauses 6/6    access speculative?(timeout) lat 16 
+[32/210] Nonmutating/search_n             mutant-1  base     C 54/56   fail             clauses 11/11  access undecided lat 16 c-runtime-error
+[33/210] Nonmutating/find5                original  base     C 8/8     bounded(20)      clauses 6/6    access speculative?(timeout) lat 16 
+[34/210] Nonmutating/search_n             mutant-2  base     C 53/56   fail             clauses 11/11  access out-of-memory lat 16 c-runtime-error
+[35/210] Nonmutating/mismatch             original  base     C 28/28   bounded(24)      clauses 17/17  access speculative lat 16 
+[36/210] Nonmutating/find_end             mutant-1  base     C 33/35   fail             clauses 17/17  access undecided lat 32 c-contract-violation
+[37/210] Nonmutating/count                original  base     C 17/17   pass             clauses 6/6    access speculative lat 8 
+[38/210] Nonmutating/find_first_of        original  base     C 41/41   bounded(21)      clauses 17/17  access speculative?(timeout) lat 64 
+[39/210] Nonmutating/count                mutant-1  base     C 16/17   fail             clauses 6/6    access out-of-memory lat 8 c-contract-violation
+[40/210] MinMax/clamp                     original  base     C 12/12   pass             clauses 5/5    access None      lat 2 
+[41/210] Nonmutating/count                mutant-2  base     C 13/17   fail             clauses 6/6    access out-of-memory lat 8 c-contract-violation
+[42/210] MinMax/clamp                     mutant-1  base     C 12/12   pass             clauses 5/5    access None      lat 2 
+[43/210] MinMax/clamp                     mutant-2  base     C 12/12   pass             clauses 5/5    access None      lat 2 
+[44/210] MinMax/make_pair                 original  base     C 5/5     pass             clauses 2/2    access None      lat 2 
+[45/210] MinMax/max_element               mutant-1  base     C 29/32   fail             clauses 13/13  access out-of-memory lat 8 c-contract-violation
+[46/210] MinMax/max_element               original  base     C 32/32   pass             clauses 13/13  access speculative lat 8 
+[47/210] MinMax/max_element               mutant-2  base     C 31/32   pass             clauses 13/13  access speculative lat 8 
+[48/210] MinMax/max_element2              original  base     C 32/32   pass             clauses 13/13  access speculative lat 8 
+[49/210] Nonmutating/find_first_of        mutant-2  base     C 38/41   bounded(22)      clauses 17/17  access speculative?(timeout) lat 128 
+[50/210] MinMax/max_element2              mutant-1  base     C 29/32   fail             clauses 13/13  access undecided lat 8 c-contract-violation
+[51/210] MinMax/max_seq                   original  base     C 10/10   pass             clauses 9/9    access speculative lat 8 
+[52/210] MinMax/max_element2              mutant-2  base     C 31/32   pass             clauses 13/13  access speculative lat 8 
+[53/210] MinMax/min_element               mutant-1  base     C 29/32   fail             clauses 13/13  access undecided lat 8 c-contract-violation
+[54/210] MinMax/min_element               original  base     C 32/32   pass             clauses 13/13  access speculative lat 8 
+[55/210] MinMax/min_element               mutant-2  base     C 31/32   pass             clauses 13/13  access speculative lat 8 
+[56/210] MinMax/minmax_element            mutant-1  base     C 53/58   fail             clauses 18/18  access undecided lat 16 c-contract-violation
+[57/210] Nonmutating/search               mutant-2  base     C 41/45   fail             clauses 17/17  access out-of-memory lat 128 c-runtime-error
+[58/210] BinarySearch/lower_bound         mutant-1  base     C 19/21   fail             clauses 8/8    access out-of-memory lat 8 c-contract-violation
+[59/210] BinarySearch/lower_bound         original  base     C 21/21   pass             clauses 8/8    access speculative lat 8 
+[60/210] Nonmutating/find_end             mutant-2  base     C 29/35   fail             clauses 17/17  access out-of-memory lat 128 c-contract-violation
+[61/210] BinarySearch/upper_bound         original  base     C 21/21   pass             clauses 8/8    access speculative lat 8 
+[62/210] BinarySearch/upper_bound         mutant-1  base     C 19/21   fail             clauses 8/8    access out-of-memory lat 8 c-contract-violation
+[63/210] Nonmutating/search               original  base     C 45/45   bounded(17)      clauses 17/17  access speculative?(timeout) lat 32 
+[64/210] MinMax/minmax_element            original  base     C 58/58   pass             clauses 18/18  access speculative lat 8 
+[65/210] MinMax/minmax_element            mutant-2  base     C 57/58   pass             clauses 18/18  access speculative lat 8 
+[66/210] BinarySearch/equal_range2        mutant-1  base     C 56/58   fail             clauses 9/9    access out-of-memory lat 16 c-contract-violation
+[67/210] BinarySearch/lower_bound         mutant-2  base     C 19/21   fail             clauses 8/8    access out-of-memory lat 128 c-runtime-error
+[68/210] BinarySearch/binary_search       original  base     C 12/12   pass             clauses 6/6    access speculative lat 8 
+[69/210] BinarySearch/binary_search       mutant-1  base     C 10/12   fail             clauses 6/6    access out-of-memory lat 8 replay-error
+[70/210] Mutating/fill                    original  base     C 15/15   pass             clauses 5/5    access speculative lat 8 
+[71/210] BinarySearch/binary_search       mutant-2  base     C 10/12   fail             clauses 6/6    access out-of-memory lat 8 replay-error
+[72/210] Mutating/fill                    mutant-1  base     C 13/15   fail             clauses 5/5    access out-of-memory lat 8 c-contract-violation
+[73/210] Mutating/fill                    mutant-2  base     C 12/15   fail             clauses 5/5    access out-of-memory lat 8 c-contract-violation
+[74/210] Mutating/swap                    original  base     C 10/10   pass             clauses 4/4    access None      lat 2 
+[75/210] Mutating/swap_ranges             mutant-1  base     C 23/25   fail             clauses 15/15  access out-of-memory lat 8 c-contract-violation
+[76/210] Mutating/swap_ranges             original  base     C 25/25   pass             clauses 15/15  access speculative lat 8 
+[77/210] BinarySearch/upper_bound         mutant-2  base     C 19/21   fail             clauses 8/8    access out-of-memory lat 128 c-runtime-error
+[78/210] Mutating/swap_ranges             mutant-2  base     C 21/25   fail             clauses 15/15  access out-of-memory lat 8 c-runtime-error
+[79/210] Mutating/copy                    original  base     C 18/18   pass             clauses 10/10  access speculative lat 8 
+[80/210] BinarySearch/equal_range         original  base     C 18/18   pass             clauses 9/9    access speculative lat 16 
+[81/210] Mutating/copy                    mutant-1  base     C 16/18   fail             clauses 10/10  access out-of-memory lat 8 c-contract-violation
+[82/210] Mutating/copy                    mutant-2  base     C 14/18   fail             clauses 10/10  access out-of-memory lat 8 c-contract-violation
+[83/210] Mutating/copy_backward           original  base     C 19/19   pass             clauses 10/10  access speculative lat 8 
+[84/210] Mutating/copy_backward           mutant-1  base     C 18/19   fail             clauses 10/10  access out-of-memory lat 8 c-contract-violation
+[85/210] Mutating/copy_backward           mutant-2  base     C 14/19   fail             clauses 10/10  access out-of-memory lat 8 c-contract-violation
+[86/210] Mutating/reverse_copy            mutant-1  base     C 18/20   fail             clauses 11/11  access out-of-memory lat 8 c-contract-violation
+[87/210] Mutating/reverse_copy            original  base     C 20/20   pass             clauses 11/11  access speculative lat 8 
+[88/210] Mutating/reverse_copy            mutant-2  base     C 17/20   fail             clauses 11/11  access out-of-memory lat 8 c-contract-violation
+[89/210] Mutating/reverse                 original  base     C 26/26   pass             clauses 7/7    access ok        lat 8 
+[90/210] BinarySearch/equal_range2        original  base     C 58/58   pass             clauses 9/9    access speculative lat 16 
+[91/210] Mutating/reverse                 mutant-2  base     C 21/26   fail             clauses 7/7    access out-of-memory lat 8 c-contract-violation
+[92/210] BinarySearch/equal_range2        mutant-2  base     C 56/58   fail             clauses 9/9    access out-of-memory lat 128 c-runtime-error
+[93/210] Nonmutating/search_n             original  base     C 55/56   pass             clauses 11/11  access speculative lat 16 
+[94/210] Mutating/rotate                  mutant-1  base     C 18/19   fail             clauses 9/9    access undecided lat 32 c-contract-violation
+[95/210] Mutating/replace_copy            original  base     C 21/21   pass             clauses 12/12  access speculative lat 8 
+[96/210] Mutating/rotate                  mutant-2  base     C 14/19   fail             clauses 9/9    access out-of-memory lat 32 invalid-witness
+[97/210] Mutating/replace_copy            mutant-1  base     C 19/21   fail             clauses 12/12  access out-of-memory lat 8 c-contract-violation
+[98/210] Mutating/replace_copy            mutant-2  base     C 16/21   fail             clauses 12/12  access out-of-memory lat 8 c-contract-violation
+[99/210] Mutating/replace                 original  base     C 18/18   pass             clauses 7/7    access speculative lat 8 
+[100/210] Mutating/replace                 mutant-1  base     C 16/18   fail             clauses 7/7    access out-of-memory lat 8 c-contract-violation
+[101/210] Mutating/reverse                 mutant-1  base     C 25/26   fail             clauses 7/7    access undecided lat 128 c-runtime-error
+[102/210] Mutating/replace                 mutant-2  base     C 14/18   fail             clauses 7/7    access out-of-memory lat 8 c-contract-violation
+[103/210] Mutating/remove_copy             original  base     C 24/24   pass             clauses 13/13  access speculative lat 8 
+[104/210] Mutating/remove_copy             mutant-1  base     C 23/24   fail             clauses 13/13  access out-of-memory lat 8 c-contract-violation
+[105/210] Mutating/remove_copy             mutant-2  base     C 19/24   fail             clauses 13/13  access out-of-memory lat 8 c-contract-violation
+[106/210] Mutating/remove_copy2            mutant-1  base     C 28/29   fail             clauses 14/14  access out-of-memory lat 8 c-contract-violation
+[107/210] Mutating/remove_copy2            mutant-2  base     C 23/29   fail             clauses 14/14  access out-of-memory lat 8 c-contract-violation
+[108/210] Mutating/remove_copy3            mutant-1  base     C 45/46   fail             clauses 14/15  access out-of-memory lat 8 replay-error
+[109/210] Mutating/remove_copy3            mutant-2  base     C 38/46   fail             clauses 14/15  access out-of-memory lat 8 replay-error
+[110/210] Mutating/remove_copy2            original  base     C 29/29   pass             clauses 14/14  access speculative lat 8 
+[111/210] Mutating/remove_copy3            original  base     C 46/46   pass-partial     clauses 14/15  access speculative lat 8 
+[112/210] Mutating/remove                  mutant-1  base     C 39/40   fail             clauses 8/9    access out-of-memory lat 8 replay-error
+[113/210] Mutating/remove                  mutant-2  base     C 34/40   fail             clauses 8/9    access out-of-memory lat 16 replay-error
+[114/210] Mutating/remove                  original  base     C 40/40   pass-partial     clauses 8/9    access ok        lat 8 
+[115/210] Mutating/rotate_copy             mutant-1  base     C 13/18   fail             clauses 12/12  access out-of-memory lat 8 rtl-c-divergence
+[116/210] Mutating/rotate_copy             original  base     C 18/18   pass             clauses 12/12  access speculative lat 8 
+[117/210] Numeric/iota                     original  base     C 19/19   pass             clauses 6/6    access speculative lat 8 
+[118/210] Mutating/rotate_copy             mutant-2  base     C 11/18   fail             clauses 12/12  access out-of-memory lat 128 c-contract-violation
+[119/210] Numeric/iota                     mutant-1  base     C 17/19   fail             clauses 6/6    access out-of-memory lat 8 c-contract-violation
+[120/210] Nonmutating/find_end             original  base     C 35/35   bounded(19)      clauses 17/17  access speculative?(timeout) lat 32 
+[121/210] Numeric/iota                     mutant-2  base     C 16/19   fail             clauses 6/6    access out-of-memory lat 8 c-contract-violation
+[122/210] Numeric/accumulate               mutant-1  base     C 14/16   fail             clauses 6/6    access out-of-memory lat 8 c-contract-violation
+[123/210] Numeric/accumulate               mutant-2  base     C 13/16   fail             clauses 6/6    access out-of-memory lat 8 c-contract-violation
+[124/210] Numeric/inner_product            mutant-1  base     C 19/21   fail             clauses 13/13  access out-of-memory lat 8 c-contract-violation
+[125/210] Numeric/accumulate               original  base     C 16/16   pass             clauses 6/6    access speculative lat 8 
+[126/210] Numeric/inner_product            mutant-2  base     C 18/21   fail             clauses 13/13  access out-of-memory lat 8 c-contract-violation
+[127/210] Numeric/partial_sum              mutant-1  base     C 39/40   fail             clauses 13/13  access out-of-memory lat 8 c-contract-violation
+[128/210] Numeric/partial_sum              mutant-2  base     C 36/40   fail             clauses 15/15  access out-of-memory lat 8 c-runtime-error
+[129/210] Mutating/rotate                  original  base     C 19/19   pass             clauses 9/9    access ok        lat 32 
+[130/210] Numeric/partial_sum              original  base     C 40/40   pass             clauses 13/13  access speculative lat 8 
+[131/210] Numeric/adjacent_difference      mutant-1  base     C 30/31   fail             clauses 15/15  access out-of-memory lat 8 c-contract-violation
+[132/210] Numeric/adjacent_difference      mutant-2  base     C 28/31   fail             clauses 15/15  access out-of-memory lat 8 c-runtime-error
+[133/210] Numeric/partial_sum_inv          original  base     C 16/16   pass             clauses 14/14  access speculative lat 16 
+[134/210] Heap/heap_parent                 original  base     C 6/6     pass             clauses 1/1    access None      lat 2 
+[135/210] Heap/heap_parent                 mutant-1  base     C 6/6     pass             clauses 1/1    access None      lat 2 
+[136/210] Heap/heap_parent                 mutant-2  base     C 4/6     fail             clauses 1/1    access None      lat 2 c-contract-violation
+[137/210] Heap/heap_child                  original  base     C 27/27   pass             clauses 17/17  access speculative lat 2 
+[138/210] Heap/heap_child                  mutant-1  base     C 24/27   fail             clauses 17/17  access out-of-memory lat 2 c-contract-violation
+[139/210] Heap/heap_child                  mutant-2  base     C 23/27   fail             clauses 17/17  access out-of-memory lat 2 c-contract-violation
+[140/210] Heap/is_heap_until               original  base     C 21/21   pass             clauses 9/9    access speculative lat 8 
+[141/210] Heap/is_heap_until               mutant-1  base     C 20/21   fail             clauses 9/9    access out-of-memory lat 8 replay-error
+[142/210] Heap/is_heap_until               mutant-2  base     C 19/21   pass             clauses 9/9    access speculative lat 16 
+[143/210] Heap/is_heap                     original  base     C 8/8     pass             clauses 7/7    access speculative lat 8 
+[144/210] Heap/is_heap                     mutant-1  base     C 7/8     fail             clauses 7/7    access out-of-memory lat 8 replay-error
+[145/210] Numeric/adjacent_difference_inv  original  base     C 15/15   pass             clauses 15/15  access speculative lat 16 
+[146/210] Heap/push_heap                   mutant-1  base     C 70/71   fail             clauses 10/10  access out-of-memory lat 16 c-contract-violation
+[147/210] Heap/push_heap                   mutant-2  base     C 65/71   fail             clauses 10/10  access out-of-memory lat 16 c-runtime-error
+[148/210] Numeric/adjacent_difference      original  base     C 31/31   pass             clauses 15/15  access speculative lat 8 
+[149/210] Heap/heap_sift_down              mutant-1  base     C 78/80   fail             clauses 10/10  access out-of-memory lat 16 invalid-witness
+[150/210] Mutating/random_number           original  base     C 12/12   pass             clauses 8/8    access ok        lat 36 
+[151/210] Heap/heap_sift_down              mutant-2  base     C 76/80   fail             clauses 10/10  access out-of-memory lat 16 c-runtime-error
+[152/210] Heap/pop_heap                    mutant-1  base     C 28/30   fail             clauses 12/12  access undecided lat 16 replay-error
+[153/210] Heap/pop_heap                    mutant-2  base     C 26/30   fail             clauses 12/12  access out-of-memory lat 16 replay-error
+[154/210] Heap/push_heap                   original  base     C 71/71   pass             clauses 10/10  access speculative lat 16 
+[155/210] Heap/make_heap                   mutant-1  base     C 33/34   fail             clauses 8/8    access out-of-memory lat 32 replay-error
+[156/210] Numeric/inner_product            original  base     C 21/21   bounded(3)       clauses 13/13  access speculative?(timeout) lat 8 
+[157/210] Heap/heap_sift_down              original  base     C 80/80   pass             clauses 10/10  access speculative lat 16 
+[158/210] Mutating/shuffle                 mutant-1  base     C 33/33   bounded(47)      clauses 14/14  access speculative?(timeout) lat 64 
+[159/210] Heap/sort_heap                   mutant-2  base     C 29/30   fail             clauses 9/9    access out-of-memory lat 32 replay-error
+[160/210] Sorting/is_sorted_until          original  base     C 19/19   pass             clauses 9/9    access speculative lat 8 
+[161/210] Sorting/is_sorted_until          mutant-1  base     C 17/19   fail             clauses 9/9    access out-of-memory lat 8 replay-error
+[162/210] Mutating/shuffle                 original  base     C 33/33   bounded(44)      clauses 14/14  access speculative?(timeout) lat 64 
+[163/210] Sorting/is_sorted_until          mutant-2  base     C 16/19   fail             clauses 9/9    access out-of-memory lat 8 replay-error
+[164/210] Sorting/is_sorted                original  base     C 8/8     pass             clauses 7/7    access speculative lat 8 
+[165/210] Sorting/is_sorted                mutant-1  base     C 7/8     fail             clauses 7/7    access out-of-memory lat 8 replay-error
+[166/210] Mutating/shuffle                 mutant-2  base     C 32/33   bounded(44)      clauses 14/14  access speculative?(timeout) lat 64 
+[167/210] Sorting/partial_sort             mutant-1  base     C 77/79   fail             clauses 10/10  access undecided lat 64 replay-error
+[168/210] Sorting/partial_sort             mutant-2  base     C 76/79   fail             clauses 10/10  access out-of-memory lat 64 replay-error
+[169/210] Heap/pop_heap                    original  base     C 30/30   pass             clauses 12/12  access speculative lat 16 
+[170/210] Sorting/bubble_sort              mutant-2  base     C 54/59   fail             clauses 8/8    access out-of-memory lat 64 replay-error
+[171/210] Heap/make_heap                   original  base     C 34/34   bounded(25)      clauses 8/8    access speculative?(timeout) lat 32 
+[172/210] Sorting/selection_sort           mutant-1  base     C 34/37   fail             clauses 8/8    access out-of-memory lat 32 replay-error
+[173/210] Heap/make_heap                   mutant-2  base     C 32/34   bounded(26)      clauses 8/8    access speculative?(timeout) lat 32 
+[174/210] Sorting/selection_sort           mutant-2  base     C 35/37   fail             clauses 8/8    access out-of-memory lat 64 replay-error
+[175/210] Heap/sort_heap                   original  base     C 30/30   bounded(25)      clauses 9/9    access speculative?(timeout) lat 64 
+[176/210] Heap/sort_heap                   mutant-1  base     C 30/30   bounded(26)      clauses 9/9    access speculative?(timeout) lat 64 
+[177/210] Sorting/partial_sort             original  base     C 79/79   bounded(22)      clauses 10/10  access speculative?(timeout) lat 64 
+[178/210] Sorting/bubble_sort              original  base     C 59/59   bounded(25)      clauses 8/8    access timeout   lat 32 
+[179/210] Sorting/merge                    mutant-1  base     C 132/134 fail             clauses 21/21  access out-of-memory lat 8 c-runtime-error
+[180/210] Sorting/bubble_sort              mutant-1  base     C 59/59   bounded(25)      clauses 8/8    access timeout   lat 32 
+[181/210] Sorting/merge                    mutant-2  base     C 126/134 fail             clauses 21/21  access out-of-memory lat 8 invalid-witness
+[182/210] Sorting/inplace_merge            mutant-1  base     C 41/45   fail             clauses 11/11  access out-of-memory lat 32 undetermined
+[183/210] Sorting/insertion_sort           mutant-2  base     C 42/47   fail             clauses 8/8    access out-of-memory lat 64 invalid-witness
+[184/210] Sorting/merge_sort               original  base     C 62/62   error            clauses None   access None      lat None 
+[185/210] Sorting/merge_sort               mutant-1  base     C 61/62   error            clauses None   access None      lat None 
+[186/210] Sorting/selection_sort           original  base     C 36/37   bounded(33)      clauses 8/8    access speculative?(timeout) lat 64 
+[187/210] Stack/stack_equal                original  base     C None    unsupported      clauses None   access None      lat None 
+[188/210] Stack/stack_equal                mutant-1  base     C None    unsupported      clauses None   access None      lat None 
+[189/210] Stack/stack_equal                mutant-2  base     C None    unsupported      clauses None   access None      lat None 
+[190/210] Stack/stack_init                 original  base     C None    unsupported      clauses None   access None      lat None 
+[191/210] Stack/stack_init                 mutant-1  base     C None    unsupported      clauses None   access None      lat None 
+[192/210] Stack/stack_size                 original  base     C None    unsupported      clauses None   access None      lat None 
+[193/210] Stack/stack_capacity             original  base     C None    unsupported      clauses None   access None      lat None 
+[194/210] Stack/stack_empty                original  base     C None    unsupported      clauses None   access None      lat None 
+[195/210] Stack/stack_empty                mutant-1  base     C None    unsupported      clauses None   access None      lat None 
+[196/210] Stack/stack_empty                mutant-2  base     C None    unsupported      clauses None   access None      lat None 
+[197/210] Stack/stack_full                 original  base     C None    unsupported      clauses None   access None      lat None 
+[198/210] Stack/stack_full                 mutant-1  base     C None    unsupported      clauses None   access None      lat None 
+[199/210] Stack/stack_top                  original  base     C None    unsupported      clauses None   access None      lat None 
+[200/210] Stack/stack_top                  mutant-1  base     C None    unsupported      clauses None   access None      lat None 
+[201/210] Stack/stack_top                  mutant-2  base     C None    unsupported      clauses None   access None      lat None 
+[202/210] Stack/stack_push                 original  base     C None    unsupported      clauses None   access None      lat None 
+[203/210] Stack/stack_pop                  original  base     C None    unsupported      clauses None   access None      lat None 
+[204/210] Sorting/merge_sort               mutant-2  base     C 55/62   error            clauses None   access None      lat None 
+[205/210] Sorting/inplace_merge            mutant-2  base     C 38/45   fail             clauses 11/11  access out-of-memory lat 32 undetermined
+[206/210] Sorting/merge                    original  base     C 130/134 pass             clauses 21/21  access speculative lat 8 
+[207/210] Sorting/insertion_sort           original  base     C 47/47   bounded(33)      clauses 8/8    access speculative?(timeout) lat 64 
+[208/210] Sorting/insertion_sort           mutant-1  base     C 46/47   bounded(30)      clauses 8/8    access speculative?(timeout) lat 64 
+[209/210] Sorting/heap_sort                original  base     C 11/11   bounded(29)      clauses 8/8    access speculative?(timeout) lat 64 
+[210/210] Sorting/inplace_merge            original  base     C 44/45   bounded(24)      clauses 11/11  access speculative?(timeout) lat 32 
+                                                              Summary per tool / HLS configuration                                                              
+┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ acce… ┃       ┃       ┃       ┃       ┃       ┃       ┃
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ out   ┃       ┃       ┃       ┃       ┃       ┃ kills ┃
+┃       ┃       ┃       ┃       ┃ pass  ┃ pass  ┃      ┃       ┃       ┃       ┃       ┃ clau… ┃ acce… ┃ of    ┃ over… ┃ muta… ┃       ┃ muta… ┃ equi… ┃ conf… ┃
+┃ tool  ┃ conf… ┃ desi… ┃ chec… ┃ full  ┃ part… ┃ fail ┃ boun… ┃ vacu… ┃ agree ┃ disa… ┃ rate  ┃ spec… ┃ memo… ┃ mode  ┃ chec… ┃ kill… ┃ score ┃ pass  ┃ in C  ┃
+┡━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ vitis │ base  │ 82    │ 56    │ 54    │ 2     │ 0    │ 16    │ 0     │ 56    │ 0     │ 99.7  │ 63    │ 0     │ 25    │ 109   │ 98    │ 91.8  │ 3     │ 71    │
+└───────┴───────┴───────┴───────┴───────┴───────┴──────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┘
+vitis/base failures on originals (C replay): {}; mutant kills (C replay): {'replay-error': 20, 'c-contract-violation': 54, 'c-runtime-error': 17, 
+'invalid-witness': 4, 'rtl-c-divergence': 1, 'undetermined': 2}
+Originals not checked:
+     9  unsupported: struct Stack: array/pointer member data
+     1  error: hls: Vitis synthesis failed: ERROR: [HLS 200-1715] Encountered problem during source synthesis
+Details: /home/anubhavsaha/cbv/runs/E3_abe/summary.md, /home/anubhavsaha/cbv/runs/E3_abe/results.csv, /home/anubhavsaha/cbv/runs/E3_abe/table.tex

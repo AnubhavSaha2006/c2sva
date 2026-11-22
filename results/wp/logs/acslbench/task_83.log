@@ -1,0 +1,42 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_83.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_83.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function ArraySum
+[rte:annot] annotating function sumTo
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_83.c:15: Warning: 
+  Lambda-functions not yet implemented
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_83.c:15: Warning: 
+  Builtin \sum(int,int,_) not defined
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_83.c:21: Warning: 
+  Missing decreases clause on recursive function sumTo, call must be unreachable
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_83.c:28: Warning: 
+  Lambda-functions not yet implemented
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_83.c:28: Warning: 
+  Builtin \sum(int,int,_) not defined
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_83.c:35: Warning: 
+  Lambda-functions not yet implemented
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_83.c:35: Warning: 
+  Builtin \sum(int,int,_) not defined
+[wp] 29 goals scheduled
+[wp] [Timeout] typed_sumTo_terminates_part2 (Qed 9ms) (Z3) (Cached)
+[wp] [Timeout] typed_sumTo_ensures_part1 (Qed 8ms) (Z3) (Cached) (Stronger, 2 warnings)
+[wp] [Timeout] typed_sumTo_ensures_part2 (Qed 13ms) (Z3) (Cached) (Stronger, 2 warnings)
+[wp] [Timeout] typed_sumTo_assert_rte_mem_access (Qed 12ms) (Z3) (Cached) (Stronger, 2 warnings)
+[wp] [Timeout] typed_sumTo_assert_rte_signed_overflow (Qed 17ms) (Z3) (Cached) (Stronger, 2 warnings)
+[wp] [Timeout] typed_sumTo_assert_rte_signed_overflow_2 (Qed 27ms) (CVC5) (Cached) (Stronger, 2 warnings)
+[wp] [Timeout] typed_ArraySum_ensures (Qed 19ms) (Z3) (Cached) (Stronger, 4 warnings)
+[wp] [Timeout] typed_ArraySum_loop_invariant_2_established (Qed 8ms) (Z3) (Cached) (Stronger, 2 warnings)
+[wp] [Timeout] typed_ArraySum_loop_invariant_2_preserved (Qed 20ms) (Z3) (Cached) (Stronger, 2 warnings)
+[wp] [Timeout] typed_ArraySum_assert_rte_mem_access (Qed 6ms) (Z3) (Cached) (Stronger, 2 warnings)
+[wp] [Timeout] typed_ArraySum_assert_rte_signed_overflow (Qed 7ms) (Z3) (Cached) (Stronger, 2 warnings)
+[wp] [Timeout] typed_ArraySum_assert_rte_signed_overflow_2 (Qed 13ms) (Z3) (Cached) (Stronger, 2 warnings)
+[wp] [Cache] found:9, updated:29
+[wp] Proved goals:   19 / 31
+  Terminating:       1
+  Unreachable:       1
+  Qed:              15 (6ms-6ms-27ms)
+  Alt-Ergo 2.6.4:    2 (68ms-72ms)
+  Timeout:          12

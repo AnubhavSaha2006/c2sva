@@ -1,0 +1,107 @@
+{
+  "design": "Sorting/bubble_sort",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "54/59",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P1: ensures MultisetReorder { Old , Here } ( \\old ( a ) , \\old ( n ) )",
+    "P8: assigns * ( a + ( 0 .. n - 1 ) )  [frame of a]"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 64,
+  "latency_status": "established",
+  "clauses": "8/8",
+  "translated": 8,
+  "total_clauses": 8,
+  "skipped": [],
+  "times": {
+    "frontend": 0.5,
+    "wp": 17.0,
+    "hls": 17.8,
+    "latency": 14.5,
+    "bmc": 9.0,
+    "access": 1.0,
+    "phys": 3.5,
+    "cover": 1.0,
+    "total": 66.1
+  },
+  "error": null,
+  "top": "bubble_sort",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 2
+      },
+      "pre": {
+        "a": [
+          -1610579968,
+          -1073741824,
+          -2147450880,
+          -2147450880
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -1610579968,
+          -2147450880,
+          -2147450880,
+          -1073741824
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {
+      "a": [
+        -1610579968,
+        -2147450880,
+        -2147450880,
+        -1073741824
+      ]
+    },
+    "eacsl": [],
+    "checker": "native+sanitizers",
+    "oracle": {
+      "requires_violated": [],
+      "violated": [
+        "ensures Increasing ( \\old ( a ) , \\old ( n ) )",
+        "assigns (frame): a[3] changed but is not assignable"
+      ],
+      "unknown": [],
+      "checked": 4
+    },
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_263,j_264: symbolic (solver-chosen) value, exact",
+    "\\forall v_260: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a",
+    "recursive logic cut off: free value"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 68,
+  "cex_step": 11,
+  "failed_cutoff": [
+    "P1"
+  ],
+  "outcome": "fail"
+}

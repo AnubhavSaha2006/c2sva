@@ -1,0 +1,38 @@
+{
+  "design": "lower_bound",
+  "variant": "mutant-3",
+  "tool": "bambu",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "19/21",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures 0 <= \\result <= \\old ( n )",
+    "P3: ensures StrictUpperBound ( \\old ( a ) , 0 , \\result , \\old ( v ) )"
+  ],
+  "access": "undecided",
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 128,
+  "latency_status": "exceeds-cap",
+  "clauses": "8/8",
+  "skipped": [],
+  "times": {
+    "frontend": 0.6,
+    "wp": 12.2,
+    "hls": 11.9,
+    "latency": 131.8,
+    "bmc": 0.6,
+    "access": 0.5,
+    "cover": 0.4,
+    "total": 157.9
+  },
+  "error": null,
+  "top": "lower_bound",
+  "discharged": 1,
+  "pre_dropped": 0,
+  "latency_report": null,
+  "cex_step": 6
+}

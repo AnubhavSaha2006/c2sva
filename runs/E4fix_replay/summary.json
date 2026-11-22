@@ -1,0 +1,75 @@
+{
+  "by_tool_config": [
+    {
+      "tool": "vitis",
+      "config": "base",
+      "designs": 4,
+      "frontend_ok": 4,
+      "hls_ok": 4,
+      "checked": 4,
+      "pass_full": 4,
+      "pass_partial": 0,
+      "fail": 0,
+      "bounded": 0,
+      "vacuous": 0,
+      "agree": 4,
+      "disagree": 0,
+      "clauses": "9/9",
+      "clause_rate": 100.0,
+      "access_speculative": 0,
+      "access_out_of_memory": 0,
+      "overlap_mode": 0,
+      "mutants": 9,
+      "mutants_checked": 7,
+      "killed": 7,
+      "mutation_score": 100.0,
+      "survivors": 0,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_untranslated": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 7,
+      "median_total_s": 23.9
+    }
+  ],
+  "details": {
+    "vitis/base": {
+      "original_outcomes": {
+        "pass": 4
+      },
+      "failure_replay": {},
+      "kill_replay": {
+        "c-runtime-error": 1,
+        "c-contract-violation": 6
+      },
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.7,
+        "wp": 1.4,
+        "hls": 20.1,
+        "latency": 0.5,
+        "bmc": 0.6,
+        "access": null,
+        "cover": 0.6,
+        "total": 23.9
+      }
+    }
+  },
+  "not_checked_reasons": [],
+  "untranslated_clause_reasons": [],
+  "translation_strategies": [
+    [
+      "holds by construction",
+      2
+    ]
+  ],
+  "disagreements": [],
+  "access_violations": [],
+  "latency": {
+    "established": 4,
+    "report_undefined": 0,
+    "not_established": 0
+  }
+}

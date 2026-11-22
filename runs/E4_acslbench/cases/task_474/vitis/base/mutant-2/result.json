@@ -1,0 +1,80 @@
+{
+  "design": "task_474",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "19/21",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P3: ensures \\old ( x ) == \\result * \\old ( y ) + * \\old ( r )"
+  ],
+  "access": null,
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 128,
+  "latency_status": "not established within cap",
+  "clauses": "4/4",
+  "translated": 4,
+  "total_clauses": 4,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 11.0,
+    "hls": 12.1,
+    "latency": 92.4,
+    "bmc": 0.4,
+    "cover": 0.4,
+    "total": 119.6
+  },
+  "error": null,
+  "top": "fun",
+  "mode": "sequential calls (overlap possible but memories are written: checked sequentially)",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "x": 1966848952,
+        "y": 737917881
+      },
+      "pre": {
+        "r": [
+          -2080374784
+        ]
+      },
+      "rtl_post": {
+        "r": [
+          -1590200463
+        ]
+      },
+      "rtl_result": 1,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Assertion",
+        "fun",
+        "rte/signed_overflow: *r + y \u2264 2147483647."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-runtime-error"
+  },
+  "engine": "yices",
+  "width": 80,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "exact frame over all 1 element(s) of r"
+  ],
+  "latency_report": null,
+  "interval_report": 0,
+  "depth": 132,
+  "cex_step": 3,
+  "outcome": "fail"
+}

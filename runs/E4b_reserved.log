@@ -1,0 +1,56 @@
+15 designs -> 43 cases (tools vitis, configs base, mutants 2) -> /home/anubhavsaha/cbv/runs/E4b_reserved
+[1/43] task_223                         original  base     C 50/50   pass-partial     clauses 0/2    access None      lat 2 
+[2/43] task_223                         mutant-1  base     C 50/50   pass-partial     clauses 0/2    access None      lat 2 
+[3/43] task_223                         mutant-2  base     C 50/50   pass-partial     clauses 0/2    access None      lat 2 
+[4/43] task_251                         mutant-2  base     C 5/5     pass             clauses 3/3    access None      lat 2 
+[5/43] task_251                         mutant-1  base     C 5/5     pass             clauses 3/3    access None      lat 2 
+[6/43] task_251                         original  base     C 5/5     pass             clauses 3/3    access None      lat 2 
+[7/43] task_261                         original  base     C 4/4     pass             clauses 3/3    access None      lat 2 
+[8/43] task_261                         mutant-1  base     C 3/4     fail             clauses 3/3    access None      lat 2 c-contract-violation
+[9/43] task_261                         mutant-2  base     C 3/4     fail             clauses 3/3    access None      lat 2 c-runtime-error
+[10/43] task_272                         original  base     C 8/8     pass             clauses 3/3    access None      lat 2 
+[11/43] task_272                         mutant-1  base     C 8/8     pass             clauses 3/3    access None      lat 2 
+[12/43] task_272                         mutant-2  base     C 7/7     pass             clauses 3/3    access None      lat 2 
+[13/43] task_360                         original  base     C 5/5     pass             clauses 3/3    access None      lat 2 
+[14/43] task_360                         mutant-1  base     C 5/5     pass             clauses 3/3    access None      lat 2 
+[15/43] task_360                         mutant-2  base     C 4/5     fail             clauses 3/3    access None      lat 2 c-contract-violation
+[16/43] task_362                         original  base     C 11/11   pass             clauses 1/1    access None      lat 128 
+[17/43] task_362                         mutant-1  base     C 11/11   pass             clauses 1/1    access None      lat 128 
+[18/43] task_442                         original  base     C 10/10   pass             clauses 4/4    access None      lat 2 
+[19/43] task_442                         mutant-1  base     C 10/10   pass             clauses 4/4    access None      lat 2 
+[20/43] task_362                         mutant-2  base     C 10/11   fail             clauses 1/1    access None      lat 2 c-nontermination
+[21/43] task_442                         mutant-2  base     C 10/10   pass             clauses 4/4    access None      lat 2 
+[22/43] task_470                         original  base     C 8/8     pass             clauses 4/4    access None      lat 2 
+[23/43] task_470                         mutant-1  base     C 8/8     pass             clauses 4/4    access None      lat 2 
+[24/43] task_470                         mutant-2  base     C 8/8     pass             clauses 4/4    access None      lat 2 
+[25/43] task_475                         original  base     C 11/11   pass             clauses 4/4    access None      lat 2 
+[26/43] task_475                         mutant-1  base     C 9/11    fail             clauses 4/4    access None      lat 2 c-contract-violation
+[27/43] task_475                         mutant-2  base     C 10/11   fail             clauses 4/4    access None      lat 2 c-contract-violation
+[28/43] task_481                         original  base     C 14/14   pass             clauses 4/4    access None      lat 2 
+[29/43] task_481                         mutant-1  base     C 14/14   pass             clauses 4/4    access None      lat 2 
+[30/43] task_481                         mutant-2  base     C 14/14   pass             clauses 4/4    access None      lat 2 
+[31/43] task_546                         original  base     C 7/7     pass             clauses 3/3    access None      lat 2 
+[32/43] task_546                         mutant-1  base     C 7/7     pass             clauses 3/3    access None      lat 2 
+[33/43] task_546                         mutant-2  base     C 7/7     pass             clauses 3/3    access None      lat 2 
+[34/43] task_590                         original  base     C 11/11   pass             clauses 3/3    access None      lat 2 
+[35/43] task_590                         mutant-1  base     C 10/11   fail             clauses 3/3    access None      lat 2 c-contract-violation
+[36/43] task_590                         mutant-2  base     C 9/11    fail             clauses 3/3    access None      lat 2 c-runtime-error
+[37/43] task_593                         original  base     C 8/8     pass             clauses 3/3    access None      lat 2 
+[38/43] task_593                         mutant-1  base     C 8/8     pass             clauses 3/3    access None      lat 2 
+[39/43] task_593                         mutant-2  base     C 8/8     pass             clauses 3/3    access None      lat 2 
+[40/43] task_595                         original  base     C 7/7     pass             clauses 3/3    access None      lat 2 
+[41/43] task_595                         mutant-1  base     C 7/7     pass             clauses 3/3    access None      lat 2 
+[42/43] task_595                         mutant-2  base     C 7/7     pass             clauses 3/3    access None      lat 2 
+[43/43] task_499                         original  base     C 6/6     bounded(37)      clauses 3/3    access None      lat 35 
+                                                              Summary per tool / HLS configuration                                                              
+┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ acce… ┃       ┃       ┃       ┃       ┃       ┃       ┃
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ out   ┃       ┃       ┃       ┃       ┃       ┃ kills ┃
+┃       ┃       ┃       ┃       ┃ pass  ┃ pass  ┃      ┃       ┃       ┃       ┃       ┃ clau… ┃ acce… ┃ of    ┃ over… ┃ muta… ┃       ┃ muta… ┃ equi… ┃ conf… ┃
+┃ tool  ┃ conf… ┃ desi… ┃ chec… ┃ full  ┃ part… ┃ fail ┃ boun… ┃ vacu… ┃ agree ┃ disa… ┃ rate  ┃ spec… ┃ memo… ┃ mode  ┃ chec… ┃ kill… ┃ score ┃ pass  ┃ in C  ┃
+┡━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ vitis │ base  │ 15    │ 14    │ 13    │ 1     │ 0    │ 1     │ 0     │ 14    │ 0     │ 95.7  │ 0     │ 0     │ 1     │ 28    │ 8     │ 100.0 │ 20    │ 8     │
+└───────┴───────┴───────┴───────┴───────┴───────┴──────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┘
+vitis/base failures on originals (C replay): {}; mutant kills (C replay): {'c-contract-violation': 5, 'c-runtime-error': 2, 'c-nontermination': 1}
+Details: /home/anubhavsaha/cbv/runs/E4b_reserved/summary.md, /home/anubhavsaha/cbv/runs/E4b_reserved/results.csv, 
+/home/anubhavsaha/cbv/runs/E4b_reserved/table.tex

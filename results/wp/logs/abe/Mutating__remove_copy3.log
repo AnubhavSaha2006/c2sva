@@ -1,0 +1,37 @@
+frama-c -pp-annot -cpp-extra-args=-I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Logic -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Nonmutating -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/MinMax -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/BinarySearch -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Mutating -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Numeric -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Heap -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Sorting -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Stack -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Mutating/remove_copy3.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Mutating/remove_copy3.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function remove_copy3
+[wp] Computing [100 goals...]
+[wp] 120 goals scheduled
+[wp] [Timeout] typed_lemma_CountNotEqual_AllEqual (Qed 4ms) (CVC5) (Cached)
+[wp] [Timeout] typed_lemma_CountNotEqual_Count (Qed 2ms) (Z3) (Cached)
+[wp] [Timeout] typed_lemma_CountNotEqual_Increasing (Qed 2ms) (CVC5) (Cached)
+[wp] [Timeout] typed_lemma_CountNotEqual_Lower (Qed 2ms) (CVC5) (Cached)
+[wp] [Timeout] typed_lemma_CountNotEqual_Unchanged (Qed 1ms) (Z3) (Cached)
+[wp] [Timeout] typed_lemma_CountNotEqual_Upper (Qed 1ms) (CVC5) (Cached)
+[wp] [Timeout] typed_lemma_Count_Bounds (Qed 2ms) (Z3) (Cached)
+[wp] [Timeout] typed_lemma_Count_Equal (Qed 2ms) (CVC5) (Cached)
+[wp] [Timeout] typed_lemma_Count_Increasing (Qed 1ms) (CVC5) (Cached)
+[wp] [Timeout] typed_lemma_Count_Shift (Qed 2ms) (CVC5) (Cached)
+[wp] [Timeout] typed_lemma_Count_Unchanged (Qed 0.84ms) (Z3) (Cached)
+[wp] [Timeout] typed_lemma_Count_Union (Qed 2ms) (CVC5) (Cached)
+[wp] [Timeout] typed_lemma_FindNotEqual_AllEqual (Qed 3ms) (CVC5) (Cached)
+[wp] [Timeout] typed_lemma_FindNotEqual_Increasing (Qed 1ms) (Z3) (Cached)
+[wp] [Timeout] typed_lemma_FindNotEqual_Limit (Qed 2ms) (Z3) (Cached)
+[wp] [Timeout] typed_lemma_FindNotEqual_Unchanged (Qed 3ms) (CVC5) (Cached)
+[wp] [Timeout] typed_lemma_IndexOfNotEqual_Core (Qed 2ms) (CVC5) (Cached)
+[wp] [Timeout] typed_lemma_IndexOfNotEqual_Lower (Qed 1ms) (CVC5) (Cached)
+[wp] [Timeout] typed_lemma_Unchanged_Shift (Qed 1ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_lemma_IndexOfNotEqual_Unchanged (Qed 1ms) (Z3) (Cached)
+[wp] [Cache] found:24, updated:109
+[wp] Proved goals:  102 / 122
+  Terminating:       1
+  Unreachable:       1
+  Qed:              30 (0.83ms-17ms-170ms)
+  Alt-Ergo 2.6.4:   64 (66ms-651ms-6.6s)
+  CVC5 :             6 (120ms-1.5s-5.0s)
+  Timeout:          20

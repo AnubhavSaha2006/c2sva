@@ -1,0 +1,96 @@
+{
+  "latency": 64,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 8.0,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 600.0
+  },
+  "candidates": {
+    "total": 600,
+    "by_origin": {
+      "structural": 599,
+      "call-requires": 1
+    },
+    "loops": 3,
+    "loop_invariants": 20,
+    "skipped": [
+      {
+        "source": "loop 1 (heap_sift_down): loop invariant unchanged: Unchanged { LoopEntry , Here } ( a , p , n )",
+        "reason": "memory label LoopEntry"
+      },
+      {
+        "source": "loop 1 (heap_sift_down): loop invariant reorder: MultisetParity { Pre , Here } ( a , n , a [ p ] , v )",
+        "reason": "unknown logic function/predicate MultisetParity"
+      },
+      {
+        "source": "loop 1 (heap_sift_down): loop invariant forest: HeapForest ( a , root , n )",
+        "reason": "unknown logic function/predicate HeapForest"
+      },
+      {
+        "source": "loop 2 (make_heap): loop invariant forest: HeapForest ( a , root , n )",
+        "reason": "unknown logic function/predicate HeapForest"
+      }
+    ]
+  },
+  "houdini": {
+    "candidates": 600,
+    "base_dropped": 448,
+    "ind_dropped": 111,
+    "rounds": 50,
+    "status": "inductive",
+    "base_depth": 36,
+    "k": 16,
+    "secs": 2745.6,
+    "invariants": 41,
+    "by_origin": {
+      "structural": 40,
+      "call-requires": 1
+    },
+    "c_invariants_survived": [],
+    "c_invariants_lagged": [],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "UNKNOWN",
+    "secs": 14.0,
+    "k": 16
+  },
+  "latency_proof": {
+    "bound": 64,
+    "established_by_bmc": "established",
+    "kind": {
+      "status": "UNKNOWN",
+      "secs": 1.5,
+      "k": 16
+    },
+    "candidates": 800,
+    "kind+inv": {
+      "status": "UNKNOWN",
+      "secs": 2.2,
+      "k": 16,
+      "progress_invariants": 0,
+      "houdini": "round limit",
+      "houdini_secs": 3839.8
+    },
+    "proved": false
+  },
+  "unbounded": false,
+  "proved_by": [],
+  "deep_cex": [],
+  "secs": 7217.5
+}

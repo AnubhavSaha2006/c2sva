@@ -1,0 +1,118 @@
+{
+  "design": "Nonmutating/find_first_of",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "39/41",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P4: ensures ! HasValueOf ( \\old ( a ) , \\result , \\old ( b ) , \\old ( n ) )"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P7: requires \\valid_read ( a + ( 0 .. m - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 64,
+  "latency_status": "established",
+  "clauses": "17/17",
+  "translated": 17,
+  "total_clauses": 17,
+  "skipped": [],
+  "times": {
+    "frontend": 0.6,
+    "wp": 2.1,
+    "hls": 18.5,
+    "latency": 26.6,
+    "bmc": 2.5,
+    "access": 1.0,
+    "phys": 4.5,
+    "cover": 1.5,
+    "total": 62.6
+  },
+  "error": null,
+  "top": "find_first_of",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "m": 1,
+        "n": 4
+      },
+      "pre": {
+        "a": [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "b": [
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "b": [
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "rtl_result": 1,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "find_first_of",
+        "found/first: \u00acHasValueOf(\\old(a), \\result, \\old(b), \\old(n))."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 2,
+  "pre_dropped": 0,
+  "notes": [
+    "\\exists i_517: symbolic (solver-chosen) value, exact",
+    "\\exists i_518: symbolic (solver-chosen) value, exact",
+    "\\exists i_519: symbolic (solver-chosen) value, exact",
+    "\\exists i_520: symbolic (solver-chosen) value, exact",
+    "\\exists i_521: enumerated over 0..4 (stronger assertion)",
+    "\\exists i_522: symbolic (solver-chosen) value, exact",
+    "\\exists i_523: symbolic (solver-chosen) value, exact",
+    "\\exists i_524: symbolic (solver-chosen) value, exact",
+    "\\exists i_525: symbolic (solver-chosen) value, exact",
+    "\\exists i_526: enumerated over 0..4 (stronger assertion)",
+    "\\exists i_527: enumerated over 0..4 (stronger assertion)",
+    "cell of a outside 0..3: solver-chosen value",
+    "cell of b outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a",
+    "exact frame over all 4 element(s) of b",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 68,
+  "cex_step": 4,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

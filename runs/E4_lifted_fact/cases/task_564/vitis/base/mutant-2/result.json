@@ -1,0 +1,79 @@
+{
+  "design": "task_564",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "17/18",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P3: ensures \\result == fact ( \\old ( n ) )"
+  ],
+  "access": null,
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "3/3",
+  "translated": 3,
+  "total_clauses": 3,
+  "skipped": [],
+  "times": {
+    "frontend": 0.8,
+    "wp": 2.3,
+    "hls": 18.0,
+    "latency": 0.4,
+    "bmc": 9.9,
+    "cover": 2.2,
+    "total": 37.0
+  },
+  "error": null,
+  "top": "factorial",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 8
+      },
+      "pre": {},
+      "rtl_post": {},
+      "rtl_result": 37,
+      "completed": true
+    },
+    "c_result": 37,
+    "c_post": {},
+    "eacsl": [],
+    "checker": "e-acsl",
+    "oracle": {
+      "requires_violated": [],
+      "violated": [],
+      "unknown": [
+        "ensures \\result == fact ( \\old ( n ) )  (recursion cut off)"
+      ],
+      "checked": 2
+    },
+    "class": "undetermined"
+  },
+  "engine": "yices",
+  "width": 240,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "recursive logic cut off: free value"
+  ],
+  "latency_report": [
+    1,
+    1
+  ],
+  "interval_report": 2,
+  "depth": 6,
+  "cex_step": 3,
+  "failed_cutoff": [
+    "P3"
+  ],
+  "outcome": "fail-inconclusive"
+}

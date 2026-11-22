@@ -1,0 +1,92 @@
+{
+  "design": "task_80",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "16/17",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures \\result != 0 <==> ( \\forall integer i ; 0 <= i < \\old ( n ) ==> * ( \\old ( a ) + i ) == * ( \\old ( a ) + 0 ) )"
+  ],
+  "access": "undecided",
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "8/8",
+  "translated": 8,
+  "total_clauses": 8,
+  "skipped": [],
+  "times": {
+    "frontend": 0.2,
+    "wp": 0.5,
+    "hls": 11.2,
+    "latency": 0.3,
+    "bmc": 0.4,
+    "access": 0.4,
+    "cover": 0.3,
+    "total": 16.0
+  },
+  "error": null,
+  "top": "HasOnlyOneDistinctElement",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 4
+      },
+      "pre": {
+        "a": [
+          0,
+          -2147483648,
+          0,
+          1073741824
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          0,
+          -2147483648,
+          0,
+          1073741824
+        ]
+      },
+      "rtl_result": 1,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "HasOnlyOneDistinctElement",
+        "\\result \u2262 0 \u21d4 (\u2200 \u2124 i; 0 \u2264 i < \\old(n) \u21d2 *(\\old(a) + i) \u2261 *(\\old(a) + 0)). With values at failure point:"
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 136,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i: enumerated over 0..4 (stronger assertion)",
+    "\\forall i: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a"
+  ],
+  "latency_report": [
+    0,
+    0
+  ],
+  "interval_report": 1,
+  "depth": 6,
+  "cex_step": 2,
+  "outcome": "fail"
+}

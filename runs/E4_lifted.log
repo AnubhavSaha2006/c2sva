@@ -1,0 +1,22 @@
+3 designs -> 9 cases (tools vitis, configs base, mutants 2) -> /home/anubhavsaha/cbv/runs/E4_lifted
+[1/9] task_363                         mutant-1  base     C 13/15   fail             clauses 3/3    access None      lat 8 c-contract-violation
+[2/9] task_564                         original  base     C 18/18   fail             clauses 3/3    access None      lat 16 translation-error
+[3/9] task_564                         mutant-1  base     C 17/18   fail             clauses 3/3    access None      lat 16 translation-error
+[4/9] task_564                         mutant-2  base     C 17/18   fail             clauses 3/3    access None      lat 2 undetermined
+[5/9] task_363                         mutant-2  base     C 15/15   bounded(4)       clauses 3/3    access None      lat 128 
+[6/9] task_586                         mutant-1  base     C 15/17   fail             clauses 3/3    access None      lat 8 c-contract-violation
+[7/9] task_363                         original  base     C 15/15   bounded(4)       clauses 3/3    access None      lat 128 
+[8/9] task_586                         original  base     C 17/17   bounded(4)       clauses 3/3    access None      lat 128 
+[9/9] task_586                         mutant-2  base     C 15/17   fail             clauses 3/3    access None      lat 128 c-runtime-error
+                                                              Summary per tool / HLS configuration                                                              
+┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ acce… ┃       ┃       ┃       ┃       ┃       ┃       ┃
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ out   ┃       ┃       ┃       ┃       ┃       ┃ kills ┃
+┃       ┃       ┃       ┃       ┃ pass  ┃ pass  ┃      ┃       ┃       ┃       ┃       ┃ clau… ┃ acce… ┃ of    ┃ over… ┃ muta… ┃       ┃ muta… ┃ equi… ┃ conf… ┃
+┃ tool  ┃ conf… ┃ desi… ┃ chec… ┃ full  ┃ part… ┃ fail ┃ boun… ┃ vacu… ┃ agree ┃ disa… ┃ rate  ┃ spec… ┃ memo… ┃ mode  ┃ chec… ┃ kill… ┃ score ┃ pass  ┃ in C  ┃
+┡━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ vitis │ base  │ 3     │ 1     │ 0     │ 0     │ 1    │ 2     │ 0     │ 0     │ 1     │ 100.0 │ 0     │ 0     │ 3     │ 5     │ 5     │ 100.0 │ 0     │ 3     │
+└───────┴───────┴───────┴───────┴───────┴───────┴──────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┘
+vitis/base failures on originals (C replay): {'translation-error': 1}; mutant kills (C replay): {'c-contract-violation': 2, 'translation-error': 1, 
+'undetermined': 1, 'c-runtime-error': 1}
+Details: /home/anubhavsaha/cbv/runs/E4_lifted/summary.md, /home/anubhavsaha/cbv/runs/E4_lifted/results.csv, /home/anubhavsaha/cbv/runs/E4_lifted/table.tex

@@ -1,0 +1,84 @@
+{
+  "design": "task_498",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "7/8",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures \\result == 0"
+  ],
+  "access": null,
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "3/3",
+  "translated": 3,
+  "total_clauses": 3,
+  "skipped": [],
+  "times": {
+    "frontend": 0.8,
+    "wp": 1.8,
+    "hls": 21.0,
+    "latency": 0.6,
+    "bmc": 0.7,
+    "cover": 0.7,
+    "total": 32.3
+  },
+  "error": null,
+  "top": "is_pos",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {},
+      "pre": {
+        "s": [
+          {
+            "x": 0
+          }
+        ]
+      },
+      "rtl_post": {
+        "s": [
+          {
+            "x": 0
+          }
+        ]
+      },
+      "rtl_result": 1,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "is_pos",
+        "is_false: \\result \u2261 0."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": [
+    0,
+    0
+  ],
+  "interval_report": 1,
+  "depth": 6,
+  "cex_step": 2,
+  "outcome": "fail"
+}

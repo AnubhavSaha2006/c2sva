@@ -1,0 +1,19 @@
+prove: 17 cases, strategies ['houdini', 'kind+inv', 'kmin', 'kmin-progress']
+c01_behaviors_clamp/vitis/base/original                                unbounded=True by=['kind+inv'] inv=11/13 c-inv=0 
+c02_exists_has_zero/vitis/base/original                                unbounded=True by=['kind+inv'] inv=103/200 c-inv=2 
+c04_single_pointers_swap/vitis/base/original                           unbounded=True by=['kind+inv'] inv=9/11 c-inv=0 
+c03_recursive_logic/vitis/base/original                                unbounded=True by=['kind+inv'] inv=56/103 c-inv=2 
+c06_verilog_keywords/vitis/base/original                               unbounded=True by=['kind+inv'] inv=15/17 c-inv=0 
+c07_frame_prefix_fill/vitis/base/original                              unbounded=True by=['kind+inv'] inv=77/104 c-inv=2 
+c05_typedef_three_arrays/vitis/base/original                           unbounded=True by=['kind+inv'] inv=135/205 c-inv=2 
+c08_old_memory_increment/vitis/base/original                           unbounded=True by=['kind+inv'] inv=146/270 c-inv=3 
+c09_nested_forall_sorted/vitis/base/original                           unbounded=True by=['kind+inv'] inv=141/302 c-inv=2 
+c11_builtins_minmax/vitis/base/original                                unbounded=True by=['kind+inv'] inv=9/11 c-inv=0 
+c12_void_out_sum/vitis/base/original                                   unbounded=False by=[] inv=0/133 c-inv=0 
+c13_shifts_casts/vitis/base/original                                   unbounded=True by=['kind+inv'] inv=7/9 c-inv=0 
+c10_products_width/vitis/base/original                                 unbounded=False by=[] inv=0/16 c-inv=0 
+c15_struct_pointer/vitis/base/original                                 unbounded=True by=['kind+inv'] inv=7/9 c-inv=0 
+c14_predicate_in_requires/vitis/base/original                          unbounded=True by=['kind+inv'] inv=147/271 c-inv=3 
+c17_struct_return/vitis/base/original                                  unbounded=True by=['kind+inv'] inv=8/10 c-inv=0 
+c16_struct_array/vitis/base/original                                   unbounded=True by=['kind+inv'] inv=126/150 c-inv=2 
+unbounded: 15/17

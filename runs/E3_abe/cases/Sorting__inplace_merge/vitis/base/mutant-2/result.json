@@ -1,0 +1,92 @@
+{
+  "design": "Sorting/inplace_merge",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "38/45",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P11: assigns * ( a + ( 0 .. n - 1 ) )  [frame of a]"
+  ],
+  "access": "out-of-memory",
+  "access_failed": [
+    "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+    "P9: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+  ],
+  "cover": "reached",
+  "latency": 32,
+  "latency_status": "established",
+  "clauses": "11/11",
+  "translated": 11,
+  "total_clauses": 11,
+  "skipped": [],
+  "times": {
+    "frontend": 0.5,
+    "wp": 27.4,
+    "hls": 19.3,
+    "latency": 9.9,
+    "bmc": 221.5,
+    "access": 1.1,
+    "phys": 180.8,
+    "cover": 0.9,
+    "total": 466.9
+  },
+  "error": null,
+  "top": "inplace_merge",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "m": 2,
+        "n": 3
+      },
+      "pre": {
+        "a": [
+          -1576749534,
+          -290773470,
+          -660293853,
+          -503007710
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -503007710,
+          -290773470,
+          -660293853,
+          -1576749534
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [],
+    "checker": "e-acsl + sanitizers",
+    "class": "c-runtime-error",
+    "detail": "ERROR: AddressSanitizer: stack-buffer-underflow"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_37019,j_37020: enumerated over 0..4 (weaker assumption)",
+    "\\forall i_37021,j_37022: enumerated over 0..4 (weaker assumption)",
+    "\\forall i_37026,j_37027: symbolic (solver-chosen) value, exact",
+    "\\forall v_37023: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a",
+    "recursive logic cut off: free value"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 36,
+  "cex_step": 15,
+  "outcome": "fail"
+}

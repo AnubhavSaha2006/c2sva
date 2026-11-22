@@ -1,0 +1,58 @@
+{
+  "design": "task_279",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "84/84",
+  "c_ok": true,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "ok",
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "6/7",
+  "translated": 6,
+  "total_clauses": 7,
+  "skipped": [
+    {
+      "id": "P3",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures \\result != 0 ==> re_0 ( \\old ( x877 ) , 0 , strlen ( \\old ( x877 ) ) )",
+      "reason": "clause too large to translate (enumeration budget exceeded)"
+    }
+  ],
+  "times": {
+    "frontend": 0.5,
+    "wp": 20.5,
+    "hls": 15.4,
+    "latency": 7.1,
+    "bmc": 7.2,
+    "access": 7.7,
+    "cover": 7.5,
+    "total": 67.7
+  },
+  "error": null,
+  "top": "dfa",
+  "mode": "overlapping calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "yices",
+  "width": 64,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "cell of x877 outside 0..3: solver-chosen value",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": 0,
+  "depth": 20,
+  "cex_step": null,
+  "outcome": "pass-partial"
+}

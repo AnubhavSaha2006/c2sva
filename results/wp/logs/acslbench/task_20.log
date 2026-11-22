@@ -1,0 +1,31 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_20.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_20.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function max_max_simplified
+[wp] Computing [100 goals...]
+[wp] 117 goals scheduled
+[wp] [Timeout] typed_max_max_simplified_loop_invariant_4_established_part1 (Qed 40ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_max_max_simplified_loop_invariant_4_established_part2 (Qed 50ms) (Z3) (Cached)
+[wp] [Timeout] typed_max_max_simplified_loop_assigns_part2 (Qed 227ms) (Z3) (Cached)
+[wp] [Timeout] typed_max_max_simplified_loop_assigns_part3 (Qed 264ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_max_max_simplified_loop_assigns_part4 (Qed 272ms) (Z3) (Cached)
+[wp] [Timeout] typed_max_max_simplified_loop_assigns_part5 (Qed 220ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_max_max_simplified_loop_assigns_part6 (Qed 221ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_max_max_simplified_loop_assigns_part7 (Qed 138ms) (Alt-Ergo) (Cached)
+[wp] [Cache] updated:67
+[wp] Proved goals:  111 / 119
+  Terminating:       1
+  Unreachable:       1
+  Qed:              69 (16ms-61ms-272ms)
+  Alt-Ergo 2.6.4:   36 (62ms-163ms-387ms)
+  CVC5 :             4 (87ms-281ms)
+  Timeout:           8
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_20.c:13: Warning: 
+  No \from specification for assigned pointer '*max1'.
+  Callers assumptions might be imprecise.
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_20.c:13: Warning: 
+  No \from specification for assigned pointer '*max2'.
+  Callers assumptions might be imprecise.

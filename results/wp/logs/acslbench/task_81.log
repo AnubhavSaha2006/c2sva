@@ -1,0 +1,29 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_81.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_81.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function CountIdenticalPositions
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_81.c:15: Warning: 
+  Lambda-functions not yet implemented
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_81.c:15: Warning: 
+  Builtin \sum(int,int,_) not defined
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_81.c:22: Warning: 
+  Lambda-functions not yet implemented
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_81.c:22: Warning: 
+  Builtin \sum(int,int,_) not defined
+[wp] 26 goals scheduled
+[wp] [Timeout] typed_CountIdenticalPositions_ensures (Qed 11ms) (Z3) (Cached) (Stronger, 4 warnings)
+[wp] [Timeout] typed_CountIdenticalPositions_loop_invariant_2_established (Qed 8ms) (Z3) (Cached) (Stronger, 2 warnings)
+[wp] [Timeout] typed_CountIdenticalPositions_loop_invariant_2_preserved_part1 (Qed 38ms) (Z3) (Cached) (Stronger, 2 warnings)
+[wp] [Timeout] typed_CountIdenticalPositions_loop_invariant_2_preserved_part2 (Qed 45ms) (Z3) (Cached) (Stronger, 2 warnings)
+[wp] [Timeout] typed_CountIdenticalPositions_loop_invariant_2_preserved_part3 (Qed 34ms) (Z3) (Cached) (Stronger, 2 warnings)
+[wp] [Timeout] typed_CountIdenticalPositions_assert_rte_unsigned_overflow (Qed 48ms) (Z3) (Cached) (Stronger, 2 warnings)
+[wp] [Cache] updated:21
+[wp] Proved goals:   22 / 28
+  Terminating:       1
+  Unreachable:       1
+  Qed:              17 (8ms-10ms-48ms)
+  Alt-Ergo 2.6.4:    3 (111ms-131ms)
+  Timeout:           6

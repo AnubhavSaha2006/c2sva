@@ -1,0 +1,264 @@
+{
+  "by_tool_config": [
+    {
+      "tool": "vitis",
+      "config": "base",
+      "designs": 16,
+      "frontend_ok": 16,
+      "hls_ok": 16,
+      "checked": 8,
+      "pass_full": 8,
+      "pass_partial": 0,
+      "fail": 0,
+      "bounded": 8,
+      "vacuous": 0,
+      "agree": 8,
+      "disagree": 0,
+      "clauses": "143/143",
+      "clause_rate": 100.0,
+      "access_speculative": 15,
+      "access_out_of_memory": 0,
+      "overlap_mode": 9,
+      "mutants": 0,
+      "mutants_checked": 0,
+      "killed": 0,
+      "mutation_score": null,
+      "survivors": 0,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_untranslated": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 0,
+      "median_total_s": 347.2
+    }
+  ],
+  "details": {
+    "vitis/base": {
+      "original_outcomes": {
+        "bounded": 8,
+        "pass": 8
+      },
+      "failure_replay": {},
+      "kill_replay": {},
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.9,
+        "wp": 3.8,
+        "hls": 23.4,
+        "latency": 2.5,
+        "bmc": 313.8,
+        "access": 1.5,
+        "cover": 1.5,
+        "total": 347.2
+      }
+    }
+  },
+  "not_checked_reasons": [],
+  "untranslated_clause_reasons": [],
+  "translation_strategies": [
+    [
+      "cell of a outside 0..7",
+      16
+    ],
+    [
+      "holds by construction",
+      12
+    ],
+    [
+      "exact frame over all 8 element(s) of a",
+      8
+    ],
+    [
+      "cell of b outside 0..7",
+      4
+    ],
+    [
+      "\\forall i",
+      3
+    ],
+    [
+      "exact frame over all 8 element(s) of b",
+      3
+    ],
+    [
+      "\\separated holds by construction (separate RTL memories/registers)",
+      2
+    ],
+    [
+      "recursive logic cut off",
+      2
+    ],
+    [
+      "\\forall i_25,j_26",
+      1
+    ],
+    [
+      "\\forall i_27",
+      1
+    ],
+    [
+      "\\forall i_28",
+      1
+    ],
+    [
+      "\\forall i_29",
+      1
+    ],
+    [
+      "\\forall i_24",
+      1
+    ],
+    [
+      "\\forall i_32",
+      1
+    ],
+    [
+      "\\forall i_33",
+      1
+    ],
+    [
+      "\\forall i_34",
+      1
+    ],
+    [
+      "\\forall i_31",
+      1
+    ],
+    [
+      "\\forall i_30",
+      1
+    ],
+    [
+      "\\exists i_14",
+      1
+    ],
+    [
+      "\\exists i_15",
+      1
+    ],
+    [
+      "\\exists i_16",
+      1
+    ],
+    [
+      "\\exists i_17",
+      1
+    ],
+    [
+      "\\exists i_18",
+      1
+    ],
+    [
+      "\\exists i_1",
+      1
+    ],
+    [
+      "\\exists i_2",
+      1
+    ]
+  ],
+  "disagreements": [],
+  "access_violations": [
+    {
+      "case": "BinarySearch__lower_bound/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "MinMax__max_element/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Mutating__copy/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__fill/vitis/base/original",
+      "detail": [
+        "P3: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__remove_copy/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__replace/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Nonmutating__adjacent_find/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__any_of/vitis/base/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__count/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__equal/vitis/base/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P6: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__mismatch/vitis/base/original",
+      "detail": [
+        "P10: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]",
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__accumulate/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__iota/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__is_sorted/vitis/base/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    }
+  ],
+  "latency": {
+    "established": 16,
+    "report_undefined": 16,
+    "not_established": 0
+  }
+}

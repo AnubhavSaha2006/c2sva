@@ -1,0 +1,127 @@
+{
+  "design": "Sorting/merge",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "126/134",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P7: ensures MultisetUnion ( \\old ( a ) , \\old ( m ) , \\old ( b ) , \\old ( n ) , \\old ( c ) )"
+  ],
+  "access": "out-of-memory",
+  "access_failed": [
+    "P14: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "21/21",
+  "translated": 21,
+  "total_clauses": 21,
+  "skipped": [],
+  "times": {
+    "frontend": 0.5,
+    "wp": 77.3,
+    "hls": 23.9,
+    "latency": 1.5,
+    "bmc": 49.1,
+    "access": 2.6,
+    "phys": 43.1,
+    "cover": 1.4,
+    "total": 206.8
+  },
+  "error": null,
+  "top": "merge",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "m": 2,
+        "n": 1
+      },
+      "pre": {
+        "a": [
+          -1602353424,
+          -917846146,
+          0,
+          -905015310
+        ],
+        "b": [
+          -1602288216,
+          1073741827,
+          -1582284028,
+          0
+        ],
+        "c": [
+          544868067,
+          -520189528,
+          -905015310,
+          -681809271
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -1602353424,
+          -917846146,
+          0,
+          -905015310
+        ],
+        "b": [
+          -1602288216,
+          1073741827,
+          -1582284028,
+          0
+        ],
+        "c": [
+          -1602353424,
+          -1602288216,
+          -905015310,
+          -681809271
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Precondition",
+        "copy",
+        "valid: \\valid_read(a + (0 .. n - 1))."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation",
+    "detail": "callee copy called outside its precondition"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 2,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_36980,j_36981: enumerated over 0..4 (weaker assumption)",
+    "\\forall i_36982,j_36983: enumerated over 0..4 (weaker assumption)",
+    "\\forall i_36984,j_36985: symbolic (solver-chosen) value, exact",
+    "\\forall i_36990: symbolic (solver-chosen) value, exact",
+    "\\forall i_36991: symbolic (solver-chosen) value, exact",
+    "\\forall v_36986: symbolic (solver-chosen) value, exact",
+    "\\separated holds by construction (separate RTL memories/registers)",
+    "cell of a outside 0..3: solver-chosen value",
+    "cell of b outside 0..3: solver-chosen value",
+    "cell of c outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of c",
+    "holds by construction: the RTL cannot write this object",
+    "recursive logic cut off: free value"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 12,
+  "cex_step": 9,
+  "outcome": "fail"
+}

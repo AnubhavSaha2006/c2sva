@@ -1,0 +1,24 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_6.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_6.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function arrays_average
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_6.c:27: Warning: 
+  Missing assigns clause (assigns 'everything' instead)
+[wp] 15 goals scheduled
+[wp] [Timeout] typed_arrays_average_ensures (Qed 27ms) (Z3) (Cached)
+[wp] [Timeout] typed_arrays_average_loop_invariant_2_preserved (Qed 40ms) (Z3) (Cached)
+[wp] [Timeout] typed_arrays_average_assert_rte_mem_access (Qed 49ms) (Z3) (Cached)
+[wp] [Timeout] typed_arrays_average_assert_rte_mem_access_2 (Qed 21ms) (Z3) (Cached)
+[wp] [Timeout] typed_arrays_average_assert_rte_mem_access_3 (Qed 21ms) (Z3) (Cached)
+[wp] [Timeout] typed_arrays_average_assert_rte_signed_overflow (Qed 19ms) (Z3) (Cached)
+[wp] [Timeout] typed_arrays_average_assert_rte_signed_overflow_2 (Qed 23ms) (Z3) (Cached)
+[wp] [Timeout] typed_arrays_average_assigns_part2 (Qed 11ms) (Z3) (Cached)
+[wp] [Cache] found:1, updated:23
+[wp] Proved goals:    9 / 17
+  Terminating:     1
+  Unreachable:     1
+  Qed:             7 (11ms-14ms-49ms)
+  Timeout:         8

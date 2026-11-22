@@ -1,0 +1,39 @@
+[tasks]
+bmc
+access
+phys
+cover
+lat
+
+[options]
+bmc: mode bmc
+bmc: depth 28
+access: mode bmc
+access: depth 28
+phys: mode bmc
+phys: depth 28
+cover: mode cover
+cover: depth 28
+lat: mode bmc
+lat: depth 19
+
+[engines]
+smtbmc bitwuzla
+
+[script]
+read -formal find.v
+read -formal find_flow_control_loop_pipe.v
+bmc: read -formal harness.sv
+cover: read -formal harness.sv
+access: read -formal -DCHECK_ACCESS -DC2SVA_ACCESS_ONLY harness_acc.sv
+phys: read -formal -DCHECK_PHYS -DC2SVA_ACCESS_ONLY harness_acc.sv
+lat: read -formal harness_lat.sv
+prep -top harness
+setundef -zero -init find find_flow_control_loop_pipe
+
+[files]
+/home/anubhavsaha/cbv/runs/DEMO_find/cases/Nonmutating__find/vitis/base/original/hls/proj/sol/syn/verilog/find.v
+/home/anubhavsaha/cbv/runs/DEMO_find/cases/Nonmutating__find/vitis/base/original/hls/proj/sol/syn/verilog/find_flow_control_loop_pipe.v
+harness.sv
+harness_acc.sv
+harness_lat.sv

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Unified entry point:  bin/c2sva run --bench demo --tool vitis,bambu --mutants 3
+HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+source "$HERE/setup/env.sh" >/dev/null 2>&1
+PYTHONPATH="$HERE/src${PYTHONPATH:+:$PYTHONPATH}" exec python -m c2sva "$@"

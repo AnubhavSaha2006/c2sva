@@ -1,0 +1,15 @@
+1 designs -> 2 cases (tools vitis, configs base, mutants 1) -> /home/anubhavsaha/cbv/runs/T_shuffle_ram
+[1/2] Mutating/shuffle                 original  base     C 33/33   fail             clauses 14/14  access speculative lat 64 rtl-c-divergence
+[2/2] Mutating/shuffle                 mutant-1  base     C 32/33   bounded(44)      clauses 14/14  access speculative lat 64 
+                                                              Summary per tool / HLS configuration                                                              
+┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ acce… ┃       ┃       ┃       ┃       ┃       ┃       ┃
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ out   ┃       ┃       ┃       ┃       ┃       ┃ kills ┃
+┃       ┃       ┃       ┃       ┃ pass  ┃ pass  ┃      ┃       ┃       ┃       ┃       ┃ clau… ┃ acce… ┃ of    ┃ over… ┃ muta… ┃       ┃ muta… ┃ equi… ┃ conf… ┃
+┃ tool  ┃ conf… ┃ desi… ┃ chec… ┃ full  ┃ part… ┃ fail ┃ boun… ┃ vacu… ┃ agree ┃ disa… ┃ rate  ┃ spec… ┃ memo… ┃ mode  ┃ chec… ┃ kill… ┃ score ┃ pass  ┃ in C  ┃
+┡━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ vitis │ base  │ 1     │ 1     │ 0     │ 0     │ 1    │ 0     │ 0     │ 0     │ 1     │ 100.0 │ 1     │ 0     │ 0     │ 0     │ 0     │ None  │ 0     │ 0     │
+└───────┴───────┴───────┴───────┴───────┴───────┴──────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┘
+vitis/base failures on originals (C replay): {'rtl-c-divergence': 1}; mutant kills (C replay): {}
+Details: /home/anubhavsaha/cbv/runs/T_shuffle_ram/summary.md, /home/anubhavsaha/cbv/runs/T_shuffle_ram/results.csv, 
+/home/anubhavsaha/cbv/runs/T_shuffle_ram/table.tex

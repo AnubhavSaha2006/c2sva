@@ -1,0 +1,102 @@
+{
+  "design": "Sorting/is_sorted",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "7/8",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P1: ensures \\result != 0 <==> Increasing ( \\old ( a ) , \\old ( n ) )"
+  ],
+  "access": "out-of-memory",
+  "access_failed": [
+    "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+    "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "7/7",
+  "translated": 7,
+  "total_clauses": 7,
+  "skipped": [],
+  "times": {
+    "frontend": 0.5,
+    "wp": 11.4,
+    "hls": 19.5,
+    "latency": 0.5,
+    "bmc": 0.6,
+    "access": 0.5,
+    "phys": 0.6,
+    "cover": 0.5,
+    "total": 35.9
+  },
+  "error": null,
+  "top": "is_sorted",
+  "mode": "overlapping calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 4
+      },
+      "pre": {
+        "a": [
+          1073741824,
+          0,
+          0,
+          0
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          1073741824,
+          0,
+          0,
+          0
+        ]
+      },
+      "rtl_result": 1,
+      "completed": true
+    },
+    "c_result": 1,
+    "c_post": {
+      "a": [
+        1073741824,
+        0,
+        0,
+        0
+      ]
+    },
+    "eacsl": [],
+    "checker": "native+sanitizers",
+    "oracle": {
+      "requires_violated": [],
+      "violated": [
+        "ensures \\result != 0 <==> Increasing ( \\old ( a ) , \\old ( n ) )"
+      ],
+      "unknown": [],
+      "checked": 3
+    },
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_36881,j_36882: symbolic (solver-chosen) value, exact",
+    "\\forall i_36883,j_36884: enumerated over 0..4 (stronger assertion)",
+    "cell of a outside 0..3: solver-chosen value",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": 0,
+  "depth": 20,
+  "cex_step": 3,
+  "outcome": "fail"
+}

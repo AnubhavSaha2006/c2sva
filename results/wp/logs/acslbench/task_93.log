@@ -1,0 +1,32 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_93.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_93.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function fun
+[rte:annot] annotating function main
+[kernel:annot:missing-spec] FRAMAC_SHARE/libc/stdio.h:239: Warning: 
+  Neither code nor explicit exits and terminates for function printf_va_1,
+  generating default clauses. See -generated-spec-* options for more info.
+[wp] 12 goals scheduled
+[wp] [Timeout] typed_fun_terminates (Qed 5ms) (Z3) (Cached)
+[wp] [Timeout] typed_fun_ensures (Qed 10ms) (Z3) (Cached)
+[wp] [Timeout] typed_fun_assert_rte_signed_overflow_2 (Qed 11ms) (Z3) (Cached)
+[wp] [Cache] updated:11
+[wp] Proved goals:   10 / 13
+  Unreachable:       1
+  Qed:               7 (5ms-3ms-11ms)
+  Alt-Ergo 2.6.4:    2 (65ms-132ms)
+  Timeout:           3
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_93.c:28: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+[wp] FRAMAC_SHARE/libc/stdio.h:239: Warning: 
+  Memory model hypotheses for function 'printf_va_1':
+  /*@
+     behavior wp_typed:
+       requires \separated(&__fc_stdout, &__fc_stdout->__fc_FILE_data);
+       requires \separated(format + (..), &__fc_stdout);
+     */
+  int printf_va_1(char const * restrict format, int param0);

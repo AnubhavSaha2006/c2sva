@@ -1,0 +1,125 @@
+{
+  "design": "Mutating/swap_ranges",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "23/25",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures Equal { Old , Here } ( \\old ( a ) , \\old ( n ) , \\old ( b ) )"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P12: requires \\valid ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 1]",
+    "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "15/15",
+  "translated": 15,
+  "total_clauses": 15,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 2.4,
+    "hls": 14.6,
+    "latency": 0.5,
+    "bmc": 1.0,
+    "access": 0.5,
+    "phys": 0.5,
+    "cover": 0.5,
+    "total": 23.0
+  },
+  "error": null,
+  "top": "swap_ranges",
+  "mode": "sequential calls (overlap possible but memories are written: checked sequentially)",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 1
+      },
+      "pre": {
+        "a": [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "b": [
+          2147483647,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "b": [
+          2147483647,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {
+      "a": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "b": [
+        2147483647,
+        -1,
+        -1,
+        -1
+      ]
+    },
+    "eacsl": [],
+    "checker": "e-acsl",
+    "oracle": {
+      "requires_violated": [],
+      "violated": [
+        "ensures Equal { Old , Here } ( \\old ( a ) , \\old ( n ) , \\old ( b ) )",
+        "ensures Equal { Old , Here } ( \\old ( b ) , \\old ( n ) , \\old ( a ) )"
+      ],
+      "unknown": [],
+      "checked": 6
+    },
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_900: symbolic (solver-chosen) value, exact",
+    "\\forall i_901: symbolic (solver-chosen) value, exact",
+    "\\separated holds by construction (separate RTL memories/registers)",
+    "cell of a outside 0..3: solver-chosen value",
+    "cell of b outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a",
+    "exact frame over all 4 element(s) of b"
+  ],
+  "latency_report": null,
+  "interval_report": 0,
+  "depth": 12,
+  "cex_step": 2,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

@@ -1,0 +1,18 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_338.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_338.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function b
+[kernel:annot:missing-spec] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_338.c:17: Warning: 
+  Neither code nor explicit exits and terminates for function a, generating
+  default clauses. See -generated-spec-* options for more info.
+[rte:annot] annotating function bn
+[kernel:annot:missing-spec] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_338.c:37: Warning: 
+  Neither code nor explicit exits and terminates for function an, generating
+  default clauses. See -generated-spec-* options for more info.
+[wp] 13 goals scheduled
+[wp] [Cache] not used
+[wp] Proved goals:   13 / 13
+  Qed:            13

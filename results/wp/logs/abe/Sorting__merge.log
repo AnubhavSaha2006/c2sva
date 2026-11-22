@@ -1,0 +1,38 @@
+frama-c -pp-annot -cpp-extra-args=-I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Logic -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Nonmutating -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/MinMax -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/BinarySearch -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Mutating -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Numeric -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Heap -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Sorting -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Stack -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Sorting/merge.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Sorting/merge.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function merge
+[wp] Computing [100 goals...]
+[wp] Computing [200 goals...]
+[wp] Computing [300 goals...]
+[wp] Computing [400 goals...]
+[wp] Computing [500 goals...]
+[wp] 533 goals scheduled
+[wp] [Timeout] typed_lemma_Count_Between (Qed 8ms) (Z3) (Cached)
+[wp] [Timeout] typed_lemma_Count_Bounds (Qed 2ms) (CVC5) (Cached)
+[wp] [Timeout] typed_lemma_Count_Equal (Qed 2ms) (CVC5) (Cached)
+[wp] [Timeout] typed_lemma_Count_Increasing (Qed 2ms) (Z3) (Cached)
+[wp] [Timeout] typed_lemma_Count_Shift (Qed 1ms) (CVC5) (Cached)
+[wp] [Timeout] typed_lemma_Count_Unchanged (Qed 0.67ms) (CVC5) (Cached)
+[wp] [Timeout] typed_lemma_Count_Union (Qed 0.86ms) (CVC5) (Cached)
+[wp] [Timeout] typed_lemma_Increasing_Shift (Qed 2ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_lemma_Increasing_Unshift (Qed 2ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_lemma_MultisetUnion_TailLeft (Qed 2ms) (Z3) (Cached)
+[wp] [Timeout] typed_lemma_Unchanged_Shift (Qed 0.77ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_lemma_WeaklyIncreasing_Increasing (Qed 1ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_lemma_WeaklyIncreasing_Shift (Qed 0.90ms) (Z3) (Cached)
+[wp] [Timeout] typed_merge_assert_upper_part1 (Qed 284ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_merge_assert_upper_2_part1 (Qed 288ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_merge_assert_equal_8_part1 (Qed 288ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_merge_assert_equal_9_part2 (Qed 458ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_merge_assert_equal_14_part4 (Qed 297ms) (Alt-Ergo) (Cached)
+[wp] [Cache] found:14, updated:218
+[wp] Proved goals:  515 / 533
+  Qed:             347 (0.65ms-75ms-706ms)
+  Alt-Ergo 2.6.4:  119 (70ms-691ms-8.7s)
+  CVC5 :            48 (99ms-1.6s-8.3s)
+  Z3 5.1.0:          1 (38ms)
+  Timeout:          18

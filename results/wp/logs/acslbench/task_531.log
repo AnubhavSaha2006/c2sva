@@ -1,0 +1,18 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_531.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_531.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function swap
+[wp] 6 goals scheduled
+[wp] [Cache] found:4
+[wp] Proved goals:    8 / 8
+  Terminating:       1
+  Unreachable:       1
+  Qed:               3 (9ms-7ms-18ms)
+  Alt-Ergo 2.6.4:    2 (93ms)
+  CVC5 :             1 (144ms)
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_531.c:12: Warning: 
+  No 'assigns' specification for function 'swap'.
+  Callers assumptions might be imprecise.

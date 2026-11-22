@@ -1,0 +1,37 @@
+{
+  "design": "Numeric/accumulate",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "16/16",
+  "c_ok": true,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "violated",
+  "access_failed": [
+    "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [read address in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "proven",
+  "clauses": "5/5",
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 0.8,
+    "hls": 11.1,
+    "latency": 0.7,
+    "bmc": 22.9,
+    "access": 0.8,
+    "cover": 0.7,
+    "total": 37.3
+  },
+  "error": null,
+  "top": "accumulate",
+  "discharged": 1,
+  "pre_dropped": 0,
+  "latency_report": null,
+  "cex_step": null
+}

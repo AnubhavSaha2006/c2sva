@@ -1,0 +1,97 @@
+{
+  "design": "Heap/heap_child",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "23/27",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P10: ensures \\result == \\old ( n ) ==> \\old ( n ) <= HeapLeft ( \\old ( p ) )",
+    "P6: ensures HeapLeft ( \\old ( p ) ) < \\old ( n ) ==> \\result < \\old ( n )"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P13: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+    "P15: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+  ],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "17/17",
+  "translated": 17,
+  "total_clauses": 17,
+  "skipped": [],
+  "times": {
+    "frontend": 1.0,
+    "wp": 6.5,
+    "hls": 23.7,
+    "latency": 1.0,
+    "bmc": 2.0,
+    "access": 1.0,
+    "phys": 1.0,
+    "cover": 1.5,
+    "total": 45.3
+  },
+  "error": null,
+  "top": "heap_child",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 4,
+        "p": 1
+      },
+      "pre": {
+        "a": [
+          -2147483645,
+          -1,
+          -2147483645,
+          -1
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -2147483645,
+          -1,
+          -2147483645,
+          -1
+        ]
+      },
+      "rtl_result": 4,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "heap_child",
+        "left: HeapLeft(\\old(p)) < \\old(n) \u21d2 \\result < \\old(n)."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 80,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "cell of a outside 0..3: solver-chosen value",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": [
+    1,
+    1
+  ],
+  "interval_report": 2,
+  "depth": 6,
+  "cex_step": 3,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

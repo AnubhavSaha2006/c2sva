@@ -1,0 +1,33 @@
+{
+  "design": "task_503",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "hls",
+  "status": "error",
+  "c_proof": "3/3",
+  "c_ok": true,
+  "rtl": null,
+  "failed": [],
+  "access": null,
+  "access_failed": [],
+  "cover": null,
+  "latency": null,
+  "latency_status": null,
+  "clauses": null,
+  "translated": null,
+  "total_clauses": null,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 0.5,
+    "total": 5.6
+  },
+  "error": "hls: Vitis synthesis failed: ERROR: [HLS 207-3487] first parameter of 'main' (argument count) must be of type 'int' (../src/hls_src/task_503.c:24:6)",
+  "top": "main",
+  "mode": null,
+  "bounded_to": null,
+  "replay": null,
+  "engine": null,
+  "outcome": "error"
+}

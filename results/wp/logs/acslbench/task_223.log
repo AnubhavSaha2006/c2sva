@@ -1,0 +1,82 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_223.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_223.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function bins
+[rte:annot] annotating function main
+[kernel:annot:missing-spec] FRAMAC_SHARE/libc/stdio.h:240: Warning: 
+  Neither code nor explicit exits and terminates for function scanf_va_1,
+  generating default clauses. See -generated-spec-* options for more info.
+[kernel:annot:missing-spec] FRAMAC_SHARE/libc/stdio.h:240: Warning: 
+  Neither code nor explicit exits and terminates for function scanf_va_2,
+  generating default clauses. See -generated-spec-* options for more info.
+[kernel:annot:missing-spec] FRAMAC_SHARE/libc/stdio.h:240: Warning: 
+  Neither code nor explicit exits and terminates for function scanf_va_3,
+  generating default clauses. See -generated-spec-* options for more info.
+[kernel:annot:missing-spec] FRAMAC_SHARE/libc/stdio.h:239: Warning: 
+  Neither code nor explicit exits and terminates for function printf_va_1,
+  generating default clauses. See -generated-spec-* options for more info.
+[wp] Computing [100 goals...]
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_223.c:83: Warning: 
+  Missing assigns clause (assigns 'everything' instead)
+[wp] 134 goals scheduled
+[wp] [Cache] updated:39
+[wp] Proved goals:  136 / 136
+  Terminating:       1
+  Unreachable:       1
+  Qed:              97 (21ms-23ms-188ms)
+  Alt-Ergo 2.6.4:   15 (74ms-182ms-316ms)
+  CVC5 :            22 (83ms-170ms-507ms)
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_223.c:81: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.
+[wp] FRAMAC_SHARE/libc/stdio.h:240: Warning: 
+  Memory model hypotheses for function 'scanf_va_1':
+  /*@
+     behavior wp_typed:
+       requires
+         \separated(
+           &(t[0]) + (..), &__fc_stdin, &n, &x, &__fc_stdin->__fc_FILE_data
+           );
+       requires \separated(format + (..), &(t[0]) + (..), &__fc_stdin, &n, &x);
+       requires \separated(param0, &(t[0]) + (..), &__fc_stdin, &n, &x);
+     */
+  int scanf_va_1(char const * restrict format, int *param0);
+[wp] FRAMAC_SHARE/libc/stdio.h:240: Warning: 
+  Memory model hypotheses for function 'scanf_va_2':
+  /*@
+     behavior wp_typed:
+       requires
+         \separated(
+           &(t[0]) + (..), &__fc_stdin, &n, &x, &__fc_stdin->__fc_FILE_data
+           );
+       requires \separated(format + (..), &(t[0]) + (..), &__fc_stdin, &n, &x);
+       requires \separated(param0, &(t[0]) + (..), &__fc_stdin, &n, &x);
+     */
+  int scanf_va_2(char const * restrict format, int *param0);
+[wp] FRAMAC_SHARE/libc/stdio.h:240: Warning: 
+  Memory model hypotheses for function 'scanf_va_3':
+  /*@
+     behavior wp_typed:
+       requires
+         \separated(
+           &(t[0]) + (..), &__fc_stdin, &n, &x, &__fc_stdin->__fc_FILE_data
+           );
+       requires \separated(format + (..), &(t[0]) + (..), &__fc_stdin, &n, &x);
+       requires \separated(param0, &(t[0]) + (..), &__fc_stdin, &n, &x);
+     */
+  int scanf_va_3(char const * restrict format, int *param0);
+[wp] FRAMAC_SHARE/libc/stdio.h:239: Warning: 
+  Memory model hypotheses for function 'printf_va_1':
+  /*@
+     behavior wp_typed:
+       requires
+         \separated(
+           &(t[0]) + (..), &__fc_stdout, &n, &x, &__fc_stdout->__fc_FILE_data
+           );
+       requires
+         \separated(format + (..), &(t[0]) + (..), &__fc_stdout, &n, &x);
+     */
+  int printf_va_1(char const * restrict format, int param0);

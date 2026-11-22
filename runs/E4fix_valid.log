@@ -1,0 +1,19 @@
+3 designs -> 7 cases (tools vitis, configs base, mutants 2) -> /home/anubhavsaha/cbv/runs/E4fix_valid
+[1/7] task_369                         original  base     C 20/20   pass             clauses 6/6    access None      lat 8 
+[2/7] task_312                         original  base     C 9/9     pass             clauses 12/12  access speculative lat 2 
+[3/7] task_369                         mutant-1  base     C 18/20   fail             clauses 6/6    access None      lat 8 c-contract-violation
+[4/7] task_369                         mutant-2  base     C 19/20   pass             clauses 6/6    access None      lat 8 
+[5/7] task_401                         original  base     C 18/18   pass             clauses 6/6    access None      lat 8 
+[6/7] task_401                         mutant-1  base     C 16/18   fail             clauses 6/6    access None      lat 8 c-contract-violation
+[7/7] task_401                         mutant-2  base     C 18/18   pass             clauses 6/6    access None      lat 8 
+                                                              Summary per tool / HLS configuration                                                              
+┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ acce… ┃       ┃       ┃       ┃       ┃       ┃       ┃
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ out   ┃       ┃       ┃       ┃       ┃       ┃ kills ┃
+┃       ┃       ┃       ┃       ┃ pass  ┃ pass  ┃      ┃       ┃       ┃       ┃       ┃ clau… ┃ acce… ┃ of    ┃ over… ┃ muta… ┃       ┃ muta… ┃ equi… ┃ conf… ┃
+┃ tool  ┃ conf… ┃ desi… ┃ chec… ┃ full  ┃ part… ┃ fail ┃ boun… ┃ vacu… ┃ agree ┃ disa… ┃ rate  ┃ spec… ┃ memo… ┃ mode  ┃ chec… ┃ kill… ┃ score ┃ pass  ┃ in C  ┃
+┡━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ vitis │ base  │ 3     │ 3     │ 3     │ 0     │ 0    │ 0     │ 0     │ 3     │ 0     │ 100.0 │ 1     │ 0     │ 0     │ 4     │ 2     │ 66.7  │ 1     │ 2     │
+└───────┴───────┴───────┴───────┴───────┴───────┴──────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┘
+vitis/base failures on originals (C replay): {}; mutant kills (C replay): {'c-contract-violation': 2}
+Details: /home/anubhavsaha/cbv/runs/E4fix_valid/summary.md, /home/anubhavsaha/cbv/runs/E4fix_valid/results.csv, /home/anubhavsaha/cbv/runs/E4fix_valid/table.tex

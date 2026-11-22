@@ -1,0 +1,110 @@
+{
+  "latency": 8,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 1.9,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 600.1
+  },
+  "candidates": {
+    "total": 144,
+    "by_origin": {
+      "structural": 64,
+      "call-requires": 1,
+      "contract-persist": 3,
+      "call-frame": 1,
+      "loop-invariant": 63,
+      "loop-variant": 9,
+      "loop-assigns": 3
+    },
+    "loops": 1,
+    "loop_invariants": 3,
+    "skipped": []
+  },
+  "houdini": {
+    "candidates": 144,
+    "base_dropped": 51,
+    "ind_dropped": 1,
+    "rounds": 12,
+    "status": "inductive",
+    "base_depth": 12,
+    "k": 4,
+    "secs": 17.5,
+    "invariants": 92,
+    "by_origin": {
+      "structural": 26,
+      "call-requires": 1,
+      "contract-persist": 3,
+      "call-frame": 1,
+      "loop-invariant": 55,
+      "loop-variant": 3,
+      "loop-assigns": 3
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant bound: 0 <= parent < child <= n + 1",
+      "loop 1: loop invariant heap: Heap ( a , child )",
+      "loop 1: loop invariant parent: parent == HeapParent ( child )"
+    ],
+    "c_invariants_lagged": [],
+    "k_tried": [
+      4
+    ]
+  },
+  "kind+inv": {
+    "status": "PASS",
+    "secs": 0.9,
+    "k": 4
+  },
+  "ablation": {
+    "hls": {
+      "candidates": 64,
+      "invariants": 26,
+      "houdini": "inductive",
+      "k": 4,
+      "status": "UNKNOWN",
+      "secs": 0.6
+    },
+    "hls+contract": {
+      "candidates": 69,
+      "invariants": 29,
+      "houdini": "inductive",
+      "k": 4,
+      "status": "UNKNOWN",
+      "secs": 0.6
+    }
+  },
+  "latency_proof": {
+    "bound": 8,
+    "established_by_bmc": "established",
+    "kind": {
+      "status": "UNKNOWN",
+      "secs": 0.6,
+      "k": 16
+    },
+    "candidates": 146,
+    "kind+inv": {
+      "status": "PASS",
+      "secs": 1.3,
+      "k": 4,
+      "progress_invariants": 119,
+      "houdini": "inductive",
+      "houdini_secs": 13.9
+    },
+    "proved": true
+  },
+  "unbounded": true,
+  "proved_by": [
+    "kind+inv"
+  ],
+  "deep_cex": [],
+  "secs": 648.1
+}

@@ -1,0 +1,91 @@
+{
+  "design": "task_346",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "21/23",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P3: ensures \\forall integer i ; 0 <= i <= \\old ( k ) ==> * ( \\old ( a ) + \\old ( k ) ) >= * ( \\old ( a ) + i )"
+  ],
+  "access": "out-of-memory",
+  "access_failed": [
+    "P5: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 16,
+  "latency_status": "established",
+  "clauses": "8/8",
+  "translated": 8,
+  "total_clauses": 8,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 1.7,
+    "hls": 13.4,
+    "latency": 1.1,
+    "bmc": 0.6,
+    "access": 0.4,
+    "phys": 0.5,
+    "cover": 0.4,
+    "total": 22.0
+  },
+  "error": null,
+  "top": "bubbleinnerloop",
+  "mode": "sequential calls (overlap possible but memories are written: checked sequentially)",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 2,
+        "k": 1
+      },
+      "pre": {
+        "a": [
+          -262148,
+          -262145,
+          0,
+          -2147483648
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -262145,
+          -262148,
+          0,
+          -2147483648
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Assertion",
+        "bubbleinnerloop",
+        "rte/mem_access: \\valid_read(a + (int)(j - 1))."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-runtime-error"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value"
+  ],
+  "latency_report": null,
+  "interval_report": 0,
+  "depth": 20,
+  "cex_step": 5,
+  "outcome": "fail"
+}

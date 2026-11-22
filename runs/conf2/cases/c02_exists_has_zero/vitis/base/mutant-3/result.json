@@ -1,0 +1,86 @@
+{
+  "design": "c02_exists_has_zero",
+  "variant": "mutant-3",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "15/16",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures \\result == 1 <==> ( \\exists integer i ; 0 <= i < \\old ( n ) && * ( \\old ( a ) + i ) == 0 )"
+  ],
+  "access": "undecided",
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 16,
+  "latency_status": "established",
+  "clauses": "7/7",
+  "translated": 7,
+  "total_clauses": 7,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 1.2,
+    "hls": 13.6,
+    "latency": 1.0,
+    "bmc": 0.5,
+    "access": 0.5,
+    "cover": 0.4,
+    "total": 21.2
+  },
+  "error": null,
+  "top": "has_zero",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 0
+      },
+      "pre": {
+        "a": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "rtl_result": 1,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "\\result \u2261 1 \u21d4 (\u2203 \u2124 i; 0 \u2264 i < \\old(n) \u2227 *(\\old(a) + i) \u2261 0)."
+      ]
+    ],
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "\\exists i: enumerated over 0..4 (stronger assertion)",
+    "\\exists i: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 20,
+  "cex_step": 3,
+  "outcome": "fail"
+}

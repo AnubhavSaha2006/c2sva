@@ -1,0 +1,91 @@
+{
+  "design": "MinMax/max_element2",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "29/32",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P3: ensures 0 <= \\result < \\old ( n )",
+    "P4: ensures MaxElement ( \\old ( a ) , \\old ( n ) , \\result )"
+  ],
+  "access": "undecided",
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "13/13",
+  "translated": 13,
+  "total_clauses": 13,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 12.6,
+    "hls": 18.1,
+    "latency": 0.5,
+    "bmc": 0.5,
+    "access": 0.6,
+    "cover": 0.5,
+    "total": 36.8
+  },
+  "error": null,
+  "top": "max_element2",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 1
+      },
+      "pre": {
+        "a": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "rtl_result": 1,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "max_element2",
+        "not_empty/first: StrictUpperBound(\\old(a), \\result, *(\\old(a) + \\result))."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_783: symbolic (solver-chosen) value, exact",
+    "\\forall i_784: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": 2,
+  "depth": 12,
+  "cex_step": 3,
+  "outcome": "fail"
+}

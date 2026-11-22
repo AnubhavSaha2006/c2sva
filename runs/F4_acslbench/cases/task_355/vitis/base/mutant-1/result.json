@@ -1,0 +1,106 @@
+{
+  "design": "task_355",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "13/14",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P3: ensures \\result == 0"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+    "P8: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "9/9",
+  "translated": 9,
+  "total_clauses": 9,
+  "skipped": [],
+  "times": {
+    "frontend": 0.5,
+    "wp": 1.9,
+    "hls": 15.0,
+    "latency": 1.0,
+    "bmc": 1.0,
+    "access": 1.0,
+    "phys": 1.0,
+    "cover": 1.0,
+    "total": 28.4
+  },
+  "error": null,
+  "top": "is_same",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 1
+      },
+      "pre": {
+        "a": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "b": [
+          -2147483648,
+          0,
+          -2147483648,
+          -2147483648
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "b": [
+          -2147483648,
+          0,
+          -2147483648,
+          -2147483648
+        ]
+      },
+      "rtl_result": 1,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "is_same",
+        "not_same: \\result \u2261 0."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\exists i: symbolic (solver-chosen) value, exact",
+    "\\forall i: enumerated over 0..4 (stronger assertion)",
+    "cell of a outside 0..3: solver-chosen value",
+    "cell of b outside 0..3: solver-chosen value"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 12,
+  "cex_step": 3,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

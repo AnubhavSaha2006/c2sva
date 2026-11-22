@@ -1,0 +1,108 @@
+{
+  "design": "Mutating/swap_ranges",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "21/25",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P14: assigns * ( a + ( 0 .. n - 1 ) ) , * ( b + ( 0 .. n - 1 ) )  [frame of a]"
+  ],
+  "access": "out-of-memory",
+  "access_failed": [
+    "P12: requires \\valid ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 1]",
+    "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "15/15",
+  "translated": 15,
+  "total_clauses": 15,
+  "skipped": [],
+  "times": {
+    "frontend": 0.5,
+    "wp": 14.9,
+    "hls": 16.1,
+    "latency": 0.5,
+    "bmc": 1.0,
+    "access": 0.5,
+    "phys": 0.9,
+    "cover": 0.5,
+    "total": 39.9
+  },
+  "error": null,
+  "top": "swap_ranges",
+  "mode": "sequential calls (overlap possible but memories are written: checked sequentially)",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 2
+      },
+      "pre": {
+        "a": [
+          1478226238,
+          1194487439,
+          875168784,
+          1579154177
+        ],
+        "b": [
+          289407024,
+          1579154209,
+          168852366,
+          107515775
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          289407024,
+          1194487439,
+          875168784,
+          1579154209
+        ],
+        "b": [
+          1478226238,
+          1579154177,
+          168852366,
+          107515775
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "RTE",
+        "swap",
+        "mem_access: \\valid_read(p)."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-runtime-error"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_870: symbolic (solver-chosen) value, exact",
+    "\\forall i_871: symbolic (solver-chosen) value, exact",
+    "\\separated holds by construction (separate RTL memories/registers)",
+    "cell of a outside 0..3: solver-chosen value",
+    "cell of b outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a",
+    "exact frame over all 4 element(s) of b"
+  ],
+  "latency_report": null,
+  "interval_report": 0,
+  "depth": 12,
+  "cex_step": 4,
+  "outcome": "fail"
+}

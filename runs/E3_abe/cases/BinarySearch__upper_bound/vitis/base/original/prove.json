@@ -1,0 +1,90 @@
+{
+  "latency": 8,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 31.0,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.0
+  },
+  "candidates": {
+    "total": 93,
+    "by_origin": {
+      "structural": 40,
+      "call-requires": 2,
+      "call-frame": 1,
+      "loop-invariant": 30,
+      "loop-variant": 18,
+      "loop-assigns": 2
+    },
+    "loops": 1,
+    "loop_invariants": 3,
+    "skipped": []
+  },
+  "houdini": {
+    "candidates": 93,
+    "base_dropped": 28,
+    "ind_dropped": 0,
+    "rounds": 2,
+    "status": "inductive",
+    "k": 16,
+    "secs": 602.2,
+    "invariants": 65,
+    "by_origin": {
+      "structural": 12,
+      "call-requires": 2,
+      "call-frame": 1,
+      "loop-invariant": 30,
+      "loop-variant": 18,
+      "loop-assigns": 2
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant bound: 0 <= left <= right <= n",
+      "loop 1: loop invariant left: UpperBound ( a , 0 , left , v )",
+      "loop 1: loop invariant right: StrictLowerBound ( a , right , n , v )"
+    ],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "PASS",
+    "secs": 11.7,
+    "k": 16
+  },
+  "ablation": {
+    "hls": {
+      "candidates": 40,
+      "invariants": 12,
+      "houdini": "inductive",
+      "k": 16,
+      "status": "PASS",
+      "secs": 34.9
+    },
+    "hls+contract": {
+      "candidates": 43,
+      "invariants": 15,
+      "houdini": "inductive",
+      "k": 16,
+      "status": "PASS",
+      "secs": 51.5
+    }
+  },
+  "unbounded": true,
+  "proved_by": [
+    "kind+inv"
+  ],
+  "deep_cex": [],
+  "secs": 1089.9
+}

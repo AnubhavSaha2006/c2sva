@@ -1,0 +1,94 @@
+{
+  "design": "Nonmutating/all_of",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "7/8",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P1: ensures \\result != 0 <==> AllEqual ( \\old ( a ) , \\old ( n ) , \\old ( v ) )"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 16,
+  "latency_status": "established",
+  "clauses": "5/5",
+  "translated": 5,
+  "total_clauses": 5,
+  "skipped": [],
+  "times": {
+    "frontend": 0.5,
+    "wp": 1.1,
+    "hls": 19.0,
+    "latency": 2.0,
+    "bmc": 1.0,
+    "access": 1.0,
+    "phys": 1.0,
+    "cover": 1.0,
+    "total": 32.7
+  },
+  "error": null,
+  "top": "all_of",
+  "mode": "overlapping calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 0,
+        "v": -2147483648
+      },
+      "pre": {
+        "a": [
+          -2147483648,
+          0,
+          0,
+          0
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -2147483648,
+          0,
+          0,
+          0
+        ]
+      },
+      "rtl_result": 0,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "all_of",
+        "result: \\result \u2262 0 \u21d4 AllEqual(\\old(a), \\old(n), \\old(v))."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_612: symbolic (solver-chosen) value, exact",
+    "\\forall i_613: enumerated over 0..4 (stronger assertion)",
+    "cell of a outside 0..3: solver-chosen value",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": 0,
+  "depth": 28,
+  "cex_step": 3,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

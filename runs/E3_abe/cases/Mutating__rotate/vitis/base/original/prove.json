@@ -1,0 +1,72 @@
+{
+  "latency": 32,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 43.2,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.0
+  },
+  "candidates": {
+    "total": 600,
+    "by_origin": {
+      "structural": 598,
+      "call-requires": 2
+    },
+    "loops": 1,
+    "loop_invariants": 4,
+    "skipped": [
+      {
+        "source": "loop 1 (reverse): loop invariant bound: 0 <= i <= half <= n - i",
+        "reason": "no RTL signal found for C variable half"
+      },
+      {
+        "source": "loop 1 (reverse): loop invariant middle: Unchanged { Pre , Here } ( a , i , n - i )",
+        "reason": "unknown logic function/predicate Unchanged"
+      },
+      {
+        "source": "loop 1 (reverse): loop variant half - i >= 0",
+        "reason": "no RTL signal found for C variable half"
+      }
+    ]
+  },
+  "houdini": {
+    "candidates": 600,
+    "base_dropped": 521,
+    "ind_dropped": 39,
+    "rounds": 15,
+    "status": "inductive",
+    "base_depth": 36,
+    "k": 16,
+    "secs": 307.6,
+    "invariants": 40,
+    "by_origin": {
+      "structural": 38,
+      "call-requires": 2
+    },
+    "c_invariants_survived": [],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "UNKNOWN",
+    "secs": 29.9,
+    "k": 16
+  },
+  "unbounded": false,
+  "proved_by": [],
+  "deep_cex": [],
+  "secs": 697.7
+}

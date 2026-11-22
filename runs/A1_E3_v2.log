@@ -1,0 +1,2 @@
+prove: 72 cases, strategies ['houdini', 'kind+inv', 'latency']
+BinarySearch__binary_search/vitis/base/original                        unbounded=True by=['kind+inv'] inv=86/365 c-inv=3 

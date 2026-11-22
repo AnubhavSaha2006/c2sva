@@ -1,0 +1,53 @@
+{
+  "design": "task_358",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "27/27",
+  "c_ok": true,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "speculative",
+  "access_failed": [
+    "P15: requires inv_matrix_Boolean ( x130 , x131 , x132 ) && inv_matrix_Boolean ( x133 , x134 , x135 ) && x131 == x134 && x132 == x135  [access in range: x130 bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "19/19",
+  "translated": 19,
+  "total_clauses": 19,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 1.9,
+    "hls": 15.2,
+    "latency": 2.5,
+    "bmc": 31.5,
+    "access": 1.5,
+    "phys": 2.0,
+    "cover": 1.5,
+    "total": 56.7
+  },
+  "error": null,
+  "top": "scalar_mult",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "yices",
+  "width": 80,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\valid inside an expression: range empty or within the 4 cells"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 12,
+  "cex_step": null,
+  "failed_cutoff": [],
+  "outcome": "pass"
+}

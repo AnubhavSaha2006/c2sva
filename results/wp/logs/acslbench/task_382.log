@@ -1,0 +1,21 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_382.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_382.c (with preprocessing)
+[kernel:typing:implicit-function-declaration] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_382.c:14: Warning: 
+  Calling undeclared function CEA_DUMP. Old style K&R code?
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function main
+[kernel:annot:missing-spec] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_382.c:14: Warning: 
+  Neither code nor specification for function CEA_DUMP, generating default
+  exits, assigns and terminates. See -generated-spec-* options for more info.
+[wp] 5 goals scheduled
+[wp] [Timeout] typed_main_requires (Qed 3ms) (Z3) (Cached)
+[wp] [Cache] found:2, updated:1
+[wp] Proved goals:    4 / 5
+  Qed:             4 (0.62ms)
+  Timeout:         1
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_382.c:12: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.

@@ -1,0 +1,53 @@
+{
+  "design": "Mutating/random_number",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "toppipe",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "12/12",
+  "c_ok": true,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "ok",
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 38,
+  "latency_status": "established",
+  "clauses": "8/8",
+  "translated": 8,
+  "total_clauses": 8,
+  "skipped": [],
+  "times": {
+    "frontend": 0.5,
+    "wp": 1.2,
+    "hls": 15.8,
+    "latency": 2.0,
+    "bmc": 298.7,
+    "access": 2.0,
+    "cover": 3.0,
+    "total": 323.2
+  },
+  "error": null,
+  "top": "random_number",
+  "mode": "sequential calls (overlap possible but memories are written: checked sequentially)",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "bitwuzla",
+  "width": 72,
+  "fifo_depth": 10,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "exact frame over all 4 element(s) of state"
+  ],
+  "latency_report": [
+    38,
+    38
+  ],
+  "interval_report": 5,
+  "depth": 42,
+  "cex_step": null,
+  "failed_cutoff": [],
+  "outcome": "pass"
+}

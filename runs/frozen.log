@@ -1,0 +1,202 @@
+=== 2026-11-21 17:45:11 F1 conformance (mutants 3)
+17 designs -> 59 cases (tools vitis, configs base, mutants 3) -> /home/anubhavsaha/cbv/runs/F1_conformance
+[1/59] c01_behaviors_clamp              original  base     C 10/10   pass             clauses 4/4    access None      lat 2 
+[2/59] c01_behaviors_clamp              mutant-1  base     C 10/10   pass             clauses 4/4    access None      lat 2 
+[3/59] c01_behaviors_clamp              mutant-2  base     C 10/10   pass             clauses 4/4    access None      lat 2 
+[4/59] c02_exists_has_zero              original  base     C 16/16   pass             clauses 7/7    access speculative lat 16 
+[5/59] c02_exists_has_zero              mutant-1  base     C 14/16   fail             clauses 7/7    access speculative lat 8 c-contract-violation
+[6/59] c02_exists_has_zero              mutant-2  base     C 13/16   fail             clauses 7/7    access speculative lat 128 c-contract-violation
+[7/59] c03_recursive_logic              mutant-1  base     C 13/14   fail             clauses 6/6    access speculative lat 8 c-contract-violation
+[8/59] c03_recursive_logic              original  base     C 14/14   pass             clauses 6/6    access speculative lat 8 
+[9/59] c02_exists_has_zero              mutant-3  base     C 15/16   fail             clauses 7/7    access speculative lat 16 c-contract-violation
+[10/59] c03_recursive_logic              mutant-2  base     C 12/14   fail             clauses 6/6    access speculative lat 8 c-contract-violation
+[11/59] c03_recursive_logic              mutant-3  base     C 13/14   fail             clauses 6/6    access speculative lat 8 c-contract-violation
+[12/59] c04_single_pointers_swap         original  base     C 10/10   pass             clauses 5/5    access None      lat 2 
+[13/59] c05_typedef_three_arrays         original  base     C 20/21   pass             clauses 15/15  access speculative lat 8 
+[14/59] c06_verilog_keywords             original  base     C 9/9     pass             clauses 8/8    access ok        lat 2 
+[15/59] c05_typedef_three_arrays         mutant-2  base     C 16/21   fail             clauses 15/15  access speculative lat 8 c-contract-violation
+[16/59] c05_typedef_three_arrays         mutant-1  base     C 18/21   fail             clauses 15/15  access speculative lat 8 c-contract-violation
+[17/59] c05_typedef_three_arrays         mutant-3  base     C 19/21   fail             clauses 15/15  access speculative lat 8 c-contract-violation
+[18/59] c06_verilog_keywords             mutant-1  base     C 8/9     fail             clauses 8/8    access ok        lat 2 c-contract-violation
+[19/59] c06_verilog_keywords             mutant-2  base     C 8/9     fail             clauses 8/8    access ok        lat 2 c-contract-violation
+[20/59] c07_frame_prefix_fill            original  base     C 15/15   pass             clauses 6/6    access speculative lat 8 
+[21/59] c06_verilog_keywords             mutant-3  base     C 5/9     fail             clauses 8/8    access speculative lat 2 c-contract-violation
+[22/59] c07_frame_prefix_fill            mutant-2  base     C 13/15   fail             clauses 6/6    access speculative lat 8 c-contract-violation
+[23/59] c07_frame_prefix_fill            mutant-1  base     C 13/15   fail             clauses 6/6    access speculative lat 8 c-contract-violation
+[24/59] c08_old_memory_increment         original  base     C 19/19   pass             clauses 9/9    access speculative lat 8 
+[25/59] c08_old_memory_increment         mutant-1  base     C 17/19   fail             clauses 9/9    access speculative lat 8 c-contract-violation
+[26/59] c08_old_memory_increment         mutant-3  base     C 17/19   fail             clauses 9/9    access speculative lat 8 c-contract-violation
+[27/59] c08_old_memory_increment         mutant-2  base     C 16/19   fail             clauses 9/9    access speculative lat 8 c-contract-violation
+[28/59] c09_nested_forall_sorted         original  base     C 18/18   pass             clauses 9/9    access speculative lat 8 
+[29/59] c09_nested_forall_sorted         mutant-1  base     C 16/18   fail             clauses 9/9    access speculative lat 8 c-contract-violation
+[30/59] c09_nested_forall_sorted         mutant-2  base     C 15/18   fail             clauses 9/9    access speculative lat 16 c-contract-violation
+[31/59] c10_products_width               mutant-1  base     C 9/10    fail             clauses 4/4    access None      lat 2 c-contract-violation
+[32/59] c09_nested_forall_sorted         mutant-3  base     C 15/18   fail             clauses 9/9    access speculative lat 8 c-contract-violation
+[33/59] c10_products_width               mutant-2  base     C 9/10    fail             clauses 4/4    access None      lat 2 c-contract-violation
+[34/59] c10_products_width               mutant-3  base     C 9/10    fail             clauses 4/4    access None      lat 2 c-contract-violation
+[35/59] c11_builtins_minmax              original  base     C 11/11   pass             clauses 3/3    access None      lat 2 
+[36/59] c11_builtins_minmax              mutant-1  base     C 11/11   pass             clauses 3/3    access None      lat 2 
+[37/59] c11_builtins_minmax              mutant-2  base     C 11/11   pass             clauses 3/3    access None      lat 2 
+[38/59] c11_builtins_minmax              mutant-3  base     C 11/11   pass             clauses 3/3    access None      lat 2 
+[39/59] c12_void_out_sum                 original  base     C 19/19   pass             clauses 9/9    access speculative lat 8 
+[40/59] c12_void_out_sum                 mutant-1  base     C 18/19   fail             clauses 9/9    access speculative lat 8 c-contract-violation
+[41/59] c13_shifts_casts                 original  base     C 5/5     pass             clauses 2/2    access None      lat 2 
+[42/59] c12_void_out_sum                 mutant-2  base     C 17/19   fail             clauses 9/9    access speculative lat 8 c-contract-violation
+[43/59] c12_void_out_sum                 mutant-3  base     C 15/19   fail             clauses 9/9    access speculative lat 8 c-contract-violation
+[44/59] c13_shifts_casts                 mutant-1  base     C 3/5     fail             clauses 2/2    access None      lat 2 c-contract-violation
+[45/59] c14_predicate_in_requires        mutant-1  base     C 19/21   fail             clauses 10/10  access speculative lat 8 c-contract-violation
+[46/59] c14_predicate_in_requires        original  base     C 21/21   pass             clauses 10/10  access speculative lat 8 
+[47/59] c15_struct_pointer               original  base     C 10/10   pass             clauses 4/4    access None      lat 2 
+[48/59] c14_predicate_in_requires        mutant-2  base     C 17/21   fail             clauses 10/10  access speculative lat 8 c-contract-violation
+[49/59] c14_predicate_in_requires        mutant-3  base     C 19/20   fail             clauses 10/10  access speculative lat 8 c-contract-violation
+[50/59] c15_struct_pointer               mutant-1  base     C 9/10    fail             clauses 4/4    access None      lat 2 c-contract-violation
+[51/59] c15_struct_pointer               mutant-2  base     C 9/10    fail             clauses 4/4    access None      lat 2 c-contract-violation
+[52/59] c15_struct_pointer               mutant-3  base     C 9/10    fail             clauses 4/4    access None      lat 2 c-contract-violation
+[53/59] c16_struct_array                 mutant-1  base     C 15/17   fail             clauses 8/8    access speculative lat 8 c-contract-violation
+[54/59] c16_struct_array                 original  base     C 17/17   pass             clauses 8/8    access speculative lat 16 
+[55/59] c17_struct_return                original  base     C 8/8     pass             clauses 2/2    access None      lat 2 
+[56/59] c16_struct_array                 mutant-2  base     C 14/17   fail             clauses 8/8    access speculative lat 16 c-contract-violation
+[57/59] c17_struct_return                mutant-1  base     C 8/8     pass             clauses 2/2    access None      lat 2 
+[58/59] c16_struct_array                 mutant-3  base     C 16/17   fail             clauses 8/8    access speculative lat 16 c-contract-violation
+[59/59] c10_products_width               original  base     C 10/10   bounded(3)       clauses 4/4    access None      lat 2 
+                                                              Summary per tool / HLS configuration                                                              
+┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ acce… ┃       ┃       ┃       ┃       ┃       ┃       ┃
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ out   ┃       ┃       ┃       ┃       ┃       ┃ kills ┃
+┃       ┃       ┃       ┃       ┃ pass  ┃ pass  ┃      ┃       ┃       ┃       ┃       ┃ clau… ┃ acce… ┃ of    ┃ over… ┃ muta… ┃       ┃ muta… ┃ equi… ┃ conf… ┃
+┃ tool  ┃ conf… ┃ desi… ┃ chec… ┃ full  ┃ part… ┃ fail ┃ boun… ┃ vacu… ┃ agree ┃ disa… ┃ rate  ┃ spec… ┃ memo… ┃ mode  ┃ chec… ┃ kill… ┃ score ┃ pass  ┃ in C  ┃
+┡━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ vitis │ base  │ 17    │ 16    │ 16    │ 0     │ 0    │ 1     │ 0     │ 16    │ 0     │ 100.0 │ 9     │ 0     │ 2     │ 42    │ 36    │ 100.0 │ 6     │ 36    │
+└───────┴───────┴───────┴───────┴───────┴───────┴──────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┘
+vitis/base failures on originals (C replay): {}; mutant kills (C replay): {'c-contract-violation': 36}
+Details: /home/anubhavsaha/cbv/runs/F1_conformance/summary.md, /home/anubhavsaha/cbv/runs/F1_conformance/results.csv, 
+/home/anubhavsaha/cbv/runs/F1_conformance/table.tex
+=== 2026-11-21 17:57:36 F3 ABE (mutants 2)
+82 designs -> 210 cases (tools vitis, configs base, mutants 2) -> /home/anubhavsaha/cbv/runs/F3_abe
+[1/210] Nonmutating/find                 mutant-1  base     C 25/27   fail             clauses 11/11  access speculative lat 8 c-contract-violation
+[2/210] Nonmutating/find_last            mutant-2  base     C 24/27   fail             clauses 11/11  access speculative lat 8 c-contract-violation
+[3/210] Nonmutating/find_last            mutant-1  base     C 25/27   fail             clauses 11/11  access speculative lat 8 c-contract-violation
+[4/210] Nonmutating/find_last            original  base     C 27/27   pass             clauses 11/11  access speculative lat 8 
+[5/210] Nonmutating/find2                mutant-1  base     C 25/27   fail             clauses 11/11  access speculative lat 8 c-contract-violation
+[6/210] Nonmutating/find                 original  base     C 27/27   pass             clauses 11/11  access speculative lat 16 
+[7/210] Nonmutating/find                 mutant-2  base     C 24/27   pass             clauses 11/11  access speculative lat 16 
+[8/210] Nonmutating/find3                mutant-1  base     C 15/17   fail             clauses 6/6    access speculative lat 8 c-runtime-error
+[9/210] Nonmutating/find2                original  base     C 27/27   pass             clauses 11/11  access speculative lat 16 
+[10/210] Nonmutating/find2                mutant-2  base     C 24/27   pass             clauses 11/11  access speculative lat 16 
+[11/210] Nonmutating/find_if_not          mutant-1  base     C 15/17   fail             clauses 6/6    access speculative lat 8 c-runtime-error
+[12/210] Nonmutating/find4                original  base     C 19/19   pass             clauses 11/11  access speculative lat 16 
+[13/210] Nonmutating/find_if_not          original  base     C 17/17   pass             clauses 6/6    access speculative lat 16 
+[14/210] Nonmutating/find_first_of        mutant-1  base     C 39/41   fail             clauses 17/17  access speculative lat 64 c-contract-violation
+[15/210] Nonmutating/find_if_not          mutant-2  base     C 14/17   pass             clauses 6/6    access speculative lat 16 
+[16/210] Nonmutating/adjacent_find        original  base     C 30/30   pass             clauses 13/13  access speculative lat 16 
+[17/210] Nonmutating/adjacent_find        mutant-1  base     C 27/30   fail             clauses 13/13  access speculative lat 16 c-contract-violation
+[18/210] Nonmutating/adjacent_find        mutant-2  base     C 26/30   fail             clauses 13/13  access ok        lat 2 c-contract-violation
+[19/210] Nonmutating/find3                original  base     C 17/17   bounded(18)      clauses 6/6    access speculative lat 16 
+[20/210] Nonmutating/find3                mutant-2  base     C 14/17   bounded(19)      clauses 6/6    access speculative lat 16 
+[21/210] Nonmutating/mismatch             mutant-1  base     C 26/28   fail             clauses 17/17  access speculative lat 8 c-contract-violation
+[22/210] Nonmutating/find5                original  base     C 8/8     bounded(18)      clauses 6/6    access speculative lat 16 
+[23/210] Nonmutating/equal                mutant-1  base     C 8/9     fail             clauses 9/9    access speculative lat 16 c-contract-violation
+[24/210] Nonmutating/equal                original  base     C 9/9     pass             clauses 9/9    access speculative lat 16 
+[25/210] Nonmutating/all_of               original  base     C 8/8     pass             clauses 5/5    access speculative lat 16 
+[26/210] Nonmutating/all_of               mutant-1  base     C 7/8     fail             clauses 5/5    access speculative lat 16 c-contract-violation
+[27/210] Nonmutating/find_first_of        original  base     C 41/41   bounded(21)      clauses 17/17  access speculative lat 64 
+[28/210] Nonmutating/any_of               mutant-1  base     C 7/8     fail             clauses 5/5    access speculative lat 16 c-contract-violation
+[29/210] Nonmutating/any_of               original  base     C 8/8     pass             clauses 5/5    access speculative lat 16 
+[30/210] Nonmutating/none_of              mutant-1  base     C 7/8     fail             clauses 5/5    access speculative lat 16 c-contract-violation
+[31/210] Nonmutating/none_of              original  base     C 8/8     pass             clauses 5/5    access speculative lat 16 
+[32/210] Nonmutating/search               mutant-1  base     C 44/45   fail             clauses 17/17  access speculative lat 16 c-runtime-error
+[33/210] Nonmutating/mismatch             mutant-2  base     C 24/28   pass             clauses 17/17  access speculative lat 16 
+[34/210] Nonmutating/search_n             original  base     C 55/56   pass             clauses 11/11  access speculative lat 16 
+[35/210] Nonmutating/find_first_of        mutant-2  base     C 38/41   bounded(23)      clauses 17/17  access speculative lat 128 
+[36/210] Nonmutating/search_n             mutant-1  base     C 54/56   fail             clauses 11/11  access speculative lat 16 c-runtime-error
+[37/210] Nonmutating/search_n             mutant-2  base     C 53/56   fail             clauses 11/11  access speculative lat 16 c-contract-violation
+[38/210] Nonmutating/find_end             mutant-1  base     C 33/35   fail             clauses 17/17  access speculative lat 32 c-contract-violation
+[39/210] Nonmutating/count                original  base     C 17/17   pass             clauses 6/6    access speculative lat 8 
+[40/210] Nonmutating/count                mutant-1  base     C 16/17   fail             clauses 6/6    access speculative lat 8 c-contract-violation
+[41/210] Nonmutating/mismatch             original  base     C 28/28   bounded(23)      clauses 17/17  access speculative lat 16 
+[42/210] Nonmutating/count                mutant-2  base     C 13/17   fail             clauses 6/6    access speculative lat 8 c-contract-violation
+[43/210] MinMax/clamp                     original  base     C 12/12   pass             clauses 5/5    access None      lat 2 
+[44/210] MinMax/clamp                     mutant-1  base     C 12/12   pass             clauses 5/5    access None      lat 2 
+[45/210] MinMax/clamp                     mutant-2  base     C 12/12   pass             clauses 5/5    access None      lat 2 
+[46/210] Nonmutating/search               mutant-2  base     C 41/45   fail             clauses 17/17  access speculative lat 128 c-runtime-error
+[47/210] MinMax/make_pair                 original  base     C 5/5     pass             clauses 2/2    access None      lat 2 
+[48/210] MinMax/max_element               mutant-1  base     C 29/32   fail             clauses 13/13  access speculative lat 8 c-contract-violation
+[49/210] MinMax/max_element               original  base     C 32/32   pass             clauses 13/13  access speculative lat 8 
+[50/210] MinMax/max_element               mutant-2  base     C 31/32   pass             clauses 13/13  access speculative lat 8 
+[51/210] MinMax/max_element2              original  base     C 32/32   pass             clauses 13/13  access speculative lat 8 
+[52/210] MinMax/max_element2              mutant-1  base     C 29/32   fail             clauses 13/13  access speculative lat 8 c-contract-violation
+[53/210] MinMax/max_seq                   original  base     C 10/10   pass             clauses 9/9    access speculative lat 8 
+[54/210] MinMax/max_element2              mutant-2  base     C 31/32   pass             clauses 13/13  access speculative lat 8 
+[55/210] MinMax/min_element               mutant-1  base     C 29/32   fail             clauses 13/13  access speculative lat 8 c-contract-violation
+[56/210] MinMax/min_element               original  base     C 32/32   pass             clauses 13/13  access speculative lat 8 
+[57/210] Nonmutating/search               original  base     C 45/45   bounded(18)      clauses 17/17  access speculative lat 32 
+[58/210] MinMax/min_element               mutant-2  base     C 31/32   pass             clauses 13/13  access speculative lat 8 
+[59/210] MinMax/minmax_element            mutant-1  base     C 53/58   fail             clauses 18/18  access speculative lat 16 c-contract-violation
+[60/210] BinarySearch/lower_bound         mutant-1  base     C 19/21   fail             clauses 8/8    access speculative lat 8 c-contract-violation
+[61/210] Nonmutating/find_end             mutant-2  base     C 29/35   fail             clauses 17/17  access speculative lat 128 c-contract-violation
+[62/210] BinarySearch/lower_bound         original  base     C 21/21   pass             clauses 8/8    access speculative lat 8 
+[63/210] BinarySearch/upper_bound         mutant-1  base     C 19/21   fail             clauses 8/8    access speculative lat 8 c-contract-violation
+[64/210] MinMax/minmax_element            original  base     C 58/58   pass             clauses 18/18  access speculative lat 8 
+[65/210] BinarySearch/upper_bound         original  base     C 21/21   pass             clauses 8/8    access speculative lat 8 
+[66/210] MinMax/minmax_element            mutant-2  base     C 57/58   pass             clauses 18/18  access speculative lat 8 
+[67/210] BinarySearch/equal_range2        mutant-1  base     C 56/58   fail             clauses 9/9    access speculative lat 16 c-contract-violation
+[68/210] Nonmutating/find_end             original  base     C 35/35   bounded(20)      clauses 17/17  access speculative lat 32 
+[69/210] BinarySearch/equal_range         original  base     C 18/18   pass             clauses 9/9    access speculative lat 16 
+[70/210] BinarySearch/binary_search       original  base     C 12/12   pass             clauses 6/6    access speculative lat 8 
+[71/210] BinarySearch/equal_range2        original  base     C 58/58   pass             clauses 9/9    access speculative lat 16 
+[72/210] BinarySearch/binary_search       mutant-1  base     C 10/12   fail             clauses 6/6    access speculative lat 8 c-contract-violation
+[73/210] BinarySearch/binary_search       mutant-2  base     C 10/12   fail             clauses 6/6    access speculative lat 8 c-contract-violation
+[74/210] Mutating/fill                    original  base     C 15/15   pass             clauses 5/5    access speculative lat 8 
+[75/210] Mutating/fill                    mutant-1  base     C 13/15   fail             clauses 5/5    access speculative lat 8 c-contract-violation
+[76/210] Mutating/swap                    original  base     C 10/10   pass             clauses 4/4    access None      lat 2 
+[77/210] Mutating/fill                    mutant-2  base     C 12/15   fail             clauses 5/5    access speculative lat 8 c-contract-violation
+[78/210] BinarySearch/lower_bound         mutant-2  base     C 19/21   fail             clauses 8/8    access speculative lat 128 c-runtime-error
+[79/210] Mutating/swap_ranges             mutant-1  base     C 23/25   fail             clauses 15/15  access speculative lat 8 c-contract-violation
+[80/210] Mutating/swap_ranges             mutant-2  base     C 21/25   fail             clauses 15/15  access speculative lat 8 c-runtime-error
+[81/210] Mutating/swap_ranges             original  base     C 25/25   pass             clauses 15/15  access speculative lat 8 
+[82/210] Mutating/copy                    original  base     C 18/18   pass             clauses 10/10  access speculative lat 8 
+[83/210] Mutating/copy                    mutant-1  base     C 16/18   fail             clauses 10/10  access speculative lat 8 c-contract-violation
+[84/210] Mutating/copy                    mutant-2  base     C 14/18   fail             clauses 10/10  access speculative lat 8 c-contract-violation
+[85/210] Mutating/copy_backward           original  base     C 19/19   pass             clauses 10/10  access speculative lat 8 
+[86/210] Mutating/copy_backward           mutant-1  base     C 18/19   fail             clauses 10/10  access speculative lat 8 c-contract-violation
+[87/210] BinarySearch/upper_bound         mutant-2  base     C 19/21   fail             clauses 8/8    access speculative lat 128 c-runtime-error
+[88/210] Mutating/copy_backward           mutant-2  base     C 14/19   fail             clauses 10/10  access speculative lat 8 c-contract-violation
+[89/210] Mutating/reverse_copy            mutant-1  base     C 18/20   fail             clauses 11/11  access speculative lat 8 c-contract-violation
+[90/210] Mutating/reverse_copy            mutant-2  base     C 17/20   fail             clauses 11/11  access speculative lat 8 c-contract-violation
+[91/210] Mutating/reverse                 original  base     C 26/26   pass             clauses 7/7    access ok        lat 8 
+[92/210] Mutating/reverse                 mutant-2  base     C 21/26   fail             clauses 7/7    access speculative lat 8 c-contract-violation
+[93/210] Mutating/reverse_copy            original  base     C 20/20   pass             clauses 11/11  access speculative lat 8 
+[94/210] Mutating/rotate_copy             mutant-1  base     C 13/18   fail             clauses 12/12  access speculative lat 8 c-runtime-error
+[95/210] Mutating/rotate_copy             original  base     C 18/18   pass             clauses 12/12  access speculative lat 8 
+[96/210] Mutating/rotate                  mutant-1  base     C 18/19   fail             clauses 9/9    access ok        lat 32 c-contract-violation
+[97/210] Mutating/rotate                  mutant-2  base     C 14/19   fail             clauses 9/9    access speculative lat 32 c-contract-violation
+[98/210] Mutating/rotate_copy             mutant-2  base     C 11/18   fail             clauses 12/12  access speculative lat 128 c-contract-violation
+[99/210] Mutating/replace_copy            mutant-1  base     C 19/21   fail             clauses 12/12  access speculative lat 8 c-contract-violation
+[100/210] Mutating/replace_copy            original  base     C 21/21   pass             clauses 12/12  access speculative lat 8 
+[101/210] Mutating/replace_copy            mutant-2  base     C 16/21   fail             clauses 12/12  access speculative lat 8 c-contract-violation
+[102/210] BinarySearch/equal_range2        mutant-2  base     C 56/58   fail             clauses 9/9    access speculative lat 128 c-runtime-error
+[103/210] Mutating/replace                 original  base     C 18/18   pass             clauses 7/7    access speculative lat 8 
+[104/210] Mutating/replace                 mutant-1  base     C 16/18   fail             clauses 7/7    access speculative lat 8 c-contract-violation
+[105/210] Mutating/replace                 mutant-2  base     C 14/18   fail             clauses 7/7    access speculative lat 8 c-contract-violation
+[106/210] Mutating/remove_copy             mutant-1  base     C 23/24   fail             clauses 13/13  access speculative lat 8 c-contract-violation
+[107/210] Mutating/remove_copy             mutant-2  base     C 19/24   fail             clauses 13/13  access speculative lat 8 c-contract-violation
+[108/210] Mutating/remove_copy             original  base     C 24/24   pass             clauses 13/13  access speculative lat 8 
+[109/210] Mutating/remove_copy2            mutant-1  base     C 28/29   fail             clauses 14/14  access speculative lat 8 c-contract-violation
+[110/210] Mutating/remove_copy2            mutant-2  base     C 23/29   fail             clauses 14/14  access speculative lat 8 c-contract-violation
+[111/210] Mutating/remove_copy3            mutant-1  base     C 45/46   fail             clauses 14/15  access speculative lat 8 c-contract-violation
+[112/210] Mutating/reverse                 mutant-1  base     C 25/26   fail             clauses 7/7    access ok        lat 128 c-runtime-error
+[113/210] Mutating/remove_copy2            original  base     C 29/29   pass             clauses 14/14  access speculative lat 8 
+[114/210] Mutating/remove_copy3            mutant-2  base     C 38/46   fail             clauses 14/15  access speculative lat 8 c-contract-violation
+[115/210] Mutating/rotate                  original  base     C 19/19   pass             clauses 9/9    access ok        lat 32 
+[116/210] Mutating/remove                  mutant-1  base     C 39/40   fail             clauses 8/9    access speculative lat 8 c-contract-violation
+[117/210] Mutating/remove_copy3            original  base     C 46/46   pass-partial     clauses 14/15  access speculative lat 8 
+[118/210] Mutating/remove                  mutant-2  base     C 34/40   fail             clauses 8/9    access speculative lat 16 c-contract-violation
+[119/210] Mutating/remove                  original  base     C 40/40   pass-partial     clauses 8/9    access ok        lat 8 
+[120/210] Numeric/iota                     original  base     C 19/19   pass             clauses 6/6    access speculative lat 8 
+[121/210] Numeric/iota                     mutant-1  base     C 17/19   fail             clauses 6/6    access speculative lat 8 c-contract-violation
+[122/210] Numeric/iota                     mutant-2  base     C 16/19   fail             clauses 6/6    access speculative lat 8 c-contract-violation
+[123/210] Numeric/accumulate               mutant-1  base     C 14/16   fail             clauses 6/6    access speculative lat 8 c-contract-violation
+[124/210] Numeric/accumulate               mutant-2  base     C 13/16   fail             clauses 6/6    access speculative lat 8 c-contract-violation
+[125/210] Numeric/accumulate               original  base     C 16/16   pass             clauses 6/6    access speculative lat 8 
+[126/210] Numeric/inner_product            mutant-1  base     C 19/21   fail             clauses 13/13  access speculative lat 8 c-contract-violation
+[127/210] Numeric/inner_product            mutant-2  base     C 18/21   fail             clauses 13/13  access speculative lat 8 c-runtime-error

@@ -1,0 +1,52 @@
+{
+  "design": "c06_verilog_keywords",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "reshape2",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "9/9",
+  "c_ok": true,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "ok",
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "8/8",
+  "translated": 8,
+  "total_clauses": 8,
+  "skipped": [],
+  "times": {
+    "frontend": 0.2,
+    "wp": 0.8,
+    "hls": 10.9,
+    "latency": 0.3,
+    "bmc": 0.4,
+    "access": 0.3,
+    "cover": 0.3,
+    "total": 13.2
+  },
+  "error": null,
+  "top": "kw",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "yices",
+  "width": 72,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "holds by construction: the RTL cannot write this object",
+    "word holds several elements: access counts as in range if any is"
+  ],
+  "latency_report": [
+    1,
+    1
+  ],
+  "interval_report": 2,
+  "depth": 6,
+  "cex_step": null,
+  "outcome": "pass"
+}

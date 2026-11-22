@@ -1,0 +1,82 @@
+{
+  "latency": 8,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "candidates": {
+    "total": 283,
+    "by_origin": {
+      "structural": 44,
+      "call-requires": 3,
+      "pipeline-copy": 15,
+      "contract-persist": 1,
+      "call-frame": 1,
+      "loop-invariant": 36,
+      "loop-invariant-store": 96,
+      "loop-invariant-lag": 72,
+      "loop-variant": 12,
+      "loop-assigns": 3
+    },
+    "loops": 1,
+    "loop_invariants": 3,
+    "skipped": []
+  },
+  "houdini": {
+    "candidates": 283,
+    "base_dropped": 103,
+    "ind_dropped": 0,
+    "rounds": 2,
+    "status": "inductive",
+    "base_depth": 12,
+    "k": 12,
+    "secs": 635.8,
+    "invariants": 180,
+    "by_origin": {
+      "structural": 13,
+      "call-requires": 3,
+      "pipeline-copy": 3,
+      "contract-persist": 1,
+      "call-frame": 1,
+      "loop-invariant": 24,
+      "loop-invariant-store": 60,
+      "loop-invariant-lag": 60,
+      "loop-variant": 12,
+      "loop-assigns": 3
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant 0 <= i <= n",
+      "loop 1: loop invariant \\forall integer j ; 0 <= j < i ==> * ( a + j ) == \\at ( * ( a + j ) , Pre ) + 1",
+      "loop 1: loop invariant \\forall integer j ; i <= j < n ==> * ( a + j ) == \\at ( * ( a + j ) , Pre )"
+    ],
+    "c_invariants_lagged": [
+      "loop 1: loop invariant \\forall integer j ; 0 <= j < i ==> * ( a + j ) == \\at ( * ( a + j ) , Pre ) + 1",
+      "loop 1: loop invariant \\forall integer j ; i <= j < n ==> * ( a + j ) == \\at ( * ( a + j ) , Pre )"
+    ],
+    "k_tried": [
+      4,
+      8,
+      12
+    ]
+  },
+  "kind+inv": {
+    "status": "PASS",
+    "secs": 32.4,
+    "k": 12
+  },
+  "kmin": {
+    "none": "timeout at k=32",
+    "hls": 12,
+    "hls+contract": 12,
+    "all": 12,
+    "all+progress": 12
+  },
+  "unbounded": true,
+  "proved_by": [
+    "kind+inv"
+  ],
+  "deep_cex": [],
+  "secs": 2706.1
+}

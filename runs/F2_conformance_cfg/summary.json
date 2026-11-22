@@ -1,0 +1,1233 @@
+{
+  "by_tool_config": [
+    {
+      "tool": "vitis",
+      "config": "base",
+      "designs": 17,
+      "frontend_ok": 17,
+      "hls_ok": 17,
+      "checked": 16,
+      "pass_full": 16,
+      "pass_partial": 0,
+      "fail": 0,
+      "bounded": 1,
+      "vacuous": 0,
+      "agree": 16,
+      "disagree": 0,
+      "clauses": "111/111",
+      "clause_rate": 100.0,
+      "access_speculative": 9,
+      "access_out_of_memory": 0,
+      "overlap_mode": 2,
+      "mutants": 0,
+      "mutants_checked": 0,
+      "killed": 0,
+      "mutation_score": null,
+      "survivors": 0,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_untranslated": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 0,
+      "median_total_s": 23.5
+    },
+    {
+      "tool": "vitis",
+      "config": "block2",
+      "designs": 17,
+      "frontend_ok": 17,
+      "hls_ok": 17,
+      "checked": 16,
+      "pass_full": 16,
+      "pass_partial": 0,
+      "fail": 0,
+      "bounded": 1,
+      "vacuous": 0,
+      "agree": 16,
+      "disagree": 0,
+      "clauses": "143/143",
+      "clause_rate": 100.0,
+      "access_speculative": 9,
+      "access_out_of_memory": 0,
+      "overlap_mode": 2,
+      "mutants": 0,
+      "mutants_checked": 0,
+      "killed": 0,
+      "mutation_score": null,
+      "survivors": 0,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_untranslated": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 0,
+      "median_total_s": 23.9
+    },
+    {
+      "tool": "vitis",
+      "config": "bram",
+      "designs": 17,
+      "frontend_ok": 17,
+      "hls_ok": 17,
+      "checked": 16,
+      "pass_full": 16,
+      "pass_partial": 0,
+      "fail": 0,
+      "bounded": 1,
+      "vacuous": 0,
+      "agree": 16,
+      "disagree": 0,
+      "clauses": "111/111",
+      "clause_rate": 100.0,
+      "access_speculative": 0,
+      "access_out_of_memory": 9,
+      "overlap_mode": 0,
+      "mutants": 0,
+      "mutants_checked": 0,
+      "killed": 0,
+      "mutation_score": null,
+      "survivors": 0,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_untranslated": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 0,
+      "median_total_s": 23.4
+    },
+    {
+      "tool": "vitis",
+      "config": "chain",
+      "designs": 17,
+      "frontend_ok": 17,
+      "hls_ok": 17,
+      "checked": 16,
+      "pass_full": 16,
+      "pass_partial": 0,
+      "fail": 0,
+      "bounded": 1,
+      "vacuous": 0,
+      "agree": 16,
+      "disagree": 0,
+      "clauses": "111/111",
+      "clause_rate": 100.0,
+      "access_speculative": 9,
+      "access_out_of_memory": 0,
+      "overlap_mode": 2,
+      "mutants": 0,
+      "mutants_checked": 0,
+      "killed": 0,
+      "mutation_score": null,
+      "survivors": 0,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_untranslated": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 0,
+      "median_total_s": 22.7
+    },
+    {
+      "tool": "vitis",
+      "config": "complete",
+      "designs": 17,
+      "frontend_ok": 17,
+      "hls_ok": 17,
+      "checked": 16,
+      "pass_full": 16,
+      "pass_partial": 0,
+      "fail": 0,
+      "bounded": 1,
+      "vacuous": 0,
+      "agree": 16,
+      "disagree": 0,
+      "clauses": "81/81",
+      "clause_rate": 100.0,
+      "access_speculative": 0,
+      "access_out_of_memory": 0,
+      "overlap_mode": 2,
+      "mutants": 0,
+      "mutants_checked": 0,
+      "killed": 0,
+      "mutation_score": null,
+      "survivors": 0,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_untranslated": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 0,
+      "median_total_s": 21.6
+    },
+    {
+      "tool": "vitis",
+      "config": "cyclic2",
+      "designs": 17,
+      "frontend_ok": 17,
+      "hls_ok": 17,
+      "checked": 16,
+      "pass_full": 16,
+      "pass_partial": 0,
+      "fail": 0,
+      "bounded": 1,
+      "vacuous": 0,
+      "agree": 16,
+      "disagree": 0,
+      "clauses": "143/143",
+      "clause_rate": 100.0,
+      "access_speculative": 9,
+      "access_out_of_memory": 0,
+      "overlap_mode": 2,
+      "mutants": 0,
+      "mutants_checked": 0,
+      "killed": 0,
+      "mutation_score": null,
+      "survivors": 0,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_untranslated": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 0,
+      "median_total_s": 23.5
+    },
+    {
+      "tool": "vitis",
+      "config": "fastclk",
+      "designs": 17,
+      "frontend_ok": 17,
+      "hls_ok": 17,
+      "checked": 16,
+      "pass_full": 16,
+      "pass_partial": 0,
+      "fail": 0,
+      "bounded": 1,
+      "vacuous": 0,
+      "agree": 16,
+      "disagree": 0,
+      "clauses": "111/111",
+      "clause_rate": 100.0,
+      "access_speculative": 8,
+      "access_out_of_memory": 0,
+      "overlap_mode": 2,
+      "mutants": 0,
+      "mutants_checked": 0,
+      "killed": 0,
+      "mutation_score": null,
+      "survivors": 0,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_untranslated": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 0,
+      "median_total_s": 22.7
+    },
+    {
+      "tool": "vitis",
+      "config": "nopipe",
+      "designs": 17,
+      "frontend_ok": 17,
+      "hls_ok": 17,
+      "checked": 16,
+      "pass_full": 16,
+      "pass_partial": 0,
+      "fail": 0,
+      "bounded": 1,
+      "vacuous": 0,
+      "agree": 16,
+      "disagree": 0,
+      "clauses": "107/107",
+      "clause_rate": 100.0,
+      "access_speculative": 9,
+      "access_out_of_memory": 0,
+      "overlap_mode": 0,
+      "mutants": 0,
+      "mutants_checked": 0,
+      "killed": 0,
+      "mutation_score": null,
+      "survivors": 0,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_untranslated": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 0,
+      "median_total_s": 22.3
+    },
+    {
+      "tool": "vitis",
+      "config": "reshape2",
+      "designs": 17,
+      "frontend_ok": 17,
+      "hls_ok": 17,
+      "checked": 16,
+      "pass_full": 16,
+      "pass_partial": 0,
+      "fail": 0,
+      "bounded": 1,
+      "vacuous": 0,
+      "agree": 16,
+      "disagree": 0,
+      "clauses": "115/115",
+      "clause_rate": 100.0,
+      "access_speculative": 9,
+      "access_out_of_memory": 0,
+      "overlap_mode": 2,
+      "mutants": 0,
+      "mutants_checked": 0,
+      "killed": 0,
+      "mutation_score": null,
+      "survivors": 0,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_untranslated": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 0,
+      "median_total_s": 23.4
+    },
+    {
+      "tool": "vitis",
+      "config": "reshapeb2",
+      "designs": 17,
+      "frontend_ok": 17,
+      "hls_ok": 17,
+      "checked": 16,
+      "pass_full": 16,
+      "pass_partial": 0,
+      "fail": 0,
+      "bounded": 1,
+      "vacuous": 0,
+      "agree": 16,
+      "disagree": 0,
+      "clauses": "115/115",
+      "clause_rate": 100.0,
+      "access_speculative": 8,
+      "access_out_of_memory": 0,
+      "overlap_mode": 2,
+      "mutants": 0,
+      "mutants_checked": 0,
+      "killed": 0,
+      "mutation_score": null,
+      "survivors": 0,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_untranslated": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 0,
+      "median_total_s": 22.9
+    },
+    {
+      "tool": "vitis",
+      "config": "unroll",
+      "designs": 17,
+      "frontend_ok": 17,
+      "hls_ok": 17,
+      "checked": 16,
+      "pass_full": 16,
+      "pass_partial": 0,
+      "fail": 0,
+      "bounded": 1,
+      "vacuous": 0,
+      "agree": 16,
+      "disagree": 0,
+      "clauses": "111/111",
+      "clause_rate": 100.0,
+      "access_speculative": 9,
+      "access_out_of_memory": 0,
+      "overlap_mode": 2,
+      "mutants": 0,
+      "mutants_checked": 0,
+      "killed": 0,
+      "mutation_score": null,
+      "survivors": 0,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_untranslated": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 0,
+      "median_total_s": 22.2
+    }
+  ],
+  "details": {
+    "vitis/base": {
+      "original_outcomes": {
+        "pass": 16,
+        "bounded": 1
+      },
+      "failure_replay": {},
+      "kill_replay": {},
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.6,
+        "wp": 1.6,
+        "hls": 15.7,
+        "latency": 0.5,
+        "bmc": 2.0,
+        "access": 0.5,
+        "cover": 1.0,
+        "total": 23.5
+      }
+    },
+    "vitis/block2": {
+      "original_outcomes": {
+        "pass": 16,
+        "bounded": 1
+      },
+      "failure_replay": {},
+      "kill_replay": {},
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.5,
+        "wp": 1.4,
+        "hls": 15.7,
+        "latency": 1.0,
+        "bmc": 2.0,
+        "access": 1.0,
+        "cover": 1.0,
+        "total": 23.9
+      }
+    },
+    "vitis/bram": {
+      "original_outcomes": {
+        "pass": 16,
+        "bounded": 1
+      },
+      "failure_replay": {},
+      "kill_replay": {},
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.5,
+        "wp": 1.4,
+        "hls": 15.4,
+        "latency": 0.5,
+        "bmc": 3.0,
+        "access": 0.8,
+        "cover": 1.0,
+        "total": 23.4
+      }
+    },
+    "vitis/chain": {
+      "original_outcomes": {
+        "pass": 16,
+        "bounded": 1
+      },
+      "failure_replay": {},
+      "kill_replay": {},
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.5,
+        "wp": 1.5,
+        "hls": 15.8,
+        "latency": 0.5,
+        "bmc": 2.0,
+        "access": 0.5,
+        "cover": 1.0,
+        "total": 22.7
+      }
+    },
+    "vitis/complete": {
+      "original_outcomes": {
+        "pass": 16,
+        "bounded": 1
+      },
+      "failure_replay": {},
+      "kill_replay": {},
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.5,
+        "wp": 1.4,
+        "hls": 15.6,
+        "latency": 0.5,
+        "bmc": 1.5,
+        "access": null,
+        "cover": 0.5,
+        "total": 21.6
+      }
+    },
+    "vitis/cyclic2": {
+      "original_outcomes": {
+        "pass": 16,
+        "bounded": 1
+      },
+      "failure_replay": {},
+      "kill_replay": {},
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.5,
+        "wp": 1.5,
+        "hls": 15.5,
+        "latency": 1.0,
+        "bmc": 2.0,
+        "access": 0.8,
+        "cover": 1.0,
+        "total": 23.5
+      }
+    },
+    "vitis/fastclk": {
+      "original_outcomes": {
+        "pass": 16,
+        "bounded": 1
+      },
+      "failure_replay": {},
+      "kill_replay": {},
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.5,
+        "wp": 1.3,
+        "hls": 15.8,
+        "latency": 1.0,
+        "bmc": 2.0,
+        "access": 0.5,
+        "cover": 0.5,
+        "total": 22.7
+      }
+    },
+    "vitis/nopipe": {
+      "original_outcomes": {
+        "pass": 16,
+        "bounded": 1
+      },
+      "failure_replay": {},
+      "kill_replay": {},
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.5,
+        "wp": 1.4,
+        "hls": 15.3,
+        "latency": 0.5,
+        "bmc": 2.0,
+        "access": 0.5,
+        "cover": 0.5,
+        "total": 22.3
+      }
+    },
+    "vitis/reshape2": {
+      "original_outcomes": {
+        "pass": 16,
+        "bounded": 1
+      },
+      "failure_replay": {},
+      "kill_replay": {},
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.5,
+        "wp": 1.4,
+        "hls": 15.9,
+        "latency": 0.5,
+        "bmc": 2.0,
+        "access": 1.0,
+        "cover": 1.0,
+        "total": 23.4
+      }
+    },
+    "vitis/reshapeb2": {
+      "original_outcomes": {
+        "pass": 16,
+        "bounded": 1
+      },
+      "failure_replay": {},
+      "kill_replay": {},
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.5,
+        "wp": 1.4,
+        "hls": 15.4,
+        "latency": 1.0,
+        "bmc": 2.0,
+        "access": 1.0,
+        "cover": 1.0,
+        "total": 22.9
+      }
+    },
+    "vitis/unroll": {
+      "original_outcomes": {
+        "pass": 16,
+        "bounded": 1
+      },
+      "failure_replay": {},
+      "kill_replay": {},
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.4,
+        "wp": 1.4,
+        "hls": 15.1,
+        "latency": 0.5,
+        "bmc": 2.0,
+        "access": 0.5,
+        "cover": 1.0,
+        "total": 22.2
+      }
+    }
+  },
+  "not_checked_reasons": [],
+  "untranslated_clause_reasons": [],
+  "translation_strategies": [
+    [
+      "cell of a outside 0..3",
+      99
+    ],
+    [
+      "\\forall i",
+      77
+    ],
+    [
+      "holds by construction",
+      68
+    ],
+    [
+      "exact frame over all 4 element(s) of a",
+      38
+    ],
+    [
+      "\\separated holds by construction (separate RTL memories/registers)",
+      33
+    ],
+    [
+      "\\exists i",
+      22
+    ],
+    [
+      "recursive logic cut off",
+      22
+    ],
+    [
+      "\\forall i,j",
+      22
+    ],
+    [
+      "word holds several elements",
+      20
+    ],
+    [
+      "exact frame over all 1 element(s) of p",
+      11
+    ],
+    [
+      "exact frame over all 1 element(s) of q",
+      11
+    ],
+    [
+      "cell of b outside 0..3",
+      11
+    ],
+    [
+      "cell of c outside 0..3",
+      11
+    ],
+    [
+      "exact frame over all 4 element(s) of c",
+      11
+    ],
+    [
+      "exact frame over all 1 element(s) of out",
+      11
+    ],
+    [
+      "exact frame over all 1 element(s) of p (per field)",
+      11
+    ],
+    [
+      "exact frame over all 4 element(s) of wire",
+      3
+    ],
+    [
+      "exact frame over all 4 element(s) of b",
+      1
+    ],
+    [
+      "\\forall i_29",
+      1
+    ],
+    [
+      "\\forall i_30",
+      1
+    ],
+    [
+      "\\forall i_37",
+      1
+    ],
+    [
+      "\\forall i_38",
+      1
+    ],
+    [
+      "\\forall i_61",
+      1
+    ],
+    [
+      "\\forall i_62",
+      1
+    ],
+    [
+      "\\forall i_76",
+      1
+    ]
+  ],
+  "disagreements": [],
+  "access_violations": [
+    {
+      "case": "c02_exists_has_zero/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c02_exists_has_zero/vitis/block2/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "c02_exists_has_zero/vitis/bram/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c02_exists_has_zero/vitis/chain/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c02_exists_has_zero/vitis/cyclic2/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "c02_exists_has_zero/vitis/fastclk/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c02_exists_has_zero/vitis/nopipe/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c02_exists_has_zero/vitis/reshape2/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c02_exists_has_zero/vitis/reshapeb2/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c02_exists_has_zero/vitis/unroll/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c03_recursive_logic/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c03_recursive_logic/vitis/block2/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "c03_recursive_logic/vitis/bram/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c03_recursive_logic/vitis/chain/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c03_recursive_logic/vitis/cyclic2/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "c03_recursive_logic/vitis/fastclk/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c03_recursive_logic/vitis/nopipe/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c03_recursive_logic/vitis/reshape2/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c03_recursive_logic/vitis/reshapeb2/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c03_recursive_logic/vitis/unroll/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c05_typedef_three_arrays/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) ) && \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P8: requires \\valid_read ( a + ( 0 .. n - 1 ) ) && \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c05_typedef_three_arrays/vitis/block2/original",
+      "detail": [
+        "P12: requires \\valid_read ( a + ( 0 .. n - 1 ) ) && \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 1 port 0]",
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) ) && \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "c05_typedef_three_arrays/vitis/bram/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) ) && \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P8: requires \\valid_read ( a + ( 0 .. n - 1 ) ) && \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c05_typedef_three_arrays/vitis/chain/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) ) && \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P8: requires \\valid_read ( a + ( 0 .. n - 1 ) ) && \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c05_typedef_three_arrays/vitis/cyclic2/original",
+      "detail": [
+        "P12: requires \\valid_read ( a + ( 0 .. n - 1 ) ) && \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 1 port 0]",
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) ) && \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "c05_typedef_three_arrays/vitis/fastclk/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) ) && \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P8: requires \\valid_read ( a + ( 0 .. n - 1 ) ) && \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c05_typedef_three_arrays/vitis/nopipe/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) ) && \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P8: requires \\valid_read ( a + ( 0 .. n - 1 ) ) && \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c05_typedef_three_arrays/vitis/reshape2/original",
+      "detail": [
+        "P13: requires \\valid ( c + ( 0 .. n - 1 ) )  [access in range: c bank 0 port 1]",
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) ) && \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c05_typedef_three_arrays/vitis/reshapeb2/original",
+      "detail": [
+        "P13: requires \\valid ( c + ( 0 .. n - 1 ) )  [access in range: c bank 0 port 1]",
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) ) && \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c05_typedef_three_arrays/vitis/unroll/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) ) && \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P8: requires \\valid_read ( a + ( 0 .. n - 1 ) ) && \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c07_frame_prefix_fill/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c07_frame_prefix_fill/vitis/block2/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "c07_frame_prefix_fill/vitis/bram/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c07_frame_prefix_fill/vitis/chain/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c07_frame_prefix_fill/vitis/cyclic2/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "c07_frame_prefix_fill/vitis/nopipe/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c07_frame_prefix_fill/vitis/reshape2/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "c07_frame_prefix_fill/vitis/reshapeb2/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "c07_frame_prefix_fill/vitis/unroll/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c08_old_memory_increment/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "c08_old_memory_increment/vitis/block2/original",
+      "detail": [
+        "P11: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 1]"
+      ]
+    },
+    {
+      "case": "c08_old_memory_increment/vitis/bram/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "c08_old_memory_increment/vitis/chain/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "c08_old_memory_increment/vitis/cyclic2/original",
+      "detail": [
+        "P11: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 1]"
+      ]
+    },
+    {
+      "case": "c08_old_memory_increment/vitis/fastclk/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "c08_old_memory_increment/vitis/nopipe/original",
+      "detail": [
+        "P5: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c08_old_memory_increment/vitis/reshape2/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "c08_old_memory_increment/vitis/reshapeb2/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "c08_old_memory_increment/vitis/unroll/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "c09_nested_forall_sorted/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c09_nested_forall_sorted/vitis/block2/original",
+      "detail": [
+        "P11: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 1]",
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "c09_nested_forall_sorted/vitis/bram/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c09_nested_forall_sorted/vitis/chain/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c09_nested_forall_sorted/vitis/cyclic2/original",
+      "detail": [
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "c09_nested_forall_sorted/vitis/fastclk/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c09_nested_forall_sorted/vitis/nopipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "c09_nested_forall_sorted/vitis/reshape2/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c09_nested_forall_sorted/vitis/unroll/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c12_void_out_sum/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c12_void_out_sum/vitis/block2/original",
+      "detail": [
+        "P8: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "c12_void_out_sum/vitis/bram/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c12_void_out_sum/vitis/chain/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c12_void_out_sum/vitis/cyclic2/original",
+      "detail": [
+        "P8: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "c12_void_out_sum/vitis/fastclk/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c12_void_out_sum/vitis/nopipe/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c12_void_out_sum/vitis/reshape2/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c12_void_out_sum/vitis/reshapeb2/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c12_void_out_sum/vitis/unroll/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c14_predicate_in_requires/vitis/base/original",
+      "detail": [
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "c14_predicate_in_requires/vitis/block2/original",
+      "detail": [
+        "P12: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 1]"
+      ]
+    },
+    {
+      "case": "c14_predicate_in_requires/vitis/bram/original",
+      "detail": [
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "c14_predicate_in_requires/vitis/chain/original",
+      "detail": [
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "c14_predicate_in_requires/vitis/cyclic2/original",
+      "detail": [
+        "P12: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 1]"
+      ]
+    },
+    {
+      "case": "c14_predicate_in_requires/vitis/fastclk/original",
+      "detail": [
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "c14_predicate_in_requires/vitis/nopipe/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c14_predicate_in_requires/vitis/reshape2/original",
+      "detail": [
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "c14_predicate_in_requires/vitis/reshapeb2/original",
+      "detail": [
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "c14_predicate_in_requires/vitis/unroll/original",
+      "detail": [
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "c16_struct_array/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c16_struct_array/vitis/block2/original",
+      "detail": [
+        "P8: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "c16_struct_array/vitis/bram/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c16_struct_array/vitis/chain/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c16_struct_array/vitis/cyclic2/original",
+      "detail": [
+        "P8: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "c16_struct_array/vitis/fastclk/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c16_struct_array/vitis/nopipe/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c16_struct_array/vitis/reshape2/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c16_struct_array/vitis/reshapeb2/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "c16_struct_array/vitis/unroll/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    }
+  ],
+  "latency": {
+    "established": 187,
+    "report_undefined": 99,
+    "not_established": 0
+  }
+}

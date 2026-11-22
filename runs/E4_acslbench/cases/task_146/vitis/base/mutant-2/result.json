@@ -1,0 +1,97 @@
+{
+  "design": "task_146",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "57/60",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P4: ensures impossible_to_break ( \\old ( s ) , \\old ( length ) , \\old ( n ) )"
+  ],
+  "access": "out-of-memory",
+  "access_failed": [
+    "P7: requires \\valid ( s + ( 0 .. n - 1 ) )  [access in range: s bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 128,
+  "latency_status": "not established within cap",
+  "clauses": "9/9",
+  "translated": 9,
+  "total_clauses": 9,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 18.3,
+    "hls": 14.7,
+    "latency": 99.6,
+    "bmc": 1.8,
+    "access": 0.9,
+    "phys": 1.9,
+    "cover": 1.0,
+    "total": 142.7
+  },
+  "error": null,
+  "top": "wrapLines",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "length": 1,
+        "n": 3
+      },
+      "pre": {
+        "s": [
+          10,
+          32,
+          -96,
+          32
+        ]
+      },
+      "rtl_post": {
+        "s": [
+          10,
+          32,
+          -96,
+          32
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Precondition",
+        "indexOf",
+        "0 \u2264 from \u2264 to. With values at failure point:"
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation",
+    "detail": "callee indexOf called outside its precondition"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall a_26,b_27,c_28: symbolic (solver-chosen) value, exact",
+    "\\forall i_22: symbolic (solver-chosen) value, exact",
+    "\\forall i_23: symbolic (solver-chosen) value, exact",
+    "\\forall j_24: enumerated over 0..4 (stronger assertion)",
+    "\\forall j_25: symbolic (solver-chosen) value, exact",
+    "cell of s outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of s"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 132,
+  "cex_step": 11,
+  "outcome": "fail"
+}

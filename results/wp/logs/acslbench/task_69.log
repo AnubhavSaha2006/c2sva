@@ -1,0 +1,46 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_69.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_69.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function RemoveElement
+[kernel:annot:missing-spec] FRAMAC_SHARE/libc/stdlib.h:626: Warning: 
+  Neither code nor explicit exits and terminates for function malloc,
+  generating default clauses. See -generated-spec-* options for more info.
+[wp] FRAMAC_SHARE/libc/stdlib.h:614: Warning: 
+  Allocation, initialization and danglingness not yet implemented
+  (allocation: \fresh{Old, Here}(\at(\result,wp:post),\at(size,wp:pre)))
+[wp] FRAMAC_SHARE/libc/stdlib.h:615: Warning: \aligned not yet implemented
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_69.c:21: Warning: 
+  Cast with incompatible pointers types (source: sint8*) (target: sint32*)
+[wp] 37 goals scheduled
+[wp] [Timeout] typed_RemoveElement_ensures (Qed 49ms) (Z3) (Cached) (Stronger, 3 warnings)
+[wp] [Timeout] typed_RemoveElement_ensures_4 (Qed 47ms) (Z3) (Cached) (Stronger, 3 warnings)
+[wp] [Timeout] typed_RemoveElement_assert_rte_unsigned_overflow_3 (Qed 10ms) (CVC5) (Cached)
+[wp] [Timeout] typed_RemoveElement_loop_invariant_2_preserved (Qed 35ms) (Z3) (Cached) (Stronger, 3 warnings)
+[wp] [Timeout] typed_RemoveElement_assert_rte_mem_access (Qed 28ms) (CVC5) (Cached) (Stronger, 3 warnings)
+[wp] [Timeout] typed_RemoveElement_loop_invariant_4_preserved (Qed 73ms) (Z3) (Cached) (Stronger, 3 warnings)
+[wp] [Timeout] typed_RemoveElement_loop_invariant_5_preserved (Qed 105ms) (CVC5) (Cached) (Stronger, 3 warnings)
+[wp] [Timeout] typed_RemoveElement_assert_rte_mem_access_3 (Qed 90ms) (Z3) (Cached) (Stronger, 3 warnings)
+[wp] [Cache] updated:34
+[wp] Proved goals:   29 / 37
+  Qed:              19 (10ms-29ms-105ms)
+  Alt-Ergo 2.6.4:   10 (89ms-131ms-215ms)
+  Timeout:           8
+[wp] FRAMAC_SHARE/libc/stdlib.h:626: Warning: 
+  Memory model hypotheses for function 'malloc':
+  /*@ behavior wp_typed:
+        ensures \separated(\result, &__fc_errno); */
+  extern void *malloc(size_t size);
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_69.c:20: Warning: 
+  No 'assigns' specification for function 'RemoveElement'.
+  Callers assumptions might be imprecise.
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_69.c:20: Warning: 
+  Memory model hypotheses for function 'RemoveElement':
+  /*@
+     behavior wp_typed:
+       requires \separated(s + (..), &__fc_errno);
+       ensures \separated(\result, &__fc_errno);
+     */
+  int *RemoveElement(int const *s, size_t size, size_t k);

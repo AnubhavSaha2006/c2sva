@@ -1,0 +1,255 @@
+{
+  "by_tool_config": [
+    {
+      "tool": "vitis",
+      "config": "unsafe_dep",
+      "designs": 15,
+      "frontend_ok": 15,
+      "hls_ok": 15,
+      "checked": 12,
+      "pass_full": 11,
+      "pass_partial": 1,
+      "fail": 0,
+      "bounded": 3,
+      "vacuous": 0,
+      "agree": 12,
+      "disagree": 0,
+      "clauses": "156/157",
+      "clause_rate": 99.4,
+      "access_speculative": 13,
+      "access_out_of_memory": 0,
+      "overlap_mode": 1,
+      "mutants": 0,
+      "mutants_checked": 0,
+      "killed": 0,
+      "mutation_score": null,
+      "survivors": 0,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_untranslated": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 0,
+      "median_total_s": 273.7
+    }
+  ],
+  "details": {
+    "vitis/unsafe_dep": {
+      "original_outcomes": {
+        "bounded": 3,
+        "pass": 11,
+        "pass-partial": 1
+      },
+      "failure_replay": {},
+      "kill_replay": {},
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.7,
+        "wp": 6.6,
+        "hls": 18.8,
+        "latency": 1.5,
+        "bmc": 198.4,
+        "access": 2.5,
+        "cover": 2.5,
+        "total": 273.7
+      }
+    }
+  },
+  "not_checked_reasons": [],
+  "untranslated_clause_reasons": [
+    [
+      "clause too large after inlining (node budget exceeded)",
+      1
+    ]
+  ],
+  "translation_strategies": [
+    [
+      "cell of a outside 0..3",
+      15
+    ],
+    [
+      "exact frame over all 4 element(s) of a",
+      10
+    ],
+    [
+      "recursive logic cut off",
+      8
+    ],
+    [
+      "\\separated holds by construction (separate RTL memories/registers)",
+      6
+    ],
+    [
+      "exact frame over all 4 element(s) of b",
+      6
+    ],
+    [
+      "holds by construction",
+      5
+    ],
+    [
+      "cell of b outside 0..3",
+      4
+    ],
+    [
+      "\\forall i_5999",
+      1
+    ],
+    [
+      "\\forall i_6000",
+      1
+    ],
+    [
+      "\\forall i_6001",
+      1
+    ],
+    [
+      "\\forall v_6002",
+      1
+    ],
+    [
+      "\\forall i_5994",
+      1
+    ],
+    [
+      "\\forall i_5995",
+      1
+    ],
+    [
+      "\\forall v_5996",
+      1
+    ],
+    [
+      "\\forall i_1",
+      1
+    ],
+    [
+      "\\forall i_5961",
+      1
+    ],
+    [
+      "\\forall i_5962",
+      1
+    ],
+    [
+      "\\forall i_2",
+      1
+    ],
+    [
+      "\\forall i_3",
+      1
+    ],
+    [
+      "\\forall i_4",
+      1
+    ],
+    [
+      "\\forall i_7",
+      1
+    ],
+    [
+      "\\forall k_5",
+      1
+    ],
+    [
+      "\\forall k_6",
+      1
+    ],
+    [
+      "\\forall i_5968",
+      1
+    ],
+    [
+      "\\forall i_5977",
+      1
+    ]
+  ],
+  "disagreements": [],
+  "access_violations": [
+    {
+      "case": "Heap__pop_heap/vitis/unsafe_dep/original",
+      "detail": [
+        "P10: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__push_heap/vitis/unsafe_dep/original",
+      "detail": [
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Mutating__copy_backward/vitis/unsafe_dep/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__remove/vitis/unsafe_dep/original",
+      "detail": [
+        "P9: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Mutating__remove_copy/vitis/unsafe_dep/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__reverse/vitis/unsafe_dep/original",
+      "detail": [
+        "P3: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P5: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Numeric__accumulate/vitis/unsafe_dep/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__adjacent_difference/vitis/unsafe_dep/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__adjacent_difference_inv/vitis/unsafe_dep/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__iota/vitis/unsafe_dep/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__partial_sum/vitis/unsafe_dep/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__partial_sum_inv/vitis/unsafe_dep/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__selection_sort/vitis/unsafe_dep/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    }
+  ],
+  "latency": {
+    "established": 15,
+    "report_undefined": 15,
+    "not_established": 0
+  }
+}

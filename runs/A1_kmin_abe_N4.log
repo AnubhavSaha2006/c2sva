@@ -1,0 +1,4 @@
+prove: 16 cases, strategies ['houdini', 'kind+inv', 'kmin', 'kmin-progress']
+BinarySearch__lower_bound/vitis/base/original                          unbounded=True by=['kind+inv'] inv=97/222 c-inv=3 
+Mutating__copy/vitis/base/original                                     unbounded=True by=['kind+inv', 'pdr'] inv=44/86 c-inv=2 
+Mutating__fill/vitis/base/original                                     unbounded=True by=['kind+inv', 'pdr'] inv=27/50 c-inv=2 

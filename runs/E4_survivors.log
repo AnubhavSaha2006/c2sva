@@ -1,0 +1,27 @@
+analysed 77 surviving mutants: {'memory-safety-only': 45, 'no-violation-found': 25, 'analysis-error': 5, 'missed-bug': 2}
+                                                              Summary per tool / HLS configuration                                                              
+┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ acce… ┃       ┃       ┃       ┃       ┃       ┃       ┃
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ out   ┃       ┃       ┃       ┃       ┃       ┃ kills ┃
+┃       ┃       ┃       ┃       ┃ pass  ┃ pass  ┃      ┃       ┃       ┃       ┃       ┃ clau… ┃ acce… ┃ of    ┃ over… ┃ muta… ┃       ┃ muta… ┃ equi… ┃ conf… ┃
+┃ tool  ┃ conf… ┃ desi… ┃ chec… ┃ full  ┃ part… ┃ fail ┃ boun… ┃ vacu… ┃ agree ┃ disa… ┃ rate  ┃ spec… ┃ memo… ┃ mode  ┃ chec… ┃ kill… ┃ score ┃ pass  ┃ in C  ┃
+┡━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ vitis │ base  │ 419   │ 319   │ 284   │ 31    │ 3    │ 18    │ 1     │ 315   │ 3     │ 96.1  │ 115   │ 1     │ 31    │ 491   │ 299   │ 79.9  │ 115   │ 290   │
+└───────┴───────┴───────┴───────┴───────┴───────┴──────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┘
+vitis/base failures on originals (C replay): {'undetermined': 1, 'invalid-witness': 2}; mutant kills (C replay): {'c-contract-violation': 241, 
+'c-runtime-error': 49, 'rtl-c-divergence': 1, 'replay-error': 6, 'invalid-witness': 2}
+Originals not checked:
+     9  error: hls: Vitis synthesis failed: ERROR: [HLS 200-103] Top function name 'abs' is not a legal name for sy
+     7  unsupported: unsupported \valid argument
+     4  unsupported: address-of (&) in contract
+     3  unsupported: ACSL builtin \null
+     3  unsupported: no function with an ACSL contract
+     3  error: hls: Vitis synthesis failed: ERROR: [HLS 214-194] in function 'reverse_in_place': Undefined function
+     2  unsupported: indexing a non-variable
+     2  error: hls: Vitis synthesis failed: ERROR: [HLS 214-134] in function 'eq_vec_vec_Int': Pointer to pointer i
+     2  error: hls: Vitis synthesis failed: ERROR: [HLS 214-194] in function 'max_abs': Undefined function max (../
+     2  error: hls: Vitis synthesis failed: ERROR: [HLS 214-139] Recursive function calls are not supported: foo ->
+     1  unsupported: C type 'enum type2'
+     1  error: hls: Vitis synthesis failed: ERROR: [HLS 214-194] in function 'matcher': Undefined function strlen (
+Details: /home/anubhavsaha/cbv/runs/E4_acslbench/summary.md, /home/anubhavsaha/cbv/runs/E4_acslbench/results.csv, 
+/home/anubhavsaha/cbv/runs/E4_acslbench/table.tex

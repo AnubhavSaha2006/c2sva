@@ -1,0 +1,20 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_232.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_232.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function tick
+[wp] 58 goals scheduled
+[wp] [Cache] updated:2
+[wp] Proved goals:   60 / 60
+  Terminating:       1
+  Unreachable:       1
+  Qed:              56 (5ms-0.20ms-7ms)
+  Alt-Ergo 2.6.4:    1 (58ms)
+  CVC5 :             1 (83ms)
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_232.c:38: Warning: 
+  No 'assigns' specification for function 'tick'.
+  - in complete behaviors: {five, four, three, two, one}
+    No assigns for (at least) 'five'
+  Callers assumptions might be imprecise.

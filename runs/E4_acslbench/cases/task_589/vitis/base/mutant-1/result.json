@@ -1,0 +1,56 @@
+{
+  "design": "task_589",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "22/23",
+  "c_ok": false,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "speculative",
+  "access_failed": [
+    "P4: requires n >= 0 && \\valid ( t + ( 0 .. n - 1 ) )  [access in range: t bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "6/6",
+  "translated": 6,
+  "total_clauses": 6,
+  "skipped": [],
+  "times": {
+    "frontend": 0.6,
+    "wp": 12.5,
+    "hls": 14.7,
+    "latency": 0.6,
+    "bmc": 0.6,
+    "access": 0.6,
+    "phys": 0.6,
+    "cover": 0.8,
+    "total": 31.0
+  },
+  "error": null,
+  "top": "binary_search4",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 12,
+  "cex_step": null,
+  "outcome": "pass",
+  "survivor": {
+    "class": "no-violation-found",
+    "tested": 1000
+  }
+}

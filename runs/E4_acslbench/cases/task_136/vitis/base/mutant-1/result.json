@@ -1,0 +1,33 @@
+{
+  "design": "task_136",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "hls",
+  "status": "error",
+  "c_proof": "3/5",
+  "c_ok": false,
+  "rtl": null,
+  "failed": [],
+  "access": null,
+  "access_failed": [],
+  "cover": null,
+  "latency": null,
+  "latency_status": null,
+  "clauses": null,
+  "translated": null,
+  "total_clauses": null,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 0.7,
+    "total": 12.8
+  },
+  "error": "hls: Vitis synthesis failed: ERROR: [HLS 214-323] Address computation on scalar port 'p' is not supported (../src/hls_src/task_136.c:29:0) | ERROR: [HLS 200-1715] Encountered problem during source synthesis",
+  "top": "pick_first",
+  "mode": null,
+  "bounded_to": null,
+  "replay": null,
+  "engine": null,
+  "outcome": "error"
+}

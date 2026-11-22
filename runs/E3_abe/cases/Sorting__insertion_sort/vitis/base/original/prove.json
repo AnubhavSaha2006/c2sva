@@ -1,0 +1,81 @@
+{
+  "latency": 64,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 30.4,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.0
+  },
+  "candidates": {
+    "total": 581,
+    "by_origin": {
+      "structural": 409,
+      "call-requires": 1,
+      "call-frame": 1,
+      "loop-invariant": 170
+    },
+    "loops": 3,
+    "loop_invariants": 11,
+    "skipped": [
+      {
+        "source": "loop 2 (reverse): loop invariant bound: 0 <= i <= half <= n - i",
+        "reason": "no RTL signal found for C variable half"
+      },
+      {
+        "source": "loop 2 (reverse): loop invariant left: Reverse { Pre , Here } ( a , 0 , i , n )",
+        "reason": "unknown logic function/predicate Reverse"
+      },
+      {
+        "source": "loop 2 (reverse): loop invariant right: Reverse { Pre , Here } ( a , n - i , n , i )",
+        "reason": "unknown logic function/predicate Reverse"
+      },
+      {
+        "source": "loop 2 (reverse): loop variant half - i >= 0",
+        "reason": "no RTL signal found for C variable half"
+      },
+      {
+        "source": "loop 3 (upper_bound): loop invariant left: UpperBound ( a , 0 , left , v )",
+        "reason": "no RTL signal found for C variable v"
+      },
+      {
+        "source": "loop 3 (upper_bound): loop invariant right: StrictLowerBound ( a , right , n , v )",
+        "reason": "no RTL signal found for C variable v"
+      }
+    ]
+  },
+  "houdini": {
+    "candidates": 581,
+    "base_dropped": 0,
+    "ind_dropped": 0,
+    "rounds": 3,
+    "status": "base timeout",
+    "k": 16,
+    "secs": 190.9,
+    "invariants": 0,
+    "by_origin": {},
+    "c_invariants_survived": [],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "no invariants",
+    "k": 16
+  },
+  "unbounded": false,
+  "proved_by": [],
+  "deep_cex": [],
+  "secs": 542.8
+}

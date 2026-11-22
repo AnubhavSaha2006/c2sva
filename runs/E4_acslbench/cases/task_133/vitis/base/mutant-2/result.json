@@ -1,0 +1,88 @@
+{
+  "design": "task_133",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "7/8",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures \\old ( * b != 0 ) ==> * \\old ( a ) == 0"
+  ],
+  "access": null,
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "6/6",
+  "translated": 6,
+  "total_clauses": 6,
+  "skipped": [],
+  "times": {
+    "frontend": 0.2,
+    "wp": 0.6,
+    "hls": 12.1,
+    "latency": 0.3,
+    "bmc": 0.4,
+    "cover": 0.4,
+    "total": 17.3
+  },
+  "error": null,
+  "top": "reset_1st_if_2nd_is_true",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {},
+      "pre": {
+        "a": [
+          0
+        ],
+        "b": [
+          536870912
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          1
+        ],
+        "b": [
+          536870912
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "reset_1st_if_2nd_is_true",
+        "\\old(*b \u2262 0) \u21d2 *\\old(a) \u2261 0. With values at failure point:"
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "\\separated holds by construction (separate RTL memories/registers)",
+    "exact frame over all 1 element(s) of a",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": [
+    0,
+    0
+  ],
+  "interval_report": 1,
+  "depth": 6,
+  "cex_step": 2,
+  "outcome": "fail"
+}

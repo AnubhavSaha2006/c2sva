@@ -1,0 +1,101 @@
+{
+  "design": "task_266",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "32/33",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures \\old ( p ) <= \\result <= \\old ( r ) && ( \\forall int l ; \\old ( p ) <= l < \\result ==> * ( \\old ( A ) + l ) <= * ( \\old ( A ) + \\result ) ) && ( \\forall int l ; \\result < l <= \\old ( r ) ==> * ( \\old ( A ) + l ) > * ( \\old ( A ) + \\result ) ) && * ( \\old ( A ) + \\result ) == \\old ( * ( A + r ) )"
+  ],
+  "access": "out-of-memory",
+  "access_failed": [
+    "P7: requires 0 <= p <= r && \\valid ( A + ( p .. r ) )  [access in range: A bank 0 port 1]"
+  ],
+  "cover": "reached",
+  "latency": 16,
+  "latency_status": "established",
+  "clauses": "8/9",
+  "translated": 8,
+  "total_clauses": 9,
+  "skipped": [
+    {
+      "id": "P3",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures Permuta { Old , Here } ( \\old ( A ) , \\old ( p ) , \\old ( r ) )",
+      "reason": "inductive logic Permuta"
+    }
+  ],
+  "times": {
+    "frontend": 0.4,
+    "wp": 1.1,
+    "hls": 14.4,
+    "latency": 1.5,
+    "bmc": 1.0,
+    "access": 0.8,
+    "phys": 1.0,
+    "cover": 0.7,
+    "total": 25.0
+  },
+  "error": null,
+  "top": "partition",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "p": 2,
+        "r": 2
+      },
+      "pre": {
+        "A": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "rtl_post": {
+        "A": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "rtl_result": 1,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Precondition",
+        "swap",
+        "\\valid(t + (start .. end)) \u2227 start \u2264 i \u2264 end \u2227 start \u2264 j \u2264 end. With values at failure point:"
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation",
+    "detail": "callee swap called outside its precondition"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall l: symbolic (solver-chosen) value, exact",
+    "cell of A outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of A"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 20,
+  "cex_step": 8,
+  "outcome": "fail"
+}

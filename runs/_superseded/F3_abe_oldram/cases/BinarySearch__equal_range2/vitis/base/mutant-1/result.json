@@ -1,0 +1,99 @@
+{
+  "design": "BinarySearch/equal_range2",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "56/58",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P3: ensures StrictUpperBound ( \\old ( a ) , 0 , \\result . first , \\old ( v ) )"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 16,
+  "latency_status": "established",
+  "clauses": "9/9",
+  "translated": 9,
+  "total_clauses": 9,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 6.6,
+    "hls": 17.8,
+    "latency": 3.5,
+    "bmc": 2.0,
+    "access": 1.0,
+    "phys": 2.0,
+    "cover": 1.5,
+    "total": 41.4
+  },
+  "error": null,
+  "top": "equal_range2",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 1,
+        "v": -2147483648
+      },
+      "pre": {
+        "a": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "rtl_result": {
+        "first": 1,
+        "second": 1
+      },
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "equal_range2",
+        "left: StrictUpperBound(\\old(a), 0, \\result.first, \\old(v))."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_857,j_858: enumerated over 0..4 (weaker assumption)",
+    "\\forall i_859: symbolic (solver-chosen) value, exact",
+    "\\forall i_860: symbolic (solver-chosen) value, exact",
+    "\\forall i_861: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 20,
+  "cex_step": 9,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

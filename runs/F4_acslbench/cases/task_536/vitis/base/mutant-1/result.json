@@ -1,0 +1,73 @@
+{
+  "design": "task_536",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "4/5",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P3: ensures \\result == \\old ( x ) + 1"
+  ],
+  "access": null,
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "3/3",
+  "translated": 3,
+  "total_clauses": 3,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 0.8,
+    "hls": 13.1,
+    "latency": 0.5,
+    "bmc": 0.5,
+    "cover": 0.5,
+    "total": 18.6
+  },
+  "error": null,
+  "top": "foo",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "x": 1073741824
+      },
+      "pre": {},
+      "rtl_post": {},
+      "rtl_result": 1073741823,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "foo",
+        "\\result \u2261 \\old(x) + 1. With values at failure point:"
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [],
+  "latency_report": [
+    0,
+    0
+  ],
+  "interval_report": 1,
+  "depth": 6,
+  "cex_step": 2,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

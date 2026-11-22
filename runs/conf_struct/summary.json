@@ -1,0 +1,87 @@
+{
+  "by_tool_config": [
+    {
+      "tool": "vitis",
+      "config": "base",
+      "designs": 3,
+      "frontend_ok": 3,
+      "hls_ok": 3,
+      "checked": 3,
+      "pass_full": 3,
+      "pass_partial": 0,
+      "fail": 0,
+      "bounded": 0,
+      "vacuous": 0,
+      "agree": 3,
+      "disagree": 0,
+      "clauses": "14/14",
+      "clause_rate": 100.0,
+      "access_speculative": 1,
+      "access_out_of_memory": 0,
+      "overlap_mode": 1,
+      "mutants": 7,
+      "mutants_checked": 7,
+      "killed": 6,
+      "mutation_score": 100.0,
+      "equivalent_pass": 1,
+      "kills_confirmed_in_C": 6,
+      "median_total_s": 22.5
+    }
+  ],
+  "details": {
+    "vitis/base": {
+      "original_outcomes": {
+        "pass": 3
+      },
+      "failure_replay": {},
+      "kill_replay": {
+        "c-contract-violation": 6
+      },
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.5,
+        "wp": 1.5,
+        "hls": 18.0,
+        "latency": 0.5,
+        "bmc": 0.7,
+        "access": 0.7,
+        "cover": 0.5,
+        "total": 22.5
+      }
+    }
+  },
+  "not_checked_reasons": [],
+  "untranslated_clause_reasons": [],
+  "translation_strategies": [
+    [
+      "exact frame over all 1 element(s) of p (per field)",
+      1
+    ],
+    [
+      "\\forall i",
+      1
+    ],
+    [
+      "cell of a outside 0..3",
+      1
+    ],
+    [
+      "holds by construction",
+      1
+    ]
+  ],
+  "disagreements": [],
+  "access_violations": [
+    {
+      "case": "c16_struct_array/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    }
+  ],
+  "latency": {
+    "established": 3,
+    "report_undefined": 1,
+    "not_established": 0
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "latency": 8,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 8.3,
+    "k": 16
+  },
+  "pdr": {
+    "status": "PASS",
+    "secs": 199.6
+  },
+  "candidates": {
+    "total": 284,
+    "by_origin": {
+      "structural": 44,
+      "call-requires": 3,
+      "pipeline-copy": 15,
+      "contract-persist": 2,
+      "call-frame": 1,
+      "loop-invariant": 36,
+      "loop-invariant-store": 96,
+      "loop-invariant-lag": 72,
+      "loop-variant": 12,
+      "loop-assigns": 3
+    },
+    "loops": 1,
+    "loop_invariants": 3,
+    "skipped": []
+  },
+  "houdini": {
+    "candidates": 284,
+    "base_dropped": 134,
+    "ind_dropped": 0,
+    "rounds": 2,
+    "status": "inductive",
+    "base_depth": 12,
+    "k": 12,
+    "secs": 100.2,
+    "invariants": 150,
+    "by_origin": {
+      "structural": 13,
+      "call-requires": 3,
+      "pipeline-copy": 2,
+      "contract-persist": 2,
+      "call-frame": 1,
+      "loop-invariant": 12,
+      "loop-invariant-store": 54,
+      "loop-invariant-lag": 48,
+      "loop-variant": 12,
+      "loop-assigns": 3
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant 0 <= i <= n",
+      "loop 1: loop invariant \\forall integer j ; 0 <= j < i ==> * ( a + j ) == 2 * \\at ( * ( a + j ) , Pre )",
+      "loop 1: loop invariant \\forall integer j ; i <= j < n ==> * ( a + j ) == \\at ( * ( a + j ) , Pre )"
+    ],
+    "c_invariants_lagged": [
+      "loop 1: loop invariant \\forall integer j ; 0 <= j < i ==> * ( a + j ) == 2 * \\at ( * ( a + j ) , Pre )",
+      "loop 1: loop invariant \\forall integer j ; i <= j < n ==> * ( a + j ) == \\at ( * ( a + j ) , Pre )"
+    ],
+    "k_tried": [
+      4,
+      8,
+      12
+    ]
+  },
+  "kind+inv": {
+    "status": "PASS",
+    "secs": 4.7,
+    "k": 12
+  },
+  "ablation": {
+    "hls": {
+      "candidates": 59,
+      "invariants": 15,
+      "houdini": "inductive",
+      "k": 12,
+      "status": "PASS",
+      "secs": 3.8
+    },
+    "hls+contract": {
+      "candidates": 65,
+      "invariants": 19,
+      "houdini": "inductive",
+      "k": 12,
+      "status": "PASS",
+      "secs": 2.9
+    }
+  },
+  "kmin": {
+    "none": null,
+    "hls": 12,
+    "hls+contract": 12,
+    "all": 12,
+    "all+progress": 8
+  },
+  "latency_proof": {
+    "bound": 8,
+    "established_by_bmc": "established",
+    "kind": {
+      "status": "UNKNOWN",
+      "secs": 0.5,
+      "k": 16
+    },
+    "candidates": 98,
+    "kind+inv": {
+      "status": "PASS",
+      "secs": 2.8,
+      "k": 8,
+      "progress_invariants": 86,
+      "houdini": "inductive",
+      "houdini_secs": 66.1
+    },
+    "proved": true
+  },
+  "unbounded": true,
+  "proved_by": [
+    "kind+inv",
+    "pdr"
+  ],
+  "deep_cex": [],
+  "secs": 969.6
+}

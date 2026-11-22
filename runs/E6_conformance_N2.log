@@ -1,0 +1,30 @@
+17 designs -> 17 cases (tools vitis, configs base, mutants 0) -> /home/anubhavsaha/cbv/runs/E6_conformance_N2
+[1/17] c01_behaviors_clamp              original  base     C 10/10   pass             clauses 4/4    access None      lat 2 
+[2/17] c04_single_pointers_swap         original  base     C 10/10   pass             clauses 5/5    access None      lat 2 
+[3/17] c06_verilog_keywords             original  base     C 9/9     pass             clauses 8/8    access ok        lat 2 
+[4/17] c02_exists_has_zero              original  base     C 16/16   pass             clauses 7/7    access speculative lat 8 
+[5/17] c05_typedef_three_arrays         original  base     C 20/21   pass             clauses 15/15  access speculative lat 8 
+[6/17] c03_recursive_logic              original  base     C 14/14   pass             clauses 6/6    access speculative lat 8 
+[7/17] c07_frame_prefix_fill            original  base     C 15/15   pass             clauses 6/6    access speculative lat 8 
+[8/17] c09_nested_forall_sorted         original  base     C 18/18   pass             clauses 9/9    access ok        lat 8 
+[9/17] c11_builtins_minmax              original  base     C 11/11   pass             clauses 3/3    access None      lat 2 
+[10/17] c08_old_memory_increment         original  base     C 19/19   pass             clauses 9/9    access speculative lat 8 
+[11/17] c12_void_out_sum                 original  base     C 19/19   pass             clauses 9/9    access speculative lat 8 
+[12/17] c13_shifts_casts                 original  base     C 5/5     pass             clauses 2/2    access None      lat 2 
+[13/17] c15_struct_pointer               original  base     C 10/10   pass             clauses 4/4    access None      lat 2 
+[14/17] c17_struct_return                original  base     C 8/8     pass             clauses 2/2    access None      lat 2 
+[15/17] c16_struct_array                 original  base     C 17/17   pass             clauses 8/8    access speculative lat 8 
+[16/17] c14_predicate_in_requires        original  base     C 21/21   pass             clauses 10/10  access speculative lat 8 
+[17/17] c10_products_width               original  base     C 10/10   bounded(3)       clauses 4/4    access None      lat 2 
+                                                              Summary per tool / HLS configuration                                                              
+┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ acce… ┃       ┃       ┃       ┃       ┃       ┃       ┃
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ out   ┃       ┃       ┃       ┃       ┃       ┃ kills ┃
+┃       ┃       ┃       ┃       ┃ pass  ┃ pass  ┃      ┃       ┃       ┃       ┃       ┃ clau… ┃ acce… ┃ of    ┃ over… ┃ muta… ┃       ┃ muta… ┃ equi… ┃ conf… ┃
+┃ tool  ┃ conf… ┃ desi… ┃ chec… ┃ full  ┃ part… ┃ fail ┃ boun… ┃ vacu… ┃ agree ┃ disa… ┃ rate  ┃ spec… ┃ memo… ┃ mode  ┃ chec… ┃ kill… ┃ score ┃ pass  ┃ in C  ┃
+┡━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ vitis │ base  │ 17    │ 16    │ 16    │ 0     │ 0    │ 1     │ 0     │ 16    │ 0     │ 100.0 │ 8     │ 0     │ 2     │ 0     │ 0     │ None  │ 0     │ 0     │
+└───────┴───────┴───────┴───────┴───────┴───────┴──────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┘
+vitis/base failures on originals (C replay): {}; mutant kills (C replay): {}
+Details: /home/anubhavsaha/cbv/runs/E6_conformance_N2/summary.md, /home/anubhavsaha/cbv/runs/E6_conformance_N2/results.csv, 
+/home/anubhavsaha/cbv/runs/E6_conformance_N2/table.tex

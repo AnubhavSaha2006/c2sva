@@ -1,0 +1,95 @@
+{
+  "design": "Heap/push_heap",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "65/71",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P3: ensures Heap ( \\old ( a ) , \\old ( n ) )"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 16,
+  "latency_status": "established",
+  "clauses": "10/10",
+  "translated": 10,
+  "total_clauses": 10,
+  "skipped": [],
+  "times": {
+    "frontend": 0.7,
+    "wp": 17.6,
+    "hls": 18.6,
+    "latency": 3.5,
+    "bmc": 3.0,
+    "access": 1.0,
+    "phys": 1.5,
+    "cover": 2.0,
+    "total": 53.8
+  },
+  "error": null,
+  "top": "push_heap",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 4
+      },
+      "pre": {
+        "a": [
+          1478492161,
+          1344274432,
+          1344274432,
+          1610612735
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          1478492161,
+          1344274432,
+          1344274432,
+          1610612735
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Assertion",
+        "push_heap",
+        "rte/mem_access: \\valid_read(a + c)."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-runtime-error"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_100: symbolic (solver-chosen) value, exact",
+    "\\forall i_99: enumerated over 0..4 (weaker assumption)",
+    "\\forall v_101: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a",
+    "recursive logic cut off: free value"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 20,
+  "cex_step": 4,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

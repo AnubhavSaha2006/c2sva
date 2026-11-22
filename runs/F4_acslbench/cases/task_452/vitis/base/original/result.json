@@ -1,0 +1,68 @@
+{
+  "design": "task_452",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "34/34",
+  "c_ok": true,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "speculative",
+  "access_failed": [
+    "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+  ],
+  "cover": "reached",
+  "latency": 32,
+  "latency_status": "established",
+  "clauses": "7/9",
+  "translated": 7,
+  "total_clauses": 9,
+  "skipped": [
+    {
+      "id": "P2",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures ordered ( \\old ( a ) , 0 , \\old ( n ) )",
+      "reason": "axiomatic logic ordered"
+    },
+    {
+      "id": "P3",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures \\forall integer p ; count ( \\old ( a ) , 0 , \\old ( n ) , p ) == count { Pre } ( \\old ( a ) , 0 , \\old ( n ) , p )",
+      "reason": "axiomatic logic count"
+    }
+  ],
+  "times": {
+    "frontend": 0.4,
+    "wp": 2.8,
+    "hls": 13.9,
+    "latency": 4.0,
+    "bmc": 65.1,
+    "access": 1.0,
+    "phys": 2.0,
+    "cover": 1.0,
+    "total": 90.2
+  },
+  "error": null,
+  "top": "sort",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "bitwuzla",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "exact frame over all 4 element(s) of a"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 36,
+  "cex_step": null,
+  "failed_cutoff": [],
+  "outcome": "pass-partial"
+}

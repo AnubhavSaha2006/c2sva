@@ -1,0 +1,53 @@
+{
+  "design": "c03_recursive_logic",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "chain",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "14/14",
+  "c_ok": true,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "speculative",
+  "access_failed": [
+    "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "6/6",
+  "translated": 6,
+  "total_clauses": 6,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 0.8,
+    "hls": 12.1,
+    "latency": 0.3,
+    "bmc": 1.7,
+    "access": 0.5,
+    "phys": 1.4,
+    "cover": 0.4,
+    "total": 17.5
+  },
+  "error": null,
+  "top": "count_pos",
+  "mode": "overlapping calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "yices",
+  "width": 72,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "cell of a outside 0..3: solver-chosen value",
+    "holds by construction: the RTL cannot write this object",
+    "recursive logic cut off: free value"
+  ],
+  "latency_report": null,
+  "interval_report": 0,
+  "depth": 15,
+  "cex_step": null,
+  "outcome": "pass"
+}

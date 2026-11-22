@@ -1,0 +1,88 @@
+{
+  "design": "c15_struct_pointer",
+  "variant": "mutant-3",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "9/10",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P3: ensures \\old ( p ) -> y == 0"
+  ],
+  "access": null,
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "4/4",
+  "translated": 4,
+  "total_clauses": 4,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 0.8,
+    "hls": 12.3,
+    "latency": 0.3,
+    "bmc": 0.4,
+    "cover": 0.3,
+    "total": 17.6
+  },
+  "error": null,
+  "top": "bump",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {},
+      "pre": {
+        "p": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": -128
+          }
+        ]
+      },
+      "rtl_post": {
+        "p": [
+          {
+            "x": 1,
+            "y": 1,
+            "z": -128
+          }
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "bump",
+        "\\old(p)->y \u2261 0. With values at failure point:"
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 120,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "exact frame over all 1 element(s) of p (per field)"
+  ],
+  "latency_report": [
+    0,
+    0
+  ],
+  "interval_report": 1,
+  "depth": 6,
+  "cex_step": 2,
+  "outcome": "fail"
+}

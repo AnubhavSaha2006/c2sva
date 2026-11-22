@@ -1,0 +1,60 @@
+{
+  "design": "task_266",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "33/33",
+  "c_ok": true,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "ok",
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 16,
+  "latency_status": "established",
+  "clauses": "8/9",
+  "translated": 8,
+  "total_clauses": 9,
+  "skipped": [
+    {
+      "id": "P3",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures Permuta { Old , Here } ( \\old ( A ) , \\old ( p ) , \\old ( r ) )",
+      "reason": "inductive logic Permuta"
+    }
+  ],
+  "times": {
+    "frontend": 0.4,
+    "wp": 3.1,
+    "hls": 15.1,
+    "latency": 2.0,
+    "bmc": 59.5,
+    "access": 1.5,
+    "cover": 1.0,
+    "total": 82.7
+  },
+  "error": null,
+  "top": "partition",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall l: symbolic (solver-chosen) value, exact",
+    "cell of A outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of A"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 20,
+  "cex_step": null,
+  "failed_cutoff": [],
+  "outcome": "pass-partial"
+}

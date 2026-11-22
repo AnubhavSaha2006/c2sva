@@ -1,0 +1,114 @@
+{
+  "by_tool_config": [
+    {
+      "tool": "vitis",
+      "config": "base",
+      "designs": 5,
+      "frontend_ok": 5,
+      "hls_ok": 4,
+      "checked": 4,
+      "pass_full": 3,
+      "pass_partial": 1,
+      "fail": 0,
+      "bounded": 0,
+      "vacuous": 0,
+      "agree": 4,
+      "disagree": 0,
+      "clauses": "28/29",
+      "clause_rate": 96.6,
+      "access_speculative": 1,
+      "access_out_of_memory": 0,
+      "overlap_mode": 3,
+      "mutants": 0,
+      "mutants_checked": 0,
+      "killed": 0,
+      "mutation_score": null,
+      "survivors": 0,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 0,
+      "median_total_s": 25.5
+    }
+  ],
+  "details": {
+    "vitis/base": {
+      "original_outcomes": {
+        "pass-partial": 1,
+        "error": 1,
+        "pass": 3
+      },
+      "failure_replay": {},
+      "kill_replay": {},
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.8,
+        "wp": 3.6,
+        "hls": 18.4,
+        "latency": 0.6,
+        "bmc": 0.8,
+        "access": 0.6,
+        "cover": 0.5,
+        "total": 25.5
+      }
+    }
+  },
+  "not_checked_reasons": [
+    [
+      "error: hls: Vitis synthesis failed: ERROR: [HLS 214-194] in function 'matcher': Undefined function strlen (",
+      1
+    ]
+  ],
+  "untranslated_clause_reasons": [
+    [
+      "abstract logic matcher_ab",
+      1
+    ]
+  ],
+  "translation_strategies": [
+    [
+      "holds by construction",
+      4
+    ],
+    [
+      "cell of x0 outside 0..3",
+      3
+    ],
+    [
+      "\\exists i_1",
+      1
+    ],
+    [
+      "\\exists i_2",
+      1
+    ],
+    [
+      "\\exists i_3",
+      1
+    ],
+    [
+      "\\exists i_4",
+      1
+    ],
+    [
+      "cell of s outside 0..3",
+      1
+    ]
+  ],
+  "disagreements": [],
+  "access_violations": [
+    {
+      "case": "task_138/vitis/base/original",
+      "detail": [
+        "P4: requires strlen ( x0 ) >= 0 && \\valid ( x0 + ( 0 .. ( strlen ( x0 ) + 1 ) - 1 ) )  [access in range: x0 bank 0 port 0]"
+      ]
+    }
+  ],
+  "latency": {
+    "established": 4,
+    "report_undefined": 3,
+    "not_established": 0
+  }
+}

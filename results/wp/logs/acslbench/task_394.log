@@ -1,0 +1,44 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_394.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_394.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function decreasing
+[rte:annot] annotating function double_
+[rte:annot] annotating function increasing
+[rte:annot] annotating function max3
+[rte:annot] annotating function monotomic
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_394.c:51: Warning: 
+  Missing assigns clause (assigns 'everything' instead)
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_394.c:76: Warning: 
+  Missing assigns clause (assigns 'everything' instead)
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_394.c:104: Warning: 
+  Missing assigns clause (assigns 'everything' instead)
+[wp] Computing [100 goals...]
+[wp] 104 goals scheduled
+[wp] [Timeout] typed_double_ensures (Qed 19ms) (Z3) (Cached)
+[wp] [Timeout] typed_double_assert_rte_mem_access (Qed 15ms) (Z3) (Cached)
+[wp] [Timeout] typed_double_assert_rte_signed_overflow_2 (Qed 13ms) (Z3) (Cached)
+[wp] [Timeout] typed_increasing_assert_rte_mem_access (Qed 23ms) (Z3) (Cached)
+[wp] [Timeout] typed_increasing_assert_rte_mem_access_2 (Qed 24ms) (Z3) (Cached)
+[wp] [Timeout] typed_increasing_assigns_part1 (Qed 5ms) (Z3) (Cached)
+[wp] [Timeout] typed_increasing_true_ensures_part1 (Qed 35ms) (CVC5) (Cached)
+[wp] [Timeout] typed_increasing_false_ensures_part2 (Qed 18ms) (Z3) (Cached)
+[wp] [Timeout] typed_decreasing_assert_rte_mem_access (Qed 17ms) (Z3) (Cached)
+[wp] [Timeout] typed_decreasing_assert_rte_mem_access_2 (Qed 19ms) (Z3) (Cached)
+[wp] [Timeout] typed_decreasing_assigns_part1 (Qed 3ms) (Z3) (Cached)
+[wp] [Timeout] typed_decreasing_true_ensures_part1 (Qed 43ms) (Z3) (Cached)
+[wp] [Timeout] typed_decreasing_false_ensures_part2 (Qed 19ms) (Z3) (Cached)
+[wp] [Timeout] typed_monotomic_decreasing_ensures_part1 (Qed 10ms) (Z3) (Cached)
+[wp] [Cache] found:4, updated:45
+[wp] Proved goals:   98 / 112
+  Terminating:       4
+  Unreachable:       4
+  Qed:              83 (3ms-5ms-64ms)
+  Alt-Ergo 2.6.4:    5 (92ms-162ms)
+  CVC5 :             2 (40ms-91ms)
+  Timeout:          14
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_394.c:45: Warning: 
+  No 'assigns' specification for function 'double_'.
+  Callers assumptions might be imprecise.

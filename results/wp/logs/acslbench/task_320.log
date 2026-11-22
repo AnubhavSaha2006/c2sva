@@ -1,0 +1,34 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_320.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_320.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function match_w
+[rte:annot] annotating function matcher
+[wp] Computing [100 goals...]
+[wp] 159 goals scheduled
+[wp] [Timeout] typed_match_w_assert_rte_mem_access (Qed 13ms) (Z3) (Cached)
+[wp] [Timeout] typed_match_w_assert_rte_mem_access_2 (Qed 36ms) (Z3) (Cached)
+[wp] [Timeout] typed_match_w_assert_rte_mem_access_3 (Qed 34ms) (Z3) (Cached)
+[wp] [Timeout] typed_match_w_assert_rte_mem_access_4 (Qed 46ms) (Z3) (Cached)
+[wp] [Timeout] typed_match_w_assert_rte_mem_access_5 (Qed 71ms) (Z3) (Cached)
+[wp] [Timeout] typed_matcher_ensures_part1 (Qed 142ms) (CVC5) (Cached)
+[wp] [Timeout] typed_matcher_assert_rte_signed_overflow_2_part2 (Qed 445ms) (Z3) (Cached)
+[wp] [Timeout] typed_matcher_assert_rte_signed_overflow_3_part2 (Qed 242ms) (CVC5) (Cached)
+[wp] [Timeout] typed_matcher_assert_rte_signed_overflow_5_part2 (Qed 202ms) (CVC5) (Cached)
+[wp] [Timeout] typed_matcher_assert_rte_signed_overflow_7_part2 (Qed 417ms) (CVC5) (Cached)
+[wp] [Timeout] typed_matcher_assert_rte_signed_overflow_9_part2 (Qed 181ms) (CVC5) (Cached)
+[wp] [Timeout] typed_matcher_assert_rte_signed_overflow_11_part2 (Qed 311ms) (CVC5) (Cached)
+[wp] [Timeout] typed_matcher_loop_variant_decrease_part15 (Qed 465ms) (Z3) (Cached)
+[wp] [Timeout] typed_matcher_loop_variant_decrease_part17 (Qed 290ms) (CVC5) (Cached)
+[wp] [Timeout] typed_matcher_loop_variant_decrease_part19 (Qed 357ms) (Z3) (Cached)
+[wp] [Timeout] typed_matcher_loop_variant_decrease_part21 (Qed 267ms) (CVC5) (Cached)
+[wp] [Cache] found:4, updated:75
+[wp] Proved goals:  147 / 163
+  Terminating:       2
+  Unreachable:       2
+  Qed:             115 (13ms-61ms-465ms)
+  Alt-Ergo 2.6.4:   26 (69ms-474ms-1.9s)
+  CVC5 :             2 (92ms-138ms)
+  Timeout:          16

@@ -1,0 +1,69 @@
+{
+  "design": "task_441",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "3/4",
+  "c_ok": false,
+  "rtl": "PASS",
+  "failed": [],
+  "access": null,
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "0/2",
+  "translated": 0,
+  "total_clauses": 2,
+  "skipped": [
+    {
+      "id": "P1",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures i == 0",
+      "reason": "global variable i: global state is not modelled"
+    },
+    {
+      "id": "-",
+      "kind": "post",
+      "origin": "assigns",
+      "source": "assigns i",
+      "reason": "global variable: global state is not modelled"
+    }
+  ],
+  "times": {
+    "frontend": 0.4,
+    "wp": 0.7,
+    "hls": 13.6,
+    "latency": 0.5,
+    "bmc": 0.5,
+    "cover": 0.5,
+    "total": 16.2
+  },
+  "error": null,
+  "top": "test",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "yices",
+  "width": 64,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [],
+  "latency_report": [
+    0,
+    0
+  ],
+  "interval_report": 1,
+  "depth": 6,
+  "cex_step": null,
+  "failed_cutoff": [],
+  "outcome": "pass-partial",
+  "survivor": {
+    "class": "no-violation-found",
+    "tested": 1000
+  }
+}

@@ -1,0 +1,38 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_23.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_23.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function min_min
+[wp] Computing [100 goals...]
+[wp] Computing [200 goals...]
+[wp] 200 goals scheduled
+[wp] [Timeout] typed_min_min_loop_invariant_5_established_part1 (Qed 40ms) (Z3) (Cached)
+[wp] [Timeout] typed_min_min_loop_invariant_5_established_part2 (Qed 46ms) (Z3) (Cached)
+[wp] [Timeout] typed_min_min_loop_assigns_part2 (Qed 342ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_min_min_loop_assigns_part3 (Qed 258ms) (Z3) (Cached)
+[wp] [Timeout] typed_min_min_loop_assigns_part4 (Qed 244ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_min_min_loop_assigns_part5 (Qed 333ms) (Z3) (Cached)
+[wp] [Timeout] typed_min_min_loop_assigns_part6 (Qed 368ms) (Z3) (Cached)
+[wp] [Timeout] typed_min_min_loop_assigns_part7 (Qed 220ms) (Z3) (Cached)
+[wp] [Cache] found:5, updated:91
+[wp] Proved goals:  194 / 202
+  Terminating:       1
+  Unreachable:       1
+  Qed:             125 (8ms-66ms-368ms)
+  Alt-Ergo 2.6.4:   54 (75ms-182ms-430ms)
+  CVC5 :            13 (48ms-168ms-321ms)
+  Timeout:           8
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_23.c:18: Warning: 
+  No \from specification for assigned pointer '*min1'.
+  Callers assumptions might be imprecise.
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_23.c:18: Warning: 
+  No \from specification for assigned pointer '*min2'.
+  Callers assumptions might be imprecise.
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_23.c:23: Warning: 
+  No \from specification for assigned pointer '*min1'.
+  Callers assumptions might be imprecise.
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_23.c:23: Warning: 
+  No \from specification for assigned pointer '*min2'.
+  Callers assumptions might be imprecise.

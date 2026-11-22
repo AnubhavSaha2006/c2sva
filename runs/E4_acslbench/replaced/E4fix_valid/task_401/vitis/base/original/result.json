@@ -1,0 +1,103 @@
+{
+  "design": "task_401",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "18/18",
+  "c_ok": true,
+  "rtl": "FAIL",
+  "failed": [
+    "P4: ensures \\result != 0 <==> eq_vec_Int ( \\old ( x16 ) , \\old ( x17 ) , \\old ( x18 ) , \\old ( x19 ) )"
+  ],
+  "access": null,
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 128,
+  "latency_status": "not established within cap",
+  "clauses": "6/6",
+  "translated": 6,
+  "total_clauses": 6,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 1.2,
+    "hls": 12.6,
+    "latency": 84.9,
+    "bmc": 1.1,
+    "cover": 0.4,
+    "total": 103.6
+  },
+  "error": null,
+  "top": "eq_vec_Int",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "x17": 5,
+        "x19": 5
+      },
+      "pre": {
+        "x16": [
+          -654840080,
+          -33554433,
+          369922336,
+          1273787
+        ],
+        "x18": [
+          -654840080,
+          -33554433,
+          369922336,
+          1273787
+        ]
+      },
+      "rtl_post": {
+        "x16": [
+          -654840080,
+          -33554433,
+          369922336,
+          1273787
+        ],
+        "x18": [
+          -654840080,
+          -33554433,
+          369922336,
+          1273787
+        ]
+      },
+      "rtl_result": 1,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Precondition",
+        "eq_vec_Int",
+        "inv_vec_Int(x16, x17) \u2227 inv_vec_Int(x18, x19). With values at failure point:"
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "invalid-witness"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 2,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall x23_78: symbolic (solver-chosen) value, exact",
+    "\\forall x23_79: enumerated over 0..4 (stronger assertion)",
+    "\\valid inside an expression holds for RTL memories",
+    "cell of x16 outside 0..3: solver-chosen value",
+    "cell of x18 outside 0..3: solver-chosen value",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 132,
+  "cex_step": 9,
+  "outcome": "fail"
+}

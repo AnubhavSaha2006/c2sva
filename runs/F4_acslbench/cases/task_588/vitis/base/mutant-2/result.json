@@ -1,0 +1,94 @@
+{
+  "design": "task_588",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "36/37",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P8: assigns * ( x2 + ( 0 .. x0 * x1 - 1 ) )  [frame of x2]"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P6: requires 0 < x0 < 100 && 0 < x1 < 100 && \\valid ( x2 + ( 0 .. x0 * x1 - 1 ) ) && ( \\forall integer i ; 0 <= i < x0 * x1 ==> 0 <= * ( x2 + i ) < 256 )  [access in range: x2 bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "8/8",
+  "translated": 8,
+  "total_clauses": 8,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 2.7,
+    "hls": 14.3,
+    "latency": 1.5,
+    "bmc": 1.5,
+    "access": 1.0,
+    "phys": 1.0,
+    "cover": 1.0,
+    "total": 26.5
+  },
+  "error": null,
+  "top": "p",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "x0": 1,
+        "x1": 1
+      },
+      "pre": {
+        "x2": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "rtl_post": {
+        "x2": [
+          255,
+          7,
+          255,
+          255
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "p",
+        "\u2200 \u2124 i; 0 \u2264 i < \\old(x0) * \\old(x1) \u21d2 *(\\old(x2) + i) \u2261 7. With values at failure point:"
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 80,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i: enumerated over 0..4 (weaker assumption)",
+    "\\forall i: symbolic (solver-chosen) value, exact",
+    "cell of x2 outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of x2"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 12,
+  "cex_step": 5,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

@@ -1,0 +1,33 @@
+{
+  "design": "task_439",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "hls",
+  "status": "error",
+  "c_proof": "20/27",
+  "c_ok": false,
+  "rtl": null,
+  "failed": [],
+  "access": null,
+  "access_failed": [],
+  "cover": null,
+  "latency": null,
+  "latency_status": null,
+  "clauses": null,
+  "translated": null,
+  "total_clauses": null,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 11.8,
+    "total": 25.5
+  },
+  "error": "hls: Vitis synthesis failed: ERROR: [HLS 214-194] in function 'f': Undefined function g (../src/hls_src/task_439.c:59:7) | ERROR: [HLS 214-194] in function 'f': Undefined function g (../src/hls_src/task_439.c:61:7)",
+  "top": "f",
+  "mode": null,
+  "bounded_to": null,
+  "replay": null,
+  "engine": null,
+  "outcome": "error"
+}

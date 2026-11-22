@@ -1,0 +1,91 @@
+{
+  "design": "c06_verilog_keywords",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "8/9",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P4: ensures \\result == ( \\old ( buf ) + \\old ( input ) ) + * ( \\old ( wire ) + 1 )"
+  ],
+  "access": "ok",
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "8/8",
+  "translated": 8,
+  "total_clauses": 8,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 1.0,
+    "hls": 11.3,
+    "latency": 0.5,
+    "bmc": 0.5,
+    "access": 0.5,
+    "cover": 0.5,
+    "total": 17.6
+  },
+  "error": null,
+  "top": "kw",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "buf": 512,
+        "input": 512
+      },
+      "pre": {
+        "wire": [
+          0,
+          -512,
+          0,
+          0
+        ]
+      },
+      "rtl_post": {
+        "wire": [
+          0,
+          -512,
+          0,
+          0
+        ]
+      },
+      "rtl_result": 1536,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "kw",
+        "\\result \u2261 (\\old(buf) + \\old(input)) + *(\\old(wire) + 1). With values at failure point:"
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": [
+    1,
+    1
+  ],
+  "interval_report": 2,
+  "depth": 6,
+  "cex_step": 3,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

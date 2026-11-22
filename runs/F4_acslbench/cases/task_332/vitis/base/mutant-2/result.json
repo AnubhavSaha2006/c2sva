@@ -1,0 +1,73 @@
+{
+  "design": "task_332",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "4/5",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures \\result > \\old ( x0 )"
+  ],
+  "access": null,
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "2/2",
+  "translated": 2,
+  "total_clauses": 2,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 0.8,
+    "hls": 14.7,
+    "latency": 0.5,
+    "bmc": 0.5,
+    "cover": 0.5,
+    "total": 21.0
+  },
+  "error": null,
+  "top": "inc",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "x0": 2147483646
+      },
+      "pre": {},
+      "rtl_post": {},
+      "rtl_result": -2147483648,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Assertion",
+        "inc",
+        "rte/signed_overflow: x0 + 2 \u2264 2147483647."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-runtime-error"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [],
+  "latency_report": [
+    0,
+    0
+  ],
+  "interval_report": 1,
+  "depth": 6,
+  "cex_step": 2,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

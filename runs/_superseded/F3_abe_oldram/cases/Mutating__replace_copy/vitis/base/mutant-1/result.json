@@ -1,0 +1,125 @@
+{
+  "design": "Mutating/replace_copy",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "19/21",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P3: ensures Replace { Old , Here } ( \\old ( a ) , \\old ( n ) , \\old ( b ) , \\old ( v ) , \\old ( w ) )"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "12/12",
+  "translated": 12,
+  "total_clauses": 12,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 1.8,
+    "hls": 12.8,
+    "latency": 0.5,
+    "bmc": 1.0,
+    "access": 0.5,
+    "phys": 0.5,
+    "cover": 0.5,
+    "total": 20.5
+  },
+  "error": null,
+  "top": "replace_copy",
+  "mode": "sequential calls (overlap possible but memories are written: checked sequentially)",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 1,
+        "v": -2147483648,
+        "w": -2147483648
+      },
+      "pre": {
+        "a": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "b": [
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "b": [
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "rtl_result": 1,
+      "completed": true
+    },
+    "c_result": 1,
+    "c_post": {
+      "a": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "b": [
+        -1,
+        -1,
+        -1,
+        -1
+      ]
+    },
+    "eacsl": [],
+    "checker": "e-acsl",
+    "oracle": {
+      "requires_violated": [],
+      "violated": [
+        "ensures Replace { Old , Here } ( \\old ( a ) , \\old ( n ) , \\old ( b ) , \\old ( v ) , \\old ( w ) )"
+      ],
+      "unknown": [],
+      "checked": 7
+    },
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_949: symbolic (solver-chosen) value, exact",
+    "\\forall i_950: symbolic (solver-chosen) value, exact",
+    "\\separated holds by construction (separate RTL memories/registers)",
+    "cell of a outside 0..3: solver-chosen value",
+    "cell of b outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of b",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": 0,
+  "depth": 12,
+  "cex_step": 2,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

@@ -1,0 +1,934 @@
+=== 2026-11-21 18:44:00 F8 unsafe pragmas
+15 designs -> 15 cases (tools vitis, configs unsafe_dep, mutants 0) -> /home/anubhavsaha/cbv/runs/F8_unsafe_dep
+[1/15] Mutating/copy_backward           original  unsafe_dep C 19/19   pass             clauses 10/10  access speculative lat 8 
+[2/15] Mutating/reverse                 original  unsafe_dep C 26/26   pass             clauses 7/7    access speculative lat 8 
+[3/15] Mutating/remove_copy             original  unsafe_dep C 24/24   pass             clauses 13/13  access speculative lat 8 
+[4/15] Numeric/iota                     original  unsafe_dep C 19/19   pass             clauses 6/6    access speculative lat 8 
+[5/15] Mutating/remove                  original  unsafe_dep C 40/40   pass-partial     clauses 10/11  access speculative lat 8 
+[6/15] Numeric/adjacent_difference      original  unsafe_dep C 31/31   pass             clauses 15/15  access speculative lat 8 
+[7/15] Numeric/partial_sum              original  unsafe_dep C 40/40   pass             clauses 13/13  access speculative lat 8 
+[8/15] Numeric/accumulate               original  unsafe_dep C 16/16   pass             clauses 6/6    access speculative lat 8 
+[9/15] Numeric/partial_sum_inv          original  unsafe_dep C 16/16   pass             clauses 14/14  access speculative lat 16 
+[10/15] Numeric/adjacent_difference_inv  original  unsafe_dep C 15/15   pass             clauses 15/15  access speculative lat 16 
+[11/15] Heap/push_heap                   original  unsafe_dep C 71/71   pass             clauses 10/10  access speculative lat 8 
+[12/15] Mutating/rotate                  original  unsafe_dep C 19/19   pass             clauses 9/9    access ok        lat 32 
+[13/15] Heap/pop_heap                    original  unsafe_dep C 30/30   bounded(18)      clauses 12/12  access speculative lat 16 
+[14/15] Sorting/bubble_sort              original  unsafe_dep C 59/59   bounded(23)      clauses 8/8    access ok        lat 32 
+[15/15] Sorting/selection_sort           original  unsafe_dep C 36/37   bounded(32)      clauses 8/8    access speculative lat 64 
+                                                              Summary per tool / HLS configuration                                                              
+┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ acce… ┃       ┃       ┃       ┃       ┃       ┃       ┃
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ out   ┃       ┃       ┃       ┃       ┃       ┃ kills ┃
+┃       ┃       ┃       ┃       ┃ pass  ┃ pass  ┃      ┃       ┃       ┃       ┃       ┃ clau… ┃ acce… ┃ of    ┃ over… ┃ muta… ┃       ┃ muta… ┃ equi… ┃ conf… ┃
+┃ tool  ┃ conf… ┃ desi… ┃ chec… ┃ full  ┃ part… ┃ fail ┃ boun… ┃ vacu… ┃ agree ┃ disa… ┃ rate  ┃ spec… ┃ memo… ┃ mode  ┃ chec… ┃ kill… ┃ score ┃ pass  ┃ in C  ┃
+┡━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ vitis │ unsa… │ 15    │ 12    │ 11    │ 1     │ 0    │ 3     │ 0     │ 12    │ 0     │ 99.4  │ 13    │ 0     │ 1     │ 0     │ 0     │ None  │ 0     │ 0     │
+└───────┴───────┴───────┴───────┴───────┴───────┴──────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┘
+vitis/unsafe_dep failures on originals (C replay): {}; mutant kills (C replay): {}
+Details: /home/anubhavsaha/cbv/runs/F8_unsafe_dep/summary.md, /home/anubhavsaha/cbv/runs/F8_unsafe_dep/results.csv, 
+/home/anubhavsaha/cbv/runs/F8_unsafe_dep/table.tex
+=== 2026-11-21 19:05:38 F6 N=2/8
+17 designs -> 17 cases (tools vitis, configs base, mutants 0) -> /home/anubhavsaha/cbv/runs/F6_conformance_N2
+[1/17] c04_single_pointers_swap         original  base     C 10/10   pass             clauses 5/5    access None      lat 2 
+[2/17] c01_behaviors_clamp              original  base     C 10/10   pass             clauses 4/4    access None      lat 2 
+[3/17] c02_exists_has_zero              original  base     C 16/16   pass             clauses 7/7    access speculative lat 8 
+[4/17] c05_typedef_three_arrays         original  base     C 20/21   pass             clauses 15/15  access speculative lat 8 
+[5/17] c03_recursive_logic              original  base     C 14/14   pass             clauses 6/6    access speculative lat 8 
+[6/17] c06_verilog_keywords             original  base     C 9/9     pass             clauses 8/8    access ok        lat 2 
+[7/17] c07_frame_prefix_fill            original  base     C 15/15   pass             clauses 6/6    access speculative lat 8 
+[8/17] c08_old_memory_increment         original  base     C 19/19   pass             clauses 9/9    access speculative lat 8 
+[9/17] c09_nested_forall_sorted         original  base     C 18/18   pass             clauses 9/9    access ok        lat 8 
+[10/17] c11_builtins_minmax              original  base     C 11/11   pass             clauses 3/3    access None      lat 2 
+[11/17] c13_shifts_casts                 original  base     C 5/5     pass             clauses 2/2    access None      lat 2 
+[12/17] c12_void_out_sum                 original  base     C 19/19   pass             clauses 9/9    access speculative lat 8 
+[13/17] c14_predicate_in_requires        original  base     C 21/21   pass             clauses 10/10  access speculative lat 8 
+[14/17] c15_struct_pointer               original  base     C 10/10   pass             clauses 4/4    access None      lat 2 
+[15/17] c17_struct_return                original  base     C 8/8     pass             clauses 2/2    access None      lat 2 
+[16/17] c16_struct_array                 original  base     C 17/17   pass             clauses 8/8    access speculative lat 8 
+[17/17] c10_products_width               original  base     C 10/10   bounded(3)       clauses 4/4    access None      lat 2 
+                                                              Summary per tool / HLS configuration                                                              
+┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ acce… ┃       ┃       ┃       ┃       ┃       ┃       ┃
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ out   ┃       ┃       ┃       ┃       ┃       ┃ kills ┃
+┃       ┃       ┃       ┃       ┃ pass  ┃ pass  ┃      ┃       ┃       ┃       ┃       ┃ clau… ┃ acce… ┃ of    ┃ over… ┃ muta… ┃       ┃ muta… ┃ equi… ┃ conf… ┃
+┃ tool  ┃ conf… ┃ desi… ┃ chec… ┃ full  ┃ part… ┃ fail ┃ boun… ┃ vacu… ┃ agree ┃ disa… ┃ rate  ┃ spec… ┃ memo… ┃ mode  ┃ chec… ┃ kill… ┃ score ┃ pass  ┃ in C  ┃
+┡━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ vitis │ base  │ 17    │ 16    │ 16    │ 0     │ 0    │ 1     │ 0     │ 16    │ 0     │ 100.0 │ 8     │ 0     │ 2     │ 0     │ 0     │ None  │ 0     │ 0     │
+└───────┴───────┴───────┴───────┴───────┴───────┴──────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┘
+vitis/base failures on originals (C replay): {}; mutant kills (C replay): {}
+Details: /home/anubhavsaha/cbv/runs/F6_conformance_N2/summary.md, /home/anubhavsaha/cbv/runs/F6_conformance_N2/results.csv, 
+/home/anubhavsaha/cbv/runs/F6_conformance_N2/table.tex
+17 designs -> 17 cases (tools vitis, configs base, mutants 0) -> /home/anubhavsaha/cbv/runs/F6_conformance_N8
+[1/17] c01_behaviors_clamp              original  base     C 10/10   pass             clauses 4/4    access None      lat 2 
+[2/17] c04_single_pointers_swap         original  base     C 10/10   pass             clauses 5/5    access None      lat 2 
+[3/17] c02_exists_has_zero              original  base     C 16/16   pass             clauses 7/7    access speculative lat 16 
+[4/17] c05_typedef_three_arrays         original  base     C 20/21   pass             clauses 15/15  access speculative lat 8 
+[5/17] c06_verilog_keywords             original  base     C 9/9     pass             clauses 8/8    access ok        lat 2 
+[6/17] c03_recursive_logic              original  base     C 14/14   pass             clauses 6/6    access speculative lat 8 
+[7/17] c07_frame_prefix_fill            original  base     C 15/15   pass             clauses 6/6    access speculative lat 8 
+[8/17] c09_nested_forall_sorted         original  base     C 18/18   pass             clauses 9/9    access speculative lat 8 
+[9/17] c11_builtins_minmax              original  base     C 11/11   pass             clauses 3/3    access None      lat 2 
+[10/17] c13_shifts_casts                 original  base     C 5/5     pass             clauses 2/2    access None      lat 2 
+[11/17] c12_void_out_sum                 original  base     C 19/19   pass             clauses 9/9    access speculative lat 8 
+[12/17] c15_struct_pointer               original  base     C 10/10   pass             clauses 4/4    access None      lat 2 
+[13/17] c08_old_memory_increment         original  base     C 19/19   pass             clauses 9/9    access speculative lat 8 
+[14/17] c17_struct_return                original  base     C 8/8     pass             clauses 2/2    access None      lat 2 
+[15/17] c16_struct_array                 original  base     C 17/17   pass             clauses 8/8    access speculative lat 16 
+[16/17] c14_predicate_in_requires        original  base     C 21/21   pass             clauses 10/10  access speculative lat 8 
+[17/17] c10_products_width               original  base     C 10/10   bounded(3)       clauses 4/4    access None      lat 2 
+                                                              Summary per tool / HLS configuration                                                              
+┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ acce… ┃       ┃       ┃       ┃       ┃       ┃       ┃
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ out   ┃       ┃       ┃       ┃       ┃       ┃ kills ┃
+┃       ┃       ┃       ┃       ┃ pass  ┃ pass  ┃      ┃       ┃       ┃       ┃       ┃ clau… ┃ acce… ┃ of    ┃ over… ┃ muta… ┃       ┃ muta… ┃ equi… ┃ conf… ┃
+┃ tool  ┃ conf… ┃ desi… ┃ chec… ┃ full  ┃ part… ┃ fail ┃ boun… ┃ vacu… ┃ agree ┃ disa… ┃ rate  ┃ spec… ┃ memo… ┃ mode  ┃ chec… ┃ kill… ┃ score ┃ pass  ┃ in C  ┃
+┡━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ vitis │ base  │ 17    │ 16    │ 16    │ 0     │ 0    │ 1     │ 0     │ 16    │ 0     │ 100.0 │ 9     │ 0     │ 2     │ 0     │ 0     │ None  │ 0     │ 0     │
+└───────┴───────┴───────┴───────┴───────┴───────┴──────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┘
+vitis/base failures on originals (C replay): {}; mutant kills (C replay): {}
+Details: /home/anubhavsaha/cbv/runs/F6_conformance_N8/summary.md, /home/anubhavsaha/cbv/runs/F6_conformance_N8/results.csv, 
+/home/anubhavsaha/cbv/runs/F6_conformance_N8/table.tex
+=== 2026-11-21 19:29:12 F7 N=8/16
+16 designs -> 16 cases (tools vitis, configs base, mutants 0) -> /home/anubhavsaha/cbv/runs/F7_abe_N8
+[1/16] Nonmutating/any_of               original  base     C 8/8     bounded(22)      clauses 5/5    access speculative lat 32 
+[2/16] Nonmutating/find                 original  base     C 27/27   bounded(18)      clauses 11/11  access speculative lat 32 
+[3/16] Nonmutating/equal                original  base     C 9/9     bounded(26)      clauses 9/9    access speculative lat 32 
+[4/16] Nonmutating/mismatch             original  base     C 28/28   bounded(15)      clauses 17/17  access speculative lat 32 
+[5/16] Nonmutating/adjacent_find        original  base     C 30/30   bounded(16)      clauses 13/13  access speculative lat 32 
+[6/16] Mutating/fill                    original  base     C 15/15   pass             clauses 5/5    access speculative lat 8 
+[7/16] Mutating/copy                    original  base     C 18/18   pass             clauses 10/10  access speculative lat 8 
+[8/16] Mutating/replace                 original  base     C 18/18   pass             clauses 7/7    access speculative lat 8 
+[9/16] Nonmutating/count                original  base     C 17/17   pass             clauses 6/6    access speculative lat 8 
+[10/16] Mutating/reverse                 original  base     C 26/26   pass             clauses 7/7    access ok        lat 16 
+[11/16] Numeric/iota                     original  base     C 19/19   pass             clauses 6/6    access speculative lat 8 
+[12/16] MinMax/max_element               original  base     C 32/32   bounded(9)       clauses 13/13  access speculative lat 8 
+[13/16] BinarySearch/lower_bound         original  base     C 21/21   bounded(14)      clauses 8/8    access speculative lat 8 
+[14/16] Mutating/remove_copy             original  base     C 24/24   pass             clauses 13/13  access speculative lat 8 
+[15/16] Numeric/accumulate               original  base     C 16/16   bounded(12)      clauses 6/6    access speculative lat 8 
+[16/16] Sorting/is_sorted                original  base     C 8/8     pass             clauses 7/7    access speculative lat 16 
+                                                              Summary per tool / HLS configuration                                                              
+┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ acce… ┃       ┃       ┃       ┃       ┃       ┃       ┃
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ out   ┃       ┃       ┃       ┃       ┃       ┃ kills ┃
+┃       ┃       ┃       ┃       ┃ pass  ┃ pass  ┃      ┃       ┃       ┃       ┃       ┃ clau… ┃ acce… ┃ of    ┃ over… ┃ muta… ┃       ┃ muta… ┃ equi… ┃ conf… ┃
+┃ tool  ┃ conf… ┃ desi… ┃ chec… ┃ full  ┃ part… ┃ fail ┃ boun… ┃ vacu… ┃ agree ┃ disa… ┃ rate  ┃ spec… ┃ memo… ┃ mode  ┃ chec… ┃ kill… ┃ score ┃ pass  ┃ in C  ┃
+┡━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ vitis │ base  │ 16    │ 8     │ 8     │ 0     │ 0    │ 8     │ 0     │ 8     │ 0     │ 100.0 │ 15    │ 0     │ 9     │ 0     │ 0     │ None  │ 0     │ 0     │
+└───────┴───────┴───────┴───────┴───────┴───────┴──────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┘
+vitis/base failures on originals (C replay): {}; mutant kills (C replay): {}
+Details: /home/anubhavsaha/cbv/runs/F7_abe_N8/summary.md, /home/anubhavsaha/cbv/runs/F7_abe_N8/results.csv, /home/anubhavsaha/cbv/runs/F7_abe_N8/table.tex
+16 designs -> 16 cases (tools vitis, configs base, mutants 0) -> /home/anubhavsaha/cbv/runs/F7_abe_N16
+[1/16] Nonmutating/any_of               original  base     C 8/8     bounded(27)      clauses 5/5    access speculative lat 64 
+[2/16] Nonmutating/find                 original  base     C 27/27   bounded(18)      clauses 11/11  access speculative lat 64 
+[3/16] Nonmutating/equal                original  base     C 9/9     bounded(25)      clauses 9/9    access speculative lat 64 
+[4/16] Nonmutating/mismatch             original  base     C 28/28   bounded(15)      clauses 17/17  access speculative lat 64 
+[5/16] Nonmutating/adjacent_find        original  base     C 30/30   bounded(16)      clauses 13/13  access speculative lat 64 
+[6/16] Mutating/fill                    original  base     C 15/15   pass             clauses 5/5    access speculative lat 16 
+[7/16] Nonmutating/count                original  base     C 17/17   bounded(14)      clauses 6/6    access speculative lat 16 
+[8/16] MinMax/max_element               original  base     C 32/32   bounded(9)       clauses 13/13  access speculative lat 16 
+[9/16] Mutating/copy                    original  base     C 18/18   bounded(17)      clauses 10/10  access speculative lat 16 
+[10/16] BinarySearch/lower_bound         original  base     C 21/21   bounded(7)       clauses 8/8    access speculative lat 8 
+[11/16] Mutating/reverse                 original  base     C 26/26   bounded(19)      clauses 7/7    access ok        lat 32 
+[12/16] Mutating/replace                 original  base     C 18/18   bounded(17)      clauses 7/7    access speculative lat 16 
+[13/16] Mutating/remove_copy             original  base     C 24/24   bounded(14)      clauses 13/13  access speculative lat 16 
+[14/16] Numeric/iota                     original  base     C 19/19   bounded(17)      clauses 6/6    access speculative lat 16 
+[15/16] Numeric/accumulate               original  base     C 16/16   bounded(10)      clauses 6/6    access speculative lat 16 
+[16/16] Sorting/is_sorted                original  base     C 8/8     bounded(22)      clauses 7/7    access speculative lat 32 
+                                                              Summary per tool / HLS configuration                                                              
+┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ acce… ┃       ┃       ┃       ┃       ┃       ┃       ┃
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ out   ┃       ┃       ┃       ┃       ┃       ┃ kills ┃
+┃       ┃       ┃       ┃       ┃ pass  ┃ pass  ┃      ┃       ┃       ┃       ┃       ┃ clau… ┃ acce… ┃ of    ┃ over… ┃ muta… ┃       ┃ muta… ┃ equi… ┃ conf… ┃
+┃ tool  ┃ conf… ┃ desi… ┃ chec… ┃ full  ┃ part… ┃ fail ┃ boun… ┃ vacu… ┃ agree ┃ disa… ┃ rate  ┃ spec… ┃ memo… ┃ mode  ┃ chec… ┃ kill… ┃ score ┃ pass  ┃ in C  ┃
+┡━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ vitis │ base  │ 16    │ 1     │ 1     │ 0     │ 0    │ 15    │ 0     │ 1     │ 0     │ 100.0 │ 15    │ 0     │ 9     │ 0     │ 0     │ None  │ 0     │ 0     │
+└───────┴───────┴───────┴───────┴───────┴───────┴──────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┘
+vitis/base failures on originals (C replay): {}; mutant kills (C replay): {}
+Details: /home/anubhavsaha/cbv/runs/F7_abe_N16/summary.md, /home/anubhavsaha/cbv/runs/F7_abe_N16/results.csv, /home/anubhavsaha/cbv/runs/F7_abe_N16/table.tex
+=== 2026-11-21 20:09:25 F2 configs
+17 designs -> 187 cases (tools vitis, configs base,cyclic2,block2,complete,reshape2,reshapeb2,bram,nopipe,unroll,fastclk,chain, mutants 0) -> 
+/home/anubhavsaha/cbv/runs/F2_conformance_cfg
+[1/187] c01_behaviors_clamp              original  block2   C 10/10   pass             clauses 4/4    access None      lat 2 
+[2/187] c01_behaviors_clamp              original  cyclic2  C 10/10   pass             clauses 4/4    access None      lat 2 
+[3/187] c01_behaviors_clamp              original  complete C 10/10   pass             clauses 4/4    access None      lat 2 
+[4/187] c01_behaviors_clamp              original  base     C 10/10   pass             clauses 4/4    access None      lat 2 
+[5/187] c01_behaviors_clamp              original  reshape2 C 10/10   pass             clauses 4/4    access None      lat 2 
+[6/187] c01_behaviors_clamp              original  reshapeb2 C 10/10   pass             clauses 4/4    access None      lat 2 
+[7/187] c01_behaviors_clamp              original  nopipe   C 10/10   pass             clauses 4/4    access None      lat 2 
+[8/187] c01_behaviors_clamp              original  unroll   C 10/10   pass             clauses 4/4    access None      lat 2 
+[9/187] c01_behaviors_clamp              original  bram     C 10/10   pass             clauses 4/4    access None      lat 2 
+[10/187] c01_behaviors_clamp              original  fastclk  C 10/10   pass             clauses 4/4    access None      lat 2 
+[11/187] c01_behaviors_clamp              original  chain    C 10/10   pass             clauses 4/4    access None      lat 2 
+[12/187] c02_exists_has_zero              original  complete C 16/16   pass             clauses 5/5    access None      lat 8 
+[13/187] c02_exists_has_zero              original  base     C 16/16   pass             clauses 7/7    access speculative lat 16 
+[14/187] c02_exists_has_zero              original  block2   C 16/16   pass             clauses 9/9    access speculative lat 16 
+[15/187] c02_exists_has_zero              original  cyclic2  C 16/16   pass             clauses 9/9    access speculative lat 16 
+[16/187] c02_exists_has_zero              original  reshape2 C 16/16   pass             clauses 7/7    access speculative lat 16 
+[17/187] c02_exists_has_zero              original  reshapeb2 C 16/16   pass             clauses 7/7    access speculative lat 16 
+[18/187] c02_exists_has_zero              original  nopipe   C 16/16   pass             clauses 7/7    access speculative lat 16 
+[19/187] c02_exists_has_zero              original  unroll   C 16/16   pass             clauses 7/7    access speculative lat 16 
+[20/187] c02_exists_has_zero              original  bram     C 16/16   pass             clauses 7/7    access out-of-memory lat 16 
+[21/187] c02_exists_has_zero              original  fastclk  C 16/16   pass             clauses 7/7    access speculative lat 16 
+[22/187] c02_exists_has_zero              original  chain    C 16/16   pass             clauses 7/7    access speculative lat 16 
+[23/187] c03_recursive_logic              original  base     C 14/14   pass             clauses 6/6    access speculative lat 8 
+[24/187] c03_recursive_logic              original  cyclic2  C 14/14   pass             clauses 8/8    access speculative lat 8 
+[25/187] c03_recursive_logic              original  block2   C 14/14   pass             clauses 8/8    access speculative lat 8 
+[26/187] c03_recursive_logic              original  complete C 14/14   pass             clauses 4/4    access None      lat 8 
+[27/187] c03_recursive_logic              original  reshape2 C 14/14   pass             clauses 6/6    access speculative lat 8 
+[28/187] c03_recursive_logic              original  reshapeb2 C 14/14   pass             clauses 6/6    access speculative lat 8 
+[29/187] c03_recursive_logic              original  bram     C 14/14   pass             clauses 6/6    access out-of-memory lat 8 
+[30/187] c03_recursive_logic              original  nopipe   C 14/14   pass             clauses 6/6    access speculative lat 16 
+[31/187] c03_recursive_logic              original  unroll   C 14/14   pass             clauses 6/6    access speculative lat 8 
+[32/187] c04_single_pointers_swap         original  base     C 10/10   pass             clauses 5/5    access None      lat 2 
+[33/187] c03_recursive_logic              original  chain    C 14/14   pass             clauses 6/6    access speculative lat 8 
+[34/187] c04_single_pointers_swap         original  cyclic2  C 10/10   pass             clauses 5/5    access None      lat 2 
+[35/187] c03_recursive_logic              original  fastclk  C 14/14   pass             clauses 6/6    access speculative lat 8 
+[36/187] c04_single_pointers_swap         original  block2   C 10/10   pass             clauses 5/5    access None      lat 2 
+[37/187] c04_single_pointers_swap         original  complete C 10/10   pass             clauses 5/5    access None      lat 2 
+[38/187] c04_single_pointers_swap         original  reshape2 C 10/10   pass             clauses 5/5    access None      lat 2 
+[39/187] c04_single_pointers_swap         original  reshapeb2 C 10/10   pass             clauses 5/5    access None      lat 2 
+[40/187] c04_single_pointers_swap         original  bram     C 10/10   pass             clauses 5/5    access None      lat 2 
+[41/187] c04_single_pointers_swap         original  nopipe   C 10/10   pass             clauses 5/5    access None      lat 2 
+[42/187] c04_single_pointers_swap         original  unroll   C 10/10   pass             clauses 5/5    access None      lat 2 
+[43/187] c04_single_pointers_swap         original  fastclk  C 10/10   pass             clauses 5/5    access None      lat 2 
+[44/187] c04_single_pointers_swap         original  chain    C 10/10   pass             clauses 5/5    access None      lat 2 
+[45/187] c05_typedef_three_arrays         original  base     C 20/21   pass             clauses 15/15  access speculative lat 8 
+[46/187] c05_typedef_three_arrays         original  cyclic2  C 20/21   pass             clauses 21/21  access speculative lat 8 
+[47/187] c05_typedef_three_arrays         original  block2   C 20/21   pass             clauses 21/21  access speculative lat 8 
+[48/187] c05_typedef_three_arrays         original  complete C 20/21   pass             clauses 9/9    access None      lat 8 
+[49/187] c05_typedef_three_arrays         original  reshape2 C 20/21   pass             clauses 17/17  access speculative lat 8 
+[50/187] c05_typedef_three_arrays         original  reshapeb2 C 20/21   pass             clauses 17/17  access speculative lat 8 
+[51/187] c05_typedef_three_arrays         original  bram     C 20/21   pass             clauses 15/15  access out-of-memory lat 8 
+[52/187] c05_typedef_three_arrays         original  nopipe   C 20/21   pass             clauses 15/15  access speculative lat 16 
+[53/187] c05_typedef_three_arrays         original  unroll   C 20/21   pass             clauses 15/15  access speculative lat 8 
+[54/187] c05_typedef_three_arrays         original  fastclk  C 20/21   pass             clauses 15/15  access speculative lat 8 
+[55/187] c05_typedef_three_arrays         original  chain    C 20/21   pass             clauses 15/15  access speculative lat 8 
+[56/187] c06_verilog_keywords             original  base     C 9/9     pass             clauses 8/8    access ok        lat 2 
+[57/187] c06_verilog_keywords             original  cyclic2  C 9/9     pass             clauses 12/12  access ok        lat 2 
+[58/187] c06_verilog_keywords             original  block2   C 9/9     pass             clauses 12/12  access ok        lat 2 
+[59/187] c06_verilog_keywords             original  complete C 9/9     pass             clauses 6/6    access None      lat 2 
+[60/187] c06_verilog_keywords             original  reshape2 C 9/9     pass             clauses 8/8    access ok        lat 2 
+[61/187] c06_verilog_keywords             original  reshapeb2 C 9/9     pass             clauses 8/8    access ok        lat 2 
+[62/187] c06_verilog_keywords             original  bram     C 9/9     pass             clauses 8/8    access ok        lat 2 
+[63/187] c06_verilog_keywords             original  unroll   C 9/9     pass             clauses 8/8    access ok        lat 2 
+[64/187] c06_verilog_keywords             original  nopipe   C 9/9     pass             clauses 8/8    access ok        lat 2 
+[65/187] c06_verilog_keywords             original  fastclk  C 9/9     pass             clauses 8/8    access ok        lat 2 
+[66/187] c06_verilog_keywords             original  chain    C 9/9     pass             clauses 8/8    access ok        lat 2 
+[67/187] c07_frame_prefix_fill            original  base     C 15/15   pass             clauses 6/6    access speculative lat 8 
+[68/187] c07_frame_prefix_fill            original  cyclic2  C 15/15   pass             clauses 8/8    access speculative lat 8 
+[69/187] c07_frame_prefix_fill            original  block2   C 15/15   pass             clauses 8/8    access speculative lat 8 
+[70/187] c07_frame_prefix_fill            original  complete C 15/15   pass             clauses 4/4    access None      lat 8 
+[71/187] c07_frame_prefix_fill            original  reshape2 C 15/15   pass             clauses 8/8    access speculative lat 8 
+[72/187] c07_frame_prefix_fill            original  reshapeb2 C 15/15   pass             clauses 8/8    access speculative lat 8 
+[73/187] c07_frame_prefix_fill            original  nopipe   C 15/15   pass             clauses 6/6    access speculative lat 8 
+[74/187] c07_frame_prefix_fill            original  bram     C 15/15   pass             clauses 6/6    access out-of-memory lat 8 
+[75/187] c07_frame_prefix_fill            original  unroll   C 15/15   pass             clauses 6/6    access speculative lat 8 
+[76/187] c07_frame_prefix_fill            original  fastclk  C 15/15   pass             clauses 6/6    access ok        lat 8 
+[77/187] c07_frame_prefix_fill            original  chain    C 15/15   pass             clauses 6/6    access speculative lat 8 
+[78/187] c08_old_memory_increment         original  cyclic2  C 19/19   pass             clauses 13/13  access speculative lat 8 
+[79/187] c08_old_memory_increment         original  base     C 19/19   pass             clauses 9/9    access speculative lat 8 
+[80/187] c08_old_memory_increment         original  block2   C 19/19   pass             clauses 13/13  access speculative lat 8 
+[81/187] c08_old_memory_increment         original  complete C 19/19   pass             clauses 5/5    access None      lat 8 
+[82/187] c08_old_memory_increment         original  bram     C 19/19   pass             clauses 9/9    access out-of-memory lat 8 
+[83/187] c08_old_memory_increment         original  reshape2 C 19/19   pass             clauses 9/9    access speculative lat 8 
+[84/187] c08_old_memory_increment         original  reshapeb2 C 19/19   pass             clauses 9/9    access speculative lat 8 
+[85/187] c08_old_memory_increment         original  unroll   C 19/19   pass             clauses 9/9    access speculative lat 8 
+[86/187] c08_old_memory_increment         original  nopipe   C 19/19   pass             clauses 7/7    access speculative lat 16 
+[87/187] c08_old_memory_increment         original  fastclk  C 19/19   pass             clauses 9/9    access speculative lat 8 
+[88/187] c08_old_memory_increment         original  chain    C 19/19   pass             clauses 9/9    access speculative lat 8 
+[89/187] c09_nested_forall_sorted         original  base     C 18/18   pass             clauses 9/9    access speculative lat 8 
+[90/187] c09_nested_forall_sorted         original  cyclic2  C 18/18   pass             clauses 13/13  access speculative lat 8 
+[91/187] c09_nested_forall_sorted         original  block2   C 18/18   pass             clauses 13/13  access speculative lat 8 
+[92/187] c09_nested_forall_sorted         original  complete C 18/18   pass             clauses 5/5    access None      lat 8 
+[93/187] c09_nested_forall_sorted         original  reshape2 C 18/18   pass             clauses 9/9    access speculative lat 8 
+[94/187] c09_nested_forall_sorted         original  reshapeb2 C 18/18   pass             clauses 9/9    access ok        lat 8 
+[95/187] c09_nested_forall_sorted         original  bram     C 18/18   pass             clauses 9/9    access out-of-memory lat 8 
+[96/187] c09_nested_forall_sorted         original  nopipe   C 18/18   pass             clauses 9/9    access speculative lat 8 
+[97/187] c09_nested_forall_sorted         original  unroll   C 18/18   pass             clauses 9/9    access speculative lat 8 
+[98/187] c09_nested_forall_sorted         original  chain    C 18/18   pass             clauses 9/9    access speculative lat 8 
+[99/187] c09_nested_forall_sorted         original  fastclk  C 18/18   pass             clauses 9/9    access speculative lat 16 
+[100/187] c10_products_width               original  base     C 10/10   bounded(3)       clauses 4/4    access None      lat 2 
+[101/187] c10_products_width               original  cyclic2  C 10/10   bounded(3)       clauses 4/4    access None      lat 2 
+[102/187] c10_products_width               original  block2   C 10/10   bounded(3)       clauses 4/4    access None      lat 2 
+[103/187] c10_products_width               original  complete C 10/10   bounded(3)       clauses 4/4    access None      lat 2 
+[104/187] c10_products_width               original  reshape2 C 10/10   bounded(3)       clauses 4/4    access None      lat 2 
+[105/187] c10_products_width               original  reshapeb2 C 10/10   bounded(3)       clauses 4/4    access None      lat 2 
+[106/187] c10_products_width               original  bram     C 10/10   bounded(3)       clauses 4/4    access None      lat 2 
+[107/187] c10_products_width               original  nopipe   C 10/10   bounded(3)       clauses 4/4    access None      lat 2 
+[108/187] c10_products_width               original  unroll   C 10/10   bounded(3)       clauses 4/4    access None      lat 2 
+[109/187] c10_products_width               original  fastclk  C 10/10   bounded(12)      clauses 4/4    access None      lat 10 
+[110/187] c11_builtins_minmax              original  base     C 11/11   pass             clauses 3/3    access None      lat 2 
+[111/187] c11_builtins_minmax              original  cyclic2  C 11/11   pass             clauses 3/3    access None      lat 2 
+[112/187] c11_builtins_minmax              original  block2   C 11/11   pass             clauses 3/3    access None      lat 2 
+[113/187] c11_builtins_minmax              original  complete C 11/11   pass             clauses 3/3    access None      lat 2 
+[114/187] c11_builtins_minmax              original  reshape2 C 11/11   pass             clauses 3/3    access None      lat 2 
+[115/187] c11_builtins_minmax              original  reshapeb2 C 11/11   pass             clauses 3/3    access None      lat 2 
+[116/187] c11_builtins_minmax              original  bram     C 11/11   pass             clauses 3/3    access None      lat 2 
+[117/187] c11_builtins_minmax              original  nopipe   C 11/11   pass             clauses 3/3    access None      lat 2 
+[118/187] c11_builtins_minmax              original  unroll   C 11/11   pass             clauses 3/3    access None      lat 2 
+[119/187] c11_builtins_minmax              original  fastclk  C 11/11   pass             clauses 3/3    access None      lat 2 
+[120/187] c11_builtins_minmax              original  chain    C 11/11   pass             clauses 3/3    access None      lat 2 
+[121/187] c12_void_out_sum                 original  base     C 19/19   pass             clauses 9/9    access speculative lat 8 
+[122/187] c12_void_out_sum                 original  cyclic2  C 19/19   pass             clauses 11/11  access speculative lat 8 
+[123/187] c12_void_out_sum                 original  block2   C 19/19   pass             clauses 11/11  access speculative lat 8 
+[124/187] c12_void_out_sum                 original  complete C 19/19   pass             clauses 7/7    access None      lat 8 
+[125/187] c12_void_out_sum                 original  reshape2 C 19/19   pass             clauses 9/9    access speculative lat 8 
+[126/187] c12_void_out_sum                 original  reshapeb2 C 19/19   pass             clauses 9/9    access speculative lat 8 
+[127/187] c12_void_out_sum                 original  bram     C 19/19   pass             clauses 9/9    access out-of-memory lat 8 
+[128/187] c12_void_out_sum                 original  nopipe   C 19/19   pass             clauses 9/9    access speculative lat 16 
+[129/187] c12_void_out_sum                 original  unroll   C 19/19   pass             clauses 9/9    access speculative lat 8 
+[130/187] c12_void_out_sum                 original  fastclk  C 19/19   pass             clauses 9/9    access speculative lat 8 
+[131/187] c13_shifts_casts                 original  base     C 5/5     pass             clauses 2/2    access None      lat 2 
+[132/187] c13_shifts_casts                 original  cyclic2  C 5/5     pass             clauses 2/2    access None      lat 2 
+[133/187] c12_void_out_sum                 original  chain    C 19/19   pass             clauses 9/9    access speculative lat 8 
+[134/187] c13_shifts_casts                 original  block2   C 5/5     pass             clauses 2/2    access None      lat 2 
+[135/187] c13_shifts_casts                 original  complete C 5/5     pass             clauses 2/2    access None      lat 2 
+[136/187] c13_shifts_casts                 original  reshape2 C 5/5     pass             clauses 2/2    access None      lat 2 
+[137/187] c13_shifts_casts                 original  reshapeb2 C 5/5     pass             clauses 2/2    access None      lat 2 
+[138/187] c13_shifts_casts                 original  bram     C 5/5     pass             clauses 2/2    access None      lat 2 
+[139/187] c13_shifts_casts                 original  nopipe   C 5/5     pass             clauses 2/2    access None      lat 2 
+[140/187] c13_shifts_casts                 original  fastclk  C 5/5     pass             clauses 2/2    access None      lat 2 
+[141/187] c13_shifts_casts                 original  unroll   C 5/5     pass             clauses 2/2    access None      lat 2 
+[142/187] c13_shifts_casts                 original  chain    C 5/5     pass             clauses 2/2    access None      lat 2 
+[143/187] c14_predicate_in_requires        original  complete C 21/21   pass             clauses 6/6    access None      lat 8 
+[144/187] c14_predicate_in_requires        original  base     C 21/21   pass             clauses 10/10  access speculative lat 8 
+[145/187] c14_predicate_in_requires        original  cyclic2  C 21/21   pass             clauses 14/14  access speculative lat 8 
+[146/187] c14_predicate_in_requires        original  block2   C 21/21   pass             clauses 14/14  access speculative lat 8 
+[147/187] c14_predicate_in_requires        original  bram     C 21/21   pass             clauses 10/10  access out-of-memory lat 8 
+[148/187] c14_predicate_in_requires        original  reshape2 C 21/21   pass             clauses 10/10  access speculative lat 8 
+[149/187] c14_predicate_in_requires        original  reshapeb2 C 21/21   pass             clauses 10/10  access speculative lat 8 
+[150/187] c14_predicate_in_requires        original  unroll   C 21/21   pass             clauses 10/10  access speculative lat 8 
+[151/187] c14_predicate_in_requires        original  nopipe   C 21/21   pass             clauses 8/8    access speculative lat 16 
+[152/187] c14_predicate_in_requires        original  fastclk  C 21/21   pass             clauses 10/10  access speculative lat 8 
+[153/187] c14_predicate_in_requires        original  chain    C 21/21   pass             clauses 10/10  access speculative lat 8 
+[154/187] c15_struct_pointer               original  base     C 10/10   pass             clauses 4/4    access None      lat 2 
+[155/187] c15_struct_pointer               original  cyclic2  C 10/10   pass             clauses 4/4    access None      lat 2 
+[156/187] c15_struct_pointer               original  block2   C 10/10   pass             clauses 4/4    access None      lat 2 
+[157/187] c10_products_width               original  chain    C 10/10   bounded(3)       clauses 4/4    access None      lat 2 
+[158/187] c15_struct_pointer               original  complete C 10/10   pass             clauses 4/4    access None      lat 2 
+[159/187] c15_struct_pointer               original  reshape2 C 10/10   pass             clauses 4/4    access None      lat 2 
+[160/187] c15_struct_pointer               original  reshapeb2 C 10/10   pass             clauses 4/4    access None      lat 2 
+[161/187] c15_struct_pointer               original  bram     C 10/10   pass             clauses 4/4    access None      lat 2 
+[162/187] c15_struct_pointer               original  nopipe   C 10/10   pass             clauses 4/4    access None      lat 2 
+[163/187] c15_struct_pointer               original  unroll   C 10/10   pass             clauses 4/4    access None      lat 2 
+[164/187] c15_struct_pointer               original  fastclk  C 10/10   pass             clauses 4/4    access None      lat 2 
+[165/187] c15_struct_pointer               original  chain    C 10/10   pass             clauses 4/4    access None      lat 2 
+[166/187] c16_struct_array                 original  cyclic2  C 17/17   pass             clauses 10/10  access speculative lat 16 
+[167/187] c16_struct_array                 original  base     C 17/17   pass             clauses 8/8    access speculative lat 16 
+[168/187] c16_struct_array                 original  block2   C 17/17   pass             clauses 10/10  access speculative lat 16 
+[169/187] c16_struct_array                 original  complete C 17/17   pass             clauses 6/6    access None      lat 8 
+[170/187] c16_struct_array                 original  reshape2 C 17/17   pass             clauses 8/8    access speculative lat 16 
+[171/187] c16_struct_array                 original  reshapeb2 C 17/17   pass             clauses 8/8    access speculative lat 16 
+[172/187] c16_struct_array                 original  nopipe   C 17/17   pass             clauses 8/8    access speculative lat 16 
+[173/187] c16_struct_array                 original  bram     C 17/17   pass             clauses 8/8    access out-of-memory lat 16 
+[174/187] c16_struct_array                 original  unroll   C 17/17   pass             clauses 8/8    access speculative lat 16 
+[175/187] c16_struct_array                 original  fastclk  C 17/17   pass             clauses 8/8    access speculative lat 16 
+[176/187] c17_struct_return                original  base     C 8/8     pass             clauses 2/2    access None      lat 2 
+[177/187] c16_struct_array                 original  chain    C 17/17   pass             clauses 8/8    access speculative lat 16 
+[178/187] c17_struct_return                original  cyclic2  C 8/8     pass             clauses 2/2    access None      lat 2 
+[179/187] c17_struct_return                original  block2   C 8/8     pass             clauses 2/2    access None      lat 2 
+[180/187] c17_struct_return                original  complete C 8/8     pass             clauses 2/2    access None      lat 2 
+[181/187] c17_struct_return                original  reshape2 C 8/8     pass             clauses 2/2    access None      lat 2 
+[182/187] c17_struct_return                original  reshapeb2 C 8/8     pass             clauses 2/2    access None      lat 2 
+[183/187] c17_struct_return                original  bram     C 8/8     pass             clauses 2/2    access None      lat 2 
+[184/187] c17_struct_return                original  nopipe   C 8/8     pass             clauses 2/2    access None      lat 2 
+[185/187] c17_struct_return                original  unroll   C 8/8     pass             clauses 2/2    access None      lat 2 
+[186/187] c17_struct_return                original  fastclk  C 8/8     pass             clauses 2/2    access None      lat 2 
+[187/187] c17_struct_return                original  chain    C 8/8     pass             clauses 2/2    access None      lat 2 
+                                                              Summary per tool / HLS configuration                                                              
+┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ acce… ┃       ┃       ┃       ┃       ┃       ┃       ┃
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ out   ┃       ┃       ┃       ┃       ┃       ┃ kills ┃
+┃       ┃       ┃       ┃       ┃ pass  ┃ pass  ┃      ┃       ┃       ┃       ┃       ┃ clau… ┃ acce… ┃ of    ┃ over… ┃ muta… ┃       ┃ muta… ┃ equi… ┃ conf… ┃
+┃ tool  ┃ conf… ┃ desi… ┃ chec… ┃ full  ┃ part… ┃ fail ┃ boun… ┃ vacu… ┃ agree ┃ disa… ┃ rate  ┃ spec… ┃ memo… ┃ mode  ┃ chec… ┃ kill… ┃ score ┃ pass  ┃ in C  ┃
+┡━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ vitis │ base  │ 17    │ 16    │ 16    │ 0     │ 0    │ 1     │ 0     │ 16    │ 0     │ 100.0 │ 9     │ 0     │ 2     │ 0     │ 0     │ None  │ 0     │ 0     │
+│ vitis │ bloc… │ 17    │ 16    │ 16    │ 0     │ 0    │ 1     │ 0     │ 16    │ 0     │ 100.0 │ 9     │ 0     │ 2     │ 0     │ 0     │ None  │ 0     │ 0     │
+│ vitis │ bram  │ 17    │ 16    │ 16    │ 0     │ 0    │ 1     │ 0     │ 16    │ 0     │ 100.0 │ 0     │ 9     │ 0     │ 0     │ 0     │ None  │ 0     │ 0     │
+│ vitis │ chain │ 17    │ 16    │ 16    │ 0     │ 0    │ 1     │ 0     │ 16    │ 0     │ 100.0 │ 9     │ 0     │ 2     │ 0     │ 0     │ None  │ 0     │ 0     │
+│ vitis │ comp… │ 17    │ 16    │ 16    │ 0     │ 0    │ 1     │ 0     │ 16    │ 0     │ 100.0 │ 0     │ 0     │ 2     │ 0     │ 0     │ None  │ 0     │ 0     │
+│ vitis │ cycl… │ 17    │ 16    │ 16    │ 0     │ 0    │ 1     │ 0     │ 16    │ 0     │ 100.0 │ 9     │ 0     │ 2     │ 0     │ 0     │ None  │ 0     │ 0     │
+│ vitis │ fast… │ 17    │ 16    │ 16    │ 0     │ 0    │ 1     │ 0     │ 16    │ 0     │ 100.0 │ 8     │ 0     │ 2     │ 0     │ 0     │ None  │ 0     │ 0     │
+│ vitis │ nopi… │ 17    │ 16    │ 16    │ 0     │ 0    │ 1     │ 0     │ 16    │ 0     │ 100.0 │ 9     │ 0     │ 0     │ 0     │ 0     │ None  │ 0     │ 0     │
+│ vitis │ resh… │ 17    │ 16    │ 16    │ 0     │ 0    │ 1     │ 0     │ 16    │ 0     │ 100.0 │ 9     │ 0     │ 2     │ 0     │ 0     │ None  │ 0     │ 0     │
+│ vitis │ resh… │ 17    │ 16    │ 16    │ 0     │ 0    │ 1     │ 0     │ 16    │ 0     │ 100.0 │ 8     │ 0     │ 2     │ 0     │ 0     │ None  │ 0     │ 0     │
+│ vitis │ unro… │ 17    │ 16    │ 16    │ 0     │ 0    │ 1     │ 0     │ 16    │ 0     │ 100.0 │ 9     │ 0     │ 2     │ 0     │ 0     │ None  │ 0     │ 0     │
+└───────┴───────┴───────┴───────┴───────┴───────┴──────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┘
+vitis/base failures on originals (C replay): {}; mutant kills (C replay): {}
+vitis/block2 failures on originals (C replay): {}; mutant kills (C replay): {}
+vitis/bram failures on originals (C replay): {}; mutant kills (C replay): {}
+vitis/chain failures on originals (C replay): {}; mutant kills (C replay): {}
+vitis/complete failures on originals (C replay): {}; mutant kills (C replay): {}
+vitis/cyclic2 failures on originals (C replay): {}; mutant kills (C replay): {}
+vitis/fastclk failures on originals (C replay): {}; mutant kills (C replay): {}
+vitis/nopipe failures on originals (C replay): {}; mutant kills (C replay): {}
+vitis/reshape2 failures on originals (C replay): {}; mutant kills (C replay): {}
+vitis/reshapeb2 failures on originals (C replay): {}; mutant kills (C replay): {}
+vitis/unroll failures on originals (C replay): {}; mutant kills (C replay): {}
+Details: /home/anubhavsaha/cbv/runs/F2_conformance_cfg/summary.md, /home/anubhavsaha/cbv/runs/F2_conformance_cfg/results.csv, 
+/home/anubhavsaha/cbv/runs/F2_conformance_cfg/table.tex
+=== 2026-11-21 20:37:18 A1 N-scaling
+prove: 17 cases, strategies ['houdini', 'kind+inv', 'kmin', 'kmin-progress']
+c01_behaviors_clamp/vitis/base/original                                unbounded=True by=['kind+inv'] inv=11/13 c-inv=0 
+c02_exists_has_zero/vitis/base/original                                unbounded=True by=['kind+inv'] inv=103/200 c-inv=2 
+c03_recursive_logic/vitis/base/original                                unbounded=True by=['kind+inv'] inv=56/103 c-inv=2 
+c04_single_pointers_swap/vitis/base/original                           unbounded=True by=['kind+inv'] inv=9/11 c-inv=0 
+c06_verilog_keywords/vitis/base/original                               unbounded=True by=['kind+inv'] inv=15/17 c-inv=0 
+c07_frame_prefix_fill/vitis/base/original                              unbounded=True by=['kind+inv'] inv=77/104 c-inv=2 
+c05_typedef_three_arrays/vitis/base/original                           unbounded=True by=['kind+inv'] inv=135/205 c-inv=2 
+c08_old_memory_increment/vitis/base/original                           unbounded=True by=['kind+inv'] inv=146/270 c-inv=3 
+c09_nested_forall_sorted/vitis/base/original                           unbounded=True by=['kind+inv'] inv=141/302 c-inv=2 
+c11_builtins_minmax/vitis/base/original                                unbounded=True by=['kind+inv'] inv=9/11 c-inv=0 
+c10_products_width/vitis/base/original                                 unbounded=False by=[] inv=0/16 c-inv=0 
+c13_shifts_casts/vitis/base/original                                   unbounded=True by=['kind+inv'] inv=7/9 c-inv=0 
+c12_void_out_sum/vitis/base/original                                   unbounded=False by=[] inv=0/133 c-inv=0 
+c15_struct_pointer/vitis/base/original                                 unbounded=True by=['kind+inv'] inv=7/9 c-inv=0 
+c16_struct_array/vitis/base/original                                   unbounded=True by=['kind+inv'] inv=126/150 c-inv=2 
+c17_struct_return/vitis/base/original                                  unbounded=True by=['kind+inv'] inv=8/10 c-inv=0 
+c14_predicate_in_requires/vitis/base/original                          unbounded=True by=['kind+inv'] inv=147/271 c-inv=3 
+unbounded: 15/17
+prove: 17 cases, strategies ['houdini', 'kind+inv', 'kmin', 'kmin-progress']
+c01_behaviors_clamp/vitis/base/original                                unbounded=True by=['kind+inv'] inv=11/13 c-inv=0 
+c02_exists_has_zero/vitis/base/original                                unbounded=True by=['kind+inv'] inv=102/200 c-inv=2 
+c04_single_pointers_swap/vitis/base/original                           unbounded=True by=['kind+inv'] inv=9/11 c-inv=0 
+c05_typedef_three_arrays/vitis/base/original                           unbounded=True by=['kind+inv'] inv=142/205 c-inv=2 
+c06_verilog_keywords/vitis/base/original                               unbounded=True by=['kind+inv'] inv=15/17 c-inv=0 
+c07_frame_prefix_fill/vitis/base/original                              unbounded=True by=['kind+inv'] inv=81/104 c-inv=2 
+c03_recursive_logic/vitis/base/original                                unbounded=True by=['kind+inv'] inv=56/103 c-inv=2 
+c08_old_memory_increment/vitis/base/original                           unbounded=True by=['kind+inv'] inv=180/283 c-inv=3 
+c09_nested_forall_sorted/vitis/base/original                           unbounded=True by=['kind+inv'] inv=141/302 c-inv=2 
+c11_builtins_minmax/vitis/base/original                                unbounded=True by=['kind+inv'] inv=9/11 c-inv=0 
+c10_products_width/vitis/base/original                                 unbounded=False by=[] inv=0/16 c-inv=0 
+c13_shifts_casts/vitis/base/original                                   unbounded=True by=['kind+inv'] inv=7/9 c-inv=0 
+c14_predicate_in_requires/vitis/base/original                          unbounded=True by=['kind+inv'] inv=181/284 c-inv=3 
+c15_struct_pointer/vitis/base/original                                 unbounded=True by=['kind+inv'] inv=7/9 c-inv=0 
+c16_struct_array/vitis/base/original                                   unbounded=True by=['kind+inv'] inv=126/150 c-inv=2 
+c17_struct_return/vitis/base/original                                  unbounded=True by=['kind+inv'] inv=8/10 c-inv=0 
+c12_void_out_sum/vitis/base/original                                   unbounded=False by=[] inv=0/133 c-inv=0 
+unbounded: 15/17
+prove: 16 cases, strategies ['kind', 'houdini', 'kind+inv', 'kmin', 'kmin-progress']
+MinMax__max_element/vitis/base/original                                unbounded=False by=[] inv=0/326 c-inv=0 
+Mutating__copy/vitis/base/original                                     unbounded=True by=['kind+inv'] inv=44/86 c-inv=2 
+Mutating__fill/vitis/base/original                                     unbounded=True by=['kind+inv'] inv=27/50 c-inv=2 
+BinarySearch__lower_bound/vitis/base/original                          unbounded=True by=['kind+inv'] inv=97/222 c-inv=3 
+Mutating__remove_copy/vitis/base/original                              unbounded=True by=['kind+inv'] inv=58/112 c-inv=3 
+Mutating__replace/vitis/base/original                                  unbounded=False by=[] inv=0/106 c-inv=0 
+=== 2026-11-22 07:36:43 N-scaling A1 cut (time); F5 ABE configs
+82 designs -> 492 cases (tools vitis, configs toppipe,cyclic2,reshape2,bram,nopipe,unroll, mutants 0) -> /home/anubhavsaha/cbv/runs/F5_abe_cfg
+[1/492] Nonmutating/find                 original  reshape2 C 27/27   pass             clauses 11/11  access speculative lat 16 
+[2/492] Nonmutating/find                 original  cyclic2  C 27/27   pass             clauses 13/13  access speculative lat 16 
+[3/492] Nonmutating/find                 original  bram     C 27/27   pass             clauses 11/11  access out-of-memory lat 16 
+[4/492] Nonmutating/find                 original  nopipe   C 27/27   pass             clauses 11/11  access speculative lat 16 
+[5/492] Nonmutating/find                 original  toppipe  C 27/27   pass             clauses 11/11  access speculative lat 16 
+[6/492] Nonmutating/find_last            original  bram     C 27/27   pass             clauses 11/11  access out-of-memory lat 8 
+[7/492] Nonmutating/find_last            original  cyclic2  C 27/27   pass             clauses 13/13  access speculative lat 8 
+[8/492] Nonmutating/find_last            original  reshape2 C 27/27   pass             clauses 11/11  access speculative lat 8 
+[9/492] Nonmutating/find_last            original  toppipe  C 27/27   pass             clauses 11/11  access speculative lat 16 
+[10/492] Nonmutating/find                 original  unroll   C 27/27   pass             clauses 11/11  access speculative lat 16 
+[11/492] Nonmutating/find_last            original  unroll   C 27/27   pass             clauses 11/11  access speculative lat 8 
+[12/492] Nonmutating/find_last            original  nopipe   C 27/27   pass             clauses 11/11  access speculative lat 16 
+[13/492] Nonmutating/find2                original  cyclic2  C 27/27   pass             clauses 13/13  access speculative lat 16 
+[14/492] Nonmutating/find2                original  toppipe  C 27/27   pass             clauses 11/11  access speculative lat 16 
+[15/492] Nonmutating/find2                original  reshape2 C 27/27   pass             clauses 11/11  access speculative lat 16 
+[16/492] Nonmutating/find2                original  bram     C 27/27   pass             clauses 11/11  access out-of-memory lat 16 
+[17/492] Nonmutating/find2                original  nopipe   C 27/27   pass             clauses 11/11  access speculative lat 16 
+[18/492] Nonmutating/find2                original  unroll   C 27/27   pass             clauses 11/11  access speculative lat 16 
+[19/492] Nonmutating/find3                original  toppipe  C 17/17   pass             clauses 6/6    access speculative lat 16 
+[20/492] Nonmutating/find3                original  nopipe   C 17/17   pass             clauses 6/6    access speculative lat 16 
+[21/492] Nonmutating/find3                original  bram     C 17/17   pass             clauses 6/6    access out-of-memory lat 16 
+[22/492] Nonmutating/find3                original  cyclic2  C 17/17   bounded(12)      clauses 8/8    access speculative lat 16 
+[23/492] Nonmutating/find3                original  reshape2 C 17/17   bounded(13)      clauses 6/6    access speculative lat 16 
+[24/492] Nonmutating/find4                original  toppipe  C 19/19   pass             clauses 11/11  access speculative lat 16 
+[25/492] Nonmutating/find4                original  cyclic2  C 19/19   pass             clauses 13/13  access speculative lat 16 
+[26/492] Nonmutating/find3                original  unroll   C 17/17   bounded(12)      clauses 6/6    access speculative lat 16 
+[27/492] Nonmutating/find4                original  reshape2 C 19/19   pass             clauses 11/11  access speculative lat 16 
+[28/492] Nonmutating/find4                original  bram     C 19/19   pass             clauses 11/11  access out-of-memory lat 16 
+[29/492] Nonmutating/find4                original  nopipe   C 19/19   pass             clauses 11/11  access speculative lat 16 
+[30/492] Nonmutating/find4                original  unroll   C 19/19   pass             clauses 11/11  access speculative lat 16 
+[31/492] Nonmutating/find5                original  toppipe  C 8/8     pass             clauses 6/6    access speculative lat 16 
+[32/492] Nonmutating/find5                original  nopipe   C 8/8     pass             clauses 6/6    access speculative lat 16 
+[33/492] Nonmutating/find5                original  bram     C 8/8     pass             clauses 6/6    access out-of-memory lat 16 
+[34/492] Nonmutating/find_if_not          original  toppipe  C 17/17   pass             clauses 6/6    access speculative lat 16 
+[35/492] Nonmutating/find5                original  cyclic2  C 8/8     bounded(13)      clauses 8/8    access speculative lat 16 
+[36/492] Nonmutating/find5                original  reshape2 C 8/8     bounded(14)      clauses 6/6    access speculative lat 16 
+[37/492] Nonmutating/find5                original  unroll   C 8/8     bounded(13)      clauses 6/6    access speculative lat 16 
+[38/492] Nonmutating/find_if_not          original  nopipe   C 17/17   pass             clauses 6/6    access speculative lat 16 
+[39/492] Nonmutating/find_if_not          original  cyclic2  C 17/17   pass             clauses 8/8    access speculative lat 16 
+[40/492] Nonmutating/find_if_not          original  reshape2 C 17/17   pass             clauses 6/6    access speculative lat 16 
+[41/492] Nonmutating/find_if_not          original  bram     C 17/17   pass             clauses 6/6    access out-of-memory lat 16 
+[42/492] Nonmutating/find_if_not          original  unroll   C 17/17   pass             clauses 6/6    access speculative lat 16 
+[43/492] Nonmutating/find_first_of        original  toppipe  C 41/41   bounded(19)      clauses 17/17  access speculative lat 64 
+[44/492] Nonmutating/find_first_of        original  cyclic2  C 41/41   bounded(19)      clauses 21/21  access speculative lat 64 
+[45/492] Nonmutating/find_first_of        original  reshape2 C 41/41   bounded(19)      clauses 17/17  access speculative lat 64 
+[46/492] Nonmutating/find_first_of        original  bram     C 41/41   bounded(25)      clauses 17/17  access out-of-memory lat 64 
+[47/492] Nonmutating/adjacent_find        original  toppipe  C 30/30   pass             clauses 13/13  access ok        lat 16 
+[48/492] Nonmutating/find_first_of        original  nopipe   C 41/41   bounded(19)      clauses 17/17  access speculative lat 64 
+[49/492] Nonmutating/adjacent_find        original  cyclic2  C 30/30   pass             clauses 17/17  access speculative lat 16 
+[50/492] Nonmutating/adjacent_find        original  reshape2 C 30/30   pass             clauses 13/13  access speculative lat 16 
+[51/492] Nonmutating/adjacent_find        original  nopipe   C 30/30   pass             clauses 13/13  access speculative lat 8 
+[52/492] Nonmutating/adjacent_find        original  bram     C 30/30   pass             clauses 13/13  access out-of-memory lat 16 
+[53/492] Nonmutating/adjacent_find        original  unroll   C 30/30   pass             clauses 13/13  access speculative lat 16 
+[54/492] Nonmutating/find_first_of        original  unroll   C 41/41   bounded(19)      clauses 17/17  access speculative lat 64 
+[55/492] Nonmutating/mismatch             original  bram     C 28/28   pass             clauses 17/17  access out-of-memory lat 16 
+[56/492] Nonmutating/mismatch             original  toppipe  C 28/28   bounded(18)      clauses 17/17  access speculative lat 16 
+[57/492] Nonmutating/mismatch             original  cyclic2  C 28/28   bounded(25)      clauses 21/21  access speculative lat 16 
+[58/492] Nonmutating/equal                original  toppipe  C 9/9     pass             clauses 9/9    access speculative lat 16 
+[59/492] Nonmutating/equal                original  cyclic2  C 9/9     pass             clauses 13/13  access speculative lat 16 
+[60/492] Nonmutating/mismatch             original  reshape2 C 28/28   bounded(24)      clauses 17/17  access speculative lat 16 
+[61/492] Nonmutating/equal                original  reshape2 C 9/9     pass             clauses 9/9    access speculative lat 16 
+[62/492] Nonmutating/equal                original  nopipe   C 9/9     pass             clauses 9/9    access speculative lat 16 
+[63/492] Nonmutating/all_of               original  toppipe  C 8/8     pass             clauses 5/5    access speculative lat 16 
+[64/492] Nonmutating/equal                original  bram     C 9/9     pass             clauses 9/9    access out-of-memory lat 16 
+[65/492] Nonmutating/equal                original  unroll   C 9/9     pass             clauses 9/9    access speculative lat 16 
+[66/492] Nonmutating/all_of               original  cyclic2  C 8/8     pass             clauses 7/7    access speculative lat 16 
+[67/492] Nonmutating/all_of               original  reshape2 C 8/8     pass             clauses 5/5    access speculative lat 16 
+[68/492] Nonmutating/all_of               original  nopipe   C 8/8     pass             clauses 5/5    access speculative lat 16 
+[69/492] Nonmutating/all_of               original  unroll   C 8/8     pass             clauses 5/5    access speculative lat 16 
+[70/492] Nonmutating/any_of               original  toppipe  C 8/8     pass             clauses 5/5    access speculative lat 16 
+[71/492] Nonmutating/any_of               original  reshape2 C 8/8     pass             clauses 5/5    access speculative lat 16 
+[72/492] Nonmutating/all_of               original  bram     C 8/8     pass             clauses 5/5    access out-of-memory lat 16 
+[73/492] Nonmutating/mismatch             original  nopipe   C 28/28   bounded(19)      clauses 17/17  access speculative lat 16 
+[74/492] Nonmutating/any_of               original  cyclic2  C 8/8     pass             clauses 7/7    access speculative lat 16 
+[75/492] Nonmutating/any_of               original  nopipe   C 8/8     pass             clauses 5/5    access speculative lat 16 
+[76/492] Nonmutating/any_of               original  bram     C 8/8     pass             clauses 5/5    access out-of-memory lat 16 
+[77/492] Nonmutating/none_of              original  toppipe  C 8/8     pass             clauses 5/5    access speculative lat 16 
+[78/492] Nonmutating/any_of               original  unroll   C 8/8     pass             clauses 5/5    access speculative lat 16 
+[79/492] Nonmutating/mismatch             original  unroll   C 28/28   bounded(21)      clauses 17/17  access speculative lat 16 
+[80/492] Nonmutating/none_of              original  cyclic2  C 8/8     pass             clauses 7/7    access speculative lat 16 
+[81/492] Nonmutating/none_of              original  reshape2 C 8/8     pass             clauses 5/5    access speculative lat 16 
+[82/492] Nonmutating/none_of              original  nopipe   C 8/8     pass             clauses 5/5    access speculative lat 16 
+[83/492] Nonmutating/none_of              original  bram     C 8/8     pass             clauses 5/5    access out-of-memory lat 16 
+[84/492] Nonmutating/none_of              original  unroll   C 8/8     pass             clauses 5/5    access speculative lat 16 
+[85/492] Nonmutating/search               original  toppipe  C 45/45   bounded(15)      clauses 17/17  access speculative lat 32 
+[86/492] Nonmutating/search               original  cyclic2  C 45/45   bounded(15)      clauses 21/21  access speculative lat 32 
+[87/492] Nonmutating/search               original  reshape2 C 45/45   bounded(15)      clauses 17/17  access speculative lat 32 
+[88/492] Nonmutating/search               original  bram     C 45/45   bounded(17)      clauses 17/17  access out-of-memory lat 32 
+[89/492] Nonmutating/search               original  nopipe   C 45/45   bounded(14)      clauses 17/17  access speculative lat 32 
+[90/492] Nonmutating/search_n             original  cyclic2  C 55/56   pass             clauses 13/13  access speculative lat 16 
+[91/492] Nonmutating/search_n             original  reshape2 C 55/56   pass             clauses 11/11  access speculative lat 16 
+[92/492] Nonmutating/search_n             original  bram     C 55/56   pass             clauses 11/11  access out-of-memory lat 16 
+[93/492] Nonmutating/search_n             original  toppipe  C 55/56   bounded(18)      clauses 11/11  access speculative lat 16 
+[94/492] Nonmutating/search               original  unroll   C 45/45   bounded(16)      clauses 17/17  access speculative lat 32 
+[95/492] Nonmutating/search_n             original  unroll   C 55/56   pass             clauses 11/11  access speculative lat 16 
+[96/492] Nonmutating/search_n             original  nopipe   C 55/56   pass             clauses 11/11  access speculative lat 16 
+[97/492] Nonmutating/find_end             original  toppipe  C 35/35   bounded(17)      clauses 17/17  access speculative lat 32 
+[98/492] Nonmutating/find_end             original  cyclic2  C 35/35   bounded(16)      clauses 21/21  access speculative lat 32 
+[99/492] Nonmutating/find_end             original  reshape2 C 35/35   bounded(16)      clauses 17/17  access speculative lat 32 
+[100/492] Nonmutating/count                original  toppipe  C 17/17   pass             clauses 6/6    access speculative lat 16 
+[101/492] Nonmutating/count                original  cyclic2  C 17/17   pass             clauses 8/8    access speculative lat 8 
+[102/492] Nonmutating/count                original  bram     C 17/17   pass             clauses 6/6    access out-of-memory lat 8 
+[103/492] Nonmutating/find_end             original  bram     C 35/35   bounded(20)      clauses 17/17  access out-of-memory lat 32 
+[104/492] Nonmutating/find_end             original  nopipe   C 35/35   bounded(15)      clauses 17/17  access speculative lat 32 
+[105/492] Nonmutating/count                original  nopipe   C 17/17   pass             clauses 6/6    access speculative lat 16 
+[106/492] MinMax/clamp                     original  toppipe  C 12/12   pass             clauses 5/5    access None      lat 2 
+[107/492] MinMax/clamp                     original  cyclic2  C 12/12   pass             clauses 5/5    access None      lat 2 
+[108/492] Nonmutating/count                original  unroll   C 17/17   pass             clauses 6/6    access speculative lat 8 
+[109/492] MinMax/clamp                     original  reshape2 C 12/12   pass             clauses 5/5    access None      lat 2 
+[110/492] MinMax/clamp                     original  bram     C 12/12   pass             clauses 5/5    access None      lat 2 
+[111/492] MinMax/clamp                     original  nopipe   C 12/12   pass             clauses 5/5    access None      lat 2 
+[112/492] MinMax/clamp                     original  unroll   C 12/12   pass             clauses 5/5    access None      lat 2 
+[113/492] Nonmutating/count                original  reshape2 C 17/17   pass             clauses 6/6    access speculative lat 8 
+[114/492] MinMax/make_pair                 original  toppipe  C 5/5     pass             clauses 2/2    access None      lat 2 
+[115/492] MinMax/make_pair                 original  cyclic2  C 5/5     pass             clauses 2/2    access None      lat 2 
+[116/492] MinMax/make_pair                 original  reshape2 C 5/5     pass             clauses 2/2    access None      lat 2 
+[117/492] MinMax/make_pair                 original  bram     C 5/5     pass             clauses 2/2    access None      lat 2 
+[118/492] MinMax/make_pair                 original  nopipe   C 5/5     pass             clauses 2/2    access None      lat 2 
+[119/492] MinMax/make_pair                 original  unroll   C 5/5     pass             clauses 2/2    access None      lat 2 
+[120/492] MinMax/max_element               original  bram     C 32/32   pass             clauses 13/13  access out-of-memory lat 8 
+[121/492] MinMax/max_element               original  cyclic2  C 32/32   pass             clauses 17/17  access speculative lat 8 
+[122/492] MinMax/max_element               original  toppipe  C 32/32   pass             clauses 13/13  access speculative lat 16 
+[123/492] MinMax/max_element               original  reshape2 C 32/32   pass             clauses 13/13  access speculative lat 8 
+[124/492] MinMax/max_element               original  nopipe   C 32/32   pass             clauses 13/13  access speculative lat 8 
+[125/492] MinMax/max_element               original  unroll   C 32/32   pass             clauses 13/13  access speculative lat 8 
+[126/492] MinMax/max_element2              original  toppipe  C 32/32   pass             clauses 13/13  access speculative lat 16 
+[127/492] MinMax/max_element2              original  cyclic2  C 32/32   pass             clauses 17/17  access speculative lat 8 
+[128/492] MinMax/max_element2              original  reshape2 C 32/32   pass             clauses 13/13  access speculative lat 8 
+[129/492] MinMax/max_element2              original  bram     C 32/32   pass             clauses 13/13  access out-of-memory lat 8 
+[130/492] MinMax/max_seq                   original  toppipe  C 10/10   pass             clauses 9/9    access ok        lat 16 
+[131/492] Nonmutating/find_end             original  unroll   C 35/35   bounded(17)      clauses 17/17  access speculative lat 32 
+[132/492] MinMax/max_seq                   original  cyclic2  C 10/10   pass             clauses 13/13  access speculative lat 8 
+[133/492] MinMax/max_element2              original  unroll   C 32/32   pass             clauses 13/13  access speculative lat 8 
+[134/492] MinMax/max_element2              original  nopipe   C 32/32   pass             clauses 13/13  access speculative lat 16 
+[135/492] MinMax/max_seq                   original  reshape2 C 10/10   pass             clauses 9/9    access speculative lat 8 
+[136/492] MinMax/max_seq                   original  bram     C 10/10   pass             clauses 9/9    access out-of-memory lat 8 
+[137/492] MinMax/max_seq                   original  nopipe   C 10/10   pass             clauses 9/9    access ok        lat 16 
+[138/492] MinMax/max_seq                   original  unroll   C 10/10   pass             clauses 9/9    access speculative lat 8 
+[139/492] MinMax/min_element               original  toppipe  C 32/32   pass             clauses 13/13  access speculative lat 16 
+[140/492] MinMax/min_element               original  bram     C 32/32   pass             clauses 13/13  access out-of-memory lat 8 
+[141/492] MinMax/min_element               original  cyclic2  C 32/32   pass             clauses 17/17  access speculative lat 8 
+[142/492] MinMax/min_element               original  reshape2 C 32/32   pass             clauses 13/13  access speculative lat 8 
+[143/492] MinMax/min_element               original  nopipe   C 32/32   pass             clauses 13/13  access speculative lat 16 
+[144/492] MinMax/min_element               original  unroll   C 32/32   pass             clauses 13/13  access speculative lat 8 
+[145/492] MinMax/minmax_element            original  bram     C 58/58   pass             clauses 18/18  access out-of-memory lat 8 
+[146/492] MinMax/minmax_element            original  nopipe   C 58/58   pass             clauses 18/18  access speculative lat 16 
+[147/492] BinarySearch/lower_bound         original  toppipe  C 21/21   pass             clauses 8/8    access ok        lat 16 
+[148/492] MinMax/minmax_element            original  reshape2 C 58/58   pass             clauses 18/18  access speculative lat 8 
+[149/492] MinMax/minmax_element            original  cyclic2  C 58/58   pass             clauses 22/22  access speculative lat 8 
+[150/492] MinMax/minmax_element            original  unroll   C 58/58   pass             clauses 18/18  access speculative lat 8 
+[151/492] MinMax/minmax_element            original  toppipe  C 58/58   bounded(26)      clauses 18/18  access speculative lat 32 
+[152/492] BinarySearch/lower_bound         original  nopipe   C 21/21   pass             clauses 8/8    access speculative lat 8 
+[153/492] BinarySearch/lower_bound         original  bram     C 21/21   pass             clauses 8/8    access out-of-memory lat 8 
+[154/492] BinarySearch/lower_bound         original  cyclic2  C 21/21   pass             clauses 10/10  access speculative lat 8 
+[155/492] BinarySearch/upper_bound         original  toppipe  C 21/21   pass             clauses 8/8    access ok        lat 16 
+[156/492] BinarySearch/lower_bound         original  reshape2 C 21/21   pass             clauses 8/8    access speculative lat 8 
+[157/492] BinarySearch/upper_bound         original  nopipe   C 21/21   pass             clauses 8/8    access speculative lat 8 
+[158/492] BinarySearch/upper_bound         original  bram     C 21/21   pass             clauses 8/8    access out-of-memory lat 8 
+[159/492] BinarySearch/lower_bound         original  unroll   C 21/21   pass             clauses 8/8    access speculative lat 8 
+[160/492] BinarySearch/upper_bound         original  cyclic2  C 21/21   pass             clauses 10/10  access speculative lat 8 
+[161/492] BinarySearch/upper_bound         original  reshape2 C 21/21   pass             clauses 8/8    access speculative lat 8 
+[162/492] BinarySearch/upper_bound         original  unroll   C 21/21   pass             clauses 8/8    access speculative lat 8 
+[163/492] BinarySearch/equal_range         original  cyclic2  C 18/18   pass             clauses 11/11  access speculative lat 16 
+[164/492] BinarySearch/equal_range         original  reshape2 C 18/18   pass             clauses 9/9    access speculative lat 16 
+[165/492] BinarySearch/equal_range         original  nopipe   C 18/18   pass             clauses 9/9    access speculative lat 16 
+[166/492] BinarySearch/equal_range         original  bram     C 18/18   pass             clauses 9/9    access out-of-memory lat 16 
+[167/492] BinarySearch/equal_range         original  unroll   C 18/18   pass             clauses 9/9    access speculative lat 16 
+[168/492] BinarySearch/equal_range2        original  cyclic2  C 58/58   pass             clauses 11/11  access speculative lat 16 
+[169/492] BinarySearch/equal_range         original  toppipe  C 18/18   bounded(28)      clauses 9/9    access ok        lat 32 
+[170/492] BinarySearch/equal_range2        original  reshape2 C 58/58   pass             clauses 9/9    access speculative lat 16 
+[171/492] BinarySearch/binary_search       original  toppipe  C 12/12   pass             clauses 6/6    access speculative lat 16 
+[172/492] BinarySearch/equal_range2        original  bram     C 58/58   pass             clauses 9/9    access out-of-memory lat 16 
+[173/492] BinarySearch/binary_search       original  cyclic2  C 12/12   pass             clauses 8/8    access speculative lat 8 
+[174/492] BinarySearch/binary_search       original  reshape2 C 12/12   pass             clauses 6/6    access speculative lat 8 
+[175/492] BinarySearch/binary_search       original  bram     C 12/12   pass             clauses 6/6    access out-of-memory lat 8 
+[176/492] BinarySearch/binary_search       original  nopipe   C 12/12   pass             clauses 6/6    access speculative lat 8 
+[177/492] BinarySearch/binary_search       original  unroll   C 12/12   pass             clauses 6/6    access speculative lat 8 
+[178/492] Mutating/fill                    original  toppipe  C 15/15   pass             clauses 5/5    access speculative lat 8 
+[179/492] Mutating/fill                    original  cyclic2  C 15/15   pass             clauses 7/7    access speculative lat 8 
+[180/492] BinarySearch/equal_range2        original  unroll   C 58/58   pass             clauses 9/9    access speculative lat 16 
+[181/492] Mutating/fill                    original  reshape2 C 15/15   pass             clauses 7/7    access speculative lat 8 
+[182/492] Mutating/fill                    original  bram     C 15/15   pass             clauses 5/5    access out-of-memory lat 8 
+[183/492] BinarySearch/equal_range2        original  nopipe   C 58/58   pass             clauses 9/9    access speculative lat 16 
+[184/492] Mutating/fill                    original  nopipe   C 15/15   pass             clauses 5/5    access speculative lat 8 
+[185/492] Mutating/fill                    original  unroll   C 15/15   pass             clauses 5/5    access speculative lat 8 
+[186/492] Mutating/swap                    original  toppipe  C 10/10   pass             clauses 4/4    access None      lat 2 
+[187/492] Mutating/swap                    original  cyclic2  C 10/10   pass             clauses 4/4    access None      lat 2 
+[188/492] Mutating/swap                    original  reshape2 C 10/10   pass             clauses 4/4    access None      lat 2 
+[189/492] Mutating/swap                    original  bram     C 10/10   pass             clauses 4/4    access None      lat 2 
+[190/492] Mutating/swap                    original  unroll   C 10/10   pass             clauses 4/4    access None      lat 2 
+[191/492] Mutating/swap                    original  nopipe   C 10/10   pass             clauses 4/4    access None      lat 2 
+[192/492] BinarySearch/equal_range2        original  toppipe  C 58/58   bounded(24)      clauses 9/9    access ok        lat 32 
+[193/492] Mutating/swap_ranges             original  cyclic2  C 25/25   pass             clauses 23/23  access speculative lat 8 
+[194/492] Mutating/swap_ranges             original  bram     C 25/25   pass             clauses 15/15  access out-of-memory lat 8 
+[195/492] Mutating/swap_ranges             original  reshape2 C 25/25   pass             clauses 15/15  access speculative lat 8 
+[196/492] Mutating/copy                    original  toppipe  C 18/18   pass             clauses 10/10  access speculative lat 16 
+[197/492] Mutating/swap_ranges             original  unroll   C 25/25   pass             clauses 15/15  access speculative lat 8 
+[198/492] Mutating/copy                    original  cyclic2  C 18/18   pass             clauses 14/14  access speculative lat 8 
+[199/492] Mutating/swap_ranges             original  toppipe  C 25/25   pass             clauses 11/11  access speculative lat 16 
+[200/492] Mutating/copy                    original  reshape2 C 18/18   pass             clauses 12/12  access speculative lat 8 
+[201/492] Mutating/copy                    original  bram     C 18/18   pass             clauses 10/10  access out-of-memory lat 8 
+[202/492] Mutating/swap_ranges             original  nopipe   C 25/25   pass             clauses 11/11  access speculative lat 16 
+[203/492] Mutating/copy                    original  unroll   C 18/18   pass             clauses 10/10  access speculative lat 8 
+[204/492] Mutating/copy                    original  nopipe   C 18/18   pass             clauses 10/10  access speculative lat 16 
+[205/492] Mutating/copy_backward           original  cyclic2  C 19/19   pass             clauses 14/14  access speculative lat 8 
+[206/492] Mutating/copy_backward           original  toppipe  C 19/19   pass             clauses 10/10  access speculative lat 16 
+[207/492] Mutating/copy_backward           original  reshape2 C 19/19   pass             clauses 12/12  access speculative lat 8 
+[208/492] Mutating/copy_backward           original  bram     C 19/19   pass             clauses 10/10  access out-of-memory lat 8 
+[209/492] Mutating/copy_backward           original  nopipe   C 19/19   pass             clauses 10/10  access speculative lat 16 
+[210/492] Mutating/copy_backward           original  unroll   C 19/19   pass             clauses 10/10  access speculative lat 8 
+[211/492] Mutating/reverse_copy            original  cyclic2  C 20/20   pass             clauses 15/15  access speculative lat 8 
+[212/492] Mutating/reverse_copy            original  reshape2 C 20/20   pass             clauses 13/13  access speculative lat 8 
+[213/492] Mutating/reverse_copy            original  bram     C 20/20   pass             clauses 11/11  access speculative lat 8 
+[214/492] Mutating/reverse                 original  toppipe  C 26/26   pass             clauses 7/7    access speculative lat 8 
+[215/492] Mutating/reverse                 original  cyclic2  C 26/26   pass             clauses 11/11  access speculative lat 8 
+[216/492] Mutating/reverse                 original  bram     C 26/26   pass             clauses 7/7    access ok        lat 8 
+[217/492] Mutating/reverse                 original  reshape2 C 26/26   pass             clauses 7/7    access ok        lat 16 
+[218/492] Mutating/reverse                 original  nopipe   C 26/26   pass             clauses 7/7    access speculative lat 8 
+[219/492] Mutating/reverse                 original  unroll   C 26/26   pass             clauses 7/7    access ok        lat 8 
+[220/492] Mutating/reverse_copy            original  toppipe  C 20/20   pass             clauses 11/11  access speculative lat 16 
+[221/492] Mutating/reverse_copy            original  unroll   C 20/20   pass             clauses 11/11  access speculative lat 8 
+[222/492] Mutating/reverse_copy            original  nopipe   C 20/20   pass             clauses 11/11  access speculative lat 16 
+[223/492] Mutating/rotate_copy             original  bram     C 18/18   pass             clauses 12/12  access out-of-memory lat 8 
+[224/492] Mutating/rotate_copy             original  reshape2 C 18/18   pass             clauses 14/14  access speculative lat 8 
+[225/492] Mutating/rotate_copy             original  cyclic2  C 18/18   pass             clauses 16/16  access speculative lat 8 
+[226/492] Mutating/rotate_copy             original  toppipe  C 18/18   pass             clauses 12/12  access speculative lat 16 
+[227/492] Mutating/rotate_copy             original  unroll   C 18/18   pass             clauses 12/12  access speculative lat 8 
+[228/492] Mutating/rotate_copy             original  nopipe   C 18/18   pass             clauses 12/12  access speculative lat 16 
+[229/492] Mutating/rotate                  original  toppipe  C 19/19   pass             clauses 9/9    access speculative lat 16 
+[230/492] Mutating/rotate                  original  nopipe   C 19/19   pass             clauses 9/9    access speculative lat 16 
+[231/492] Mutating/replace_copy            original  toppipe  C 21/21   pass             clauses 12/12  access speculative lat 16 
+[232/492] Mutating/rotate                  original  cyclic2  C 19/19   pass             clauses 13/13  access speculative lat 32 
+[233/492] Mutating/replace_copy            original  cyclic2  C 21/21   pass             clauses 16/16  access speculative lat 8 
+[234/492] Mutating/replace_copy            original  reshape2 C 21/21   pass             clauses 14/14  access speculative lat 8 
+[235/492] Mutating/rotate                  original  reshape2 C 19/19   pass             clauses 9/9    access ok        lat 32 
+[236/492] Mutating/rotate                  original  bram     C 19/19   pass             clauses 9/9    access ok        lat 32 
+[237/492] Mutating/rotate                  original  unroll   C 19/19   pass             clauses 9/9    access ok        lat 32 
+[238/492] Mutating/replace_copy            original  bram     C 21/21   pass             clauses 12/12  access out-of-memory lat 8 
+[239/492] Mutating/replace_copy            original  unroll   C 21/21   pass             clauses 12/12  access speculative lat 8 
+[240/492] Mutating/replace                 original  cyclic2  C 18/18   pass             clauses 11/11  access speculative lat 8 
+[241/492] Mutating/replace                 original  toppipe  C 18/18   pass             clauses 5/5    access speculative lat 16 
+[242/492] Mutating/replace_copy            original  nopipe   C 21/21   pass             clauses 12/12  access speculative lat 16 
+[243/492] Mutating/replace                 original  reshape2 C 18/18   pass             clauses 5/5    access ok        lat 8 
+[244/492] Mutating/replace                 original  bram     C 18/18   pass             clauses 7/7    access out-of-memory lat 8 
+[245/492] Mutating/replace                 original  unroll   C 18/18   pass             clauses 7/7    access speculative lat 8 
+[246/492] Mutating/replace                 original  nopipe   C 18/18   pass             clauses 5/5    access speculative lat 16 
+[247/492] Mutating/remove_copy             original  cyclic2  C 24/24   pass             clauses 17/17  access speculative lat 8 
+[248/492] Mutating/remove_copy             original  reshape2 C 24/24   pass             clauses 13/13  access speculative lat 8 
+[249/492] Mutating/remove_copy             original  toppipe  C 24/24   pass             clauses 13/13  access speculative lat 16 
+[250/492] Mutating/remove_copy             original  bram     C 24/24   pass             clauses 13/13  access out-of-memory lat 8 
+[251/492] Mutating/remove_copy             original  unroll   C 24/24   pass             clauses 13/13  access speculative lat 8 
+[252/492] Mutating/remove_copy             original  nopipe   C 24/24   pass             clauses 13/13  access speculative lat 16 
+[253/492] Mutating/remove_copy2            original  cyclic2  C 29/29   pass             clauses 18/18  access speculative lat 8 
+[254/492] Mutating/remove_copy2            original  bram     C 29/29   pass             clauses 14/14  access out-of-memory lat 8 
+[255/492] Mutating/remove_copy2            original  reshape2 C 29/29   pass             clauses 14/14  access speculative lat 8 
+[256/492] Mutating/remove_copy2            original  unroll   C 29/29   pass             clauses 14/14  access speculative lat 8 
+[257/492] Mutating/remove_copy2            original  toppipe  C 29/29   pass             clauses 14/14  access speculative lat 16 
+[258/492] Mutating/remove_copy3            original  cyclic2  C 46/46   pass-partial     clauses 18/19  access speculative lat 8 
+[259/492] Mutating/remove_copy2            original  nopipe   C 29/29   pass             clauses 14/14  access speculative lat 16 
+[260/492] Mutating/remove_copy3            original  reshape2 C 46/46   pass-partial     clauses 14/15  access speculative lat 8 
+[261/492] Mutating/remove_copy3            original  bram     C 46/46   pass-partial     clauses 14/15  access out-of-memory lat 8 
+[262/492] Mutating/remove_copy3            original  toppipe  C 46/46   pass-partial     clauses 14/15  access speculative lat 16 
+[263/492] Mutating/remove_copy3            original  unroll   C 46/46   pass-partial     clauses 14/15  access speculative lat 8 
+[264/492] Mutating/remove                  original  cyclic2  C 40/40   pass-partial     clauses 10/11  access speculative lat 8 
+[265/492] Mutating/remove_copy3            original  nopipe   C 46/46   pass-partial     clauses 14/15  access speculative lat 16 
+[266/492] Mutating/remove                  original  bram     C 40/40   pass-partial     clauses 8/9    access ok        lat 8 
+[267/492] Mutating/remove                  original  unroll   C 40/40   pass-partial     clauses 8/9    access ok        lat 8 
+[268/492] Mutating/remove                  original  toppipe  C 40/40   pass-partial     clauses 8/9    access speculative lat 16 
+[269/492] Mutating/remove                  original  reshape2 C 40/40   pass-partial     clauses 8/9    access ok        lat 16 
+[270/492] Mutating/remove                  original  nopipe   C 40/40   pass-partial     clauses 8/9    access speculative lat 16 
+[271/492] Mutating/shuffle                 original  cyclic2  C 33/33   bounded(47)      clauses 20/20  access speculative lat 64 
+[272/492] Mutating/shuffle                 original  reshape2 C 33/33   bounded(47)      clauses 14/14  access ok        lat 64 
+[273/492] Mutating/shuffle                 original  bram     C 33/33   bounded(47)      clauses 14/14  access ok        lat 64 
+[274/492] Mutating/random_number           original  toppipe  C 12/12   pass             clauses 8/8    access ok        lat 38 
+[275/492] Mutating/shuffle                 original  toppipe  C 33/33   bounded(51)      clauses 14/14  access timeout   lat 128 
+[276/492] Mutating/shuffle                 original  unroll   C 33/33   bounded(47)      clauses 14/14  access ok        lat 64 
+[277/492] Mutating/random_number           original  cyclic2  C 12/12   pass             clauses 10/10  access ok        lat 35 
+[278/492] Mutating/shuffle                 original  nopipe   C 33/33   bounded(52)      clauses 14/14  access timeout   lat 128 
+[279/492] Numeric/iota                     original  toppipe  C 19/19   pass             clauses 6/6    access speculative lat 8 
+[280/492] Numeric/iota                     original  cyclic2  C 19/19   pass             clauses 8/8    access speculative lat 8 
+[281/492] Numeric/iota                     original  reshape2 C 19/19   pass             clauses 8/8    access speculative lat 8 
+[282/492] Mutating/random_number           original  reshape2 C 12/12   pass             clauses 8/8    access ok        lat 35 
+[283/492] Numeric/iota                     original  bram     C 19/19   pass             clauses 6/6    access out-of-memory lat 8 
+[284/492] Mutating/random_number           original  bram     C 12/12   bounded(39)      clauses 8/8    access ok        lat 36 
+[285/492] Numeric/iota                     original  nopipe   C 19/19   pass             clauses 6/6    access speculative lat 8 
+[286/492] Numeric/iota                     original  unroll   C 19/19   pass             clauses 6/6    access speculative lat 8 
+[287/492] Numeric/accumulate               original  cyclic2  C 16/16   pass             clauses 8/8    access speculative lat 8 
+[288/492] Numeric/accumulate               original  toppipe  C 16/16   pass             clauses 6/6    access speculative lat 16 
+[289/492] Numeric/accumulate               original  reshape2 C 16/16   pass             clauses 6/6    access speculative lat 8 
+[290/492] Mutating/random_number           original  nopipe   C 12/12   bounded(39)      clauses 8/8    access ok        lat 36 
+[291/492] Numeric/accumulate               original  bram     C 16/16   pass             clauses 6/6    access out-of-memory lat 8 
+[292/492] Mutating/random_number           original  unroll   C 12/12   pass             clauses 8/8    access ok        lat 36 
+[293/492] Numeric/accumulate               original  unroll   C 16/16   pass             clauses 6/6    access speculative lat 8 
+[294/492] Numeric/accumulate               original  nopipe   C 16/16   pass             clauses 6/6    access speculative lat 16 
+[295/492] Numeric/inner_product            original  cyclic2  C 21/21   bounded(3)       clauses 17/17  access speculative lat 8 
+[296/492] Numeric/inner_product            original  reshape2 C 21/21   bounded(3)       clauses 13/13  access speculative lat 8 
+[297/492] Numeric/inner_product            original  toppipe  C 21/21   bounded(10)      clauses 13/13  access speculative lat 32 
+[298/492] Numeric/inner_product            original  bram     C 21/21   bounded(3)       clauses 13/13  access out-of-memory lat 8 
+[299/492] Numeric/inner_product            original  nopipe   C 21/21   bounded(5)       clauses 13/13  access speculative lat 16 
+[300/492] Numeric/partial_sum              original  toppipe  C 40/40   pass             clauses 13/13  access speculative lat 8 
+[301/492] Numeric/partial_sum              original  nopipe   C 40/40   pass             clauses 13/13  access speculative lat 8 
+[302/492] Numeric/partial_sum              original  unroll   C 40/40   pass             clauses 13/13  access speculative lat 8 
+[303/492] Numeric/partial_sum              original  bram     C 40/40   pass             clauses 13/13  access out-of-memory lat 8 
+[304/492] Numeric/adjacent_difference      original  cyclic2  C 31/31   pass             clauses 21/21  access speculative lat 8 
+[305/492] Numeric/adjacent_difference      original  toppipe  C 31/31   pass             clauses 15/15  access speculative lat 8 
+[306/492] Numeric/adjacent_difference      original  reshape2 C 31/31   pass             clauses 17/17  access speculative lat 8 
+[307/492] Numeric/adjacent_difference      original  bram     C 31/31   pass             clauses 15/15  access out-of-memory lat 8 
+[308/492] Numeric/inner_product            original  unroll   C 21/21   bounded(3)       clauses 13/13  access speculative lat 8 
+[309/492] Numeric/partial_sum              original  cyclic2  C 40/40   pass             clauses 17/17  access speculative lat 16 
+[310/492] Numeric/partial_sum              original  reshape2 C 40/40   bounded(19)      clauses 15/15  access speculative lat 16 
+[311/492] Numeric/adjacent_difference      original  nopipe   C 31/31   pass             clauses 15/15  access speculative lat 8 
+[312/492] Numeric/adjacent_difference      original  unroll   C 31/31   pass             clauses 15/15  access speculative lat 8 
+[313/492] Numeric/partial_sum_inv          original  toppipe  C 16/16   pass             clauses 14/14  access speculative lat 16 
+[314/492] Numeric/partial_sum_inv          original  cyclic2  C 16/16   pass             clauses 20/20  access speculative lat 16 
+[315/492] Numeric/partial_sum_inv          original  reshape2 C 16/16   pass             clauses 16/16  access speculative lat 16 
+[316/492] Numeric/partial_sum_inv          original  bram     C 16/16   pass             clauses 14/14  access out-of-memory lat 16 
+[317/492] Numeric/partial_sum_inv          original  nopipe   C 16/16   pass             clauses 14/14  access speculative lat 16 
+[318/492] Numeric/partial_sum_inv          original  unroll   C 16/16   pass             clauses 14/14  access speculative lat 16 
+[319/492] Numeric/adjacent_difference_inv  original  cyclic2  C 15/15   pass             clauses 21/21  access speculative lat 16 
+[320/492] Numeric/adjacent_difference_inv  original  toppipe  C 15/15   pass             clauses 15/15  access speculative lat 16 
+[321/492] Heap/heap_parent                 original  toppipe  C 6/6     pass             clauses 1/1    access None      lat 2 
+[322/492] Heap/heap_parent                 original  cyclic2  C 6/6     pass             clauses 1/1    access None      lat 2 
+[323/492] Numeric/adjacent_difference_inv  original  reshape2 C 15/15   pass             clauses 17/17  access speculative lat 16 
+[324/492] Heap/heap_parent                 original  reshape2 C 6/6     pass             clauses 1/1    access None      lat 2 
+[325/492] Numeric/adjacent_difference_inv  original  bram     C 15/15   pass             clauses 15/15  access out-of-memory lat 16 
+[326/492] Heap/heap_parent                 original  bram     C 6/6     pass             clauses 1/1    access None      lat 2 
+[327/492] Heap/heap_parent                 original  nopipe   C 6/6     pass             clauses 1/1    access None      lat 2 
+[328/492] Heap/heap_parent                 original  unroll   C 6/6     pass             clauses 1/1    access None      lat 2 
+[329/492] Heap/heap_child                  original  toppipe  C 27/27   pass             clauses 17/17  access speculative lat 2 
+[330/492] Heap/heap_child                  original  cyclic2  C 27/27   pass             clauses 17/17  access speculative lat 2 
+[331/492] Heap/heap_child                  original  reshape2 C 27/27   pass             clauses 17/17  access speculative lat 2 
+[332/492] Heap/heap_child                  original  bram     C 27/27   pass             clauses 17/17  access out-of-memory lat 2 
+[333/492] Heap/heap_child                  original  nopipe   C 27/27   pass             clauses 17/17  access speculative lat 2 
+[334/492] Numeric/adjacent_difference_inv  original  nopipe   C 15/15   pass             clauses 15/15  access speculative lat 16 
+[335/492] Heap/heap_child                  original  unroll   C 27/27   pass             clauses 17/17  access speculative lat 2 
+[336/492] Heap/is_heap_until               original  toppipe  C 21/21   pass             clauses 9/9    access speculative lat 16 
+[337/492] Numeric/adjacent_difference_inv  original  unroll   C 15/15   pass             clauses 15/15  access speculative lat 16 
+[338/492] Heap/is_heap_until               original  cyclic2  C 21/21   pass             clauses 13/13  access speculative lat 8 
+[339/492] Heap/is_heap_until               original  reshape2 C 21/21   pass             clauses 9/9    access speculative lat 8 
+[340/492] Heap/is_heap_until               original  bram     C 21/21   pass             clauses 9/9    access out-of-memory lat 8 
+[341/492] Heap/is_heap_until               original  nopipe   C 21/21   pass             clauses 9/9    access speculative lat 8 
+[342/492] Heap/is_heap                     original  toppipe  C 8/8     pass             clauses 7/7    access speculative lat 16 
+[343/492] Heap/is_heap_until               original  unroll   C 21/21   pass             clauses 9/9    access speculative lat 8 
+[344/492] Heap/is_heap                     original  cyclic2  C 8/8     pass             clauses 11/11  access speculative lat 8 
+[345/492] Heap/is_heap                     original  reshape2 C 8/8     pass             clauses 7/7    access speculative lat 8 
+[346/492] Heap/is_heap                     original  bram     C 8/8     pass             clauses 7/7    access out-of-memory lat 8 
+[347/492] Heap/is_heap                     original  nopipe   C 8/8     pass             clauses 7/7    access speculative lat 8 
+[348/492] Heap/is_heap                     original  unroll   C 8/8     pass             clauses 7/7    access speculative lat 8 
+[349/492] Heap/push_heap                   original  toppipe  C 71/71   pass             clauses 10/10  access speculative lat 8 
+[350/492] Heap/push_heap                   original  nopipe   C 71/71   pass             clauses 10/10  access speculative lat 8 
+[351/492] Heap/push_heap                   original  cyclic2  C 71/71   bounded(19)      clauses 14/14  access speculative lat 16 
+[352/492] Heap/push_heap                   original  bram     C 71/71   pass             clauses 10/10  access out-of-memory lat 16 
+[353/492] Heap/push_heap                   original  reshape2 C 71/71   bounded(19)      clauses 10/10  access speculative lat 16 
+[354/492] Heap/push_heap                   original  unroll   C 71/71   pass             clauses 10/10  access speculative lat 16 
+[355/492] Heap/heap_sift_down              original  toppipe  C 80/80   pass             clauses 10/10  access speculative lat 16 
+[356/492] Heap/heap_sift_down              original  cyclic2  C 80/80   bounded(17)      clauses 14/14  access speculative lat 16 
+[357/492] Heap/heap_sift_down              original  reshape2 C 80/80   bounded(18)      clauses 10/10  access speculative lat 16 
+[358/492] Heap/heap_sift_down              original  bram     C 80/80   bounded(18)      clauses 10/10  access out-of-memory lat 16 
+[359/492] Heap/heap_sift_down              original  nopipe   C 80/80   bounded(19)      clauses 10/10  access speculative lat 16 
+[360/492] Heap/heap_sift_down              original  unroll   C 80/80   pass             clauses 10/10  access speculative lat 16 
+[361/492] Heap/pop_heap                    original  toppipe  C 30/30   bounded(17)      clauses 12/12  access speculative lat 16 
+[362/492] Heap/pop_heap                    original  cyclic2  C 30/30   bounded(17)      clauses 14/14  access speculative lat 16 
+[363/492] Heap/pop_heap                    original  reshape2 C 30/30   bounded(18)      clauses 12/12  access speculative lat 16 
+[364/492] Heap/pop_heap                    original  bram     C 30/30   bounded(17)      clauses 12/12  access out-of-memory lat 16 
+[365/492] Heap/pop_heap                    original  nopipe   C 30/30   bounded(18)      clauses 12/12  access speculative lat 16 
+[366/492] Heap/pop_heap                    original  unroll   C 30/30   bounded(18)      clauses 12/12  access speculative lat 16 
+[367/492] Heap/make_heap                   original  toppipe  C 34/34   bounded(21)      clauses 8/8    access speculative lat 32 
+[368/492] Heap/make_heap                   original  cyclic2  C 34/34   bounded(18)      clauses 12/12  access speculative lat 32 
+[369/492] Heap/make_heap                   original  reshape2 C 34/34   bounded(20)      clauses 8/8    access speculative lat 32 
+[370/492] Heap/make_heap                   original  bram     C 34/34   bounded(21)      clauses 8/8    access out-of-memory lat 32 
+[371/492] Heap/make_heap                   original  nopipe   C 34/34   bounded(19)      clauses 8/8    access speculative lat 32 
+[372/492] Heap/make_heap                   original  unroll   C 34/34   bounded(21)      clauses 8/8    access speculative lat 32 
+[373/492] Heap/sort_heap                   original  toppipe  C 30/30   bounded(19)      clauses 9/9    access speculative lat 64 
+[374/492] Heap/sort_heap                   original  cyclic2  C 30/30   bounded(19)      clauses 11/11  access speculative lat 64 
+[375/492] Sorting/is_sorted_until          original  toppipe  C 19/19   pass             clauses 9/9    access speculative lat 8 
+[376/492] Sorting/is_sorted_until          original  cyclic2  C 19/19   pass             clauses 13/13  access speculative lat 8 
+[377/492] Sorting/is_sorted_until          original  reshape2 C 19/19   pass             clauses 9/9    access speculative lat 8 
+[378/492] Sorting/is_sorted_until          original  bram     C 19/19   pass             clauses 9/9    access out-of-memory lat 8 
+[379/492] Heap/sort_heap                   original  reshape2 C 30/30   bounded(19)      clauses 9/9    access speculative lat 64 
+[380/492] Sorting/is_sorted_until          original  nopipe   C 19/19   pass             clauses 9/9    access speculative lat 8 
+[381/492] Sorting/is_sorted_until          original  unroll   C 19/19   pass             clauses 9/9    access speculative lat 8 
+[382/492] Sorting/is_sorted                original  toppipe  C 8/8     pass             clauses 7/7    access speculative lat 8 
+[383/492] Sorting/is_sorted                original  cyclic2  C 8/8     pass             clauses 11/11  access speculative lat 8 
+[384/492] Sorting/is_sorted                original  reshape2 C 8/8     pass             clauses 7/7    access speculative lat 8 
+[385/492] Sorting/is_sorted                original  bram     C 8/8     pass             clauses 7/7    access out-of-memory lat 8 
+[386/492] Sorting/is_sorted                original  nopipe   C 8/8     pass             clauses 7/7    access speculative lat 8 
+[387/492] Sorting/is_sorted                original  unroll   C 8/8     pass             clauses 7/7    access speculative lat 8 
+[388/492] Heap/sort_heap                   original  nopipe   C 30/30   bounded(21)      clauses 9/9    access speculative lat 32 
+[389/492] Heap/sort_heap                   original  bram     C 30/30   bounded(21)      clauses 9/9    access out-of-memory lat 64 
+[390/492] Heap/sort_heap                   original  unroll   C 30/30   bounded(20)      clauses 9/9    access speculative lat 64 
+[391/492] Sorting/partial_sort             original  bram     C 79/79   bounded(19)      clauses 10/10  access out-of-memory lat 64 
+[392/492] Sorting/partial_sort             original  cyclic2  C 79/79   bounded(18)      clauses 14/14  access speculative lat 64 
+[393/492] Sorting/partial_sort             original  nopipe   C 79/79   bounded(19)      clauses 10/10  access speculative lat 64 
+[394/492] Sorting/partial_sort             original  reshape2 C 79/79   bounded(19)      clauses 10/10  access speculative lat 64 
+[395/492] Sorting/partial_sort             original  toppipe  C 79/79   bounded(20)      clauses 10/10  access speculative lat 128 
+[396/492] Sorting/bubble_sort              original  toppipe  C 59/59   bounded(25)      clauses 8/8    access speculative lat 32 
+[397/492] Sorting/bubble_sort              original  cyclic2  C 59/59   bounded(22)      clauses 12/12  access speculative lat 32 
+[398/492] Sorting/partial_sort             original  unroll   C 79/79   bounded(19)      clauses 10/10  access speculative lat 64 
+[399/492] Sorting/bubble_sort              original  reshape2 C 59/59   bounded(27)      clauses 8/8    access ok        lat 32 
+[400/492] Sorting/bubble_sort              original  bram     C 59/59   bounded(22)      clauses 8/8    access ok        lat 32 
+[401/492] Sorting/bubble_sort              original  nopipe   C 59/59   bounded(23)      clauses 8/8    access speculative lat 32 
+[402/492] Sorting/bubble_sort              original  unroll   C 59/59   bounded(23)      clauses 8/8    access ok        lat 32 
+[403/492] Sorting/selection_sort           original  toppipe  C 36/37   bounded(31)      clauses 8/8    access speculative lat 64 
+[404/492] Sorting/selection_sort           original  cyclic2  C 36/37   bounded(28)      clauses 12/12  access speculative lat 64 
+[405/492] Sorting/selection_sort           original  reshape2 C 36/37   bounded(28)      clauses 8/8    access speculative lat 64 
+[406/492] Sorting/selection_sort           original  bram     C 36/37   bounded(29)      clauses 8/8    access speculative lat 64 
+[407/492] Sorting/selection_sort           original  unroll   C 36/37   bounded(29)      clauses 8/8    access speculative lat 64 
+[408/492] Sorting/selection_sort           original  nopipe   C 36/37   bounded(29)      clauses 8/8    access ok        lat 64 
+[409/492] Sorting/insertion_sort           original  toppipe  C 47/47   bounded(33)      clauses 8/8    access speculative lat 64 
+[410/492] Sorting/insertion_sort           original  cyclic2  C 47/47   bounded(31)      clauses 12/12  access speculative lat 64 
+[411/492] Sorting/insertion_sort           original  reshape2 C 47/47   bounded(31)      clauses 8/8    access speculative lat 64 
+[412/492] Sorting/insertion_sort           original  bram     C 47/47   bounded(30)      clauses 8/8    access out-of-memory lat 64 
+[413/492] Sorting/insertion_sort           original  nopipe   C 47/47   bounded(28)      clauses 8/8    access speculative lat 64 
+[414/492] Sorting/insertion_sort           original  unroll   C 47/47   bounded(31)      clauses 8/8    access speculative lat 64 
+[415/492] Sorting/heap_sort                original  toppipe  C 11/11   bounded(26)      clauses 8/8    access speculative lat 64 
+[416/492] Sorting/heap_sort                original  cyclic2  C 11/11   bounded(24)      clauses 12/12  access speculative lat 64 
+[417/492] Sorting/heap_sort                original  bram     C 11/11   bounded(26)      clauses 8/8    access out-of-memory lat 64 
+[418/492] Sorting/heap_sort                original  nopipe   C 11/11   bounded(26)      clauses 8/8    access speculative lat 64 
+[419/492] Sorting/heap_sort                original  unroll   C 11/11   bounded(26)      clauses 8/8    access speculative lat 64 
+[420/492] Sorting/merge                    original  cyclic2  C 130/134 pass             clauses 27/27  access speculative lat 8 
+[421/492] Sorting/merge                    original  toppipe  C 130/134 bounded(14)      clauses 21/21  access speculative lat 16 
+[422/492] Sorting/heap_sort                original  reshape2 C 11/11   bounded(24)      clauses 8/8    access speculative lat 128 
+[423/492] Sorting/merge                    original  reshape2 C 130/134 bounded(12)      clauses 23/23  access speculative lat 16 
+[424/492] Sorting/merge                    original  bram     C 130/134 pass             clauses 21/21  access speculative lat 8 
+[425/492] Sorting/merge                    original  nopipe   C 130/134 bounded(12)      clauses 21/21  access speculative lat 16 
+[426/492] Sorting/merge                    original  unroll   C 130/134 bounded(11)      clauses 21/21  access speculative lat 8 
+[427/492] Sorting/inplace_merge            original  toppipe  C 44/45   bounded(16)      clauses 11/11  access speculative lat 32 
+[428/492] Sorting/inplace_merge            original  cyclic2  C 44/45   bounded(16)      clauses 15/15  access speculative lat 32 
+[429/492] Sorting/merge_sort               original  toppipe  C 62/62   error            clauses None   access None      lat None 
+[430/492] Sorting/inplace_merge            original  reshape2 C 44/45   bounded(17)      clauses 11/11  access speculative lat 32 
+[431/492] Sorting/merge_sort               original  cyclic2  C 62/62   error            clauses None   access None      lat None 
+[432/492] Sorting/merge_sort               original  bram     C 62/62   error            clauses None   access None      lat None 
+[433/492] Sorting/merge_sort               original  reshape2 C 62/62   error            clauses None   access None      lat None 
+[434/492] Sorting/merge_sort               original  nopipe   C 62/62   error            clauses None   access None      lat None 
+[435/492] Stack/stack_equal                original  toppipe  C None    unsupported      clauses None   access None      lat None 
+[436/492] Stack/stack_equal                original  cyclic2  C None    unsupported      clauses None   access None      lat None 
+[437/492] Stack/stack_equal                original  reshape2 C None    unsupported      clauses None   access None      lat None 
+[438/492] Stack/stack_equal                original  bram     C None    unsupported      clauses None   access None      lat None 
+[439/492] Stack/stack_equal                original  nopipe   C None    unsupported      clauses None   access None      lat None 
+[440/492] Stack/stack_equal                original  unroll   C None    unsupported      clauses None   access None      lat None 
+[441/492] Stack/stack_init                 original  toppipe  C None    unsupported      clauses None   access None      lat None 
+[442/492] Stack/stack_init                 original  cyclic2  C None    unsupported      clauses None   access None      lat None 
+[443/492] Stack/stack_init                 original  reshape2 C None    unsupported      clauses None   access None      lat None 
+[444/492] Stack/stack_init                 original  bram     C None    unsupported      clauses None   access None      lat None 
+[445/492] Stack/stack_init                 original  nopipe   C None    unsupported      clauses None   access None      lat None 
+[446/492] Stack/stack_init                 original  unroll   C None    unsupported      clauses None   access None      lat None 
+[447/492] Stack/stack_size                 original  toppipe  C None    unsupported      clauses None   access None      lat None 
+[448/492] Stack/stack_size                 original  cyclic2  C None    unsupported      clauses None   access None      lat None 
+[449/492] Stack/stack_size                 original  reshape2 C None    unsupported      clauses None   access None      lat None 
+[450/492] Sorting/merge_sort               original  unroll   C 62/62   error            clauses None   access None      lat None 
+[451/492] Stack/stack_size                 original  bram     C None    unsupported      clauses None   access None      lat None 
+[452/492] Stack/stack_size                 original  nopipe   C None    unsupported      clauses None   access None      lat None 
+[453/492] Stack/stack_size                 original  unroll   C None    unsupported      clauses None   access None      lat None 
+[454/492] Stack/stack_capacity             original  toppipe  C None    unsupported      clauses None   access None      lat None 
+[455/492] Stack/stack_capacity             original  reshape2 C None    unsupported      clauses None   access None      lat None 
+[456/492] Stack/stack_capacity             original  cyclic2  C None    unsupported      clauses None   access None      lat None 
+[457/492] Stack/stack_capacity             original  nopipe   C None    unsupported      clauses None   access None      lat None 
+[458/492] Stack/stack_capacity             original  bram     C None    unsupported      clauses None   access None      lat None 
+[459/492] Stack/stack_capacity             original  unroll   C None    unsupported      clauses None   access None      lat None 
+[460/492] Stack/stack_empty                original  toppipe  C None    unsupported      clauses None   access None      lat None 
+[461/492] Stack/stack_empty                original  cyclic2  C None    unsupported      clauses None   access None      lat None 
+[462/492] Stack/stack_empty                original  reshape2 C None    unsupported      clauses None   access None      lat None 
+[463/492] Stack/stack_empty                original  nopipe   C None    unsupported      clauses None   access None      lat None 
+[464/492] Stack/stack_empty                original  bram     C None    unsupported      clauses None   access None      lat None 
+[465/492] Stack/stack_empty                original  unroll   C None    unsupported      clauses None   access None      lat None 
+[466/492] Stack/stack_full                 original  toppipe  C None    unsupported      clauses None   access None      lat None 
+[467/492] Stack/stack_full                 original  cyclic2  C None    unsupported      clauses None   access None      lat None 
+[468/492] Stack/stack_full                 original  reshape2 C None    unsupported      clauses None   access None      lat None 
+[469/492] Stack/stack_full                 original  bram     C None    unsupported      clauses None   access None      lat None 
+[470/492] Stack/stack_full                 original  nopipe   C None    unsupported      clauses None   access None      lat None 
+[471/492] Stack/stack_full                 original  unroll   C None    unsupported      clauses None   access None      lat None 
+[472/492] Stack/stack_top                  original  toppipe  C None    unsupported      clauses None   access None      lat None 
+[473/492] Stack/stack_top                  original  cyclic2  C None    unsupported      clauses None   access None      lat None 
+[474/492] Stack/stack_top                  original  reshape2 C None    unsupported      clauses None   access None      lat None 
+[475/492] Stack/stack_top                  original  bram     C None    unsupported      clauses None   access None      lat None 
+[476/492] Stack/stack_top                  original  nopipe   C None    unsupported      clauses None   access None      lat None 
+[477/492] Stack/stack_top                  original  unroll   C None    unsupported      clauses None   access None      lat None 
+[478/492] Stack/stack_push                 original  toppipe  C None    unsupported      clauses None   access None      lat None 
+[479/492] Stack/stack_push                 original  cyclic2  C None    unsupported      clauses None   access None      lat None 
+[480/492] Stack/stack_push                 original  reshape2 C None    unsupported      clauses None   access None      lat None 
+[481/492] Stack/stack_push                 original  bram     C None    unsupported      clauses None   access None      lat None 
+[482/492] Stack/stack_push                 original  nopipe   C None    unsupported      clauses None   access None      lat None 
+[483/492] Stack/stack_push                 original  unroll   C None    unsupported      clauses None   access None      lat None 
+[484/492] Stack/stack_pop                  original  toppipe  C None    unsupported      clauses None   access None      lat None 
+[485/492] Stack/stack_pop                  original  cyclic2  C None    unsupported      clauses None   access None      lat None 
+[486/492] Stack/stack_pop                  original  reshape2 C None    unsupported      clauses None   access None      lat None 
+[487/492] Stack/stack_pop                  original  bram     C None    unsupported      clauses None   access None      lat None 
+[488/492] Stack/stack_pop                  original  nopipe   C None    unsupported      clauses None   access None      lat None 
+[489/492] Stack/stack_pop                  original  unroll   C None    unsupported      clauses None   access None      lat None 
+[490/492] Sorting/inplace_merge            original  bram     C 44/45   bounded(17)      clauses 11/11  access out-of-memory lat 32 
+[491/492] Sorting/inplace_merge            original  nopipe   C 44/45   bounded(16)      clauses 11/11  access speculative lat 32 
+[492/492] Sorting/inplace_merge            original  unroll   C 44/45   bounded(19)      clauses 11/11  access speculative lat 32 
+                                                              Summary per tool / HLS configuration                                                              
+┏━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ acce… ┃       ┃       ┃       ┃       ┃       ┃       ┃
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ out   ┃       ┃       ┃       ┃       ┃       ┃ kills ┃
+┃       ┃       ┃       ┃       ┃ pass  ┃ pass  ┃      ┃       ┃       ┃       ┃       ┃ clau… ┃ acce… ┃ of    ┃ over… ┃ muta… ┃       ┃ muta… ┃ equi… ┃ conf… ┃
+┃ tool  ┃ conf… ┃ desi… ┃ chec… ┃ full  ┃ part… ┃ fail ┃ boun… ┃ vacu… ┃ agree ┃ disa… ┃ rate  ┃ spec… ┃ memo… ┃ mode  ┃ chec… ┃ kill… ┃ score ┃ pass  ┃ in C  ┃
+┡━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ vitis │ bram  │ 82    │ 56    │ 54    │ 2     │ 0    │ 16    │ 0     │ 56    │ 0     │ 99.7  │ 3     │ 59    │ 0     │ 0     │ 0     │ None  │ 0     │ 0     │
+│ vitis │ cycl… │ 82    │ 53    │ 51    │ 2     │ 0    │ 19    │ 0     │ 53    │ 0     │ 99.8  │ 67    │ 0     │ 25    │ 0     │ 0     │ None  │ 0     │ 0     │
+│ vitis │ nopi… │ 82    │ 54    │ 52    │ 2     │ 0    │ 18    │ 0     │ 54    │ 0     │ 99.7  │ 64    │ 0     │ 0     │ 0     │ 0     │ None  │ 0     │ 0     │
+│ vitis │ resh… │ 82    │ 51    │ 49    │ 2     │ 0    │ 21    │ 0     │ 51    │ 0     │ 99.7  │ 61    │ 0     │ 25    │ 0     │ 0     │ None  │ 0     │ 0     │
+│ vitis │ topp… │ 82    │ 52    │ 50    │ 2     │ 0    │ 20    │ 0     │ 52    │ 0     │ 99.7  │ 60    │ 0     │ 1     │ 0     │ 0     │ None  │ 0     │ 0     │
+│ vitis │ unro… │ 82    │ 54    │ 52    │ 2     │ 0    │ 18    │ 0     │ 54    │ 0     │ 99.7  │ 62    │ 0     │ 25    │ 0     │ 0     │ None  │ 0     │ 0     │
+└───────┴───────┴───────┴───────┴───────┴───────┴──────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┴───────┘
+vitis/bram failures on originals (C replay): {}; mutant kills (C replay): {}
+vitis/cyclic2 failures on originals (C replay): {}; mutant kills (C replay): {}
+vitis/nopipe failures on originals (C replay): {}; mutant kills (C replay): {}
+vitis/reshape2 failures on originals (C replay): {}; mutant kills (C replay): {}
+vitis/toppipe failures on originals (C replay): {}; mutant kills (C replay): {}
+vitis/unroll failures on originals (C replay): {}; mutant kills (C replay): {}
+Originals not checked:
+    54  unsupported: struct Stack: array/pointer member data
+     6  error: hls: Vitis synthesis failed: ERROR: [HLS 200-1715] Encountered problem during source synthesis
+Details: /home/anubhavsaha/cbv/runs/F5_abe_cfg/summary.md, /home/anubhavsaha/cbv/runs/F5_abe_cfg/results.csv, /home/anubhavsaha/cbv/runs/F5_abe_cfg/table.tex
+=== 2026-11-22 12:23:31 lane B done

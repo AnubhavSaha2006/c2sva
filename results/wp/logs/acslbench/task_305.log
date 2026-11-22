@@ -1,0 +1,14 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_305.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_305.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function selectionSort
+[wp] 35 goals scheduled
+[wp] [Cache] updated:17
+[wp] Proved goals:   37 / 37
+  Terminating:       1
+  Unreachable:       1
+  Qed:              21 (18ms-35ms-175ms)
+  Alt-Ergo 2.6.4:   14 (65ms-242ms-1.3s)

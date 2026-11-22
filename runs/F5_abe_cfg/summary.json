@@ -1,0 +1,2823 @@
+{
+  "by_tool_config": [
+    {
+      "tool": "vitis",
+      "config": "bram",
+      "designs": 82,
+      "frontend_ok": 73,
+      "hls_ok": 72,
+      "checked": 56,
+      "pass_full": 54,
+      "pass_partial": 2,
+      "fail": 0,
+      "bounded": 16,
+      "vacuous": 0,
+      "agree": 56,
+      "disagree": 0,
+      "clauses": "725/727",
+      "clause_rate": 99.7,
+      "access_speculative": 3,
+      "access_out_of_memory": 59,
+      "overlap_mode": 0,
+      "mutants": 0,
+      "mutants_checked": 0,
+      "killed": 0,
+      "mutation_score": null,
+      "survivors": 0,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_untranslated": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 0,
+      "median_total_s": 60.5
+    },
+    {
+      "tool": "vitis",
+      "config": "cyclic2",
+      "designs": 82,
+      "frontend_ok": 73,
+      "hls_ok": 72,
+      "checked": 53,
+      "pass_full": 51,
+      "pass_partial": 2,
+      "fail": 0,
+      "bounded": 19,
+      "vacuous": 0,
+      "agree": 53,
+      "disagree": 0,
+      "clauses": "959/961",
+      "clause_rate": 99.8,
+      "access_speculative": 67,
+      "access_out_of_memory": 0,
+      "overlap_mode": 25,
+      "mutants": 0,
+      "mutants_checked": 0,
+      "killed": 0,
+      "mutation_score": null,
+      "survivors": 0,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_untranslated": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 0,
+      "median_total_s": 64.7
+    },
+    {
+      "tool": "vitis",
+      "config": "nopipe",
+      "designs": 82,
+      "frontend_ok": 73,
+      "hls_ok": 72,
+      "checked": 54,
+      "pass_full": 52,
+      "pass_partial": 2,
+      "fail": 0,
+      "bounded": 18,
+      "vacuous": 0,
+      "agree": 54,
+      "disagree": 0,
+      "clauses": "719/721",
+      "clause_rate": 99.7,
+      "access_speculative": 64,
+      "access_out_of_memory": 0,
+      "overlap_mode": 0,
+      "mutants": 0,
+      "mutants_checked": 0,
+      "killed": 0,
+      "mutation_score": null,
+      "survivors": 0,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_untranslated": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 0,
+      "median_total_s": 55.8
+    },
+    {
+      "tool": "vitis",
+      "config": "reshape2",
+      "designs": 82,
+      "frontend_ok": 73,
+      "hls_ok": 72,
+      "checked": 51,
+      "pass_full": 49,
+      "pass_partial": 2,
+      "fail": 0,
+      "bounded": 21,
+      "vacuous": 0,
+      "agree": 51,
+      "disagree": 0,
+      "clauses": "747/749",
+      "clause_rate": 99.7,
+      "access_speculative": 61,
+      "access_out_of_memory": 0,
+      "overlap_mode": 25,
+      "mutants": 0,
+      "mutants_checked": 0,
+      "killed": 0,
+      "mutation_score": null,
+      "survivors": 0,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_untranslated": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 0,
+      "median_total_s": 77.7
+    },
+    {
+      "tool": "vitis",
+      "config": "toppipe",
+      "designs": 82,
+      "frontend_ok": 73,
+      "hls_ok": 72,
+      "checked": 52,
+      "pass_full": 50,
+      "pass_partial": 2,
+      "fail": 0,
+      "bounded": 20,
+      "vacuous": 0,
+      "agree": 52,
+      "disagree": 0,
+      "clauses": "719/721",
+      "clause_rate": 99.7,
+      "access_speculative": 60,
+      "access_out_of_memory": 0,
+      "overlap_mode": 1,
+      "mutants": 0,
+      "mutants_checked": 0,
+      "killed": 0,
+      "mutation_score": null,
+      "survivors": 0,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_untranslated": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 0,
+      "median_total_s": 86.2
+    },
+    {
+      "tool": "vitis",
+      "config": "unroll",
+      "designs": 82,
+      "frontend_ok": 73,
+      "hls_ok": 72,
+      "checked": 54,
+      "pass_full": 52,
+      "pass_partial": 2,
+      "fail": 0,
+      "bounded": 18,
+      "vacuous": 0,
+      "agree": 54,
+      "disagree": 0,
+      "clauses": "725/727",
+      "clause_rate": 99.7,
+      "access_speculative": 62,
+      "access_out_of_memory": 0,
+      "overlap_mode": 25,
+      "mutants": 0,
+      "mutants_checked": 0,
+      "killed": 0,
+      "mutation_score": null,
+      "survivors": 0,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_untranslated": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 0,
+      "median_total_s": 75.2
+    }
+  ],
+  "details": {
+    "vitis/bram": {
+      "original_outcomes": {
+        "pass": 54,
+        "bounded": 16,
+        "pass-partial": 2,
+        "error": 1,
+        "unsupported": 9
+      },
+      "failure_replay": {},
+      "kill_replay": {},
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.5,
+        "wp": 2.3,
+        "hls": 15.6,
+        "latency": 1.5,
+        "bmc": 58.5,
+        "access": 1.0,
+        "cover": 1.0,
+        "total": 60.5
+      }
+    },
+    "vitis/cyclic2": {
+      "original_outcomes": {
+        "pass": 51,
+        "bounded": 19,
+        "pass-partial": 2,
+        "error": 1,
+        "unsupported": 9
+      },
+      "failure_replay": {},
+      "kill_replay": {},
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.5,
+        "wp": 2.3,
+        "hls": 16.2,
+        "latency": 1.8,
+        "bmc": 61.8,
+        "access": 1.0,
+        "cover": 1.0,
+        "total": 64.7
+      }
+    },
+    "vitis/nopipe": {
+      "original_outcomes": {
+        "pass": 52,
+        "bounded": 18,
+        "pass-partial": 2,
+        "error": 1,
+        "unsupported": 9
+      },
+      "failure_replay": {},
+      "kill_replay": {},
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.5,
+        "wp": 2.3,
+        "hls": 16.0,
+        "latency": 2.0,
+        "bmc": 75.2,
+        "access": 1.0,
+        "cover": 1.0,
+        "total": 55.8
+      }
+    },
+    "vitis/reshape2": {
+      "original_outcomes": {
+        "pass": 49,
+        "bounded": 21,
+        "pass-partial": 2,
+        "error": 1,
+        "unsupported": 9
+      },
+      "failure_replay": {},
+      "kill_replay": {},
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.5,
+        "wp": 2.3,
+        "hls": 15.9,
+        "latency": 2.0,
+        "bmc": 67.0,
+        "access": 1.0,
+        "cover": 1.0,
+        "total": 77.7
+      }
+    },
+    "vitis/toppipe": {
+      "original_outcomes": {
+        "pass": 50,
+        "bounded": 20,
+        "pass-partial": 2,
+        "error": 1,
+        "unsupported": 9
+      },
+      "failure_replay": {},
+      "kill_replay": {},
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.5,
+        "wp": 2.2,
+        "hls": 16.2,
+        "latency": 2.0,
+        "bmc": 83.0,
+        "access": 1.0,
+        "cover": 1.0,
+        "total": 86.2
+      }
+    },
+    "vitis/unroll": {
+      "original_outcomes": {
+        "pass": 52,
+        "bounded": 18,
+        "pass-partial": 2,
+        "error": 1,
+        "unsupported": 9
+      },
+      "failure_replay": {},
+      "kill_replay": {},
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.5,
+        "wp": 2.2,
+        "hls": 15.6,
+        "latency": 1.2,
+        "bmc": 67.5,
+        "access": 1.0,
+        "cover": 1.0,
+        "total": 75.2
+      }
+    }
+  },
+  "not_checked_reasons": [
+    [
+      "unsupported: struct Stack: array/pointer member data",
+      54
+    ],
+    [
+      "error: hls: Vitis synthesis failed: ERROR: [HLS 200-1715] Encountered problem during source synthesis",
+      6
+    ]
+  ],
+  "untranslated_clause_reasons": [
+    [
+      "clause too large after inlining (node budget exceeded)",
+      12
+    ]
+  ],
+  "translation_strategies": [
+    [
+      "cell of a outside 0..3",
+      396
+    ],
+    [
+      "exact frame over all 4 element(s) of a",
+      241
+    ],
+    [
+      "holds by construction",
+      230
+    ],
+    [
+      "recursive logic cut off",
+      144
+    ],
+    [
+      "cell of b outside 0..3",
+      108
+    ],
+    [
+      "exact frame over all 4 element(s) of b",
+      105
+    ],
+    [
+      "\\separated holds by construction (separate RTL memories/registers)",
+      90
+    ],
+    [
+      "word holds several elements",
+      68
+    ],
+    [
+      "\\forall i",
+      24
+    ],
+    [
+      "\\exists e",
+      6
+    ],
+    [
+      "cell of p outside 0..3",
+      6
+    ],
+    [
+      "exact frame over all 4 element(s) of state",
+      6
+    ],
+    [
+      "exact frame over all 4 element(s) of seed",
+      6
+    ],
+    [
+      "exact frame over all 1 element(s) of p",
+      6
+    ],
+    [
+      "exact frame over all 1 element(s) of q",
+      6
+    ],
+    [
+      "\\exists i",
+      6
+    ],
+    [
+      "cell of c outside 0..3",
+      6
+    ],
+    [
+      "exact frame over all 4 element(s) of c",
+      6
+    ],
+    [
+      "\\exists i_2087",
+      1
+    ],
+    [
+      "\\exists i_2088",
+      1
+    ],
+    [
+      "\\forall i_2085,j_2086",
+      1
+    ],
+    [
+      "\\exists i_2077",
+      1
+    ],
+    [
+      "\\exists i_2078",
+      1
+    ],
+    [
+      "\\forall i_2075,j_2076",
+      1
+    ],
+    [
+      "\\exists i_2095",
+      1
+    ]
+  ],
+  "disagreements": [],
+  "access_violations": [
+    {
+      "case": "BinarySearch__binary_search/vitis/bram/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__binary_search/vitis/cyclic2/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__binary_search/vitis/nopipe/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__binary_search/vitis/reshape2/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__binary_search/vitis/toppipe/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__binary_search/vitis/unroll/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__equal_range/vitis/bram/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__equal_range/vitis/cyclic2/original",
+      "detail": [
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__equal_range/vitis/nopipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__equal_range/vitis/reshape2/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__equal_range/vitis/unroll/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__equal_range2/vitis/bram/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__equal_range2/vitis/cyclic2/original",
+      "detail": [
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__equal_range2/vitis/nopipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__equal_range2/vitis/reshape2/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__equal_range2/vitis/unroll/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__lower_bound/vitis/bram/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__lower_bound/vitis/cyclic2/original",
+      "detail": [
+        "P8: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__lower_bound/vitis/nopipe/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__lower_bound/vitis/reshape2/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__lower_bound/vitis/unroll/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__upper_bound/vitis/bram/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__upper_bound/vitis/cyclic2/original",
+      "detail": [
+        "P8: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__upper_bound/vitis/nopipe/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__upper_bound/vitis/reshape2/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "BinarySearch__upper_bound/vitis/unroll/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Heap__heap_child/vitis/bram/original",
+      "detail": [
+        "P15: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__heap_child/vitis/cyclic2/original",
+      "detail": [
+        "P15: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Heap__heap_child/vitis/nopipe/original",
+      "detail": [
+        "P15: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__heap_child/vitis/reshape2/original",
+      "detail": [
+        "P15: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__heap_child/vitis/toppipe/original",
+      "detail": [
+        "P15: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__heap_child/vitis/unroll/original",
+      "detail": [
+        "P15: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__heap_sift_down/vitis/bram/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__heap_sift_down/vitis/cyclic2/original",
+      "detail": [
+        "P12: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__heap_sift_down/vitis/nopipe/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__heap_sift_down/vitis/reshape2/original",
+      "detail": [
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__heap_sift_down/vitis/toppipe/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__heap_sift_down/vitis/unroll/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__is_heap/vitis/bram/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__is_heap/vitis/cyclic2/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]",
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__is_heap/vitis/nopipe/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__is_heap/vitis/reshape2/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__is_heap/vitis/toppipe/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__is_heap/vitis/unroll/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__is_heap_until/vitis/bram/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__is_heap_until/vitis/cyclic2/original",
+      "detail": [
+        "P11: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 1]",
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Heap__is_heap_until/vitis/nopipe/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__is_heap_until/vitis/reshape2/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__is_heap_until/vitis/toppipe/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__is_heap_until/vitis/unroll/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__make_heap/vitis/bram/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__make_heap/vitis/cyclic2/original",
+      "detail": [
+        "P10: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__make_heap/vitis/nopipe/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__make_heap/vitis/reshape2/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Heap__make_heap/vitis/toppipe/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Heap__make_heap/vitis/unroll/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__pop_heap/vitis/bram/original",
+      "detail": [
+        "P10: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__pop_heap/vitis/cyclic2/original",
+      "detail": [
+        "P12: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Heap__pop_heap/vitis/nopipe/original",
+      "detail": [
+        "P10: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__pop_heap/vitis/reshape2/original",
+      "detail": [
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Heap__pop_heap/vitis/toppipe/original",
+      "detail": [
+        "P10: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__pop_heap/vitis/unroll/original",
+      "detail": [
+        "P10: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__push_heap/vitis/bram/original",
+      "detail": [
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__push_heap/vitis/cyclic2/original",
+      "detail": [
+        "P10: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Heap__push_heap/vitis/nopipe/original",
+      "detail": [
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__push_heap/vitis/reshape2/original",
+      "detail": [
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__push_heap/vitis/toppipe/original",
+      "detail": [
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__push_heap/vitis/unroll/original",
+      "detail": [
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__sort_heap/vitis/bram/original",
+      "detail": [
+        "P5: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Heap__sort_heap/vitis/cyclic2/original",
+      "detail": [
+        "P9: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Heap__sort_heap/vitis/nopipe/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__sort_heap/vitis/reshape2/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__sort_heap/vitis/toppipe/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Heap__sort_heap/vitis/unroll/original",
+      "detail": [
+        "P5: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "MinMax__max_element/vitis/bram/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "MinMax__max_element/vitis/cyclic2/original",
+      "detail": [
+        "P11: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]",
+        "P13: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 1]"
+      ]
+    },
+    {
+      "case": "MinMax__max_element/vitis/nopipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "MinMax__max_element/vitis/reshape2/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "MinMax__max_element/vitis/toppipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "MinMax__max_element/vitis/unroll/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "MinMax__max_element2/vitis/bram/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "MinMax__max_element2/vitis/cyclic2/original",
+      "detail": [
+        "P11: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]",
+        "P13: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 1]"
+      ]
+    },
+    {
+      "case": "MinMax__max_element2/vitis/nopipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "MinMax__max_element2/vitis/reshape2/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "MinMax__max_element2/vitis/toppipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "MinMax__max_element2/vitis/unroll/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "MinMax__max_seq/vitis/bram/original",
+      "detail": [
+        "P5: requires \\valid_read ( p + ( 0 .. n - 1 ) )  [access in range: p bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "MinMax__max_seq/vitis/cyclic2/original",
+      "detail": [
+        "P11: requires \\valid_read ( p + ( 0 .. n - 1 ) )  [access in range: p bank 1 port 1]",
+        "P9: requires \\valid_read ( p + ( 0 .. n - 1 ) )  [access in range: p bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "MinMax__max_seq/vitis/reshape2/original",
+      "detail": [
+        "P5: requires \\valid_read ( p + ( 0 .. n - 1 ) )  [access in range: p bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "MinMax__max_seq/vitis/unroll/original",
+      "detail": [
+        "P5: requires \\valid_read ( p + ( 0 .. n - 1 ) )  [access in range: p bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "MinMax__min_element/vitis/bram/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "MinMax__min_element/vitis/cyclic2/original",
+      "detail": [
+        "P11: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]",
+        "P13: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 1]"
+      ]
+    },
+    {
+      "case": "MinMax__min_element/vitis/nopipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "MinMax__min_element/vitis/reshape2/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "MinMax__min_element/vitis/toppipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "MinMax__min_element/vitis/unroll/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "MinMax__minmax_element/vitis/bram/original",
+      "detail": [
+        "P12: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P14: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "MinMax__minmax_element/vitis/cyclic2/original",
+      "detail": [
+        "P16: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]",
+        "P18: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 1]"
+      ]
+    },
+    {
+      "case": "MinMax__minmax_element/vitis/nopipe/original",
+      "detail": [
+        "P12: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P14: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "MinMax__minmax_element/vitis/reshape2/original",
+      "detail": [
+        "P12: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P14: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "MinMax__minmax_element/vitis/toppipe/original",
+      "detail": [
+        "P12: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P14: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "MinMax__minmax_element/vitis/unroll/original",
+      "detail": [
+        "P12: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P14: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Mutating__copy/vitis/bram/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__copy/vitis/cyclic2/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__copy/vitis/nopipe/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__copy/vitis/reshape2/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Mutating__copy/vitis/toppipe/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__copy/vitis/unroll/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__copy_backward/vitis/bram/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__copy_backward/vitis/cyclic2/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__copy_backward/vitis/nopipe/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__copy_backward/vitis/reshape2/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Mutating__copy_backward/vitis/toppipe/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__copy_backward/vitis/unroll/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__fill/vitis/bram/original",
+      "detail": [
+        "P3: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__fill/vitis/cyclic2/original",
+      "detail": [
+        "P5: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__fill/vitis/nopipe/original",
+      "detail": [
+        "P3: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__fill/vitis/reshape2/original",
+      "detail": [
+        "P5: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Mutating__fill/vitis/toppipe/original",
+      "detail": [
+        "P3: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__fill/vitis/unroll/original",
+      "detail": [
+        "P3: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__remove/vitis/cyclic2/original",
+      "detail": [
+        "P9: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__remove/vitis/nopipe/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__remove/vitis/toppipe/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__remove_copy/vitis/bram/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__remove_copy/vitis/cyclic2/original",
+      "detail": [
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__remove_copy/vitis/nopipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__remove_copy/vitis/reshape2/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__remove_copy/vitis/toppipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__remove_copy/vitis/unroll/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__remove_copy2/vitis/bram/original",
+      "detail": [
+        "P8: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__remove_copy2/vitis/cyclic2/original",
+      "detail": [
+        "P10: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__remove_copy2/vitis/nopipe/original",
+      "detail": [
+        "P8: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__remove_copy2/vitis/reshape2/original",
+      "detail": [
+        "P8: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__remove_copy2/vitis/toppipe/original",
+      "detail": [
+        "P8: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__remove_copy2/vitis/unroll/original",
+      "detail": [
+        "P8: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__remove_copy3/vitis/bram/original",
+      "detail": [
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__remove_copy3/vitis/cyclic2/original",
+      "detail": [
+        "P11: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__remove_copy3/vitis/nopipe/original",
+      "detail": [
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__remove_copy3/vitis/reshape2/original",
+      "detail": [
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__remove_copy3/vitis/toppipe/original",
+      "detail": [
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__remove_copy3/vitis/unroll/original",
+      "detail": [
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__replace/vitis/bram/original",
+      "detail": [
+        "P5: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Mutating__replace/vitis/cyclic2/original",
+      "detail": [
+        "P9: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 1]"
+      ]
+    },
+    {
+      "case": "Mutating__replace/vitis/nopipe/original",
+      "detail": [
+        "P3: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__replace/vitis/toppipe/original",
+      "detail": [
+        "P3: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__replace/vitis/unroll/original",
+      "detail": [
+        "P5: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Mutating__replace_copy/vitis/bram/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__replace_copy/vitis/cyclic2/original",
+      "detail": [
+        "P8: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__replace_copy/vitis/nopipe/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__replace_copy/vitis/reshape2/original",
+      "detail": [
+        "P11: requires \\valid ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 1]",
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__replace_copy/vitis/toppipe/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__replace_copy/vitis/unroll/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__reverse/vitis/cyclic2/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__reverse/vitis/nopipe/original",
+      "detail": [
+        "P3: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P5: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Mutating__reverse/vitis/toppipe/original",
+      "detail": [
+        "P3: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P5: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Mutating__reverse_copy/vitis/bram/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__reverse_copy/vitis/cyclic2/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__reverse_copy/vitis/nopipe/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__reverse_copy/vitis/reshape2/original",
+      "detail": [
+        "P10: requires \\valid ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 1]",
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__reverse_copy/vitis/toppipe/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__reverse_copy/vitis/unroll/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__rotate/vitis/cyclic2/original",
+      "detail": [
+        "P9: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__rotate/vitis/nopipe/original",
+      "detail": [
+        "P5: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Mutating__rotate/vitis/toppipe/original",
+      "detail": [
+        "P5: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Mutating__rotate_copy/vitis/bram/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__rotate_copy/vitis/cyclic2/original",
+      "detail": [
+        "P8: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__rotate_copy/vitis/nopipe/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__rotate_copy/vitis/reshape2/original",
+      "detail": [
+        "P11: requires \\valid ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Mutating__rotate_copy/vitis/toppipe/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__rotate_copy/vitis/unroll/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__shuffle/vitis/cyclic2/original",
+      "detail": [
+        "P10: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 1]",
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__shuffle/vitis/nopipe/original",
+      "detail": []
+    },
+    {
+      "case": "Mutating__shuffle/vitis/toppipe/original",
+      "detail": []
+    },
+    {
+      "case": "Mutating__swap_ranges/vitis/bram/original",
+      "detail": [
+        "P12: requires \\valid ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 1]",
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Mutating__swap_ranges/vitis/cyclic2/original",
+      "detail": [
+        "P11: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 1]",
+        "P20: requires \\valid ( b + ( 0 .. n - 1 ) )  [access in range: b bank 1 port 1]"
+      ]
+    },
+    {
+      "case": "Mutating__swap_ranges/vitis/nopipe/original",
+      "detail": [
+        "P5: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P8: requires \\valid ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__swap_ranges/vitis/reshape2/original",
+      "detail": [
+        "P12: requires \\valid ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 1]",
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Mutating__swap_ranges/vitis/toppipe/original",
+      "detail": [
+        "P5: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P8: requires \\valid ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Mutating__swap_ranges/vitis/unroll/original",
+      "detail": [
+        "P12: requires \\valid ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 1]",
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Nonmutating__adjacent_find/vitis/bram/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__adjacent_find/vitis/cyclic2/original",
+      "detail": [
+        "P11: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__adjacent_find/vitis/nopipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Nonmutating__adjacent_find/vitis/reshape2/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__adjacent_find/vitis/unroll/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__all_of/vitis/bram/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__all_of/vitis/cyclic2/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__all_of/vitis/nopipe/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__all_of/vitis/reshape2/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__all_of/vitis/toppipe/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__all_of/vitis/unroll/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__any_of/vitis/bram/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__any_of/vitis/cyclic2/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__any_of/vitis/nopipe/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__any_of/vitis/reshape2/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__any_of/vitis/toppipe/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__any_of/vitis/unroll/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__count/vitis/bram/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__count/vitis/cyclic2/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__count/vitis/nopipe/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__count/vitis/reshape2/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__count/vitis/toppipe/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__count/vitis/unroll/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__equal/vitis/bram/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P6: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__equal/vitis/cyclic2/original",
+      "detail": [
+        "P10: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 1 port 0]",
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__equal/vitis/nopipe/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P6: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__equal/vitis/reshape2/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P6: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__equal/vitis/toppipe/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P6: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__equal/vitis/unroll/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P6: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find/vitis/bram/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find/vitis/cyclic2/original",
+      "detail": [
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find/vitis/nopipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find/vitis/reshape2/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find/vitis/toppipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find/vitis/unroll/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find2/vitis/bram/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find2/vitis/cyclic2/original",
+      "detail": [
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find2/vitis/nopipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find2/vitis/reshape2/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find2/vitis/toppipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find2/vitis/unroll/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find3/vitis/bram/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find3/vitis/cyclic2/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find3/vitis/nopipe/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find3/vitis/reshape2/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find3/vitis/toppipe/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find3/vitis/unroll/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find4/vitis/bram/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find4/vitis/cyclic2/original",
+      "detail": [
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find4/vitis/nopipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find4/vitis/reshape2/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find4/vitis/toppipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find4/vitis/unroll/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find5/vitis/bram/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find5/vitis/cyclic2/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find5/vitis/nopipe/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find5/vitis/reshape2/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find5/vitis/toppipe/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find5/vitis/unroll/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_end/vitis/bram/original",
+      "detail": [
+        "P10: requires \\valid_read ( b + ( 0 .. p - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_end/vitis/cyclic2/original",
+      "detail": [
+        "P14: requires \\valid_read ( b + ( 0 .. p - 1 ) )  [access in range: b bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_end/vitis/nopipe/original",
+      "detail": [
+        "P10: requires \\valid_read ( b + ( 0 .. p - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_end/vitis/reshape2/original",
+      "detail": [
+        "P10: requires \\valid_read ( b + ( 0 .. p - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_end/vitis/toppipe/original",
+      "detail": [
+        "P10: requires \\valid_read ( b + ( 0 .. p - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_end/vitis/unroll/original",
+      "detail": [
+        "P10: requires \\valid_read ( b + ( 0 .. p - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_first_of/vitis/bram/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. m - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_first_of/vitis/cyclic2/original",
+      "detail": [
+        "P9: requires \\valid_read ( a + ( 0 .. m - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_first_of/vitis/nopipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. m - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_first_of/vitis/reshape2/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. m - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_first_of/vitis/toppipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. m - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_first_of/vitis/unroll/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. m - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_if_not/vitis/bram/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_if_not/vitis/cyclic2/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_if_not/vitis/nopipe/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_if_not/vitis/reshape2/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_if_not/vitis/toppipe/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_if_not/vitis/unroll/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_last/vitis/bram/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_last/vitis/cyclic2/original",
+      "detail": [
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_last/vitis/nopipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_last/vitis/reshape2/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_last/vitis/toppipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__find_last/vitis/unroll/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__mismatch/vitis/bram/original",
+      "detail": [
+        "P10: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]",
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__mismatch/vitis/cyclic2/original",
+      "detail": [
+        "P14: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 1 port 0]",
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__mismatch/vitis/nopipe/original",
+      "detail": [
+        "P10: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]",
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__mismatch/vitis/reshape2/original",
+      "detail": [
+        "P10: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]",
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__mismatch/vitis/toppipe/original",
+      "detail": [
+        "P10: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]",
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__mismatch/vitis/unroll/original",
+      "detail": [
+        "P10: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]",
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__none_of/vitis/bram/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__none_of/vitis/cyclic2/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__none_of/vitis/nopipe/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__none_of/vitis/reshape2/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__none_of/vitis/toppipe/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__none_of/vitis/unroll/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__search/vitis/bram/original",
+      "detail": [
+        "P10: requires \\valid_read ( b + ( 0 .. p - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__search/vitis/cyclic2/original",
+      "detail": [
+        "P14: requires \\valid_read ( b + ( 0 .. p - 1 ) )  [access in range: b bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__search/vitis/nopipe/original",
+      "detail": [
+        "P10: requires \\valid_read ( b + ( 0 .. p - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__search/vitis/reshape2/original",
+      "detail": [
+        "P10: requires \\valid_read ( b + ( 0 .. p - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__search/vitis/toppipe/original",
+      "detail": [
+        "P10: requires \\valid_read ( b + ( 0 .. p - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__search/vitis/unroll/original",
+      "detail": [
+        "P10: requires \\valid_read ( b + ( 0 .. p - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__search_n/vitis/bram/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__search_n/vitis/cyclic2/original",
+      "detail": [
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__search_n/vitis/nopipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__search_n/vitis/reshape2/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__search_n/vitis/toppipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Nonmutating__search_n/vitis/unroll/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__accumulate/vitis/bram/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__accumulate/vitis/cyclic2/original",
+      "detail": [
+        "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__accumulate/vitis/nopipe/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__accumulate/vitis/reshape2/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__accumulate/vitis/toppipe/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__accumulate/vitis/unroll/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__adjacent_difference/vitis/bram/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__adjacent_difference/vitis/cyclic2/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__adjacent_difference/vitis/nopipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__adjacent_difference/vitis/reshape2/original",
+      "detail": [
+        "P12: requires \\valid ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]",
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__adjacent_difference/vitis/toppipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__adjacent_difference/vitis/unroll/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__adjacent_difference_inv/vitis/bram/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__adjacent_difference_inv/vitis/cyclic2/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__adjacent_difference_inv/vitis/nopipe/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__adjacent_difference_inv/vitis/reshape2/original",
+      "detail": [
+        "P12: requires \\valid ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]",
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__adjacent_difference_inv/vitis/toppipe/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__adjacent_difference_inv/vitis/unroll/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__inner_product/vitis/bram/original",
+      "detail": [
+        "P10: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]",
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__inner_product/vitis/cyclic2/original",
+      "detail": [
+        "P14: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 1 port 0]",
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__inner_product/vitis/nopipe/original",
+      "detail": [
+        "P10: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]",
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__inner_product/vitis/reshape2/original",
+      "detail": [
+        "P10: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]",
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__inner_product/vitis/toppipe/original",
+      "detail": [
+        "P10: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]",
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__inner_product/vitis/unroll/original",
+      "detail": [
+        "P10: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]",
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__iota/vitis/bram/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__iota/vitis/cyclic2/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__iota/vitis/nopipe/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__iota/vitis/reshape2/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Numeric__iota/vitis/toppipe/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__iota/vitis/unroll/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__partial_sum/vitis/bram/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__partial_sum/vitis/cyclic2/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__partial_sum/vitis/nopipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__partial_sum/vitis/reshape2/original",
+      "detail": [
+        "P10: requires \\valid ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]",
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__partial_sum/vitis/toppipe/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__partial_sum/vitis/unroll/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__partial_sum_inv/vitis/bram/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__partial_sum_inv/vitis/cyclic2/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__partial_sum_inv/vitis/nopipe/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__partial_sum_inv/vitis/reshape2/original",
+      "detail": [
+        "P11: requires \\valid ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]",
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__partial_sum_inv/vitis/toppipe/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Numeric__partial_sum_inv/vitis/unroll/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__bubble_sort/vitis/cyclic2/original",
+      "detail": [
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__bubble_sort/vitis/nopipe/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__bubble_sort/vitis/toppipe/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__heap_sort/vitis/bram/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__heap_sort/vitis/cyclic2/original",
+      "detail": [
+        "P10: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__heap_sort/vitis/nopipe/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__heap_sort/vitis/reshape2/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__heap_sort/vitis/toppipe/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__heap_sort/vitis/unroll/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__inplace_merge/vitis/bram/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__inplace_merge/vitis/cyclic2/original",
+      "detail": [
+        "P11: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]",
+        "P13: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__inplace_merge/vitis/nopipe/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__inplace_merge/vitis/reshape2/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__inplace_merge/vitis/toppipe/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__inplace_merge/vitis/unroll/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__insertion_sort/vitis/bram/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__insertion_sort/vitis/cyclic2/original",
+      "detail": [
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__insertion_sort/vitis/nopipe/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__insertion_sort/vitis/reshape2/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__insertion_sort/vitis/toppipe/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__insertion_sort/vitis/unroll/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__is_sorted/vitis/bram/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__is_sorted/vitis/cyclic2/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]",
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__is_sorted/vitis/nopipe/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__is_sorted/vitis/reshape2/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__is_sorted/vitis/toppipe/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__is_sorted/vitis/unroll/original",
+      "detail": [
+        "P3: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__is_sorted_until/vitis/bram/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__is_sorted_until/vitis/cyclic2/original",
+      "detail": [
+        "P11: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 1]",
+        "P9: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__is_sorted_until/vitis/nopipe/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__is_sorted_until/vitis/reshape2/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__is_sorted_until/vitis/toppipe/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__is_sorted_until/vitis/unroll/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__merge/vitis/bram/original",
+      "detail": [
+        "P14: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__merge/vitis/cyclic2/original",
+      "detail": [
+        "P18: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__merge/vitis/nopipe/original",
+      "detail": [
+        "P11: requires \\valid_read ( a + ( 0 .. m - 1 ) )  [access in range: a bank 0 port 0]",
+        "P14: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__merge/vitis/reshape2/original",
+      "detail": [
+        "P14: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__merge/vitis/toppipe/original",
+      "detail": [
+        "P11: requires \\valid_read ( a + ( 0 .. m - 1 ) )  [access in range: a bank 0 port 0]",
+        "P14: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__merge/vitis/unroll/original",
+      "detail": [
+        "P14: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__partial_sort/vitis/bram/original",
+      "detail": [
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__partial_sort/vitis/cyclic2/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__partial_sort/vitis/nopipe/original",
+      "detail": [
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__partial_sort/vitis/reshape2/original",
+      "detail": [
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__partial_sort/vitis/toppipe/original",
+      "detail": [
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__partial_sort/vitis/unroll/original",
+      "detail": [
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__selection_sort/vitis/bram/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__selection_sort/vitis/cyclic2/original",
+      "detail": [
+        "P10: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 1]",
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 1 port 0]"
+      ]
+    },
+    {
+      "case": "Sorting__selection_sort/vitis/reshape2/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__selection_sort/vitis/toppipe/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "Sorting__selection_sort/vitis/unroll/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    }
+  ],
+  "latency": {
+    "established": 428,
+    "report_undefined": 392,
+    "not_established": 4
+  }
+}

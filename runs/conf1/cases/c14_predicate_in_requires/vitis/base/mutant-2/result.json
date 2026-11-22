@@ -1,0 +1,91 @@
+{
+  "design": "c14_predicate_in_requires",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "17/21",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P8: assigns * ( a + ( 0 .. n - 1 ) )  [frame of a]"
+  ],
+  "access": "violated",
+  "access_failed": [
+    "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "8/8",
+  "translated": 8,
+  "total_clauses": 8,
+  "skipped": [],
+  "times": {
+    "frontend": 0.5,
+    "wp": 14.6,
+    "hls": 11.3,
+    "latency": 0.3,
+    "bmc": 0.5,
+    "access": 0.4,
+    "cover": 0.4,
+    "total": 29.5
+  },
+  "error": null,
+  "top": "double_all",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 0
+      },
+      "pre": {
+        "a": [
+          -64,
+          -64,
+          -64,
+          -2147483648
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -128,
+          -64,
+          -64,
+          -2147483648
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {
+      "a": [
+        -128,
+        -64,
+        -64,
+        -2147483648
+      ]
+    },
+    "eacsl": [],
+    "class": "translation-error"
+  },
+  "engine": "yices",
+  "width": 80,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i: symbolic (solver-chosen) value, exact",
+    "\\forall i_23: enumerated over 0..4 (weaker assumption)",
+    "\\forall i_24: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a"
+  ],
+  "latency_report": null,
+  "interval_report": 2,
+  "depth": 12,
+  "cex_step": 4,
+  "outcome": "fail"
+}

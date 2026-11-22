@@ -1,0 +1,32 @@
+=== E1_conformance: --bench conformance --mutants 3
+vitis/base failures on originals (C replay): {}; mutant kills (C replay): {'c-contract-violation': 35, 'c-runtime-error': 1}
+Details: /home/anubhavsaha/cbv/runs/E1_conformance/summary.md, /home/anubhavsaha/cbv/runs/E1_conformance/results.csv, 
+/home/anubhavsaha/cbv/runs/E1_conformance/table.tex
+=== E2_conformance_cfg: --bench conformance --config nopipe,unroll,fastclk,chain,toppipe,cyclic2,block2,complete,reshape2,reshapeb2,bram
+     2  error: interface: a: struct of 80 bits matches no known packing
+Details: /home/anubhavsaha/cbv/runs/E2_conformance_cfg/summary.md, /home/anubhavsaha/cbv/runs/E2_conformance_cfg/results.csv, 
+/home/anubhavsaha/cbv/runs/E2_conformance_cfg/table.tex
+=== E3_abe: --bench abe --mutants 2
+     9  unsupported: struct Stack: array/pointer member data
+     1  error: hls: Vitis synthesis failed: ERROR: [HLS 200-1715] Encountered problem during source synthesis
+Details: /home/anubhavsaha/cbv/runs/E3_abe/summary.md, /home/anubhavsaha/cbv/runs/E3_abe/results.csv, /home/anubhavsaha/cbv/runs/E3_abe/table.tex
+=== E4_acslbench: --bench acslbench --proven-only --mutants 2
+=== E4_acslbench: --bench acslbench --proven-only --mutants 2
+=== E4_acslbench: --bench acslbench --proven-only --mutants 2 (resume)
+=== E4_acslbench: --bench acslbench --proven-only --mutants 2 (resume)
+     1  error: hls: Vitis synthesis failed: ERROR: [HLS 214-194] in function 'matcher': Undefined function strlen (
+Details: /home/anubhavsaha/cbv/runs/E4_acslbench/summary.md, /home/anubhavsaha/cbv/runs/E4_acslbench/results.csv, 
+/home/anubhavsaha/cbv/runs/E4_acslbench/table.tex
+=== E5_abe_cfg: --bench abe --config toppipe,cyclic2,reshape2,bram,nopipe,unroll (resume)
+    54  unsupported: struct Stack: array/pointer member data
+     6  error: hls: Vitis synthesis failed: ERROR: [HLS 200-1715] Encountered problem during source synthesis
+Details: /home/anubhavsaha/cbv/runs/E5_abe_cfg/summary.md, /home/anubhavsaha/cbv/runs/E5_abe_cfg/results.csv, /home/anubhavsaha/cbv/runs/E5_abe_cfg/table.tex
+=== E6_conformance_N2: --bench conformance --array-size 2 (resume)
+vitis/base failures on originals (C replay): {}; mutant kills (C replay): {}
+Details: /home/anubhavsaha/cbv/runs/E6_conformance_N2/summary.md, /home/anubhavsaha/cbv/runs/E6_conformance_N2/results.csv, 
+/home/anubhavsaha/cbv/runs/E6_conformance_N2/table.tex
+=== E6_conformance_N8: --bench conformance --array-size 8 (resume)
+vitis/base failures on originals (C replay): {}; mutant kills (C replay): {}
+Details: /home/anubhavsaha/cbv/runs/E6_conformance_N8/summary.md, /home/anubhavsaha/cbv/runs/E6_conformance_N8/results.csv, 
+/home/anubhavsaha/cbv/runs/E6_conformance_N8/table.tex
+campaign done

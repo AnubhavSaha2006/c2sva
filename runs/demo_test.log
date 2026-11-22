@@ -1,0 +1,211 @@
+
+[1;36m=== 1. The C function and its ACSL contract (ACSL by Example: find) ===[0m
+  /*@
+    loop invariant 0 <= i <= n;
+    loop invariant \forall integer k; 0 <= k < i ==> a[k] != v;
+    loop assigns i;
+    loop variant n-i;
+   */
+  for (size_type i = 0u; i < n; i++) {
+    if (a[i] == v) {
+      return i;
+    }
+  }
+
+  return n;
+}
+/*@
+  requires   \valid_read(a + (0..n-1));
+
+  terminates \true;
+  exits      \false;
+  assigns    \nothing;
+
+  ensures    0 <= \result <= n;
+
+  behavior some:
+    assumes  \exists integer i; 0 <= i < n && a[i] == v;
+    assigns  \nothing;
+    ensures  0 <= \result < n;
+    ensures  a[\result] == v;
+    ensures  \forall integer i; 0 <= i < \result ==> a[i] != v;
+
+  behavior none:
+    assumes  \forall integer i; 0 <= i < n ==> a[i] != v;
+    assigns  \nothing;
+    ensures  \result == n;
+
+  complete behaviors;
+  disjoint behaviors;
+*/
+
+
+[1;36m=== 2. Full pipeline: Frama-C WP -> Vitis HLS -> properties -> BMC -> 2 mutants -> C replay ===[0m
+1 designs -> 3 cases (tools vitis, configs base, mutants 2) -> /home/anubhavsaha/cbv/runs/DEMO_find
+[1/3] Nonmutating/find                 mutant-1  base     C 25/27   fail             clauses 11/11  access speculative lat 8 c-contract-violation
+[2/3] Nonmutating/find                 original  base     C 27/27   pass             clauses 11/11  access speculative lat 16 
+[3/3] Nonmutating/find                 mutant-2  base     C 24/27   pass             clauses 11/11  access speculative lat 16 
+┃       ┃       ┃       ┃       ┃       ┃       ┃      ┃       ┃       ┃       ┃       ┃       ┃       ┃ out   ┃       ┃       ┃       ┃       ┃       ┃ kills ┃
+vitis/base failures on originals (C replay): {}; mutant kills (C replay): {'c-contract-violation': 1}
+
+real	6m21.322s
+user	9m25.713s
+sys	0m13.550s
+
+
+[1;36m=== 3. Interface model read from the Vitis report (C object -> RTL ports) ===[0m
+{
+ "module": "find",
+ "scalars": {
+  "n": "n",
+  "v": "v"
+ },
+ "memories": {
+  "a": {
+   "name": "a",
+   "size": 4,
+   "width": 32,
+   "signed": true,
+   "protocol": "ap_memory",
+   "banks": [
+    {
+     "ports": {
+      "address0": "a_address0",
+      "ce0": "a_ce0",
+      "q0": "a_q0"
+     },
+     "aw": 2,
+     "word_width": 32,
+     "byte_addr": false,
+     "wen_bits": 1
+    }
+   ],
+   "cells": [],
+   "partition": null,
+   "reshape": null
+  }
+ },
+ "control": {
+  "protocol": "ap_ctrl_hs",
+  "clk": "ap_clk",
+  "rst": "ap_rst",
+  "clk_port": true,
+  "rst_active_low": false,
+  "start": "ap_start",
+  "done": "ap_done",
+  "idle": "ap_idle",
+  "ready": "ap_ready",
+  "cont": null,
+  "overlap": true,
+  "pipeline_type": "loop auto-rewind stp (delay=0 cycle(s))"
+ },
+ "latency": null
+}
+
+
+[1;36m=== 4. Generated properties (SVA view of the contract) ===[0m
+// SVA view of the find contract on vitis RTL (helper signals as in harness.sv)
+default clocking @(posedge ap_clk); endclocking
+// P1 ensures 0 <= \result <= \old ( n )
+assert property (h_done_d |-> ((72'sd0 <= h_res_c) && (h_res_c <= n_c)));
+// P2 ensures 0 <= \result < \old ( n )   [\exists i: symbolic (solver-chosen) value, exact; cell of a outside 0..3: solver-chosen value]
+assert property (h_done_d |-> (!((((72'sd0 <= q_i_1) && (q_i_1 < n_c)) && ((((q_i_1) == 72'sd0 ? a_o0 : ((q_i_1) == 72'sd1 ? a_o1 : ((q_i_1) == 72'sd2 ? a_o2 : ((q_i_1) == 72'sd3 ? a_o3 : a_xddf37a180)))) == v_c)))) || (((72'sd0 <= h_res_c) && (h_res_c < n_c)))));
+// P3 ensures * ( \old ( a ) + \result ) == \old ( v )   [\exists i: symbolic (solver-chosen) value, exact; cell of a outside 0..3: solver-chosen value]
+assert property (h_done_d |-> (!((((72'sd0 <= q_i_2) && (q_i_2 < n_c)) && ((((q_i_2) == 72'sd0 ? a_o0 : ((q_i_2) == 72'sd1 ? a_o1 : ((q_i_2) == 72'sd2 ? a_o2 : ((q_i_2) == 72'sd3 ? a_o3 : a_xdb9bb0f93)))) == v_c)))) || (((((h_res_c) == 72'sd0 ? a_e0 : ((h_res_c) == 72'sd1 ? a_e1 : ((h_res_c) == 72'sd2 ? a_e2 : ((h_res_c) == 72'sd3 ? a_e3 : a_xdfe23f930)))) == v_c)))));
+// P4 ensures \forall integer i ; 0 <= i < \result ==> * ( \old ( a ) + i ) != \old ( v )   [\exists i: symbolic (solver-chosen) value, exact; cell of a outside 0..3: solver-chosen value; \forall i: symbolic (solver-chosen) value, exact]
+assert property (h_done_d |-> (!((((72'sd0 <= q_i_3) && (q_i_3 < n_c)) && ((((q_i_3) == 72'sd0 ? a_o0 : ((q_i_3) == 72'sd1 ? a_o1 : ((q_i_3) == 72'sd2 ? a_o2 : ((q_i_3) == 72'sd3 ? a_o3 : a_xd8f60325c)))) == v_c)))) || ((!(((72'sd0 <= q_i_4) && (q_i_4 < h_res_c))) || (((((q_i_4) == 72'sd0 ? a_e0 : ((q_i_4) == 72'sd1 ? a_e1 : ((q_i_4) == 72'sd2 ? a_e2 : ((q_i_4) == 72'sd3 ? a_e3 : a_xd462d28e8)))) != v_c)))))));
+// P5 ensures \result == \old ( n )   [\forall i: enumerated over 0..4 (stronger assertion); cell of a outside 0..3: solver-chosen value]
+assert property (h_done_d |-> (!(((!(((72'sd0 <= 72'sd0) && (72'sd0 < n_c))) || (((a_o0 != v_c)))) && (!(((72'sd0 <= 72'sd1) && (72'sd1 < n_c))) || (((a_o1 != v_c)))) && (!(((72'sd0 <= 72'sd2) && (72'sd2 < n_c))) || (((a_o2 != v_c)))) && (!(((72'sd0 <= 72'sd3) && (72'sd3 < n_c))) || (((a_o3 != v_c)))) && (!(((72'sd0 <= 72'sd4) && (72'sd4 < n_c))) || (((a_x4 != v_c)))))) || (((h_res_c == n_c)))));
+// P6 requires \valid_read ( a + ( 0 .. n - 1 ) )  [range fits the 4-cell memory]
+assume property (h_start_evt |-> ((((n_now - 72'sd1) < 72'sd0)) || (((72'sd0 <= 72'sd0)) && (((n_now - 72'sd1) < 72'sd4)))));
+// P7 requires \valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]
+assert property ((h_busy || h_start_evt) |-> !a_ce0 || (((72'sd0 <= (($signed({{70{1'b0}}, a_address0}) >>> 0))) && ((($signed({{70{1'b0}}, a_address0}) >>> 0)) <= (n_now - 72'sd1)))));  // access check
+// P8 physical memory bound: a bank 0 port 0 address < 4
+assert property ((h_busy || h_start_evt) |-> !a_ce0 || ((($signed({{70{1'b0}}, a_address0}) >>> 0)) < 72'sd4));  // physical bound
+// P9 assigns \nothing  [frame of a]   [holds by construction: the RTL cannot write this object]
+// discharged by construction (no property needed)
+// P10 assigns \nothing  [frame of a]   [exact frame over all 4 element(s) of a]
+assert property (h_done_d |-> (((!(((72'sd0 <= q_i_5) && (q_i_5 < n_c)) && ((((q_i_5) == 72'sd0 ? a_o0 : ((q_i_5) == 72'sd1 ? a_o1 : ((q_i_5) == 72'sd2 ? a_o2 : ((q_i_5) == 72'sd3 ? a_o3 : a_xd9a9d02a4)))) == v_c))))) || ((a_e0 == a_o0) && (a_e1 == a_o1) && (a_e2 == a_o2) && (a_e3 == a_o3))));
+// P11 assigns \nothing  [frame of a]   [exact frame over all 4 element(s) of a]
+assert property (h_done_d |-> (((!((!(((72'sd0 <= 72'sd0) && (72'sd0 < n_c))) || (((a_o0 != v_c)))) && (!(((72'sd0 <= 72'sd1) && (72'sd1 < n_c))) || (((a_o1 != v_c)))) && (!(((72'sd0 <= 72'sd2) && (72'sd2 < n_c))) || (((a_o2 != v_c)))) && (!(((72'sd0 <= 72'sd3) && (72'sd3 < n_c))) || (((a_o3 != v_c)))) && (!(((72'sd0 <= 72'sd4) && (72'sd4 < n_c))) || (((a_x4 != v_c))))))) || ((a_e0 == a_o0) && (a_e1 == a_o1) && (a_e2 == a_o2) && (a_e3 == a_o3))));
+// P12 termination: every call eventually completes (checked bounded by the latency search)
+assert property (h_start_evt |-> s_eventually ap_done);   // checked bounded
+
+
+[1;36m=== 5. Mutants: what changed, and the C-level confirmation of each kill ===[0m
+--- mutant-1
+11c11
+<   for (size_type i = 0u; i < n; i++) {
+---
+>   for (size_type i = 1u; i < n; i++) {
+RTL: fail | C replay: c-contract-violation | failed: ['P4: ensures \\forall integer i ; 0 <= i < \\result ==> * ( \\old ( a ) + i ) != \\old ( v )']
+--- mutant-2
+11c11
+<   for (size_type i = 0u; i < n; i++) {
+---
+>   for (size_type i = 0u; i <= n; i++) {
+RTL: pass | C replay: None | failed: []
+
+
+[1;36m=== 6. Unbounded proof (A1): C loop invariants -> RTL invariants -> k-induction ===[0m
+Nonmutating__find/vitis/base/original                                  unbounded=False by=None inv=None/None c-inv=0 ERROR [Errno 2] No such file or directory: 
+'/home/anubhavsaha/cbv/runs/DEMO_find/cases
+unbounded: 0/1
+
+real	0m0.697s
+user	0m0.451s
+sys	0m0.072s
+plain k-induction  : None
+candidates          : None None
+certified invariants: None   C loop invariants kept: None
+contract, all runs  : None
+
+
+[1;36m=== 7. RQ6: LLM-lifted definitions are admitted only after a Frama-C proof ===[0m
+Counter({'lemma-unproved': 5, 'validated-unfolding': 3, 'inconsistent-axioms': 2, 'no-definition (abstract)': 2})
+  task_13   factorial       inconsistent-axioms
+  task_138  matcher_ab      no-definition (abstract)
+  task_164  matcher_a_or_b  no-definition (abstract)
+  task_216  factorial       inconsistent-axioms
+  task_266  Permuta         lemma-unproved
+  task_273  same_elements   lemma-unproved
+  task_321  same_elements   lemma-unproved
+  task_363  gcd             validated-unfolding
+  task_452  count           lemma-unproved
+  task_452  ordered         lemma-unproved
+  task_564  fact            validated-unfolding
+  task_586  GCD             validated-unfolding
+seeded wrong definitions: 11/11 rejected (docs/methodology.md section 6.2)
+
+
+[1;36m=== 8. Campaign results (frozen re-run tables) ===[0m
+# Evaluation tables (generated)
+
+### T1 Coverage funnel (originals, Vitis base)
+
+| Suite | Designs | Front end | HLS | Checked | Clauses | Clause % |
+|---|---|---|---|---|---|---|
+| Conformance | 17 | 17 | 17 | 17 | 111/111 | 100.0 |
+| ACSL by Example | 82 | 73 | 72 | 72 | 725/727 | 99.7 |
+| ACSLBench (proven) | 419 | 380 | 352 | 352 | 1827/1902 | 96.1 |
+
+### T2 Correctness on originals (Vitis base)
+
+| Suite | Pass | Pass partial | Fail | Bounded | Vacuous | Agree w/ C proof | RTL fail on proven C | C replay of failures |
+|---|---|---|---|---|---|---|---|---|
+| Conformance | 16 | 0 | 0 | 1 | 0 | 16 | 0 | -- |
+| ACSL by Example | 54 | 2 | 0 | 16 | 0 | 56 | 0 | -- |
+| ACSLBench (proven) | 300 | 32 | 0 | 19 | 1 | 332 | 0 | -- |
+
+### T3 Property strength (automatic mutants, Vitis base)
+
+| Suite | Mutants checked | Non-equivalent | Killed | Mutation score % | Kills confirmed in C | Equivalent passing |
+|---|---|---|---|---|---|---|
+| Conformance | 42 | 36 | 36 | 100.0 | 36 | 6/6 |
+| ACSL by Example | 109 | 106 | 98 | 92.5 | 98 | 3/3 |
+| ACSLBench (proven) | 519 | 383 | 305 | 79.6 | 305 | 136/136 |
+
+### T4 Robustness across Vitis optimisations (originals)
+
+| Suite | Config | Designs | Pass | Fail | Bounded | Error/unsupported | Overlap mode | Speculative | Out-of-memory |
+|---|---|---|---|---|---|---|---|---|---|

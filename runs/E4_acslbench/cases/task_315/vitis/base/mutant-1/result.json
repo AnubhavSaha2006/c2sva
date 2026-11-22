@@ -1,0 +1,84 @@
+{
+  "design": "task_315",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "5/6",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P1: ensures \\result >= * \\old ( p ) && \\result >= * \\old ( q )"
+  ],
+  "access": null,
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "2/2",
+  "translated": 2,
+  "total_clauses": 2,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 10.9,
+    "hls": 12.5,
+    "latency": 0.2,
+    "bmc": 0.3,
+    "cover": 0.3,
+    "total": 27.4
+  },
+  "error": null,
+  "top": "max_ptr",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {},
+      "pre": {
+        "p": [
+          1073741824
+        ],
+        "q": [
+          1073741824
+        ]
+      },
+      "rtl_post": {
+        "p": [
+          1
+        ],
+        "q": [
+          0
+        ]
+      },
+      "rtl_result": 0,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "max_ptr",
+        "\\result \u2265 *\\old(p) \u2227 \\result \u2265 *\\old(q). With values at failure point:"
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [],
+  "latency_report": [
+    0,
+    0
+  ],
+  "interval_report": 1,
+  "depth": 6,
+  "cex_step": 2,
+  "outcome": "fail"
+}

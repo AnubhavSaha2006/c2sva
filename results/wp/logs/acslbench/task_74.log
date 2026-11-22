@@ -1,0 +1,40 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_74.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_74.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function AreaOfLargestTriangleInSemicircle
+[kernel:annot:missing-spec] FRAMAC_SHARE/libc/stdlib.h:626: Warning: 
+  Neither code nor explicit exits and terminates for function malloc,
+  generating default clauses. See -generated-spec-* options for more info.
+[wp] FRAMAC_SHARE/libc/stdlib.h:614: Warning: 
+  Allocation, initialization and danglingness not yet implemented
+  (allocation: \fresh{Old, Here}(\at(\result,wp:post),\at(size,wp:pre)))
+[wp] FRAMAC_SHARE/libc/stdlib.h:615: Warning: \aligned not yet implemented
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_74.c:24: Warning: 
+  Cast with incompatible pointers types (source: sint8*) (target: sint32*)
+[wp] 18 goals scheduled
+[wp] [Timeout] typed_AreaOfLargestTriangleInSemicircle_ensures_2_part2 (Qed 18ms) (Z3) (Cached) (Stronger, 3 warnings)
+[wp] [Timeout] typed_AreaOfLargestTriangleInSemicircle_assert_rte_mem_access (Qed 10ms) (Z3) (Cached) (Stronger, 3 warnings)
+[wp] [Timeout] typed_AreaOfLargestTriangleInSemicircle_assert_rte_signed_2 (Qed 17ms) (Z3) (Cached) (Stronger, 3 warnings)
+[wp] [Timeout] typed_AreaOfLargestTriangleInSemicircle_assigns_normal_part2 (Qed 9ms) (Z3) (Cached) (Stronger, 3 warnings)
+[wp] [Timeout] typed_AreaOfLargestTriangleInSemicircle_assigns_normal_part5 (Qed 10ms) (Z3) (Cached) (Stronger, 3 warnings)
+[wp] [Cache] found:2, updated:14
+[wp] Proved goals:   13 / 18
+  Qed:              12 (6ms-4ms-18ms)
+  Alt-Ergo 2.6.4:    1 (71ms)
+  Timeout:           5
+[wp] FRAMAC_SHARE/libc/stdlib.h:626: Warning: 
+  Memory model hypotheses for function 'malloc':
+  /*@ behavior wp_typed:
+        ensures \separated(\result, &__fc_errno); */
+  extern void *malloc(size_t size);
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_74.c:19: Warning: 
+  No 'assigns \result \from ...' specification for function 'AreaOfLargestTriangleInSemicircle'returning pointer type.
+  Callers assumptions might be imprecise.
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_74.c:19: Warning: 
+  Memory model hypotheses for function 'AreaOfLargestTriangleInSemicircle':
+  /*@ behavior wp_typed:
+        ensures \separated(\result, &__fc_errno); */
+  int *AreaOfLargestTriangleInSemicircle(int radius);

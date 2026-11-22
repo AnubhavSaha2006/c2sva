@@ -1,0 +1,110 @@
+{
+  "design": "Numeric/inner_product",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "19/21",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P3: ensures \\result == InnerProduct ( \\old ( a ) , \\old ( b ) , \\old ( n ) , \\old ( init ) )"
+  ],
+  "access": "out-of-memory",
+  "access_failed": [
+    "P10: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]",
+    "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "13/13",
+  "translated": 13,
+  "total_clauses": 13,
+  "skipped": [],
+  "times": {
+    "frontend": 0.6,
+    "wp": 12.5,
+    "hls": 19.7,
+    "latency": 4.6,
+    "bmc": 6.0,
+    "access": 2.0,
+    "phys": 4.7,
+    "cover": 1.6,
+    "total": 56.9
+  },
+  "error": null,
+  "top": "inner_product",
+  "mode": "overlapping calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 1,
+        "init": -1
+      },
+      "pre": {
+        "a": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "b": [
+          -1,
+          0,
+          0,
+          0
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "b": [
+          -1,
+          0,
+          0,
+          0
+        ]
+      },
+      "rtl_result": -1,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "inner_product",
+        "result: \\result \u2261 InnerProduct(\\old(a), \\old(b), \\old(n), \\old(init))."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 80,
+  "fifo_depth": 8,
+  "discharged": 2,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_36728: enumerated over 0..4 (weaker assumption)",
+    "\\forall i_36729: enumerated over 0..4 (weaker assumption)",
+    "\\forall i_36732: symbolic (solver-chosen) value, exact",
+    "\\forall i_36733: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "cell of b outside 0..3: solver-chosen value",
+    "holds by construction: the RTL cannot write this object",
+    "recursive logic cut off: free value"
+  ],
+  "latency_report": null,
+  "interval_report": 0,
+  "depth": 20,
+  "cex_step": 2,
+  "outcome": "fail"
+}

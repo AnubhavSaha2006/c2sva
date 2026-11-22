@@ -1,0 +1,98 @@
+{
+  "latency": 8,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 25.6,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.0
+  },
+  "candidates": {
+    "total": 130,
+    "by_origin": {
+      "structural": 72,
+      "call-requires": 1,
+      "call-frame": 1,
+      "loop-invariant": 48,
+      "loop-assigns": 8
+    },
+    "loops": 1,
+    "loop_invariants": 4,
+    "skipped": [
+      {
+        "source": "loop 1: loop invariant bound: 0 <= i <= half <= n - i",
+        "reason": "no RTL signal found for C variable half"
+      },
+      {
+        "source": "loop 1: loop variant half - i >= 0",
+        "reason": "no RTL signal found for C variable half"
+      }
+    ]
+  },
+  "houdini": {
+    "candidates": 130,
+    "base_dropped": 72,
+    "ind_dropped": 0,
+    "rounds": 2,
+    "status": "inductive",
+    "base_depth": 12,
+    "k": 16,
+    "secs": 626.6,
+    "invariants": 58,
+    "by_origin": {
+      "structural": 24,
+      "call-requires": 1,
+      "call-frame": 1,
+      "loop-invariant": 24,
+      "loop-assigns": 8
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant left: Reverse { Pre , Here } ( a , 0 , i , n )",
+      "loop 1: loop invariant middle: Unchanged { Pre , Here } ( a , i , n - i )",
+      "loop 1: loop invariant right: Reverse { Pre , Here } ( a , n - i , n , i )"
+    ],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "PASS",
+    "secs": 48.5,
+    "k": 16
+  },
+  "ablation": {
+    "hls": {
+      "candidates": 72,
+      "invariants": 24,
+      "houdini": "inductive",
+      "k": 16,
+      "status": "PASS",
+      "secs": 12.0
+    },
+    "hls+contract": {
+      "candidates": 74,
+      "invariants": 26,
+      "houdini": "inductive",
+      "k": 16,
+      "status": "PASS",
+      "secs": 8.4
+    }
+  },
+  "unbounded": true,
+  "proved_by": [
+    "kind+inv"
+  ],
+  "deep_cex": [],
+  "secs": 1037.4
+}

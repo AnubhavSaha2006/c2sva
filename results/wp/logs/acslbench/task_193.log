@@ -1,0 +1,22 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_193.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_193.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function mv_mult2
+[rte:annot] annotating function mv_mult2_bool
+[rte:annot] annotating function mv_mult2r_bool
+[rte:annot] annotating function mv_mult2s_bool
+[wp] Computing [100 goals...]
+[wp] Computing [200 goals...]
+[wp] Computing [300 goals...]
+[wp] Computing [400 goals...]
+[wp] 426 goals scheduled
+[wp] [Cache] updated:251
+[wp] Proved goals:  434 / 434
+  Terminating:       4
+  Unreachable:       4
+  Qed:             194 (18ms-40ms-175ms)
+  Alt-Ergo 2.6.4:  206 (43ms-235ms-7.7s)
+  CVC5 :            26 (74ms-289ms-1.2s)

@@ -1,0 +1,109 @@
+{
+  "design": "task_500",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "18/23",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures ( \\forall integer i ; 0 <= i < \\old ( n ) ==> * ( \\old ( t1 ) + i ) == * ( \\old ( t2 ) + i ) ) ==> \\result == 1"
+  ],
+  "access": "out-of-memory",
+  "access_failed": [
+    "P5: requires \\valid ( t1 + ( 0 .. n - 1 ) ) && \\valid ( t2 + ( 0 .. n - 1 ) ) && n > 0  [access in range: t1 bank 0 port 0]",
+    "P8: requires \\valid ( t1 + ( 0 .. n - 1 ) ) && \\valid ( t2 + ( 0 .. n - 1 ) ) && n > 0  [access in range: t2 bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 128,
+  "latency_status": "established",
+  "clauses": "11/11",
+  "translated": 11,
+  "total_clauses": 11,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 12.2,
+    "hls": 15.6,
+    "latency": 63.2,
+    "bmc": 0.7,
+    "access": 0.7,
+    "phys": 0.8,
+    "cover": 0.6,
+    "total": 97.9
+  },
+  "error": null,
+  "top": "compare",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 1
+      },
+      "pre": {
+        "t1": [
+          -1,
+          0,
+          0,
+          0
+        ],
+        "t2": [
+          -1,
+          16777216,
+          0,
+          0
+        ]
+      },
+      "rtl_post": {
+        "t1": [
+          -1,
+          0,
+          0,
+          0
+        ],
+        "t2": [
+          -1,
+          16777216,
+          0,
+          0
+        ]
+      },
+      "rtl_result": 0,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "compare",
+        "(\u2200 \u2124 i; 0 \u2264 i < \\old(n) \u21d2 *(\\old(t1) + i) \u2261 *(\\old(t2) + i)) \u21d2 \\result \u2261 1. With values at failure point:"
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 64,
+  "discharged": 2,
+  "pre_dropped": 0,
+  "notes": [
+    "\\exists i: symbolic (solver-chosen) value, exact",
+    "\\forall i: enumerated over 0..4 (stronger assertion)",
+    "cell of t1 outside 0..3: solver-chosen value",
+    "cell of t2 outside 0..3: solver-chosen value",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": [
+    1,
+    4294967300
+  ],
+  "interval_report": 2,
+  "depth": 132,
+  "cex_step": 6,
+  "outcome": "fail"
+}

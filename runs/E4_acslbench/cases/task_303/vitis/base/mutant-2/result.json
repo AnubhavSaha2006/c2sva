@@ -1,0 +1,57 @@
+{
+  "design": "task_303",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "23/24",
+  "c_ok": false,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "speculative",
+  "access_failed": [
+    "P9: requires \\valid ( t + ( 0 .. n - 1 ) )  [access in range: t bank 0 port 1]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "10/10",
+  "translated": 10,
+  "total_clauses": 10,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 11.0,
+    "hls": 13.0,
+    "latency": 0.4,
+    "bmc": 2.4,
+    "access": 0.6,
+    "phys": 2.4,
+    "cover": 0.4,
+    "total": 30.5
+  },
+  "error": null,
+  "top": "min",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall k: symbolic (solver-chosen) value, exact",
+    "cell of t outside 0..3: solver-chosen value"
+  ],
+  "latency_report": null,
+  "interval_report": 2,
+  "depth": 12,
+  "cex_step": null,
+  "outcome": "pass",
+  "survivor": {
+    "class": "no-violation-found",
+    "tested": 1000
+  }
+}

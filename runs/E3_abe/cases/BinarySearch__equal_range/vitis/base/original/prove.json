@@ -1,0 +1,69 @@
+{
+  "latency": 16,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 113.4,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.0
+  },
+  "candidates": {
+    "total": 600,
+    "by_origin": {
+      "structural": 149,
+      "call-requires": 2,
+      "call-frame": 1,
+      "loop-invariant": 308,
+      "loop-variant": 133,
+      "loop-assigns": 7
+    },
+    "loops": 2,
+    "loop_invariants": 6,
+    "skipped": []
+  },
+  "houdini": {
+    "candidates": 600,
+    "base_dropped": 474,
+    "ind_dropped": 80,
+    "rounds": 19,
+    "status": "inductive",
+    "base_depth": 20,
+    "k": 16,
+    "secs": 2495.5,
+    "invariants": 46,
+    "by_origin": {
+      "structural": 36,
+      "call-requires": 2,
+      "call-frame": 1,
+      "loop-assigns": 7
+    },
+    "c_invariants_survived": [],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "UNKNOWN",
+    "secs": 70.3,
+    "k": 16
+  },
+  "pdr+inv": {
+    "status": "TIMEOUT",
+    "secs": 300.0
+  },
+  "unbounded": false,
+  "proved_by": [],
+  "deep_cex": [],
+  "secs": 3297.7
+}

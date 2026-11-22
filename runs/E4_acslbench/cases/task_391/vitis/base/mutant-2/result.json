@@ -1,0 +1,105 @@
+{
+  "design": "task_391",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "10/15",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures 0 <= \\result <= \\old ( x1 ) && ( \\forall int x74 ; 0 <= x74 < \\result ==> 0 <= * ( \\old ( x2 ) + x74 ) < \\old ( x1 ) ) && ( \\forall int x86 ; 0 < x86 < \\result ==> * ( \\old ( x2 ) + ( x86 - 1 ) ) < * ( \\old ( x2 ) + x86 ) )"
+  ],
+  "access": "out-of-memory",
+  "access_failed": [
+    "P4: requires x1 > 0 && \\valid ( x0 + ( 0 .. x1 - 1 ) ) && \\valid ( x2 + ( 0 .. x1 - 1 ) )  [access in range: x0 bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "10/10",
+  "translated": 10,
+  "total_clauses": 10,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 14.1,
+    "hls": 12.3,
+    "latency": 0.4,
+    "bmc": 0.6,
+    "access": 0.5,
+    "phys": 0.6,
+    "cover": 0.4,
+    "total": 32.3
+  },
+  "error": null,
+  "top": "index_where_even",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "x1": 1
+      },
+      "pre": {
+        "x0": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "x2": [
+          0,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "rtl_post": {
+        "x0": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "x2": [
+          1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "rtl_result": 1,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "index_where_even",
+        "0 \u2264 \\result \u2264 \\old(x1) \u2227 (\u2200 int x74; 0 \u2264 x74 < \\result \u21d2 0 \u2264 *(\\old(x2) + x74) < \\old(x1)) \u2227"
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall x74: symbolic (solver-chosen) value, exact",
+    "\\forall x86: symbolic (solver-chosen) value, exact",
+    "cell of x2 outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of x2",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": 2,
+  "depth": 12,
+  "cex_step": 6,
+  "outcome": "fail"
+}

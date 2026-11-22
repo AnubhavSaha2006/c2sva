@@ -1,0 +1,38 @@
+{
+  "design": "Mutating/swap_ranges",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "25/25",
+  "c_ok": true,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "violated",
+  "access_failed": [
+    "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [read address in range: a bank 0 port 1]",
+    "P9: requires \\valid ( b + ( 0 .. n - 1 ) )  [read address in range: b bank 0 port 1]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "proven",
+  "clauses": "11/11",
+  "skipped": [],
+  "times": {
+    "frontend": 1.0,
+    "wp": 3.3,
+    "hls": 16.5,
+    "latency": 0.4,
+    "bmc": 2.9,
+    "access": 0.6,
+    "cover": 0.6,
+    "total": 25.3
+  },
+  "error": null,
+  "top": "swap_ranges",
+  "discharged": 0,
+  "pre_dropped": 0,
+  "latency_report": null,
+  "cex_step": null
+}

@@ -1,0 +1,42 @@
+{
+  "design": "max_element",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "15/17",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures 0 <= \\result < \\old ( n )"
+  ],
+  "access": "violated",
+  "access_failed": [
+    "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [read address in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "proven",
+  "clauses": "7/7",
+  "skipped": [],
+  "times": {
+    "frontend": 0.5,
+    "wp": 1.8,
+    "hls": 17.6,
+    "latency": 0.6,
+    "bmc": 0.8,
+    "access": 0.7,
+    "cover": 0.7,
+    "total": 22.8
+  },
+  "error": null,
+  "top": "max_element",
+  "discharged": 1,
+  "pre_dropped": 0,
+  "latency_report": [
+    1,
+    8
+  ],
+  "cex_step": 6
+}

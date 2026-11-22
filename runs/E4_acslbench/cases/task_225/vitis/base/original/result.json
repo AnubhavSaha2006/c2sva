@@ -1,0 +1,53 @@
+{
+  "design": "task_225",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "10/10",
+  "c_ok": true,
+  "rtl": "TIMEOUT",
+  "failed": [],
+  "access": null,
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 35,
+  "latency_status": "established",
+  "clauses": "6/6",
+  "translated": 6,
+  "total_clauses": 6,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 1.1,
+    "hls": 14.8,
+    "latency": 1.5,
+    "bmc": 1200.3,
+    "cover": 2.9,
+    "total": 1221.1
+  },
+  "error": null,
+  "top": "div_rem",
+  "mode": "sequential calls",
+  "bounded_to": 37,
+  "replay": null,
+  "engine": "bitwuzla",
+  "width": 80,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\separated holds by construction (separate RTL memories/registers)",
+    "exact frame over all 1 element(s) of q",
+    "exact frame over all 1 element(s) of r"
+  ],
+  "latency_report": [
+    35,
+    35
+  ],
+  "interval_report": 36,
+  "depth": 39,
+  "cex_step": 37,
+  "outcome": "bounded(37)"
+}

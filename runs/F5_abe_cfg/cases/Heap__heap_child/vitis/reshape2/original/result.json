@@ -1,0 +1,58 @@
+{
+  "design": "Heap/heap_child",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "reshape2",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "27/27",
+  "c_ok": true,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "speculative",
+  "access_failed": [
+    "P15: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+  ],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "17/17",
+  "translated": 17,
+  "total_clauses": 17,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 2.7,
+    "hls": 15.1,
+    "latency": 0.5,
+    "bmc": 1.0,
+    "access": 1.0,
+    "phys": 0.5,
+    "cover": 1.0,
+    "total": 22.3
+  },
+  "error": null,
+  "top": "heap_child",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "yices",
+  "width": 80,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "cell of a outside 0..3: solver-chosen value",
+    "holds by construction: the RTL cannot write this object",
+    "word holds several elements: access counts as in range if any is"
+  ],
+  "latency_report": [
+    1,
+    1
+  ],
+  "interval_report": 2,
+  "depth": 6,
+  "cex_step": null,
+  "failed_cutoff": [],
+  "outcome": "pass"
+}

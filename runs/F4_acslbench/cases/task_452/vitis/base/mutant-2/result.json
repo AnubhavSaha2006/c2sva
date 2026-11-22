@@ -1,0 +1,105 @@
+{
+  "design": "task_452",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "33/34",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P9: assigns * ( a + ( 0 .. n - 1 ) )  [frame of a]"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+  ],
+  "cover": "reached",
+  "latency": 64,
+  "latency_status": "established",
+  "clauses": "7/9",
+  "translated": 7,
+  "total_clauses": 9,
+  "skipped": [
+    {
+      "id": "P2",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures ordered ( \\old ( a ) , 0 , \\old ( n ) )",
+      "reason": "axiomatic logic ordered"
+    },
+    {
+      "id": "P3",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures \\forall integer p ; count ( \\old ( a ) , 0 , \\old ( n ) , p ) == count { Pre } ( \\old ( a ) , 0 , \\old ( n ) , p )",
+      "reason": "axiomatic logic count"
+    }
+  ],
+  "times": {
+    "frontend": 0.4,
+    "wp": 1.3,
+    "hls": 14.4,
+    "latency": 32.1,
+    "bmc": 2.0,
+    "access": 1.0,
+    "phys": 5.0,
+    "cover": 1.0,
+    "total": 61.8
+  },
+  "error": null,
+  "top": "sort",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 1
+      },
+      "pre": {
+        "a": [
+          1341645068,
+          17,
+          -1363987707,
+          1341636876
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          1341636876,
+          17,
+          -1363987707,
+          1341645068
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Assertion",
+        "sort",
+        "rte/mem_access: \\valid_read(a + j)."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-runtime-error"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "exact frame over all 4 element(s) of a"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 68,
+  "cex_step": 11,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

@@ -1,0 +1,100 @@
+{
+  "design": "Mutating/rotate",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "18/19",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P3: ensures Rotate { Old , Here } ( \\old ( a ) , \\old ( p ) , \\old ( n ) )"
+  ],
+  "access": "ok",
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 32,
+  "latency_status": "established",
+  "clauses": "9/9",
+  "translated": 9,
+  "total_clauses": 9,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 1.4,
+    "hls": 13.2,
+    "latency": 3.5,
+    "bmc": 1.0,
+    "access": 22.5,
+    "cover": 1.0,
+    "total": 45.6
+  },
+  "error": null,
+  "top": "rotate",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "p": 1,
+        "n": 4
+      },
+      "pre": {
+        "a": [
+          -1744814082,
+          609492993,
+          609484801,
+          -1744814084
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -1744814082,
+          609492993,
+          609484801,
+          -1744814084
+        ]
+      },
+      "rtl_result": 3,
+      "completed": true
+    },
+    "c_result": 3,
+    "c_post": {
+      "a": [
+        -1744814082,
+        609492993,
+        609484801,
+        -1744814084
+      ]
+    },
+    "eacsl": [],
+    "checker": "e-acsl",
+    "oracle": {
+      "requires_violated": [],
+      "violated": [
+        "ensures Rotate { Old , Here } ( \\old ( a ) , \\old ( p ) , \\old ( n ) )"
+      ],
+      "unknown": [],
+      "checked": 5
+    },
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall k_941: symbolic (solver-chosen) value, exact",
+    "\\forall k_942: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 36,
+  "cex_step": 3,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

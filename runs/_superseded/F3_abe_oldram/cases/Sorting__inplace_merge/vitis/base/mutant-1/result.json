@@ -1,0 +1,92 @@
+{
+  "design": "Sorting/inplace_merge",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "41/45",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P5: ensures Increasing ( \\old ( a ) , \\old ( n ) )"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P9: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+  ],
+  "cover": "reached",
+  "latency": 32,
+  "latency_status": "established",
+  "clauses": "11/11",
+  "translated": 11,
+  "total_clauses": 11,
+  "skipped": [],
+  "times": {
+    "frontend": 0.6,
+    "wp": 15.6,
+    "hls": 20.5,
+    "latency": 11.0,
+    "bmc": 2.0,
+    "access": 1.0,
+    "phys": 3.5,
+    "cover": 1.5,
+    "total": 63.9
+  },
+  "error": null,
+  "top": "inplace_merge",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "m": 1,
+        "n": 2
+      },
+      "pre": {
+        "a": [
+          -1073741824,
+          -1073741825,
+          -1,
+          -1
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -1073741824,
+          -1073741825,
+          -1,
+          -1
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [],
+    "checker": "e-acsl",
+    "class": "c-runtime-error",
+    "detail": "C execution crashed (exit code -11)"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_63079,j_63080: enumerated over 0..4 (weaker assumption)",
+    "\\forall i_63081,j_63082: enumerated over 0..4 (weaker assumption)",
+    "\\forall i_63086,j_63087: symbolic (solver-chosen) value, exact",
+    "\\forall v_63083: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a",
+    "recursive logic cut off: free value"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 36,
+  "cex_step": 3,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

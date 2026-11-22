@@ -1,0 +1,72 @@
+{
+  "candidates": {
+    "total": 103,
+    "by_origin": {
+      "structural": 48,
+      "call-requires": 2,
+      "contract-persist": 1,
+      "call-frame": 1,
+      "loop-invariant": 36,
+      "loop-variant": 12,
+      "loop-assigns": 3
+    },
+    "loops": 1,
+    "loop_invariants": 2,
+    "skipped": []
+  },
+  "houdini": {
+    "candidates": 103,
+    "base_dropped": 47,
+    "ind_dropped": 0,
+    "rounds": 2,
+    "status": "inductive",
+    "base_depth": 12,
+    "k": 12,
+    "secs": 92.1,
+    "invariants": 56,
+    "by_origin": {
+      "structural": 13,
+      "call-requires": 2,
+      "contract-persist": 1,
+      "call-frame": 1,
+      "loop-invariant": 24,
+      "loop-variant": 12,
+      "loop-assigns": 3
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant 0 <= i <= n",
+      "loop 1: loop invariant c == CountPos ( a , i )"
+    ],
+    "c_invariants_lagged": [],
+    "k_tried": [
+      4,
+      8,
+      12
+    ]
+  },
+  "kind+inv": {
+    "status": "PASS",
+    "secs": 4.6,
+    "k": 12
+  },
+  "latency": 8,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kmin": {
+    "none": null,
+    "hls": 12,
+    "hls+contract": 12,
+    "all": 12,
+    "all+progress": 8
+  },
+  "unbounded": true,
+  "proved_by": [
+    "kind+inv"
+  ],
+  "deep_cex": [],
+  "secs": 555.5
+}

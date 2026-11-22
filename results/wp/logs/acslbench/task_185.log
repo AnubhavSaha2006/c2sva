@@ -1,0 +1,30 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_185.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_185.c (with preprocessing)
+[kernel] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_185.c:76: Warning: 
+  parsing obsolete ACSL construct '\valid_range(addr,min,max)'. '\valid(addr+(min..max))' should be used instead.
+[kernel] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_185.c:78: Warning: 
+  parsing obsolete ACSL construct '\valid_range(addr,min,max)'. '\valid(addr+(min..max))' should be used instead.
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function remove_copy_array
+[wp] Warning: No definition for 'predicate_remove_copy' interpreted as reads nothing
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_185.c:124: Warning: 
+  Missing assigns clause (assigns 'everything' instead)
+[wp] 26 goals scheduled
+[wp] [Timeout] typed_remove_copy_array_terminates (Qed 6ms) (Z3) (Cached)
+[wp] [Timeout] typed_remove_copy_array_ensures (Qed 19ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_remove_copy_array_ensures_2 (Qed 23ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_remove_copy_array_ensures_3 (Qed 33ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_remove_copy_array_assert_rte_mem_access (Qed 29ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_remove_copy_array_assert_rte_mem_access_2 (Qed 28ms) (Alt-Ergo) (Cached)
+[wp] [Cache] updated:30
+[wp] Proved goals:   21 / 27
+  Unreachable:       1
+  Qed:               8 (6ms-22ms-60ms)
+  Alt-Ergo 2.6.4:   12 (90ms-136ms-254ms)
+  Timeout:           6
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_185.c:96: Warning: 
+  No 'assigns' specification for function 'remove_copy_array'.
+  Callers assumptions might be imprecise.

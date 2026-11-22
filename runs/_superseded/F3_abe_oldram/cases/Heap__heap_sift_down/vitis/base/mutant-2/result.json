@@ -1,0 +1,97 @@
+{
+  "design": "Heap/heap_sift_down",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "76/80",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P10: assigns * ( a + ( 0 .. n - 1 ) )  [frame of a]"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+  ],
+  "cover": "reached",
+  "latency": 16,
+  "latency_status": "established",
+  "clauses": "10/10",
+  "translated": 10,
+  "total_clauses": 10,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 12.5,
+    "hls": 12.0,
+    "latency": 2.0,
+    "bmc": 6.0,
+    "access": 0.5,
+    "phys": 1.0,
+    "cover": 1.0,
+    "total": 40.1
+  },
+  "error": null,
+  "top": "heap_sift_down",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 3,
+        "root": 2
+      },
+      "pre": {
+        "a": [
+          -1543501824,
+          163974442,
+          -1610579968,
+          -1073672192
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -1543501824,
+          163974442,
+          -1073672192,
+          -1610579968
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Precondition",
+        "heap_child",
+        "bound: 0 \u2264 p < n."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation",
+    "detail": "callee heap_child called outside its precondition"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall c_62830: enumerated over 0..4 (weaker assumption)",
+    "\\forall c_62831: symbolic (solver-chosen) value, exact",
+    "\\forall v_62832: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a",
+    "recursive logic cut off: free value"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 20,
+  "cex_step": 10,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

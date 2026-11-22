@@ -1,0 +1,94 @@
+{
+  "design": "BinarySearch/equal_range2",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "56/58",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures 0 <= \\result . first <= \\result . second <= \\old ( n )"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 128,
+  "latency_status": "not established within cap",
+  "clauses": "9/9",
+  "translated": 9,
+  "total_clauses": 9,
+  "skipped": [],
+  "times": {
+    "frontend": 0.5,
+    "wp": 6.9,
+    "hls": 17.6,
+    "latency": 370.8,
+    "bmc": 1.5,
+    "access": 1.0,
+    "phys": 26.5,
+    "cover": 1.0,
+    "total": 434.5
+  },
+  "error": null,
+  "top": "equal_range2",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 4,
+        "v": 0
+      },
+      "pre": {
+        "a": [
+          -2147483648,
+          -2147483648,
+          -2147483647,
+          2147483644
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -2147483648,
+          -2147483648,
+          -2147483647,
+          2147483644
+        ]
+      },
+      "rtl_result": {
+        "first": 4294967295,
+        "second": 4294967295
+      },
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [],
+    "checker": "native+sanitizers (E-ACSL stopped at unsigned wrap-around)",
+    "class": "c-runtime-error",
+    "detail": "ERROR: AddressSanitizer: SEGV"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_871,j_872: enumerated over 0..4 (weaker assumption)",
+    "\\forall i_873: symbolic (solver-chosen) value, exact",
+    "\\forall i_874: symbolic (solver-chosen) value, exact",
+    "\\forall i_875: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 132,
+  "cex_step": 11,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

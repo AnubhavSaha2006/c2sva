@@ -1,0 +1,41 @@
+{
+  "by_tool_config": [
+    {
+      "tool": "vitis",
+      "config": "base",
+      "designs": 1,
+      "frontend_ok": 1,
+      "hls_ok": 1,
+      "checked": 1,
+      "rtl_pass": 1,
+      "rtl_fail": 0,
+      "agree": 1,
+      "disagree": 0,
+      "vacuous": 0,
+      "access_violations": 1,
+      "clauses": "5/5",
+      "mutants": 0,
+      "mutants_checked": 0,
+      "killed": 0,
+      "killed_c_unproven": 0,
+      "survived_c_proven": 0,
+      "survived_c_unproven": 0,
+      "killed_c_proven": 0
+    }
+  ],
+  "not_checked_reasons": [],
+  "untranslated_clause_reasons": [],
+  "disagreements": [],
+  "access_violations": [
+    {
+      "case": "Numeric__accumulate/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [read address in range: a bank 0 port 0]"
+      ]
+    }
+  ],
+  "latency": {
+    "proven": 1,
+    "report_undefined": 1
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "design": "Numeric/accumulate",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "16/16",
+  "c_ok": true,
+  "rtl": "ERROR",
+  "failed": [
+    "SBY 10:43:27 [check_bmc] base: harness.sv:2: ERROR:Incompatible re-declaration of wire \\init. | SBY 10:43:27 [check_bmc] base: task failed. ERROR."
+  ],
+  "access": "error",
+  "access_failed": [],
+  "cover": "error",
+  "latency": 8,
+  "latency_status": "latency search error: SBY 10:43:26 [check_lat] base: harness.sv:2: ERROR:Incompatible re-declaration of wire \\init. | SBY 10:43:26 [check_lat] base: task failed. ERROR.",
+  "clauses": "5/5",
+  "skipped": [],
+  "times": {
+    "frontend": 1.0,
+    "wp": 1.8,
+    "hls": 16.9,
+    "latency": 0.2,
+    "bmc": 0.2,
+    "access": 0.2,
+    "cover": 0.2,
+    "total": 20.3
+  },
+  "error": null,
+  "top": "accumulate",
+  "discharged": 1,
+  "pre_dropped": 0,
+  "latency_report": null,
+  "cex_step": null
+}

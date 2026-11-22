@@ -1,0 +1,88 @@
+{
+  "design": "c15_struct_pointer",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "9/10",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures \\old ( p ) -> x == \\old ( p -> x ) + 1"
+  ],
+  "access": null,
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "4/4",
+  "translated": 4,
+  "total_clauses": 4,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 0.9,
+    "hls": 13.3,
+    "latency": 0.3,
+    "bmc": 0.4,
+    "cover": 0.3,
+    "total": 19.9
+  },
+  "error": null,
+  "top": "bump",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {},
+      "pre": {
+        "p": [
+          {
+            "x": 1,
+            "y": 0,
+            "z": 127
+          }
+        ]
+      },
+      "rtl_post": {
+        "p": [
+          {
+            "x": 3,
+            "y": 0,
+            "z": 127
+          }
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "bump",
+        "\\old(p)->x \u2261 \\old(p->x) + 1. With values at failure point:"
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 120,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "exact frame over all 1 element(s) of p (per field)"
+  ],
+  "latency_report": [
+    0,
+    0
+  ],
+  "interval_report": 1,
+  "depth": 6,
+  "cex_step": 2,
+  "outcome": "fail"
+}

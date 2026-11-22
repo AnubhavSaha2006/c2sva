@@ -1,0 +1,62 @@
+{
+  "design": "task_242",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "30/31",
+  "c_ok": false,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "speculative",
+  "access_failed": [
+    "P4: requires \\valid ( x + ( 0 .. N - 1 ) )  [access in range: x bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 32,
+  "latency_status": "established",
+  "clauses": "6/6",
+  "translated": 6,
+  "total_clauses": 6,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 1.1,
+    "hls": 15.8,
+    "latency": 3.5,
+    "bmc": 330.2,
+    "access": 0.5,
+    "phys": 1.0,
+    "cover": 1.0,
+    "total": 353.6
+  },
+  "error": null,
+  "top": "countSameConsecutive",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "\\exists i_112: enumerated over 0..4 (stronger assertion)",
+    "\\exists j_115: enumerated over 0..4 (stronger assertion)",
+    "\\forall i_114: symbolic (solver-chosen) value, exact",
+    "\\forall j_113: symbolic (solver-chosen) value, exact",
+    "cell of x outside 0..3: solver-chosen value",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 36,
+  "cex_step": null,
+  "failed_cutoff": [],
+  "outcome": "pass",
+  "survivor": {
+    "class": "no-violation-found",
+    "tested": 1000
+  }
+}

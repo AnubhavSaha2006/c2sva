@@ -1,0 +1,92 @@
+{
+  "design": "task_533",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "14/18",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures \\result != 0 <==> ( \\forall integer i ; 0 <= i < \\old ( n ) / 2 ==> * ( \\old ( t ) + i ) == * ( \\old ( t ) + ( ( \\old ( n ) - i ) - 1 ) ) )"
+  ],
+  "access": "out-of-memory",
+  "access_failed": [
+    "P4: requires \\valid ( t + ( 0 .. n - 1 ) )  [access in range: t bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "8/8",
+  "translated": 8,
+  "total_clauses": 8,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 13.8,
+    "hls": 13.3,
+    "latency": 0.4,
+    "bmc": 1.1,
+    "access": 1.0,
+    "phys": 1.2,
+    "cover": 0.8,
+    "total": 35.9
+  },
+  "error": null,
+  "top": "is_palindrome",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 4
+      },
+      "pre": {
+        "t": [
+          65537,
+          65536,
+          65536,
+          65537
+        ]
+      },
+      "rtl_post": {
+        "t": [
+          65537,
+          65536,
+          65536,
+          65537
+        ]
+      },
+      "rtl_result": 0,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Assertion",
+        "is_palindrome",
+        "rte/mem_access: \\valid_read(t + (int)((int)(n + i) - 1))."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-runtime-error"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i: enumerated over 0..4 (stronger assertion)",
+    "\\forall i: symbolic (solver-chosen) value, exact",
+    "cell of t outside 0..3: solver-chosen value",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 12,
+  "cex_step": 7,
+  "outcome": "fail"
+}

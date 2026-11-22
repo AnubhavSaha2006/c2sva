@@ -1,0 +1,119 @@
+{
+  "design": "Nonmutating/find_end",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "29/35",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P1: ensures 0 <= \\result <= \\old ( n )"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P10: requires \\valid_read ( b + ( 0 .. p - 1 ) )  [access in range: b bank 0 port 0]",
+    "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 128,
+  "latency_status": "established",
+  "clauses": "17/17",
+  "translated": 17,
+  "total_clauses": 17,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 2.7,
+    "hls": 17.0,
+    "latency": 288.7,
+    "bmc": 71.1,
+    "access": 1.0,
+    "phys": 14.5,
+    "cover": 2.5,
+    "total": 403.1
+  },
+  "error": null,
+  "top": "find_end",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 1,
+        "p": 1
+      },
+      "pre": {
+        "a": [
+          -1176501809,
+          -1176501809,
+          -1193279025,
+          -1
+        ],
+        "b": [
+          -1193279025,
+          -1193279025,
+          536870944,
+          -1
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -1176501809,
+          -1176501809,
+          -1193279025,
+          -1
+        ],
+        "b": [
+          -1193279025,
+          -1193279025,
+          536870944,
+          -1
+        ]
+      },
+      "rtl_result": 2,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "find_end",
+        "result: 0 \u2264 \\result \u2264 \\old(n)."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 2,
+  "pre_dropped": 0,
+  "notes": [
+    "\\exists k_759: symbolic (solver-chosen) value, exact",
+    "\\exists k_761: symbolic (solver-chosen) value, exact",
+    "\\exists k_764: symbolic (solver-chosen) value, exact",
+    "\\exists k_766: symbolic (solver-chosen) value, exact",
+    "\\exists k_768: enumerated over 0..4 (stronger assertion)",
+    "\\forall i_760: enumerated over 0..4 (stronger assertion)",
+    "\\forall i_762: enumerated over 0..4 (stronger assertion)",
+    "\\forall i_763: symbolic (solver-chosen) value, exact",
+    "\\forall i_765: enumerated over 0..4 (stronger assertion)",
+    "\\forall i_767: enumerated over 0..4 (stronger assertion)",
+    "\\forall i_769: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "cell of b outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a",
+    "exact frame over all 4 element(s) of b",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 132,
+  "cex_step": 18,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

@@ -1,0 +1,24 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_343.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_343.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function matcher_ab_dot_star_ab
+[wp] Computing [100 goals...]
+[wp] Computing [200 goals...]
+[wp] Computing [300 goals...]
+[wp] Computing [400 goals...]
+[wp] Computing [500 goals...]
+[wp] Computing [600 goals...]
+[wp] 603 goals scheduled
+[wp] [Cache] found:5, updated:15
+[wp] Proved goals:  605 / 605
+  Terminating:       1
+  Unreachable:       1
+  Qed:             586 (204ms-17ms-873ms)
+  Alt-Ergo 2.6.4:    8 (61ms-216ms-343ms)
+  CVC5 :             9 (217ms-343ms-552ms)
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_343.c:15: Warning: 
+  No 'assigns' specification for function 'matcher_ab_dot_star_ab'.
+  Callers assumptions might be imprecise.

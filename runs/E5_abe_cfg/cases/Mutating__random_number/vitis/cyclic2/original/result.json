@@ -1,0 +1,52 @@
+{
+  "design": "Mutating/random_number",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "cyclic2",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "12/12",
+  "c_ok": true,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "ok",
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 35,
+  "latency_status": "established",
+  "clauses": "10/10",
+  "translated": 10,
+  "total_clauses": 10,
+  "skipped": [],
+  "times": {
+    "frontend": 0.5,
+    "wp": 1.5,
+    "hls": 16.0,
+    "latency": 3.8,
+    "bmc": 929.9,
+    "access": 953.8,
+    "cover": 5.6,
+    "total": 1911.0
+  },
+  "error": null,
+  "top": "random_number",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "bitwuzla",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "exact frame over all 4 element(s) of state"
+  ],
+  "latency_report": [
+    35,
+    35
+  ],
+  "interval_report": 36,
+  "depth": 39,
+  "cex_step": null,
+  "outcome": "pass"
+}

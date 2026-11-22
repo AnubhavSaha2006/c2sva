@@ -1,0 +1,95 @@
+{
+  "design": "task_515",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "13/17",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures ( \\forall integer i ; 0 <= i < \\old ( n ) ==> * ( \\old ( t ) + i ) == * ( \\old ( t ) + ( ( \\old ( n ) - i ) - 1 ) ) ) ==> \\result == 1"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P5: requires \\valid ( t + ( 0 .. n - 1 ) ) && n > 0  [access in range: t bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 128,
+  "latency_status": "established",
+  "clauses": "8/8",
+  "translated": 8,
+  "total_clauses": 8,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 11.1,
+    "hls": 14.3,
+    "latency": 142.6,
+    "bmc": 1.5,
+    "access": 1.0,
+    "phys": 11.0,
+    "cover": 1.0,
+    "total": 187.9
+  },
+  "error": null,
+  "top": "palindrome",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 4
+      },
+      "pre": {
+        "t": [
+          -2130706827,
+          -16776804,
+          -16776804,
+          -2130706827
+        ]
+      },
+      "rtl_post": {
+        "t": [
+          -2130706827,
+          -16776804,
+          -16776804,
+          -2130706827
+        ]
+      },
+      "rtl_result": 0,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Assertion",
+        "palindrome",
+        "rte/mem_access: \\valid_read(t + (int)((int)(n + i) - 1))."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-runtime-error"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 64,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\exists i: symbolic (solver-chosen) value, exact",
+    "\\forall i: enumerated over 0..4 (stronger assertion)",
+    "cell of t outside 0..3: solver-chosen value"
+  ],
+  "latency_report": [
+    1,
+    2147483650
+  ],
+  "interval_report": 2,
+  "depth": 132,
+  "cex_step": 6,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

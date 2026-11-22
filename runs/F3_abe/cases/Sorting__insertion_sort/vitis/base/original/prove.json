@@ -1,0 +1,104 @@
+{
+  "latency": 64,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 5.4,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 600.0
+  },
+  "candidates": {
+    "total": 600,
+    "by_origin": {
+      "structural": 599,
+      "call-requires": 1
+    },
+    "loops": 3,
+    "loop_invariants": 11,
+    "skipped": [
+      {
+        "source": "loop 2 (reverse): loop invariant bound: 0 <= i <= half <= n - i",
+        "reason": "no RTL signal found for C variable half"
+      },
+      {
+        "source": "loop 2 (reverse): loop invariant left: Reverse { Pre , Here } ( a , 0 , i , n )",
+        "reason": "unknown logic function/predicate Reverse"
+      },
+      {
+        "source": "loop 2 (reverse): loop invariant right: Reverse { Pre , Here } ( a , n - i , n , i )",
+        "reason": "unknown logic function/predicate Reverse"
+      },
+      {
+        "source": "loop 2 (reverse): loop variant half - i >= 0",
+        "reason": "no RTL signal found for C variable half"
+      },
+      {
+        "source": "loop 3 (upper_bound): loop invariant left: UpperBound ( a , 0 , left , v )",
+        "reason": "no RTL signal found for C variable v"
+      },
+      {
+        "source": "loop 3 (upper_bound): loop invariant right: StrictLowerBound ( a , right , n , v )",
+        "reason": "no RTL signal found for C variable v"
+      }
+    ]
+  },
+  "houdini": {
+    "candidates": 600,
+    "base_dropped": 501,
+    "ind_dropped": 53,
+    "rounds": 22,
+    "status": "inductive",
+    "base_depth": 36,
+    "k": 16,
+    "secs": 440.2,
+    "invariants": 46,
+    "by_origin": {
+      "structural": 45,
+      "call-requires": 1
+    },
+    "c_invariants_survived": [],
+    "c_invariants_lagged": [],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "UNKNOWN",
+    "secs": 9.6,
+    "k": 16
+  },
+  "latency_proof": {
+    "bound": 64,
+    "established_by_bmc": "established",
+    "kind": {
+      "status": "UNKNOWN",
+      "secs": 0.9,
+      "k": 16
+    },
+    "candidates": 800,
+    "kind+inv": {
+      "status": "UNKNOWN",
+      "secs": 1.5,
+      "k": 16,
+      "progress_invariants": 0,
+      "houdini": "empty",
+      "houdini_secs": 1716.9
+    },
+    "proved": false
+  },
+  "unbounded": false,
+  "proved_by": [],
+  "deep_cex": [],
+  "secs": 2779.9
+}

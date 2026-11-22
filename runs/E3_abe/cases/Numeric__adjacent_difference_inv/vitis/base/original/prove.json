@@ -1,0 +1,58 @@
+{
+  "latency": 16,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 155.4,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.0
+  },
+  "candidates": {
+    "total": 600,
+    "by_origin": {
+      "structural": 232,
+      "call-requires": 6,
+      "call-frame": 2,
+      "loop-invariant": 290,
+      "loop-variant": 56,
+      "loop-assigns": 14
+    },
+    "loops": 2,
+    "loop_invariants": 8,
+    "skipped": []
+  },
+  "houdini": {
+    "candidates": 600,
+    "base_dropped": 442,
+    "ind_dropped": 0,
+    "rounds": 2,
+    "status": "base timeout",
+    "k": 16,
+    "secs": 4048.0,
+    "invariants": 0,
+    "by_origin": {},
+    "c_invariants_survived": [],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "no invariants",
+    "k": 16
+  },
+  "unbounded": false,
+  "proved_by": [],
+  "deep_cex": [],
+  "secs": 4524.8
+}

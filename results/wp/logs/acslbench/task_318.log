@@ -1,0 +1,24 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_318.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_318.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function countSameConsecutive
+[wp] 83 goals scheduled
+[wp] [Timeout] typed_countSameConsecutive_ensures_2 (Qed 22ms) (Z3) (Cached)
+[wp] [Timeout] typed_countSameConsecutive_ensures_3 (Qed 23ms) (Z3) (Cached)
+[wp] [Timeout] typed_countSameConsecutive_ensures_4 (Qed 24ms) (Z3) (Cached)
+[wp] [Timeout] typed_countSameConsecutive_ensures_5 (Qed 42ms) (Z3) (Cached)
+[wp] [Timeout] typed_countSameConsecutive_ensures_6 (Qed 44ms) (Z3) (Cached)
+[wp] [Cache] found:5, updated:43
+[wp] Proved goals:   80 / 85
+  Terminating:       1
+  Unreachable:       1
+  Qed:              53 (12ms-19ms-112ms)
+  Alt-Ergo 2.6.4:   21 (52ms-686ms-4s)
+  CVC5 :             4 (128ms-149ms-195ms)
+  Timeout:           5
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_318.c:53: Warning: 
+  No 'assigns' specification for function 'countSameConsecutive'.
+  Callers assumptions might be imprecise.

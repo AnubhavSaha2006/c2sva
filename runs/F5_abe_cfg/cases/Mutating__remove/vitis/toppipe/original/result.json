@@ -1,0 +1,65 @@
+{
+  "design": "Mutating/remove",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "toppipe",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "40/40",
+  "c_ok": true,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "speculative",
+  "access_failed": [
+    "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 16,
+  "latency_status": "established",
+  "clauses": "8/9",
+  "translated": 8,
+  "total_clauses": 9,
+  "skipped": [
+    {
+      "id": "P3",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures Remove { Old , Here } ( \\old ( a ) , \\old ( n ) , \\old ( v ) )",
+      "reason": "clause too large after inlining (node budget exceeded)"
+    }
+  ],
+  "times": {
+    "frontend": 0.6,
+    "wp": 13.9,
+    "hls": 15.9,
+    "latency": 1.5,
+    "bmc": 171.3,
+    "access": 1.0,
+    "phys": 1.0,
+    "cover": 1.0,
+    "total": 207.1
+  },
+  "error": null,
+  "top": "remove",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "bitwuzla",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_43928: symbolic (solver-chosen) value, exact",
+    "\\forall i_43929: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a",
+    "recursive logic cut off: free value"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 20,
+  "cex_step": null,
+  "failed_cutoff": [],
+  "outcome": "pass-partial"
+}

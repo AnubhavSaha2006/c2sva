@@ -1,0 +1,22 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_103.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_103.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function binarysearch
+[wp] 23 goals scheduled
+[wp] [Timeout] typed_binarysearch_disjoint_not_present_present (Qed 24ms) (Z3) (Cached)
+[wp] [Timeout] typed_binarysearch_terminates (Qed 13ms) (Z3) (Cached)
+[wp] [Timeout] typed_binarysearch_loop_invariant_established (Qed 12ms) (Z3) (Cached)
+[wp] [Cache] found:1, updated:10
+[wp] Proved goals:   21 / 24
+  Unreachable:       1
+  Qed:              19 (4ms-2ms-24ms)
+  Alt-Ergo 2.6.4:    1 (85ms)
+  Timeout:           3
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_103.c:28: Warning: 
+  No 'assigns' specification for function 'binarysearch'.
+  - in complete behaviors: {not_present, present}
+    No assigns for (at least) 'not_present'
+  Callers assumptions might be imprecise.

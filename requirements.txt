@@ -1,0 +1,27 @@
+# Benchmarks / data
+datasets==5.1.0
+huggingface_hub==2.1.1
+pandas==3.0.6
+# C + ACSL parsing
+pycparser==3.0
+tree-sitter==0.26.0
+tree-sitter-c==0.24.2
+lark==1.3.1
+# HLS reports, IR, templates
+lxml==6.1.3
+pydantic==2.13.5
+jsonschema==4.26.0
+jinja2==3.1.6
+# SystemVerilog parse/elaborate (lint generated SVA)
+pyslang==12.0.0
+# LLM
+anthropic==1.11.0
+# Simulation / tests
+cocotb==2.1.0
+pytest==9.1.1
+# CLI + plots
+typer==0.27.3
+rich==15.0.0
+tqdm==4.70.1
+matplotlib==3.11.2
+seaborn==0.13.2

@@ -1,0 +1,93 @@
+{
+  "latency": 32,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 101.0,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 600.0
+  },
+  "candidates": {
+    "total": 367,
+    "by_origin": {
+      "structural": 150,
+      "call-requires": 2,
+      "contract-persist": 5,
+      "call-frame": 2,
+      "loop-invariant": 112,
+      "loop-variant": 56,
+      "loop-assigns": 40
+    },
+    "loops": 2,
+    "loop_invariants": 4,
+    "skipped": []
+  },
+  "houdini": {
+    "candidates": 367,
+    "base_dropped": 224,
+    "ind_dropped": 36,
+    "rounds": 14,
+    "status": "inductive",
+    "base_depth": 18,
+    "k": 16,
+    "secs": 2325.6,
+    "invariants": 107,
+    "by_origin": {
+      "structural": 51,
+      "call-requires": 2,
+      "call-frame": 2,
+      "loop-invariant": 8,
+      "loop-variant": 4,
+      "loop-assigns": 40
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant bound: i <= ( n - p ) + 1",
+      "loop 1: loop invariant no_match: ! HasSubRange ( a , ( p + i ) - 1 , b , p )",
+      "loop 2 (mismatch): loop invariant bound: 0 <= i <= n",
+      "loop 2 (mismatch): loop invariant equal: Equal { Here , Here } ( a , i , b )"
+    ],
+    "c_invariants_lagged": [],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "UNKNOWN",
+    "secs": 83.8,
+    "k": 16
+  },
+  "latency_proof": {
+    "bound": 32,
+    "established_by_bmc": "established",
+    "kind": {
+      "status": "UNKNOWN",
+      "secs": 0.7,
+      "k": 16
+    },
+    "candidates": 800,
+    "kind+inv": {
+      "status": "UNKNOWN",
+      "secs": 3.4,
+      "k": 16,
+      "progress_invariants": 80,
+      "houdini": "inductive",
+      "houdini_secs": 3362.1
+    },
+    "proved": false
+  },
+  "unbounded": false,
+  "proved_by": [],
+  "deep_cex": [],
+  "secs": 6501.2
+}

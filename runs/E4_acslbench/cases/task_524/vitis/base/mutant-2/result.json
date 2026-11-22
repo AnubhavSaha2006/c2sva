@@ -1,0 +1,33 @@
+{
+  "design": "task_524",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "hls",
+  "status": "error",
+  "c_proof": "22/23",
+  "c_ok": false,
+  "rtl": null,
+  "failed": [],
+  "access": null,
+  "access_failed": [],
+  "cover": null,
+  "latency": null,
+  "latency_status": null,
+  "clauses": null,
+  "translated": null,
+  "total_clauses": null,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 11.1,
+    "total": 15.6
+  },
+  "error": "hls: Vitis synthesis failed: ERROR: [HLS 207-2550] array has incomplete element type 'char[]' (../src/hls_src/task_524.c:86:31)",
+  "top": "main",
+  "mode": null,
+  "bounded_to": null,
+  "replay": null,
+  "engine": null,
+  "outcome": "error"
+}

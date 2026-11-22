@@ -1,0 +1,107 @@
+{
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 1.5,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.0
+  },
+  "candidates": {
+    "total": 205,
+    "by_origin": {
+      "structural": 52,
+      "call-requires": 5,
+      "pipeline-copy": 15,
+      "contract-persist": 1,
+      "call-frame": 3,
+      "loop-invariant": 24,
+      "loop-invariant-store": 48,
+      "loop-invariant-lag": 36,
+      "loop-variant": 12,
+      "loop-assigns": 9
+    },
+    "loops": 1,
+    "loop_invariants": 2,
+    "skipped": []
+  },
+  "houdini": {
+    "candidates": 205,
+    "base_dropped": 70,
+    "ind_dropped": 0,
+    "rounds": 2,
+    "status": "inductive",
+    "base_depth": 12,
+    "k": 12,
+    "secs": 103.7,
+    "invariants": 135,
+    "by_origin": {
+      "structural": 13,
+      "call-requires": 5,
+      "pipeline-copy": 2,
+      "contract-persist": 1,
+      "call-frame": 3,
+      "loop-invariant": 6,
+      "loop-invariant-store": 48,
+      "loop-invariant-lag": 36,
+      "loop-variant": 12,
+      "loop-assigns": 9
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant 0 <= i <= n",
+      "loop 1: loop invariant \\forall integer j ; 0 <= j < i ==> * ( c + j ) == ( u8 ) ( * ( a + j ) + * ( b + j ) )"
+    ],
+    "c_invariants_lagged": [
+      "loop 1: loop invariant \\forall integer j ; 0 <= j < i ==> * ( c + j ) == ( u8 ) ( * ( a + j ) + * ( b + j ) )"
+    ],
+    "k_tried": [
+      4,
+      8,
+      12
+    ]
+  },
+  "kind+inv": {
+    "status": "PASS",
+    "secs": 3.5,
+    "k": 12
+  },
+  "ablation": {
+    "hls": {
+      "candidates": 40,
+      "invariants": 10,
+      "houdini": "inductive",
+      "k": 16,
+      "status": "PASS",
+      "secs": 1.9
+    },
+    "hls+contract": {
+      "candidates": 48,
+      "invariants": 18,
+      "houdini": "inductive",
+      "k": 16,
+      "status": "PASS",
+      "secs": 1.8
+    }
+  },
+  "latency": 8,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kmin": {
+    "none": null,
+    "hls": 12,
+    "hls+contract": 12,
+    "all": 12,
+    "all+progress": 8
+  },
+  "unbounded": true,
+  "proved_by": [
+    "kind+inv"
+  ],
+  "deep_cex": [],
+  "secs": 511.1
+}

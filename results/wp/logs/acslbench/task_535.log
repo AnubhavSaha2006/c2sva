@@ -1,0 +1,28 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_535.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_535.c (with preprocessing)
+[kernel] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_535.c:30: Warning: 
+  found two contracts (old location: FRAMAC_SHARE/libc/string.h:55-64). Merging them
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function memcmp
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_535.c:41: Warning: 
+  Cast with incompatible pointers types (source: sint8*) (target: uint8*)
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_535.c:41: Warning: 
+  Cast with incompatible pointers types (source: sint8*) (target: uint8*)
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_535.c:37: Warning: 
+  Cast with incompatible pointers types (source: sint8*) (target: uint8*)
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_535.c:37: Warning: 
+  Cast with incompatible pointers types (source: sint8*) (target: uint8*)
+[wp] FRAMAC_SHARE/libc/string.h:24: Warning: 
+  Allocation, initialization and danglingness not yet implemented
+  (\dangling{L}((char *)s + i))
+[wp] 37 goals scheduled
+[wp] [Cache] updated:16
+[wp] Proved goals:   39 / 39
+  Terminating:       1
+  Unreachable:       1
+  Qed:              21 (11ms-18ms-81ms)
+  Alt-Ergo 2.6.4:    6 (125ms-192ms)
+  CVC5 :            10 (121ms-310ms-566ms)

@@ -1,0 +1,39 @@
+{
+  "design": "lower_bound",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "17/21",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures 0 <= \\result <= \\old ( n )"
+  ],
+  "access": "violated",
+  "access_failed": [
+    "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [read address in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "proven",
+  "clauses": "7/7",
+  "skipped": [],
+  "times": {
+    "frontend": 0.5,
+    "wp": 11.6,
+    "hls": 15.5,
+    "latency": 0.7,
+    "bmc": 0.7,
+    "access": 0.5,
+    "cover": 0.5,
+    "total": 30.1
+  },
+  "error": null,
+  "top": "lower_bound",
+  "discharged": 1,
+  "pre_dropped": 0,
+  "latency_report": null,
+  "cex_step": 4
+}

@@ -1,0 +1,87 @@
+{
+  "latency": 8,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 3.2,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.0
+  },
+  "candidates": {
+    "total": 139,
+    "by_origin": {
+      "structural": 62,
+      "call-requires": 1,
+      "call-frame": 1,
+      "loop-invariant": 63,
+      "loop-variant": 9,
+      "loop-assigns": 3
+    },
+    "loops": 1,
+    "loop_invariants": 3,
+    "skipped": []
+  },
+  "houdini": {
+    "candidates": 139,
+    "base_dropped": 60,
+    "ind_dropped": 1,
+    "rounds": 3,
+    "status": "inductive",
+    "k": 8,
+    "secs": 50.3,
+    "invariants": 78,
+    "by_origin": {
+      "structural": 24,
+      "call-requires": 1,
+      "call-frame": 1,
+      "loop-invariant": 46,
+      "loop-variant": 3,
+      "loop-assigns": 3
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant bound: 0 <= parent < child <= n + 1",
+      "loop 1: loop invariant parent: parent == HeapParent ( child )"
+    ],
+    "k_tried": [
+      4,
+      8
+    ]
+  },
+  "kind+inv": {
+    "status": "PASS",
+    "secs": 2.5,
+    "k": 8
+  },
+  "ablation": {
+    "hls": {
+      "candidates": 62,
+      "invariants": 24,
+      "houdini": "inductive",
+      "k": 8,
+      "status": "UNKNOWN",
+      "secs": 1.2
+    },
+    "hls+contract": {
+      "candidates": 64,
+      "invariants": 26,
+      "houdini": "inductive",
+      "k": 8,
+      "status": "UNKNOWN",
+      "secs": 1.6
+    }
+  },
+  "unbounded": true,
+  "proved_by": [
+    "kind+inv"
+  ],
+  "deep_cex": [],
+  "secs": 371.8
+}

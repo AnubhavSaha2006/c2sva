@@ -1,0 +1,24 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_37.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_37.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function SphereVolume
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_37.c:15: Warning: 
+  Unexpected constant literal "0x1.921fb54442d18p1"
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_37.c:18: Warning: 
+  Unexpected constant literal "0x1.921fb54442d18p1"
+[wp] 7 goals scheduled
+[wp] [Timeout] typed_SphereVolume_ensures (Qed 8ms) (Z3) (Cached) (Stronger, 2 warnings)
+[wp] [Timeout] typed_SphereVolume_assert_rte_is_nan_or_infinite_2 (Qed 3ms) (Z3) (Cached) (Stronger)
+[wp] [Timeout] typed_SphereVolume_assert_rte_is_nan_or_infinite_3 (Qed 2ms) (Z3) (Cached) (Stronger)
+[wp] [Timeout] typed_SphereVolume_assert_rte_is_nan_or_infinite_4 (Qed 3ms) (CVC5) (Cached) (Stronger)
+[wp] [Timeout] typed_SphereVolume_assert_rte_is_nan_or_infinite_5 (Qed 8ms) (CVC5) (Cached) (Stronger)
+[wp] [Cache] updated:16
+[wp] Proved goals:    4 / 9
+  Terminating:       1
+  Unreachable:       1
+  Qed:               1 (2ms-4ms-8ms)
+  Alt-Ergo 2.6.4:    1 (307ms)
+  Timeout:           5

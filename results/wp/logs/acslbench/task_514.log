@@ -1,0 +1,18 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_514.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_514.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function doubleint
+[wp] 17 goals scheduled
+[wp] [Cache] updated:7
+[wp] Proved goals:   19 / 19
+  Terminating:       1
+  Unreachable:       1
+  Qed:              11 (35ms-23ms-135ms)
+  Alt-Ergo 2.6.4:    5 (72ms-148ms-187ms)
+  CVC5 :             1 (185ms)
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_514.c:14: Warning: 
+  No 'assigns' specification for function 'doubleint'.
+  Callers assumptions might be imprecise.

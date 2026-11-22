@@ -1,0 +1,22 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_104.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_104.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function areElementsEven
+[rte:annot] annotating function main
+[wp] 22 goals scheduled
+[wp] [Timeout] typed_areElementsEven_disjoint_all_even_all_not_even (Qed 5ms) (Z3) (Cached)
+[wp] [Timeout] typed_areElementsEven_terminates (Qed 6ms) (Z3) (Cached)
+[wp] [Timeout] typed_areElementsEven_all_not_even_ensures_part2 (Qed 7ms) (Z3) (Cached)
+[wp] [Cache] updated:14
+[wp] Proved goals:   20 / 23
+  Unreachable:       1
+  Qed:              14 (5ms-3ms-18ms)
+  Alt-Ergo 2.6.4:    4 (43ms-82ms-105ms)
+  CVC5 :             1 (127ms)
+  Timeout:           3
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_104.c:42: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.

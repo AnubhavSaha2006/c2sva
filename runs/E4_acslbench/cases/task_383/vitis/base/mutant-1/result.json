@@ -1,0 +1,33 @@
+{
+  "design": "task_383",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "hls",
+  "status": "error",
+  "c_proof": "6/8",
+  "c_ok": false,
+  "rtl": null,
+  "failed": [],
+  "access": null,
+  "access_failed": [],
+  "cover": null,
+  "latency": null,
+  "latency_status": null,
+  "clauses": null,
+  "translated": null,
+  "total_clauses": null,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 11.9,
+    "total": 17.5
+  },
+  "error": "hls: Vitis synthesis failed: ERROR: [HLS 214-157] Top function not found: there is no function named 'inverse_modulo'",
+  "top": "inverse_modulo",
+  "mode": null,
+  "bounded_to": null,
+  "replay": null,
+  "engine": null,
+  "outcome": "error"
+}

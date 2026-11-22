@@ -1,0 +1,105 @@
+{
+  "design": "Nonmutating/search_n",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "54/56",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P3: ensures AllEqual ( \\old ( a ) , \\result , \\result + \\old ( p ) , \\old ( v ) )"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 16,
+  "latency_status": "established",
+  "clauses": "11/11",
+  "translated": 11,
+  "total_clauses": 11,
+  "skipped": [],
+  "times": {
+    "frontend": 0.7,
+    "wp": 6.3,
+    "hls": 16.9,
+    "latency": 2.5,
+    "bmc": 2.0,
+    "access": 1.0,
+    "phys": 1.5,
+    "cover": 1.5,
+    "total": 37.9
+  },
+  "error": null,
+  "top": "search_n",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 4,
+        "v": -402653185,
+        "p": 1
+      },
+      "pre": {
+        "a": [
+          -469762049,
+          -1,
+          -402653185,
+          -1
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -469762049,
+          -1,
+          -402653185,
+          -1
+        ]
+      },
+      "rtl_result": 0,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Assertion",
+        "search_n",
+        "bound: p \u2261 0."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-runtime-error"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "\\exists k_694: symbolic (solver-chosen) value, exact",
+    "\\exists k_696: symbolic (solver-chosen) value, exact",
+    "\\exists k_699: symbolic (solver-chosen) value, exact",
+    "\\exists k_701: symbolic (solver-chosen) value, exact",
+    "\\exists k_703: enumerated over 0..4 (stronger assertion)",
+    "\\forall i_695: enumerated over 0..4 (stronger assertion)",
+    "\\forall i_697: enumerated over 0..4 (stronger assertion)",
+    "\\forall i_698: symbolic (solver-chosen) value, exact",
+    "\\forall i_700: enumerated over 0..4 (stronger assertion)",
+    "\\forall i_702: enumerated over 0..4 (stronger assertion)",
+    "\\forall i_704: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 20,
+  "cex_step": 3,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

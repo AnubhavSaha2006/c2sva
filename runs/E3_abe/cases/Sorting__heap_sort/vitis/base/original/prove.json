@@ -1,0 +1,80 @@
+{
+  "latency": 64,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 46.9,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.0
+  },
+  "candidates": {
+    "total": 600,
+    "by_origin": {
+      "structural": 599,
+      "call-requires": 1
+    },
+    "loops": 3,
+    "loop_invariants": 20,
+    "skipped": [
+      {
+        "source": "loop 1 (heap_sift_down): loop invariant ancestor: HeapAncestor ( root , p )",
+        "reason": "unknown logic function/predicate HeapAncestor"
+      },
+      {
+        "source": "loop 1 (heap_sift_down): loop invariant unchanged: Unchanged { LoopEntry , Here } ( a , p , n )",
+        "reason": "memory label LoopEntry"
+      },
+      {
+        "source": "loop 1 (heap_sift_down): loop invariant reorder: MultisetParity { Pre , Here } ( a , n , a [ p ] , v )",
+        "reason": "unknown logic function/predicate MultisetParity"
+      },
+      {
+        "source": "loop 1 (heap_sift_down): loop invariant forest: HeapForest ( a , root , n )",
+        "reason": "unknown logic function/predicate HeapForest"
+      },
+      {
+        "source": "loop 2 (make_heap): loop invariant forest: HeapForest ( a , root , n )",
+        "reason": "unknown logic function/predicate HeapForest"
+      }
+    ]
+  },
+  "houdini": {
+    "candidates": 600,
+    "base_dropped": 458,
+    "ind_dropped": 103,
+    "rounds": 50,
+    "status": "inductive",
+    "base_depth": 18,
+    "k": 16,
+    "secs": 6717.4,
+    "invariants": 39,
+    "by_origin": {
+      "structural": 38,
+      "call-requires": 1
+    },
+    "c_invariants_survived": [],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "UNKNOWN",
+    "secs": 42.4,
+    "k": 16
+  },
+  "unbounded": false,
+  "proved_by": [],
+  "deep_cex": [],
+  "secs": 7129.6
+}

@@ -1,0 +1,36 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_234.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_234.c (with preprocessing)
+[kernel:typing:implicit-function-declaration] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_234.c:79: Warning: 
+  __builtin_bswap32 is a compiler builtin, only allowed for GCC-based machdeps; see option -machdep or run 'frama-c -machdep help' for the list of available machdeps
+[kernel:typing:implicit-function-declaration] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_234.c:86: Warning: 
+  __builtin_bswap64 is a compiler builtin, only allowed for GCC-based machdeps; see option -machdep or run 'frama-c -machdep help' for the list of available machdeps
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function main
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_234.c:149: Warning: 
+  Cast with incompatible pointers types (source: sint32*) (target: sint8*)
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_234.c:147: Warning: 
+  Cast with incompatible pointers types (source: sint32*) (target: sint8*)
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_234.c:144: Warning: 
+  Cast with incompatible pointers types (source: int**) (target: sint8*)
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_234.c:143: Warning: 
+  Cast with incompatible pointers types (source: int**) (target: sint8*)
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_234.c:139: Warning: 
+  Cast with incompatible pointers types (source: int**) (target: sint8*)
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_234.c:138: Warning: 
+  Cast with incompatible pointers types (source: int**) (target: sint8*)
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_234.c:135: Warning: 
+  Cast with incompatible pointers types (source: int**) (target: sint8*)
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_234.c:134: Warning: 
+  Cast with incompatible pointers types (source: int**) (target: sint8*)
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_234.c:131: Warning: 
+  Cast with incompatible pointers types (source: sint32*) (target: sint8*)
+[wp] 3 goals scheduled
+[wp] [Cache] not used
+[wp] Proved goals:    3 / 3
+  Qed:             3
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_234.c:126: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.

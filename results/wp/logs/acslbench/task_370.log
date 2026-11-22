@@ -1,0 +1,28 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_370.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_370.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function check
+[rte:annot] annotating function main
+[wp] 12 goals scheduled
+[wp] [Timeout] typed_check_assert_rte_signed_overflow_2 (Qed 4ms) (Z3) (Cached)
+[wp] [Timeout] typed_check_assert_rte_signed_overflow_3 (Qed 4ms) (Z3) (Cached)
+[wp] [Timeout] typed_check_assert_rte_signed_overflow_4 (Qed 10ms) (Z3) (Cached)
+[wp] [Timeout] typed_check_assert_rte_signed_overflow_5 (Qed 10ms) (CVC5) (Cached)
+[wp] [Timeout] typed_check_assert_rte_signed_overflow_6 (Qed 6ms) (CVC5) (Cached)
+[wp] [Timeout] typed_check_assert_rte_signed_overflow_8 (Qed 5ms) (Z3) (Cached)
+[wp] [Cache] found:4, updated:17
+[wp] Proved goals:    8 / 14
+  Terminating:       1
+  Unreachable:       1
+  Qed:               4 (4ms-4ms-10ms)
+  Alt-Ergo 2.6.4:    2 (53ms-77ms)
+  Timeout:           6
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_370.c:13: Warning: 
+  No 'assigns' specification for function 'check'.
+  Callers assumptions might be imprecise.
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_370.c:21: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.

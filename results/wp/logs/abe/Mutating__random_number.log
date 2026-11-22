@@ -1,0 +1,21 @@
+frama-c -pp-annot -cpp-extra-args=-I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Logic -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Nonmutating -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/MinMax -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/BinarySearch -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Mutating -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Numeric -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Heap -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Sorting -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Stack -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Mutating/random_number.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Mutating/random_number.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function my_lrand48
+[rte:annot] annotating function random_init
+[rte:annot] annotating function random_number
+[wp] 41 goals scheduled
+[wp] [Timeout] typed_my_lrand48_assert_rte_unsigned_overflow (Qed 7ms) (Z3) (Cached)
+[wp] [Timeout] typed_my_lrand48_assert_rte_unsigned_overflow_2 (Qed 8ms) (Z3) (Cached)
+[wp] [Timeout] typed_my_lrand48_assert_rte_unsigned_overflow_4 (Qed 18ms) (Z3) (Cached)
+[wp] [Cache] updated:31
+[wp] Proved goals:   42 / 45
+  Terminating:       2
+  Unreachable:       2
+  Qed:              19 (2ms-10ms-74ms)
+  Alt-Ergo 2.6.4:   14 (84ms-157ms-302ms)
+  CVC5 :             5 (96ms-180ms-367ms)
+  Timeout:           3

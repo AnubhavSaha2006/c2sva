@@ -1,0 +1,57 @@
+{
+  "design": "task_584",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "18/18",
+  "c_ok": true,
+  "rtl": "PASS",
+  "failed": [],
+  "access": null,
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "0/1",
+  "translated": 0,
+  "total_clauses": 1,
+  "skipped": [
+    {
+      "id": "-",
+      "kind": "post",
+      "origin": "assigns",
+      "source": "assigns x",
+      "reason": "global variable: global state is not modelled"
+    }
+  ],
+  "times": {
+    "frontend": 0.5,
+    "wp": 0.8,
+    "hls": 16.3,
+    "latency": 0.4,
+    "bmc": 0.4,
+    "cover": 0.3,
+    "total": 18.6
+  },
+  "error": null,
+  "top": "f",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "yices",
+  "width": 64,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [],
+  "latency_report": [
+    0,
+    0
+  ],
+  "interval_report": 1,
+  "depth": 6,
+  "cex_step": null,
+  "outcome": "pass-partial"
+}

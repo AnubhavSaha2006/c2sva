@@ -1,0 +1,23 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_238.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_238.c (with preprocessing)
+[kernel:typing:incompatible-types-call] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_238.c:15: Warning: 
+  expected 'int *' but got argument of type 'char *': c
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function sub
+[kernel:annot:missing-spec] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_238.c:12: Warning: 
+  Neither code nor explicit exits, assigns and terminates for function bar,
+  generating default clauses. See -generated-spec-* options for more info.
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_238.c:15: Warning: 
+  Cast with incompatible pointers types (source: sint8*) (target: sint32*)
+[wp] 3 goals scheduled
+[wp] [Timeout] typed_sub_call_bar_b_requires (Qed 4ms) (Z3) (Cached) (Stronger)
+[wp] [Cache] found:2, updated:1
+[wp] Proved goals:    2 / 3
+  Qed:             2 (1ms)
+  Timeout:         1
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_238.c:14: Warning: 
+  No 'assigns' specification for function 'sub'.
+  Callers assumptions might be imprecise.

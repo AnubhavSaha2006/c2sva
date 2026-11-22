@@ -1,0 +1,87 @@
+{
+  "design": "task_292",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "9/10",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures * ( \\old ( p ) + 1 ) == \\old ( * ( p + 0 ) )"
+  ],
+  "access": "undecided",
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "6/6",
+  "translated": 6,
+  "total_clauses": 6,
+  "skipped": [],
+  "times": {
+    "frontend": 0.5,
+    "wp": 11.4,
+    "hls": 14.6,
+    "latency": 0.4,
+    "bmc": 0.4,
+    "access": 0.4,
+    "cover": 0.4,
+    "total": 31.9
+  },
+  "error": null,
+  "top": "array_swap",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {},
+      "pre": {
+        "p": [
+          -1073741824,
+          -2147483648,
+          -1,
+          -1
+        ]
+      },
+      "rtl_post": {
+        "p": [
+          -2147483648,
+          -2147483648,
+          -1,
+          -1
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "array_swap",
+        "*(\\old(p) + 1) \u2261 \\old(*(p + 0)). With values at failure point:"
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "exact frame over all 4 element(s) of p"
+  ],
+  "latency_report": [
+    1,
+    1
+  ],
+  "interval_report": 2,
+  "depth": 6,
+  "cex_step": 3,
+  "outcome": "fail"
+}

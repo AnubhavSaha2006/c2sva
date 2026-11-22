@@ -1,0 +1,18 @@
+frama-c -pp-annot -cpp-extra-args=-I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Logic -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Nonmutating -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/MinMax -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/BinarySearch -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Mutating -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Numeric -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Heap -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Sorting -I/home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Stack -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Nonmutating/all_of.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acsl-by-example/StandardAlgorithms/Nonmutating/all_of.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function all_of
+[wp] 28 goals scheduled
+[wp] [Timeout] typed_lemma_FindNotEqual_AllEqual (Qed 0.66ms) (CVC5) (Cached)
+[wp] [Timeout] typed_lemma_FindNotEqual_Increasing (Qed 0.64ms) (CVC5) (Cached)
+[wp] [Timeout] typed_lemma_FindNotEqual_Limit (Qed 3ms) (CVC5) (Cached)
+[wp] [Timeout] typed_lemma_FindNotEqual_Unchanged (Qed 1ms) (Z3) (Cached)
+[wp] [Timeout] typed_lemma_Unchanged_Shift (Qed 1ms) (Alt-Ergo) (Cached)
+[wp] [Cache] found:18, updated:13
+[wp] Proved goals:   23 / 28
+  Qed:               7 (0.64ms-2ms-15ms)
+  Alt-Ergo 2.6.4:   16 (81ms-330ms-3.2s)
+  Timeout:           5

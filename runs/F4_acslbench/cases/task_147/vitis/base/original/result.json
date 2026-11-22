@@ -1,0 +1,33 @@
+{
+  "design": "task_147",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "hls",
+  "status": "error",
+  "c_proof": "4/4",
+  "c_ok": true,
+  "rtl": null,
+  "failed": [],
+  "access": null,
+  "access_failed": [],
+  "cover": null,
+  "latency": null,
+  "latency_status": null,
+  "clauses": null,
+  "translated": null,
+  "total_clauses": null,
+  "skipped": [],
+  "times": {
+    "frontend": 0.5,
+    "wp": 1.4,
+    "total": 17.3
+  },
+  "error": "hls: Vitis synthesis failed: ERROR: [HLS 214-194] in function 'matcher': Undefined function strlen (../src/hls_src/task_147.c:15:12) | ERROR: [HLS 214-135] Syn check fail!",
+  "top": "matcher",
+  "mode": null,
+  "bounded_to": null,
+  "replay": null,
+  "engine": null,
+  "outcome": "error"
+}

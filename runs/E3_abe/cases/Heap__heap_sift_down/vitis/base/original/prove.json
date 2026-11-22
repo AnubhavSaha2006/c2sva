@@ -1,0 +1,191 @@
+{
+  "latency": 16,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 247.4,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.0
+  },
+  "candidates": {
+    "total": 600,
+    "by_origin": {
+      "structural": 319,
+      "call-requires": 3,
+      "call-frame": 1,
+      "loop-invariant": 277
+    },
+    "loops": 1,
+    "loop_invariants": 12,
+    "skipped": [
+      {
+        "source": "loop 1: loop invariant ancestor: HeapAncestor ( root , p )",
+        "reason": "inductive logic HeapAncestor"
+      },
+      {
+        "source": "loop 1: loop invariant unchanged: Unchanged { LoopEntry , Here } ( a , p , n )",
+        "reason": "memory label LoopEntry"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy; p=tv_3, v=tv_6]",
+        "reason": "candidate too large (28320 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy & ap_CS_fsm_state1; p=tv_3, v=tv_6]",
+        "reason": "candidate too large (28329 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy & ap_CS_fsm_state2; p=tv_3, v=tv_6]",
+        "reason": "candidate too large (28329 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy & ap_CS_fsm_state3; p=tv_3, v=tv_6]",
+        "reason": "candidate too large (28329 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy & ap_CS_fsm_state4; p=tv_3, v=tv_6]",
+        "reason": "candidate too large (28329 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy & ap_CS_fsm_state5; p=tv_3, v=tv_6]",
+        "reason": "candidate too large (28329 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy & ap_CS_fsm_state6; p=tv_3, v=tv_6]",
+        "reason": "candidate too large (28329 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy & ap_CS_fsm_state7; p=tv_3, v=tv_6]",
+        "reason": "candidate too large (28329 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy & ap_CS_fsm_state8; p=tv_3, v=tv_6]",
+        "reason": "candidate too large (28329 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy & ap_CS_fsm_state9; p=tv_3, v=tv_6]",
+        "reason": "candidate too large (28329 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy & grp_heap_sift_down_Pipeline_VITIS_LOOP_39_1_fu_134.ap_start; p=tv_3, v=tv_6]",
+        "reason": "candidate too large (28330 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy & grp_heap_sift_down_Pipeline_VITIS_LOOP_39_1_fu_134.ap_CS_fsm_pp0_stage0; p=tv_3, v=tv_6]",
+        "reason": "candidate too large (28330 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy & grp_heap_sift_down_Pipeline_VITIS_LOOP_39_1_fu_134.ap_start & grp_heap_sift_down_Pipeline_VITIS_LOOP_39_1_fu_134.ap_CS_fsm_pp0_stage0; p=tv_3, v=tv_6]",
+        "reason": "candidate too large (28338 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy & grp_heap_sift_down_Pipeline_VITIS_LOOP_39_1_fu_134.ap_CS_fsm_pp0_stage1; p=tv_3, v=tv_6]",
+        "reason": "candidate too large (28330 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy & grp_heap_sift_down_Pipeline_VITIS_LOOP_39_1_fu_134.ap_start & grp_heap_sift_down_Pipeline_VITIS_LOOP_39_1_fu_134.ap_CS_fsm_pp0_stage1; p=tv_3, v=tv_6]",
+        "reason": "candidate too large (28338 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy & grp_heap_sift_down_Pipeline_VITIS_LOOP_39_1_fu_134.ap_CS_fsm_pp0_stage2; p=tv_3, v=tv_6]",
+        "reason": "candidate too large (28330 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy & grp_heap_sift_down_Pipeline_VITIS_LOOP_39_1_fu_134.ap_start & grp_heap_sift_down_Pipeline_VITIS_LOOP_39_1_fu_134.ap_CS_fsm_pp0_stage2; p=tv_3, v=tv_6]",
+        "reason": "candidate too large (28338 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy & grp_heap_sift_down_Pipeline_VITIS_LOOP_39_1_fu_134.ap_CS_fsm_pp0_stage3; p=tv_3, v=tv_6]",
+        "reason": "candidate too large (28330 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy & grp_heap_sift_down_Pipeline_VITIS_LOOP_39_1_fu_134.ap_start & grp_heap_sift_down_Pipeline_VITIS_LOOP_39_1_fu_134.ap_CS_fsm_pp0_stage3; p=tv_3, v=tv_6]",
+        "reason": "candidate too large (28338 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy; p=tv_3, v=tv_7]",
+        "reason": "candidate too large (28329 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy & ap_CS_fsm_state1; p=tv_3, v=tv_7]",
+        "reason": "candidate too large (28338 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy & ap_CS_fsm_state2; p=tv_3, v=tv_7]",
+        "reason": "candidate too large (28338 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy & ap_CS_fsm_state3; p=tv_3, v=tv_7]",
+        "reason": "candidate too large (28338 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy & ap_CS_fsm_state4; p=tv_3, v=tv_7]",
+        "reason": "candidate too large (28338 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy & ap_CS_fsm_state5; p=tv_3, v=tv_7]",
+        "reason": "candidate too large (28338 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy & ap_CS_fsm_state6; p=tv_3, v=tv_7]",
+        "reason": "candidate too large (28338 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy & ap_CS_fsm_state7; p=tv_3, v=tv_7]",
+        "reason": "candidate too large (28338 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + p ) , v )  [busy & ap_CS_fsm_state8; p=tv_3, v=tv_7]",
+        "reason": "candidate too large (28338 chars)"
+      }
+    ]
+  },
+  "houdini": {
+    "candidates": 600,
+    "base_dropped": 484,
+    "ind_dropped": 27,
+    "rounds": 8,
+    "status": "inductive",
+    "base_depth": 20,
+    "k": 16,
+    "secs": 1313.4,
+    "invariants": 89,
+    "by_origin": {
+      "structural": 70,
+      "call-requires": 3,
+      "call-frame": 1,
+      "loop-invariant": 15
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant bounds: root <= p < c <= n",
+      "loop 1: loop invariant parent: c < n ==> p == HeapParent ( c )"
+    ],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "UNKNOWN",
+    "secs": 255.9,
+    "k": 16
+  },
+  "pdr+inv": {
+    "status": "TIMEOUT",
+    "secs": 300.0
+  },
+  "unbounded": false,
+  "proved_by": [],
+  "deep_cex": [],
+  "secs": 2489.8
+}

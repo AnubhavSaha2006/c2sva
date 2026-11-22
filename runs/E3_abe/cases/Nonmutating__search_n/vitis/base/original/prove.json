@@ -1,0 +1,92 @@
+{
+  "latency": 16,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "TIMEOUT",
+    "secs": 300.1,
+    "k": 12
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.0
+  },
+  "candidates": {
+    "total": 216,
+    "by_origin": {
+      "structural": 88,
+      "call-requires": 1,
+      "call-frame": 1,
+      "loop-invariant": 102,
+      "loop-variant": 18,
+      "loop-assigns": 6
+    },
+    "loops": 1,
+    "loop_invariants": 4,
+    "skipped": []
+  },
+  "houdini": {
+    "candidates": 216,
+    "base_dropped": 161,
+    "ind_dropped": 1,
+    "rounds": 3,
+    "status": "inductive",
+    "base_depth": 20,
+    "k": 16,
+    "secs": 408.4,
+    "invariants": 54,
+    "by_origin": {
+      "structural": 36,
+      "call-requires": 1,
+      "call-frame": 1,
+      "loop-invariant": 8,
+      "loop-variant": 2,
+      "loop-assigns": 6
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant bound: start <= i + 1 <= start + p",
+      "loop 1: loop invariant match: AllEqual ( a , start , i , v )",
+      "loop 1: loop invariant no_match: ! HasConstantSubRange ( a , i , v , p )",
+      "loop 1: loop invariant start: 0 < start ==> * ( a + ( start - 1 ) ) != v"
+    ],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "PASS",
+    "secs": 105.3,
+    "k": 16
+  },
+  "ablation": {
+    "hls": {
+      "candidates": 88,
+      "invariants": 36,
+      "houdini": "inductive",
+      "k": 16,
+      "status": "UNKNOWN",
+      "secs": 122.5
+    },
+    "hls+contract": {
+      "candidates": 90,
+      "invariants": 38,
+      "houdini": "inductive",
+      "k": 16,
+      "status": "PASS",
+      "secs": 121.5
+    }
+  },
+  "unbounded": true,
+  "proved_by": [
+    "kind+inv"
+  ],
+  "deep_cex": [],
+  "secs": 1390.3
+}

@@ -1,0 +1,115 @@
+{
+  "latency": 16,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "TIMEOUT",
+    "secs": 300.1,
+    "k": 12
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 600.0
+  },
+  "candidates": {
+    "total": 69,
+    "by_origin": {
+      "structural": 45,
+      "call-requires": 1,
+      "contract-persist": 1,
+      "call-frame": 1,
+      "loop-invariant": 9,
+      "loop-variant": 9,
+      "loop-assigns": 3
+    },
+    "loops": 1,
+    "loop_invariants": 2,
+    "skipped": [
+      {
+        "source": "loop 1: loop invariant not_found: Find ( a , i , v ) == i",
+        "reason": "candidate too large"
+      }
+    ]
+  },
+  "houdini": {
+    "candidates": 69,
+    "base_dropped": 21,
+    "ind_dropped": 0,
+    "rounds": 2,
+    "status": "inductive",
+    "base_depth": 20,
+    "k": 12,
+    "secs": 60.1,
+    "invariants": 48,
+    "by_origin": {
+      "structural": 24,
+      "call-requires": 1,
+      "contract-persist": 1,
+      "call-frame": 1,
+      "loop-invariant": 9,
+      "loop-variant": 9,
+      "loop-assigns": 3
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant bound: 0 <= i <= n"
+    ],
+    "c_invariants_lagged": [],
+    "k_tried": [
+      4,
+      8,
+      12
+    ]
+  },
+  "kind+inv": {
+    "status": "PASS",
+    "secs": 31.2,
+    "k": 12
+  },
+  "ablation": {
+    "hls": {
+      "candidates": 45,
+      "invariants": 23,
+      "houdini": "inductive",
+      "k": 12,
+      "status": "UNKNOWN",
+      "secs": 26.4
+    },
+    "hls+contract": {
+      "candidates": 48,
+      "invariants": 27,
+      "houdini": "inductive",
+      "k": 12,
+      "status": "PASS",
+      "secs": 31.1
+    }
+  },
+  "latency_proof": {
+    "bound": 16,
+    "established_by_bmc": "established",
+    "kind": {
+      "status": "UNKNOWN",
+      "secs": 0.7,
+      "k": 16
+    },
+    "candidates": 74,
+    "kind+inv": {
+      "status": "PASS",
+      "secs": 0.9,
+      "k": 4,
+      "progress_invariants": 65,
+      "houdini": "inductive",
+      "houdini_secs": 8.5
+    },
+    "proved": true
+  },
+  "unbounded": true,
+  "proved_by": [
+    "kind+inv"
+  ],
+  "deep_cex": [],
+  "secs": 1096.7
+}

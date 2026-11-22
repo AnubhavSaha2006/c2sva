@@ -1,0 +1,94 @@
+{
+  "design": "BinarySearch/lower_bound",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "19/21",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures 0 <= \\result <= \\old ( n )"
+  ],
+  "access": "out-of-memory",
+  "access_failed": [
+    "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 128,
+  "latency_status": "not established within cap",
+  "clauses": "8/8",
+  "translated": 8,
+  "total_clauses": 8,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 14.1,
+    "hls": 15.0,
+    "latency": 333.0,
+    "bmc": 0.6,
+    "access": 0.5,
+    "phys": 0.6,
+    "cover": 0.5,
+    "total": 368.8
+  },
+  "error": null,
+  "top": "lower_bound",
+  "mode": "overlapping calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 4,
+        "v": 895784619
+      },
+      "pre": {
+        "a": [
+          -1251699010,
+          -1023414272,
+          -890988984,
+          -101
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -1251699010,
+          -1023414272,
+          -890988984,
+          -101
+        ]
+      },
+      "rtl_result": 4294967295,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Assertion",
+        "lower_bound",
+        "rte/unsigned_overflow: 0 \u2264 left - (size_type)((size_type)(right - left) / 2u)."
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-runtime-error"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_813,j_814: enumerated over 0..4 (weaker assumption)",
+    "\\forall i_815: symbolic (solver-chosen) value, exact",
+    "\\forall i_816: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": 0,
+  "depth": 140,
+  "cex_step": 3,
+  "outcome": "fail"
+}

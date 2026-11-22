@@ -1,0 +1,53 @@
+{
+  "design": "task_333",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "14/14",
+  "c_ok": true,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "ok",
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "6/6",
+  "translated": 6,
+  "total_clauses": 6,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 1.5,
+    "hls": 14.7,
+    "latency": 0.5,
+    "bmc": 0.5,
+    "access": 1.0,
+    "cover": 0.5,
+    "total": 19.2
+  },
+  "error": null,
+  "top": "matcher_a",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "yices",
+  "width": 64,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "cell of x0 outside 0..3: solver-chosen value"
+  ],
+  "latency_report": [
+    0,
+    0
+  ],
+  "interval_report": 1,
+  "depth": 6,
+  "cex_step": null,
+  "failed_cutoff": [],
+  "outcome": "pass"
+}

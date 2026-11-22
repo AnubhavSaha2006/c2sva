@@ -1,0 +1,53 @@
+{
+  "design": "c06_verilog_keywords",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "block2",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "9/9",
+  "c_ok": true,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "ok",
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "12/12",
+  "translated": 12,
+  "total_clauses": 12,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 1.2,
+    "hls": 15.7,
+    "latency": 1.0,
+    "bmc": 1.0,
+    "access": 1.4,
+    "cover": 1.0,
+    "total": 21.6
+  },
+  "error": null,
+  "top": "kw",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "exact frame over all 4 element(s) of wire"
+  ],
+  "latency_report": [
+    1,
+    1
+  ],
+  "interval_report": 2,
+  "depth": 6,
+  "cex_step": null,
+  "failed_cutoff": [],
+  "outcome": "pass"
+}

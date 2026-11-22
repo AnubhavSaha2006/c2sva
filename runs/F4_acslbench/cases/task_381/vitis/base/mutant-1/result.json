@@ -1,0 +1,86 @@
+{
+  "design": "task_381",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "6/7",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P1: ensures * ( \\old ( x0 ) + 0 ) == \\old ( * ( x0 + 1 ) ) && * ( \\old ( x0 ) + 1 ) == \\old ( * ( x0 + 0 ) )"
+  ],
+  "access": "ok",
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "4/4",
+  "translated": 4,
+  "total_clauses": 4,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 0.8,
+    "hls": 12.8,
+    "latency": 0.5,
+    "bmc": 0.5,
+    "access": 0.5,
+    "cover": 0.5,
+    "total": 19.4
+  },
+  "error": null,
+  "top": "array_swap",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {},
+      "pre": {
+        "x0": [
+          -2147483648,
+          -1073741824,
+          0,
+          0
+        ]
+      },
+      "rtl_post": {
+        "x0": [
+          -1073741824,
+          -1073741824,
+          0,
+          0
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "array_swap",
+        "*(\\old(x0) + 0) \u2261 \\old(*(x0 + 1)) \u2227 *(\\old(x0) + 1) \u2261 \\old(*(x0 + 0)). With values at failure point:"
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [],
+  "latency_report": [
+    1,
+    1
+  ],
+  "interval_report": 2,
+  "depth": 6,
+  "cex_step": 3,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

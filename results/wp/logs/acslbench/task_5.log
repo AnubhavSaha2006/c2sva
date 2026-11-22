@@ -1,0 +1,24 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_5.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_5.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function array_sum
+[wp] Warning: No definition for 'array_sum' interpreted as reads nothing
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_5.c:42: Warning: 
+  Missing assigns clause (assigns 'everything' instead)
+[wp] 15 goals scheduled
+[wp] [Timeout] typed_lemma_array_sum_increases (Qed 0.59ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_lemma_array_sum_lower_bound (Qed 0.59ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_array_sum_ensures (Qed 21ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_array_sum_assert_rte_mem_access (Qed 23ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_array_sum_assigns_part2 (Qed 8ms) (Alt-Ergo) (Cached)
+[wp] [Cache] updated:20
+[wp] Proved goals:   12 / 17
+  Terminating:       1
+  Unreachable:       1
+  Qed:               6 (0.59ms-9ms-43ms)
+  Alt-Ergo 2.6.4:    3 (68ms-127ms-234ms)
+  Z3 5.1.0:          1 (5.4s)
+  Timeout:           5

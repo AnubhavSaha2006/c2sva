@@ -1,0 +1,80 @@
+{
+  "design": "task_273",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "41/43",
+  "c_ok": false,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "speculative",
+  "access_failed": [
+    "P5: requires \\valid ( a + ( 0 .. length - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 64,
+  "latency_status": "established",
+  "clauses": "6/7",
+  "translated": 6,
+  "total_clauses": 7,
+  "skipped": [
+    {
+      "id": "P3",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures same_elements { Pre , Here } ( \\old ( a ) , \\old ( length ) )",
+      "reason": "inductive logic same_elements"
+    }
+  ],
+  "times": {
+    "frontend": 0.4,
+    "wp": 2.8,
+    "hls": 12.2,
+    "latency": 8.5,
+    "bmc": 1123.4,
+    "access": 0.5,
+    "phys": 1096.3,
+    "cover": 0.7,
+    "total": 2244.8
+  },
+  "error": null,
+  "top": "sort",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "bitwuzla",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_18,j_19: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 68,
+  "cex_step": null,
+  "outcome": "pass-partial",
+  "survivor": {
+    "class": "memory-safety-only",
+    "tested": 1000,
+    "detail": "ERROR: AddressSanitizer: stack-buffer-overflow",
+    "vector": [
+      {
+        "length": 4
+      },
+      {
+        "a": [
+          3,
+          -2147483648,
+          0,
+          -1
+        ]
+      }
+    ]
+  }
+}

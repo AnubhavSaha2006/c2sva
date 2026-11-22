@@ -1,0 +1,15 @@
+{
+  "abs": {
+    "file": "abs.c", "top": "spec_abs", "lat_max": 4,
+    "mutants": [
+      {"from": "a < 0 ? -a : a", "to": "a < -1 ? -a : a", "bug": "wrong result for a = -1"}
+    ]
+  },
+  "max_element": {
+    "file": "max_element.c", "top": "max_element", "lat_max": 16, "defines": {"N": 4},
+    "mutants": [
+      {"from": "i < n;", "to": "i < n - 1;", "bug": "loop skips the last element"},
+      {"from": "i < n;", "to": "i <= n;", "bug": "reads one past the end"}
+    ]
+  }
+}

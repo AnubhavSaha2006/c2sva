@@ -1,0 +1,37 @@
+{
+  "design": "abs",
+  "variant": "mutant-2",
+  "tool": "bambu",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "5/7",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures \\result >= 0",
+    "P4: ensures \\old ( a ) < 0 ==> \\result == - \\old ( a )"
+  ],
+  "access": null,
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "proven",
+  "clauses": "4/4",
+  "skipped": [],
+  "times": {
+    "frontend": 0.5,
+    "wp": 1.0,
+    "hls": 12.8,
+    "latency": 0.5,
+    "bmc": 0.4,
+    "cover": 0.4,
+    "total": 15.6
+  },
+  "error": null,
+  "top": "spec_abs",
+  "discharged": 0,
+  "pre_dropped": 0,
+  "latency_report": null,
+  "cex_step": 2
+}

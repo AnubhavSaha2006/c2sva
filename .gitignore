@@ -1,0 +1,18 @@
+# environments / caches
+.venv/
+.pytest_cache/
+__pycache__/
+*.pyc
+.vscode/
+.frama-c/
+# bulky generated outputs (regenerate with bin/c2sva)
+runs/
+demo/out/
+demo/out_acslbench/
+demo/scratch/
+hls/smoke/
+benchmarks/raw/acslbench/ACSL_C.tar
+# formal/HLS work products
+*.vcd.gz
+*.smt2
+*.aig

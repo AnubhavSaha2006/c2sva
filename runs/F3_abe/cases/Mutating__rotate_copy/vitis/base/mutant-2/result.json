@@ -1,0 +1,126 @@
+{
+  "design": "Mutating/rotate_copy",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "11/18",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P12: assigns * ( b + ( 0 .. n - 1 ) )  [frame of b]"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 128,
+  "latency_status": "not established within cap",
+  "clauses": "12/12",
+  "translated": 12,
+  "total_clauses": 12,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 1.8,
+    "hls": 13.9,
+    "latency": 41.6,
+    "bmc": 51.6,
+    "access": 1.0,
+    "phys": 7.5,
+    "cover": 1.0,
+    "total": 121.8
+  },
+  "error": null,
+  "top": "rotate_copy",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "p": 1,
+        "n": 1
+      },
+      "pre": {
+        "a": [
+          -2075900860,
+          -465288123,
+          -465288123,
+          0
+        ],
+        "b": [
+          -465288127,
+          1682195525,
+          1843256797,
+          -1145324613
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -2075900860,
+          -465288123,
+          -465288123,
+          0
+        ],
+        "b": [
+          -465288123,
+          -465288123,
+          1843256797,
+          -1145324613
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {
+      "a": [
+        -2075900860,
+        -465288123,
+        -465288123,
+        0
+      ],
+      "b": [
+        -465288123,
+        -465288123,
+        1843256797,
+        -1145324613
+      ]
+    },
+    "eacsl": [],
+    "checker": "e-acsl",
+    "oracle": {
+      "requires_violated": [],
+      "violated": [
+        "ensures Rotate { Old , Here } ( \\old ( a ) , \\old ( p ) , \\old ( n ) , \\old ( b ) )",
+        "assigns (frame): b[1] changed but is not assignable"
+      ],
+      "unknown": [],
+      "checked": 7
+    },
+    "class": "c-contract-violation"
+  },
+  "engine": "bitwuzla",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_945: symbolic (solver-chosen) value, exact",
+    "\\forall k_943: symbolic (solver-chosen) value, exact",
+    "\\forall k_944: symbolic (solver-chosen) value, exact",
+    "\\separated holds by construction (separate RTL memories/registers)",
+    "cell of a outside 0..3: solver-chosen value",
+    "cell of b outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of b",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 132,
+  "cex_step": 8,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

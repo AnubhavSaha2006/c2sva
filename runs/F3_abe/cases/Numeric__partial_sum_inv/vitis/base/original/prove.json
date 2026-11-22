@@ -1,0 +1,113 @@
+{
+  "latency": 16,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 20.8,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 600.0
+  },
+  "candidates": {
+    "total": 600,
+    "by_origin": {
+      "structural": 286,
+      "call-requires": 4,
+      "pipeline-copy": 60,
+      "contract-persist": 1,
+      "call-frame": 2,
+      "loop-invariant": 189,
+      "loop-variant": 40,
+      "loop-assigns": 18
+    },
+    "loops": 2,
+    "loop_invariants": 8,
+    "skipped": [
+      {
+        "source": "requires AccumulateDefaultBounds ( a , n ) [captured inputs, during the call]",
+        "reason": "candidate too large (20329 chars)"
+      },
+      {
+        "source": "loop 2 (partial_sum): loop invariant bounds: AccumulateDefaultBounds ( a , n )  [busy]",
+        "reason": "candidate too large (20323 chars)"
+      },
+      {
+        "source": "loop 2 (partial_sum): loop invariant bounds: AccumulateDefaultBounds ( a , n )  [busy & ap_CS_fsm_state1]",
+        "reason": "candidate too large (20332 chars)"
+      },
+      {
+        "source": "loop 2 (partial_sum): loop invariant bounds: AccumulateDefaultBounds ( a , n )  [busy & ap_CS_fsm_state2]",
+        "reason": "candidate too large (20332 chars)"
+      },
+      {
+        "source": "loop 2 (partial_sum): loop invariant bounds: AccumulateDefaultBounds ( a , n )  [busy & ap_CS_fsm_state3]",
+        "reason": "candidate too large (20332 chars)"
+      },
+      {
+        "source": "loop 2 (partial_sum): loop invariant bounds: AccumulateDefaultBounds ( a , n )  [busy & ap_CS_fsm_state4]",
+        "reason": "candidate too large (20332 chars)"
+      },
+      {
+        "source": "loop 2 (partial_sum): loop invariant bounds: AccumulateDefaultBounds ( a , n )  [busy & ap_CS_fsm_state5]",
+        "reason": "candidate too large (20332 chars)"
+      },
+      {
+        "source": "loop 2 (partial_sum): loop invariant bounds: AccumulateDefaultBounds ( a , n )  [busy & ap_CS_fsm_state6]",
+        "reason": "candidate too large (20333 chars)"
+      }
+    ]
+  },
+  "houdini": {
+    "candidates": 600,
+    "base_dropped": 453,
+    "ind_dropped": 0,
+    "rounds": 2,
+    "status": "base timeout",
+    "k": 16,
+    "secs": 2752.6,
+    "invariants": 0,
+    "by_origin": {},
+    "c_invariants_survived": [],
+    "c_invariants_lagged": [],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "no invariants",
+    "k": 16
+  },
+  "latency_proof": {
+    "bound": 16,
+    "established_by_bmc": "established",
+    "kind": {
+      "status": "UNKNOWN",
+      "secs": 0.9,
+      "k": 16
+    },
+    "candidates": 800,
+    "kind+inv": {
+      "status": "UNKNOWN",
+      "secs": 1.1,
+      "k": 16,
+      "progress_invariants": 0,
+      "houdini": "empty",
+      "houdini_secs": 1417.3
+    },
+    "proved": false
+  },
+  "unbounded": false,
+  "proved_by": [],
+  "deep_cex": [],
+  "secs": 4800.6
+}

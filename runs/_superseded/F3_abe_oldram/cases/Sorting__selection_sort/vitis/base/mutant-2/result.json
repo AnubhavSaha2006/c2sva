@@ -1,0 +1,89 @@
+{
+  "design": "Sorting/selection_sort",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "35/37",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P8: assigns * ( a + ( 0 .. n - 1 ) )  [frame of a]"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+  ],
+  "cover": "reached",
+  "latency": 64,
+  "latency_status": "established",
+  "clauses": "8/8",
+  "translated": 8,
+  "total_clauses": 8,
+  "skipped": [],
+  "times": {
+    "frontend": 0.7,
+    "wp": 4.2,
+    "hls": 20.3,
+    "latency": 29.1,
+    "bmc": 48.6,
+    "access": 1.0,
+    "phys": 5.5,
+    "cover": 1.5,
+    "total": 113.4
+  },
+  "error": null,
+  "top": "selection_sort",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 2
+      },
+      "pre": {
+        "a": [
+          2136572159,
+          -746471957,
+          -1495590589,
+          -2498817
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -2498817,
+          -746471957,
+          -1495590589,
+          2136572159
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [],
+    "checker": "native+sanitizers",
+    "class": "c-runtime-error",
+    "detail": "ERROR: AddressSanitizer: SEGV"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_63001,j_63002: symbolic (solver-chosen) value, exact",
+    "\\forall v_62998: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a",
+    "recursive logic cut off: free value"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 68,
+  "cex_step": 17,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

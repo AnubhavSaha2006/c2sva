@@ -1,0 +1,21 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_46.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_46.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function MaxLengthList
+[wp] 19 goals scheduled
+[wp] [Timeout] typed_MaxLengthList_assert_rte_mem_access (Qed 10ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_MaxLengthList_loop_invariant_established (Qed 6ms) (Alt-Ergo) (Cached)
+[wp] [Timeout] typed_MaxLengthList_assert_rte_mem_access_2 (Qed 42ms) (Alt-Ergo) (Cached)
+[wp] [Cache] updated:14
+[wp] Proved goals:   18 / 21
+  Terminating:       1
+  Unreachable:       1
+  Qed:              11 (6ms-15ms-63ms)
+  Alt-Ergo 2.6.4:    5 (91ms-119ms)
+  Timeout:           3
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_46.c:25: Warning: 
+  No 'assigns' specification for function 'MaxLengthList'.
+  Callers assumptions might be imprecise.

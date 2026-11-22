@@ -1,0 +1,71 @@
+{
+  "design": "c10_products_width",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "9/10",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P4: ensures \\result == ( \\old ( x ) * \\old ( y ) ) * \\old ( z ) + \\old ( x )"
+  ],
+  "access": null,
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "4/4",
+  "translated": 4,
+  "total_clauses": 4,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 12.5,
+    "hls": 12.8,
+    "latency": 0.3,
+    "bmc": 0.6,
+    "cover": 0.6,
+    "total": 30.3
+  },
+  "error": null,
+  "top": "cube_ish",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "x": 512,
+        "y": 512,
+        "z": 512
+      },
+      "pre": {},
+      "rtl_post": {},
+      "rtl_result": 263168,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "\\result \u2261 (\\old(x) * \\old(y)) * \\old(z) + \\old(x)."
+      ]
+    ],
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 208,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [],
+  "latency_report": [
+    0,
+    0
+  ],
+  "interval_report": 1,
+  "depth": 6,
+  "cex_step": 2,
+  "outcome": "fail"
+}

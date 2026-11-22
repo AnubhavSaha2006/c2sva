@@ -1,0 +1,25 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_415.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_415.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function main
+[rte:annot] annotating function swap
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_415.c:30: Warning: 
+  Cast with incompatible pointers types (source: sint32*) (target: sint8*)
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_415.c:30: Warning: 
+  Cast with incompatible pointers types (source: sint8*) (target: sint32*)
+[wp] 12 goals scheduled
+[wp] [Timeout] typed_main_call_swap_requires_2 (Qed 5ms) (Z3) (Cached) (Stronger, 2 warnings)
+[wp] [Cache] found:5, updated:1
+[wp] Proved goals:   13 / 14
+  Terminating:       1
+  Unreachable:       1
+  Qed:               8 (5ms-2ms-7ms)
+  Alt-Ergo 2.6.4:    2 (93ms)
+  CVC5 :             1 (144ms)
+  Timeout:           1
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_415.c:28: Warning: 
+  No 'assigns' specification for function 'main'.
+  Callers assumptions might be imprecise.

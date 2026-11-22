@@ -1,0 +1,74 @@
+{
+  "latency": 32,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "TIMEOUT",
+    "secs": 300.0,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.1
+  },
+  "candidates": {
+    "total": 468,
+    "by_origin": {
+      "structural": 132,
+      "call-requires": 2,
+      "call-frame": 2,
+      "loop-invariant": 222,
+      "loop-variant": 66,
+      "loop-assigns": 44
+    },
+    "loops": 2,
+    "loop_invariants": 6,
+    "skipped": []
+  },
+  "houdini": {
+    "candidates": 468,
+    "base_dropped": 297,
+    "ind_dropped": 45,
+    "rounds": 16,
+    "status": "inductive",
+    "base_depth": 16,
+    "k": 16,
+    "secs": 6953.2,
+    "invariants": 126,
+    "by_origin": {
+      "structural": 50,
+      "call-requires": 2,
+      "call-frame": 2,
+      "loop-invariant": 22,
+      "loop-variant": 6,
+      "loop-assigns": 44
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant bound: r <= n - p || r == n",
+      "loop 1: loop invariant found: r < n ==> Equal { Here , Here } ( a + r , p , b )",
+      "loop 1: loop invariant last: r < n ==> ! HasSubRange ( a , r + 1 , ( i + p ) - 1 , b , p )",
+      "loop 1: loop invariant no_match: r == n ==> ! HasSubRange ( a , ( p + i ) - 1 , b , p )",
+      "loop 2 (mismatch): loop invariant bound: 0 <= i <= n",
+      "loop 2 (mismatch): loop invariant equal: Equal { Here , Here } ( a , i , b )"
+    ],
+    "k_tried": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "kind+inv": {
+    "status": "UNKNOWN",
+    "secs": 262.1,
+    "k": 16
+  },
+  "unbounded": false,
+  "proved_by": [],
+  "deep_cex": [],
+  "secs": 7885.9
+}

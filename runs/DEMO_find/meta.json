@@ -1,0 +1,10 @@
+{
+  "Nonmutating/find": {
+    "suite": "abe",
+    "reference_proven": true,
+    "mutants": {
+      "mutant-1": "CRP line 12: '0u' -> '1u' in `for (size_type i = 0u; i < n; i++) {`",
+      "mutant-2": "ROR line 12: '<' -> '<=' in `for (size_type i = 0u; i < n; i++) {`"
+    }
+  }
+}

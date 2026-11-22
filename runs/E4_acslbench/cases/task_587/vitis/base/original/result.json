@@ -1,0 +1,53 @@
+{
+  "design": "task_587",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "16/16",
+  "c_ok": true,
+  "rtl": "PASS",
+  "failed": [],
+  "access": "speculative",
+  "access_failed": [
+    "P7: requires \\valid ( t + ( 0 .. n - 1 ) ) && n > 0  [access in range: t bank 0 port 1]"
+  ],
+  "cover": "reached",
+  "latency": 8,
+  "latency_status": "established",
+  "clauses": "8/8",
+  "translated": 8,
+  "total_clauses": 8,
+  "skipped": [],
+  "times": {
+    "frontend": 0.6,
+    "wp": 2.1,
+    "hls": 16.6,
+    "latency": 0.5,
+    "bmc": 5.4,
+    "access": 0.6,
+    "phys": 1.8,
+    "cover": 0.5,
+    "total": 28.0
+  },
+  "error": null,
+  "top": "minIndex",
+  "mode": "overlapping calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i: symbolic (solver-chosen) value, exact",
+    "cell of t outside 0..3: solver-chosen value"
+  ],
+  "latency_report": null,
+  "interval_report": 0,
+  "depth": 20,
+  "cex_step": null,
+  "outcome": "pass"
+}

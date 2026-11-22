@@ -1,0 +1,92 @@
+{
+  "design": "task_540",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "19/22",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures 0 <= \\result < \\old ( n )"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P5: requires \\valid ( p + ( 0 .. n - 1 ) )  [access in range: p bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 16,
+  "latency_status": "established",
+  "clauses": "7/7",
+  "translated": 7,
+  "total_clauses": 7,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 1.5,
+    "hls": 13.2,
+    "latency": 2.0,
+    "bmc": 1.0,
+    "access": 0.5,
+    "phys": 1.0,
+    "cover": 0.5,
+    "total": 23.2
+  },
+  "error": null,
+  "top": "array_max",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 1
+      },
+      "pre": {
+        "p": [
+          -715827883,
+          357913941,
+          0,
+          0
+        ]
+      },
+      "rtl_post": {
+        "p": [
+          -715827883,
+          357913941,
+          0,
+          0
+        ]
+      },
+      "rtl_result": 1,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [
+      [
+        "Postcondition",
+        "array_max",
+        "0 \u2264 \\result < \\old(n). With values at failure point:"
+      ]
+    ],
+    "checker": "e-acsl",
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i: symbolic (solver-chosen) value, exact",
+    "cell of p outside 0..3: solver-chosen value",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": 3,
+  "depth": 20,
+  "cex_step": 8,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

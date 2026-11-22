@@ -1,0 +1,21 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_231.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_231.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function incr_list
+[wp] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_231.c:41: Warning: 
+  Missing assigns clause (assigns 'everything' instead)
+[wp] 6 goals scheduled
+[wp] [Timeout] typed_incr_list_terminates (Qed 3ms) (CVC5) (Cached)
+[wp] [Timeout] typed_incr_list_assert_rte_mem_access (Qed 5ms) (CVC5) (Cached)
+[wp] [Timeout] typed_incr_list_assert_rte_signed_overflow (Qed 7ms) (CVC5) (Cached)
+[wp] [Timeout] typed_incr_list_assert_rte_mem_access_3 (Qed 10ms) (CVC5) (Cached)
+[wp] [Timeout] typed_incr_list_assigns (Qed 5ms) (CVC5) (Cached)
+[wp] [Cache] found:2, updated:14
+[wp] Proved goals:    2 / 7
+  Unreachable:       1
+  Qed:               0 (3ms-6ms-10ms)
+  Alt-Ergo 2.6.4:    1 (66ms)
+  Timeout:           5

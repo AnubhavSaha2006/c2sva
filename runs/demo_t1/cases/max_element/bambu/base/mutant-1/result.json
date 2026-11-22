@@ -1,0 +1,39 @@
+{
+  "design": "max_element",
+  "variant": "mutant-1",
+  "tool": "bambu",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "15/17",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures 0 <= \\result < \\old ( n )"
+  ],
+  "access": "violated",
+  "access_failed": [
+    "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [read address in range: a bank 0 port 1]"
+  ],
+  "cover": "reached",
+  "latency": 16,
+  "latency_status": "proven",
+  "clauses": "7/7",
+  "skipped": [],
+  "times": {
+    "frontend": 0.6,
+    "wp": 1.8,
+    "hls": 12.7,
+    "latency": 5.2,
+    "bmc": 2.0,
+    "access": 1.7,
+    "cover": 2.0,
+    "total": 26.0
+  },
+  "error": null,
+  "top": "max_element",
+  "discharged": 1,
+  "pre_dropped": 0,
+  "latency_report": null,
+  "cex_step": 7
+}

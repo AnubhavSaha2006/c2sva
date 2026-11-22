@@ -1,0 +1,25 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_75.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_75.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function SmallestMissingNumber
+[wp] 29 goals scheduled
+[wp] [Timeout] typed_SmallestMissingNumber_ensures_2_part1 (Qed 26ms) (CVC5) (Cached)
+[wp] [Timeout] typed_SmallestMissingNumber_ensures_3_part1 (Qed 38ms) (Z3) (Cached)
+[wp] [Timeout] typed_SmallestMissingNumber_ensures_3_part2 (Qed 27ms) (CVC5) (Cached)
+[wp] [Timeout] typed_SmallestMissingNumber_loop_invariant_2_preserved_part1 (Qed 32ms) (CVC5) (Cached)
+[wp] [Timeout] typed_SmallestMissingNumber_loop_invariant_2_preserved_part2 (Qed 30ms) (Z3) (Cached)
+[wp] [Timeout] typed_SmallestMissingNumber_loop_invariant_3_preserved_part1 (Qed 31ms) (Z3) (Cached)
+[wp] [Timeout] typed_SmallestMissingNumber_loop_invariant_3_preserved_part2 (Qed 54ms) (CVC5) (Cached)
+[wp] [Timeout] typed_SmallestMissingNumber_loop_invariant_4_preserved_part1 (Qed 56ms) (Z3) (Cached)
+[wp] [Timeout] typed_SmallestMissingNumber_assert_rte_mem_access (Qed 60ms) (CVC5) (Cached)
+[wp] [Timeout] typed_SmallestMissingNumber_assert_rte_signed_overflow (Qed 54ms) (Z3) (Cached)
+[wp] [Cache] updated:32
+[wp] Proved goals:   21 / 31
+  Terminating:       1
+  Unreachable:       1
+  Qed:              17 (15ms-16ms-60ms)
+  Alt-Ergo 2.6.4:    2 (103ms-143ms)
+  Timeout:          10

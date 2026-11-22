@@ -1,0 +1,20 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_150.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_150.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function is_sorted
+[wp] 17 goals scheduled
+[wp] [Cache] updated:6
+[wp] Proved goals:   19 / 19
+  Terminating:       1
+  Unreachable:       1
+  Qed:              12 (14ms-6ms-24ms)
+  Alt-Ergo 2.6.4:    4 (95ms-122ms)
+  CVC5 :             1 (170ms)
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_150.c:23: Warning: 
+  No 'assigns' specification for function 'is_sorted'.
+  - in complete behaviors: {unsorted, sorted}
+    No assigns for (at least) 'unsorted'
+  Callers assumptions might be imprecise.

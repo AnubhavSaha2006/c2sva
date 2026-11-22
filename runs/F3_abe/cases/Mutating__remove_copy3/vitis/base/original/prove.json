@@ -1,0 +1,92 @@
+{
+  "latency": 8,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 214.4,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 600.0
+  },
+  "candidates": {
+    "total": 128,
+    "by_origin": {
+      "structural": 47,
+      "call-requires": 3,
+      "pipeline-copy": 20,
+      "contract-persist": 5,
+      "call-frame": 2,
+      "loop-invariant": 39,
+      "loop-variant": 6,
+      "loop-assigns": 6
+    },
+    "loops": 1,
+    "loop_invariants": 8,
+    "skipped": [
+      {
+        "source": "loop 1: loop invariant remove: Remove { Pre , Here } ( a , n , i , b , v )",
+        "reason": "clause too large after inlining (node budget exceeded)"
+      },
+      {
+        "source": "loop 1: loop invariant interval: IndexOfNotEqual { Pre } ( a , n , v , k - 1 ) <= i",
+        "reason": "clause too large after inlining (node budget exceeded)"
+      },
+      {
+        "source": "loop 1: loop invariant interval: i <= IndexOfNotEqual { Pre } ( a , n , v , k )",
+        "reason": "clause too large after inlining (node budget exceeded)"
+      }
+    ]
+  },
+  "houdini": {
+    "candidates": 128,
+    "base_dropped": 60,
+    "ind_dropped": 0,
+    "rounds": 1,
+    "status": "base timeout",
+    "k": 12,
+    "secs": 1254.7,
+    "invariants": 0,
+    "by_origin": {},
+    "c_invariants_survived": [],
+    "c_invariants_lagged": [],
+    "k_tried": [
+      4,
+      8,
+      12
+    ]
+  },
+  "kind+inv": {
+    "status": "no invariants",
+    "k": 12
+  },
+  "latency_proof": {
+    "bound": 8,
+    "established_by_bmc": "established",
+    "kind": {
+      "status": "UNKNOWN",
+      "secs": 1.5,
+      "k": 16
+    },
+    "candidates": 98,
+    "kind+inv": {
+      "status": "UNKNOWN",
+      "secs": 1.1,
+      "k": 16,
+      "progress_invariants": 0,
+      "houdini": "empty",
+      "houdini_secs": 121.9
+    },
+    "proved": false
+  },
+  "unbounded": false,
+  "proved_by": [],
+  "deep_cex": [],
+  "secs": 2290.9
+}

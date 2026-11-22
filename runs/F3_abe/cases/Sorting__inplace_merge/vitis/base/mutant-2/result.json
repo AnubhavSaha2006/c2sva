@@ -1,0 +1,93 @@
+{
+  "design": "Sorting/inplace_merge",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "38/45",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P11: assigns * ( a + ( 0 .. n - 1 ) )  [frame of a]"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+    "P9: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+  ],
+  "cover": "reached",
+  "latency": 32,
+  "latency_status": "established",
+  "clauses": "11/11",
+  "translated": 11,
+  "total_clauses": 11,
+  "skipped": [],
+  "times": {
+    "frontend": 0.8,
+    "wp": 18.5,
+    "hls": 21.7,
+    "latency": 14.0,
+    "bmc": 170.1,
+    "access": 1.0,
+    "phys": 3.5,
+    "cover": 1.5,
+    "total": 238.4
+  },
+  "error": null,
+  "top": "inplace_merge",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "m": 2,
+        "n": 3
+      },
+      "pre": {
+        "a": [
+          460894239,
+          929607710,
+          669970463,
+          2070425629
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          2070425629,
+          929607710,
+          669970463,
+          460894239
+        ]
+      },
+      "rtl_result": null,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [],
+    "checker": "e-acsl + sanitizers",
+    "class": "c-runtime-error",
+    "detail": "ERROR: AddressSanitizer: stack-buffer-underflow"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_388,j_389: enumerated over 0..4 (weaker assumption)",
+    "\\forall i_390,j_391: enumerated over 0..4 (weaker assumption)",
+    "\\forall i_395,j_396: symbolic (solver-chosen) value, exact",
+    "\\forall v_392: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "exact frame over all 4 element(s) of a",
+    "recursive logic cut off: free value"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 36,
+  "cex_step": 15,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

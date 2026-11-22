@@ -1,0 +1,134 @@
+{
+  "function": "find",
+  "tool": "vitis",
+  "properties": [
+    {
+      "id": "P1",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures 0 <= \\result <= \\old ( n )",
+      "behavior": null,
+      "cond": "((72'sd0 <= h_res_c) && (h_res_c <= n_c))",
+      "notes": []
+    },
+    {
+      "id": "P2",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures 0 <= \\result < \\old ( n )",
+      "behavior": "some",
+      "cond": "(!((((72'sd0 <= q_i_1) && (q_i_1 < n_c)) && ((((q_i_1) == 72'sd0 ? a_o0 : ((q_i_1) == 72'sd1 ? a_o1 : ((q_i_1) == 72'sd2 ? a_o2 : ((q_i_1) == 72'sd3 ? a_o3 : a_xddf37a180)))) == v_c)))) || (((72'sd0 <= h_res_c) && (h_res_c < n_c))))",
+      "notes": [
+        "\\exists i: symbolic (solver-chosen) value, exact",
+        "cell of a outside 0..3: solver-chosen value"
+      ]
+    },
+    {
+      "id": "P3",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures * ( \\old ( a ) + \\result ) == \\old ( v )",
+      "behavior": "some",
+      "cond": "(!((((72'sd0 <= q_i_2) && (q_i_2 < n_c)) && ((((q_i_2) == 72'sd0 ? a_o0 : ((q_i_2) == 72'sd1 ? a_o1 : ((q_i_2) == 72'sd2 ? a_o2 : ((q_i_2) == 72'sd3 ? a_o3 : a_xdb9bb0f93)))) == v_c)))) || (((((h_res_c) == 72'sd0 ? a_e0 : ((h_res_c) == 72'sd1 ? a_e1 : ((h_res_c) == 72'sd2 ? a_e2 : ((h_res_c) == 72'sd3 ? a_e3 : a_xdfe23f930)))) == v_c))))",
+      "notes": [
+        "\\exists i: symbolic (solver-chosen) value, exact",
+        "cell of a outside 0..3: solver-chosen value"
+      ]
+    },
+    {
+      "id": "P4",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures \\forall integer i ; 0 <= i < \\result ==> * ( \\old ( a ) + i ) != \\old ( v )",
+      "behavior": "some",
+      "cond": "(!((((72'sd0 <= q_i_3) && (q_i_3 < n_c)) && ((((q_i_3) == 72'sd0 ? a_o0 : ((q_i_3) == 72'sd1 ? a_o1 : ((q_i_3) == 72'sd2 ? a_o2 : ((q_i_3) == 72'sd3 ? a_o3 : a_xd8f60325c)))) == v_c)))) || ((!(((72'sd0 <= q_i_4) && (q_i_4 < h_res_c))) || (((((q_i_4) == 72'sd0 ? a_e0 : ((q_i_4) == 72'sd1 ? a_e1 : ((q_i_4) == 72'sd2 ? a_e2 : ((q_i_4) == 72'sd3 ? a_e3 : a_xd462d28e8)))) != v_c))))))",
+      "notes": [
+        "\\exists i: symbolic (solver-chosen) value, exact",
+        "cell of a outside 0..3: solver-chosen value",
+        "\\forall i: symbolic (solver-chosen) value, exact"
+      ]
+    },
+    {
+      "id": "P5",
+      "kind": "post",
+      "origin": "ensures",
+      "source": "ensures \\result == \\old ( n )",
+      "behavior": "none",
+      "cond": "(!(((!(((72'sd0 <= 72'sd0) && (72'sd0 < n_c))) || (((a_o0 != v_c)))) && (!(((72'sd0 <= 72'sd1) && (72'sd1 < n_c))) || (((a_o1 != v_c)))) && (!(((72'sd0 <= 72'sd2) && (72'sd2 < n_c))) || (((a_o2 != v_c)))) && (!(((72'sd0 <= 72'sd3) && (72'sd3 < n_c))) || (((a_o3 != v_c)))) && (!(((72'sd0 <= 72'sd4) && (72'sd4 < n_c))) || (((a_x4 != v_c)))))) || (((h_res_c == n_c))))",
+      "notes": [
+        "\\forall i: enumerated over 0..4 (stronger assertion)",
+        "cell of a outside 0..3: solver-chosen value"
+      ]
+    },
+    {
+      "id": "P6",
+      "kind": "assume",
+      "origin": "valid",
+      "source": "requires \\valid_read ( a + ( 0 .. n - 1 ) )  [range fits the 4-cell memory]",
+      "behavior": null,
+      "cond": "((((n_now - 72'sd1) < 72'sd0)) || (((72'sd0 <= 72'sd0)) && (((n_now - 72'sd1) < 72'sd4))))",
+      "notes": []
+    },
+    {
+      "id": "P7",
+      "kind": "access",
+      "origin": "valid",
+      "source": "requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+      "behavior": null,
+      "cond": "!a_ce0 || (((72'sd0 <= (($signed({{70{1'b0}}, a_address0}) >>> 0))) && ((($signed({{70{1'b0}}, a_address0}) >>> 0)) <= (n_now - 72'sd1))))",
+      "notes": []
+    },
+    {
+      "id": "P8",
+      "kind": "access_phys",
+      "origin": "valid",
+      "source": "physical memory bound: a bank 0 port 0 address < 4",
+      "behavior": null,
+      "cond": "!a_ce0 || ((($signed({{70{1'b0}}, a_address0}) >>> 0)) < 72'sd4)",
+      "notes": []
+    },
+    {
+      "id": "P9",
+      "kind": "discharged",
+      "origin": "assigns",
+      "source": "assigns \\nothing  [frame of a]",
+      "behavior": null,
+      "cond": "1'b1",
+      "notes": [
+        "holds by construction: the RTL cannot write this object"
+      ]
+    },
+    {
+      "id": "P10",
+      "kind": "post",
+      "origin": "assigns",
+      "source": "assigns \\nothing  [frame of a]",
+      "behavior": "some",
+      "cond": "(((!(((72'sd0 <= q_i_5) && (q_i_5 < n_c)) && ((((q_i_5) == 72'sd0 ? a_o0 : ((q_i_5) == 72'sd1 ? a_o1 : ((q_i_5) == 72'sd2 ? a_o2 : ((q_i_5) == 72'sd3 ? a_o3 : a_xd9a9d02a4)))) == v_c))))) || ((a_e0 == a_o0) && (a_e1 == a_o1) && (a_e2 == a_o2) && (a_e3 == a_o3)))",
+      "notes": [
+        "exact frame over all 4 element(s) of a"
+      ]
+    },
+    {
+      "id": "P11",
+      "kind": "post",
+      "origin": "assigns",
+      "source": "assigns \\nothing  [frame of a]",
+      "behavior": "none",
+      "cond": "(((!((!(((72'sd0 <= 72'sd0) && (72'sd0 < n_c))) || (((a_o0 != v_c)))) && (!(((72'sd0 <= 72'sd1) && (72'sd1 < n_c))) || (((a_o1 != v_c)))) && (!(((72'sd0 <= 72'sd2) && (72'sd2 < n_c))) || (((a_o2 != v_c)))) && (!(((72'sd0 <= 72'sd3) && (72'sd3 < n_c))) || (((a_o3 != v_c)))) && (!(((72'sd0 <= 72'sd4) && (72'sd4 < n_c))) || (((a_x4 != v_c))))))) || ((a_e0 == a_o0) && (a_e1 == a_o1) && (a_e2 == a_o2) && (a_e3 == a_o3)))",
+      "notes": [
+        "exact frame over all 4 element(s) of a"
+      ]
+    },
+    {
+      "id": "P12",
+      "kind": "term",
+      "origin": "termination",
+      "source": "termination: every call eventually completes (checked bounded by the latency search)",
+      "behavior": null,
+      "cond": "",
+      "notes": []
+    }
+  ],
+  "not_translated": []
+}

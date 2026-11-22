@@ -1,0 +1,1222 @@
+{
+  "by_tool_config": [
+    {
+      "tool": "vitis",
+      "config": "base",
+      "designs": 419,
+      "frontend_ok": 380,
+      "hls_ok": 352,
+      "checked": 333,
+      "pass_full": 300,
+      "pass_partial": 32,
+      "fail": 0,
+      "bounded": 19,
+      "vacuous": 1,
+      "agree": 332,
+      "disagree": 0,
+      "clauses": "1827/1902",
+      "clause_rate": 96.1,
+      "access_speculative": 116,
+      "access_out_of_memory": 0,
+      "overlap_mode": 32,
+      "mutants": 600,
+      "mutants_checked": 519,
+      "killed": 305,
+      "mutation_score": 80.1,
+      "survivors": 76,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 45,
+      "survivors_untranslated": 2,
+      "survivors_no_violation": 24,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 136,
+      "kills_confirmed_in_C": 305,
+      "median_total_s": 17.2
+    }
+  ],
+  "details": {
+    "vitis/base": {
+      "original_outcomes": {
+        "pass": 300,
+        "bounded": 19,
+        "pass-partial": 32,
+        "unsupported": 39,
+        "error": 28,
+        "vacuous": 1
+      },
+      "failure_replay": {},
+      "kill_replay": {
+        "c-contract-violation": 252,
+        "c-runtime-error": 52,
+        "c-nontermination": 1
+      },
+      "survived_c_unproven": [
+        "task_126/vitis/base/mutant-1",
+        "task_138/vitis/base/mutant-1",
+        "task_141/vitis/base/mutant-2",
+        "task_162/vitis/base/mutant-1",
+        "task_164/vitis/base/mutant-1",
+        "task_167/vitis/base/mutant-1",
+        "task_167/vitis/base/mutant-2",
+        "task_172/vitis/base/mutant-2",
+        "task_187/vitis/base/mutant-1",
+        "task_212/vitis/base/mutant-1",
+        "task_215/vitis/base/mutant-1",
+        "task_220/vitis/base/mutant-1",
+        "task_232/vitis/base/mutant-1",
+        "task_232/vitis/base/mutant-2",
+        "task_247/vitis/base/mutant-1",
+        "task_254/vitis/base/mutant-2",
+        "task_255/vitis/base/mutant-1",
+        "task_256/vitis/base/mutant-1",
+        "task_256/vitis/base/mutant-2",
+        "task_263/vitis/base/mutant-1",
+        "task_273/vitis/base/mutant-2",
+        "task_299/vitis/base/mutant-1",
+        "task_299/vitis/base/mutant-2",
+        "task_302/vitis/base/mutant-1",
+        "task_302/vitis/base/mutant-2",
+        "task_303/vitis/base/mutant-2",
+        "task_321/vitis/base/mutant-2",
+        "task_322/vitis/base/mutant-1",
+        "task_327/vitis/base/mutant-1",
+        "task_327/vitis/base/mutant-2",
+        "task_347/vitis/base/mutant-1",
+        "task_347/vitis/base/mutant-2",
+        "task_358/vitis/base/mutant-2",
+        "task_363/vitis/base/mutant-1",
+        "task_369/vitis/base/mutant-2",
+        "task_411/vitis/base/mutant-2",
+        "task_441/vitis/base/mutant-1",
+        "task_447/vitis/base/mutant-2",
+        "task_452/vitis/base/mutant-1",
+        "task_455/vitis/base/mutant-1",
+        "task_455/vitis/base/mutant-2",
+        "task_459/vitis/base/mutant-2",
+        "task_462/vitis/base/mutant-2",
+        "task_465/vitis/base/mutant-2",
+        "task_473/vitis/base/mutant-2",
+        "task_479/vitis/base/mutant-2",
+        "task_482/vitis/base/mutant-1",
+        "task_482/vitis/base/mutant-2",
+        "task_488/vitis/base/mutant-2",
+        "task_510/vitis/base/mutant-2",
+        "task_513/vitis/base/mutant-2",
+        "task_519/vitis/base/mutant-2",
+        "task_525/vitis/base/mutant-1",
+        "task_525/vitis/base/mutant-2",
+        "task_526/vitis/base/mutant-2",
+        "task_529/vitis/base/mutant-1",
+        "task_542/vitis/base/mutant-1",
+        "task_545/vitis/base/mutant-2",
+        "task_547/vitis/base/mutant-1",
+        "task_552/vitis/base/mutant-1",
+        "task_553/vitis/base/mutant-1",
+        "task_553/vitis/base/mutant-2",
+        "task_554/vitis/base/mutant-1",
+        "task_561/vitis/base/mutant-2",
+        "task_562/vitis/base/mutant-1",
+        "task_564/vitis/base/mutant-1",
+        "task_564/vitis/base/mutant-2",
+        "task_569/vitis/base/mutant-2",
+        "task_570/vitis/base/mutant-1",
+        "task_586/vitis/base/mutant-1",
+        "task_586/vitis/base/mutant-2",
+        "task_589/vitis/base/mutant-1",
+        "task_597/vitis/base/mutant-2",
+        "task_73/vitis/base/mutant-1",
+        "task_73/vitis/base/mutant-2",
+        "task_88/vitis/base/mutant-1"
+      ],
+      "stage_median_s": {
+        "frontend": 0.4,
+        "wp": 1.1,
+        "hls": 13.8,
+        "latency": 0.4,
+        "bmc": 0.7,
+        "access": 0.6,
+        "cover": 0.4,
+        "total": 17.2
+      }
+    }
+  },
+  "not_checked_reasons": [
+    [
+      "unsupported: unsupported \\valid argument",
+      7
+    ],
+    [
+      "unsupported: address-of (&) in contract",
+      4
+    ],
+    [
+      "unsupported: ACSL builtin \\null",
+      3
+    ],
+    [
+      "unsupported: no function with an ACSL contract",
+      3
+    ],
+    [
+      "error: hls: Vitis synthesis failed: ERROR: [HLS 214-194] in function 'reverse_in_place': Undefined function",
+      3
+    ],
+    [
+      "unsupported: indexing a non-variable",
+      2
+    ],
+    [
+      "error: hls: Vitis synthesis failed: ERROR: [HLS 214-134] in function 'eq_vec_vec_Int': Pointer to pointer i",
+      2
+    ],
+    [
+      "error: hls: Vitis synthesis failed: ERROR: [HLS 214-194] in function 'max_abs': Undefined function max (../",
+      2
+    ],
+    [
+      "error: hls: Vitis synthesis failed: ERROR: [HLS 214-139] Recursive function calls are not supported: foo ->",
+      2
+    ],
+    [
+      "unsupported: C type 'enum type2'",
+      1
+    ],
+    [
+      "error: hls: Vitis synthesis failed: ERROR: [HLS 214-194] in function 'matcher': Undefined function strlen (",
+      1
+    ],
+    [
+      "unsupported: struct _vvc: array/pointer member a",
+      1
+    ],
+    [
+      "error: hls: Vitis synthesis failed: ERROR: [HLS 214-193] in function 'array_copy': Pointer comparison is no",
+      1
+    ],
+    [
+      "error: hls: Vitis synthesis failed: ERROR: [HLS 214-134] in function 'eq_VVC': Pointer to pointer is not su",
+      1
+    ],
+    [
+      "unsupported: non-constant array size 'size'",
+      1
+    ],
+    [
+      "error: hls: Vitis synthesis failed: ERROR: [HLS 214-194] in function 'permut': Undefined function swap (../",
+      1
+    ],
+    [
+      "error: hls: Vitis synthesis failed: ERROR: [HLS 214-134] in function 'count_pos': Pointer to pointer is not",
+      1
+    ],
+    [
+      "unsupported: floating-point type",
+      1
+    ],
+    [
+      "error: hls: Vitis synthesis failed: ERROR: [HLS 207-6187] non-void function does not return a value in all ",
+      1
+    ],
+    [
+      "unsupported: C type 'enum __anonenum_kind_1'",
+      1
+    ],
+    [
+      "error: hls: Vitis synthesis failed: ERROR: [HLS 214-194] in function 'bn': Undefined function an (../src/hl",
+      1
+    ],
+    [
+      "unsupported: ACSL builtin \\lambda",
+      1
+    ],
+    [
+      "error: hls: Vitis synthesis failed: ERROR: [HLS 214-133] Global variable 'a' must have definition (../src/h",
+      1
+    ],
+    [
+      "error: hls: Vitis synthesis failed: ERROR: [HLS 214-157] Top function not found: there is no function named",
+      1
+    ],
+    [
+      "unsupported: ACSL builtin \\pointer_comparable",
+      1
+    ],
+    [
+      "unsupported: unexpected token '{'",
+      1
+    ],
+    [
+      "error: hls: Vitis synthesis failed: ERROR: [HLS 214-139] Recursive function calls are not supported: gcd_re",
+      1
+    ],
+    [
+      "unsupported: non-constant array size 'static 8'",
+      1
+    ],
+    [
+      "unsupported: C type 'enum __anonenum_T_BOOLEEN_1'",
+      1
+    ],
+    [
+      "unsupported: dereference of a complex pointer expression",
+      1
+    ]
+  ],
+  "untranslated_clause_reasons": [
+    [
+      "global variable c: global state is not modelled",
+      26
+    ],
+    [
+      "global variable: global state is not modelled",
+      16
+    ],
+    [
+      "axiomatic logic factorial",
+      4
+    ],
+    [
+      "global variable rr: global state is not modelled",
+      4
+    ],
+    [
+      "unknown logic function/predicate sizeof",
+      3
+    ],
+    [
+      "inductive logic same_elements",
+      2
+    ],
+    [
+      "global variable behavior: global state is not modelled",
+      2
+    ],
+    [
+      "abstract logic matcher_ab",
+      1
+    ],
+    [
+      "abstract logic matcher_a_or_b",
+      1
+    ],
+    [
+      "global variable status: global state is not modelled",
+      1
+    ],
+    [
+      "global variable at: global state is not modelled",
+      1
+    ],
+    [
+      "inductive logic Permuta",
+      1
+    ],
+    [
+      "quantifier under mixed polarity",
+      1
+    ],
+    [
+      "clause too large to translate (enumeration budget exceeded)",
+      1
+    ],
+    [
+      "axiomatic logic gcd",
+      1
+    ],
+    [
+      "ambiguous overload of Positive",
+      1
+    ],
+    [
+      "global variable i: global state is not modelled",
+      1
+    ],
+    [
+      "axiomatic logic ordered",
+      1
+    ],
+    [
+      "axiomatic logic count",
+      1
+    ],
+    [
+      "global variable e: global state is not modelled",
+      1
+    ],
+    [
+      "global variable x: global state is not modelled",
+      1
+    ],
+    [
+      "field of an unsupported expression",
+      1
+    ],
+    [
+      "p is not a memory",
+      1
+    ],
+    [
+      "axiomatic logic fact",
+      1
+    ],
+    [
+      "axiomatic logic GCD",
+      1
+    ]
+  ],
+  "translation_strategies": [
+    [
+      "holds by construction",
+      91
+    ],
+    [
+      "\\forall i",
+      81
+    ],
+    [
+      "cell of a outside 0..3",
+      55
+    ],
+    [
+      "cell of t outside 0..3",
+      33
+    ],
+    [
+      "\\exists i",
+      29
+    ],
+    [
+      "\\forall k",
+      18
+    ],
+    [
+      "\\separated holds by construction (separate RTL memories/registers)",
+      17
+    ],
+    [
+      "exact frame over all 1 element(s) of a",
+      15
+    ],
+    [
+      "exact frame over all 4 element(s) of a",
+      12
+    ],
+    [
+      "cell of arr outside 0..3",
+      11
+    ],
+    [
+      "exact frame over all 1 element(s) of b",
+      11
+    ],
+    [
+      "\\forall j",
+      11
+    ],
+    [
+      "cell of x0 outside 0..3",
+      10
+    ],
+    [
+      "\\valid inside an expression holds for RTL memories",
+      8
+    ],
+    [
+      "\\exists k",
+      8
+    ],
+    [
+      "\\forall i,j",
+      7
+    ],
+    [
+      "exact frame over all 1 element(s) of q",
+      7
+    ],
+    [
+      "cell of s outside 0..3",
+      6
+    ],
+    [
+      "exact frame over all 4 element(s) of t",
+      6
+    ],
+    [
+      "cell of b outside 0..3",
+      6
+    ],
+    [
+      "exact frame over all 1 element(s) of r",
+      5
+    ],
+    [
+      "cell of x outside 0..3",
+      5
+    ],
+    [
+      "\\exists i,j",
+      5
+    ],
+    [
+      "exact frame over all 1 element(s) of p",
+      5
+    ],
+    [
+      "cell of p outside 0..3",
+      4
+    ]
+  ],
+  "disagreements": [
+    {
+      "case": "task_460/vitis/base/original",
+      "outcome": "vacuous",
+      "ref": true,
+      "failed": [],
+      "replay": null
+    }
+  ],
+  "access_violations": [
+    {
+      "case": "task_117/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid_read ( arr + ( 0 .. n - 1 ) )  [access in range: arr bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_126/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_138/vitis/base/original",
+      "detail": [
+        "P4: requires strlen ( x0 ) >= 0 && \\valid ( x0 + ( 0 .. ( strlen ( x0 ) + 1 ) - 1 ) )  [access in range: x0 bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_141/vitis/base/original",
+      "detail": [
+        "P6: requires x26 > 0 && \\valid ( x25 + ( 0 .. x26 - 1 ) )  [access in range: x25 bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "task_143/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid ( u + ( 0 .. size - 1 ) ) && 0 < size  [access in range: u bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "task_144/vitis/base/original",
+      "detail": [
+        "P8: requires \\valid ( t + ( 0 .. n - 1 ) )  [access in range: t bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "task_146/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid ( s + ( 0 .. n - 1 ) )  [access in range: s bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_150/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_156/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. len - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_164/vitis/base/original",
+      "detail": [
+        "P4: requires strlen ( x0 ) >= 0 && \\valid ( x0 + ( 0 .. ( strlen ( x0 ) + 1 ) - 1 ) )  [access in range: x0 bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_17/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_171/vitis/base/original",
+      "detail": [
+        "P8: requires \\valid ( t + ( 0 .. len - 1 ) )  [access in range: t bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_172/vitis/base/original",
+      "detail": [
+        "P15: requires inv_matrix_Boolean ( x111 , x112 , x113 ) && inv_matrix_Boolean ( x114 , x115 , x116 ) && x112 == x115 && x113 == x116  [access in range: x111 bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_175/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. size - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_177/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid ( v + ( 0 .. n - 1 ) )  [access in range: v bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_187/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid ( x + ( 0 .. N - 1 ) )  [access in range: x bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_193/vitis/base/original",
+      "detail": [
+        "P13: requires \\valid ( v + ( 0 .. n - 1 ) )  [access in range: v bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_197/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. length - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_205/vitis/base/original",
+      "detail": [
+        "P21: requires inv_matrix_Boolean ( x63 , x64 , x65 ) && inv_matrix_Boolean ( x66 , x67 , x68 ) && inv_matrix_Boolean ( x69 , x70 , x71 ) && x65 == x67 && x64 == x70 && x68 == x71  [access in range: x63 bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_206/vitis/base/original",
+      "detail": [
+        "P5: requires n > 0 && \\valid ( p + ( 0 .. n - 1 ) )  [access in range: p bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_212/vitis/base/original",
+      "detail": [
+        "P16: requires inv_matrix_Boolean ( x204 , x205 , x206 ) && inv_matrix_Boolean ( x207 , x208 , x209 ) && x208 == x205 && x209 == x206 && ( \\forall int x248 ; \\forall int x249 ; 0 <= x248 < x208 * x209 && 0 <= x249 < x205 * x206 ==> \\separated ( x207 + x248 , x204 + x249 ) )  [access in range: x204 bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_213/vitis/base/original",
+      "detail": [
+        "P6: requires x405 > 0 && \\valid ( x402 + ( 0 .. x405 - 1 ) ) && \\valid ( x403 + ( 0 .. x405 - 1 ) ) && \\valid ( x404 + ( 0 .. x405 - 1 ) ) && ( \\forall int x421 ; 0 <= x421 < x405 ==> ( \\forall int x426 ; 0 <= x426 < x405 ==> ( \\forall int x431 ; 0 <= x431 < x405 ==> \\separated ( x402 + x421 , x403 + x426 ) && \\separated ( x402 + x421 , x404 + x431 ) && \\separated ( x403 + x426 , x404 + x431 ) ) ) ) && ( \\forall int x453 ; 0 <= x453 < x405 ==> 0 <= * ( x402 + x453 ) <= 26 )  [access in range: x402 bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_214/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid_read ( arr + ( 0 .. n - 1 ) )  [access in range: arr bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_220/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid ( x + ( 0 .. N - 1 ) )  [access in range: x bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_229/vitis/base/original",
+      "detail": []
+    },
+    {
+      "case": "task_242/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid ( x + ( 0 .. N - 1 ) )  [access in range: x bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_246/vitis/base/original",
+      "detail": [
+        "P7: requires valid_range_r ( arr , len )  [access in range: arr bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_25/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. size - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_254/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. length - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_259/vitis/base/original",
+      "detail": [
+        "P9: requires \\valid ( a + ( 0 .. length - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_263/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_264/vitis/base/original",
+      "detail": []
+    },
+    {
+      "case": "task_265/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. size - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_273/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid ( a + ( 0 .. length - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_276/vitis/base/original",
+      "detail": []
+    },
+    {
+      "case": "task_303/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid ( t + ( 0 .. n - 1 ) )  [access in range: t bank 0 port 0]",
+        "P9: requires \\valid ( t + ( 0 .. n - 1 ) )  [access in range: t bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "task_304/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid ( s1 + ( 0 .. n - 1 ) )  [access in range: s1 bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_305/vitis/base/original",
+      "detail": [
+        "P6: requires N >= 1 && \\valid ( A + ( 0 .. N - 1 ) )  [access in range: A bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "task_312/vitis/base/original",
+      "detail": [
+        "P10: requires \\valid ( t + j )  [access in range: t bank 0 port 1]",
+        "P3: requires \\valid ( t + i )  [access in range: t bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_317/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_321/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid ( a + ( 0 .. length - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_322/vitis/base/original",
+      "detail": [
+        "P16: requires inv_matrix_Boolean ( x172 , x173 , x174 ) && inv_matrix_Boolean ( x175 , x176 , x177 ) && x176 == x173 && x177 == x174 && ( \\forall int x213 ; \\forall int x214 ; 0 <= x213 < x176 * x177 && 0 <= x214 < x173 * x174 ==> \\separated ( x175 + x213 , x172 + x214 ) )  [access in range: x172 bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_325/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid_read ( arr + ( 0 .. n - 1 ) )  [access in range: arr bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_327/vitis/base/original",
+      "detail": [
+        "P2: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_329/vitis/base/original",
+      "detail": [
+        "P3: requires strlen ( x0 ) >= 0 && \\valid ( x0 + ( 0 .. strlen ( x0 ) ) )  [access in range: x0 bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_337/vitis/base/original",
+      "detail": [
+        "P6: requires x319 > 0 && \\valid ( x316 + ( 0 .. x319 - 1 ) ) && \\valid ( x317 + ( 0 .. x319 - 1 ) ) && \\valid ( x318 + ( 0 .. x319 - 1 ) ) && ( \\forall int x332 ; 0 <= x332 < x319 ==> ( \\forall int x336 ; 0 <= x336 < x319 ==> ( \\forall int x340 ; 0 <= x340 < x319 ==> \\separated ( x316 + x332 , x317 + x336 ) && \\separated ( x316 + x332 , x318 + x340 ) && \\separated ( x317 + x336 , x318 + x340 ) ) ) ) && ( \\forall int x359 ; 0 <= x359 < x319 ==> 0 <= * ( x316 + x359 ) <= 26 )  [access in range: x316 bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_343/vitis/base/original",
+      "detail": [
+        "P3: requires strlen ( x0 ) >= 0 && \\valid ( x0 + ( 0 .. strlen ( x0 ) ) )  [access in range: x0 bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_350/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P8: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_351/vitis/base/original",
+      "detail": []
+    },
+    {
+      "case": "task_352/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid ( p + ( 0 .. n - 1 ) )  [access in range: p bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_355/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P8: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_358/vitis/base/original",
+      "detail": [
+        "P15: requires inv_matrix_Boolean ( x130 , x131 , x132 ) && inv_matrix_Boolean ( x133 , x134 , x135 ) && x131 == x134 && x132 == x135  [access in range: x130 bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_385/vitis/base/original",
+      "detail": [
+        "P4: requires N >= 1 && \\valid ( A + ( 0 .. N - 1 ) )  [access in range: A bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_388/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P8: requires \\valid ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_389/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid ( t + ( 0 .. n - 1 ) ) && n > 0  [access in range: t bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_391/vitis/base/original",
+      "detail": [
+        "P4: requires x1 > 0 && \\valid ( x0 + ( 0 .. x1 - 1 ) ) && \\valid ( x2 + ( 0 .. x1 - 1 ) )  [access in range: x0 bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_399/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid_read ( arr + ( 0 .. n - 1 ) )  [access in range: arr bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_400/vitis/base/original",
+      "detail": [
+        "P4: requires x1 > 0 && \\valid ( x0 + ( 0 .. x1 - 1 ) )  [access in range: x0 bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_404/vitis/base/original",
+      "detail": []
+    },
+    {
+      "case": "task_411/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid_read ( arr + ( 0 .. n - 1 ) )  [access in range: arr bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_414/vitis/base/original",
+      "detail": [
+        "P21: requires inv_matrix_Boolean ( x79 , x80 , x81 ) && inv_matrix_Boolean ( x82 , x83 , x84 ) && inv_matrix_Boolean ( x85 , x86 , x87 ) && x81 == x83 && x80 == x86 && x84 == x87  [access in range: x79 bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_419/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid ( a + ( 0 .. N - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_427/vitis/base/original",
+      "detail": [
+        "P10: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]",
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_430/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid ( x + ( 0 .. N - 1 ) )  [access in range: x bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_431/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid ( t + ( 0 .. n - 1 ) ) && n > 0  [access in range: t bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_435/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid ( t + ( 0 .. n - 1 ) ) && n >= 0  [access in range: t bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_436/vitis/base/original",
+      "detail": [
+        "P10: requires \\valid ( t + ( 0 .. size - 1 ) )  [access in range: t bank 0 port 0]",
+        "P13: requires \\valid ( s + ( 0 .. size - 1 ) )  [access in range: s bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_440/vitis/base/original",
+      "detail": [
+        "P5: requires 0 < length <= 2147483647 && \\valid_read ( arr + ( 0 .. length - 1 ) )  [access in range: arr bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_443/vitis/base/original",
+      "detail": [
+        "P5: requires n > 0 && \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_447/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_448/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_452/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "task_459/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid ( arr + ( 0 .. n - 1 ) )  [access in range: arr bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_462/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. length - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_471/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P8: requires \\valid_read ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_473/vitis/base/original",
+      "detail": [
+        "P4: requires size > 0 && \\valid_read ( a + ( 0 .. size - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_479/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_485/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid ( t + ( 0 .. n - 1 ) )  [access in range: t bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_486/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid ( t + ( 0 .. taille - 1 ) ) && taille > 0  [access in range: t bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_488/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_490/vitis/base/original",
+      "detail": [
+        "P9: requires \\valid_read ( t + ( 0 .. tt - 1 ) ) && tt > 0  [access in range: t bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_492/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid ( t + ( 0 .. n - 1 ) ) && n > 0  [access in range: t bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_493/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid ( t + ( 0 .. n - 1 ) ) && n > 0  [access in range: t bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "task_500/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid ( t1 + ( 0 .. n - 1 ) ) && \\valid ( t2 + ( 0 .. n - 1 ) ) && n > 0  [access in range: t1 bank 0 port 0]",
+        "P8: requires \\valid ( t1 + ( 0 .. n - 1 ) ) && \\valid ( t2 + ( 0 .. n - 1 ) ) && n > 0  [access in range: t2 bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_501/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid_read ( t + ( 0 .. n - 1 ) ) && n > 0  [access in range: t bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_504/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid ( s + ( 0 .. n - 1 ) )  [access in range: s bank 0 port 0]",
+        "P7: requires \\valid ( t + ( 0 .. n - 1 ) )  [access in range: t bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_505/vitis/base/original",
+      "detail": []
+    },
+    {
+      "case": "task_510/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid_read ( arr + ( 0 .. n - 1 ) )  [access in range: arr bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_513/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_514/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid ( t + ( 0 .. taille - 1 ) )  [access in range: t bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_515/vitis/base/original",
+      "detail": []
+    },
+    {
+      "case": "task_516/vitis/base/original",
+      "detail": [
+        "P10: requires m >= 0 && \\valid ( p + ( 0 .. m - 1 ) )  [access in range: p bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_519/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. N - 1 ) ) && 0 <= x < N && 0 <= y < N  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "task_520/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid_read ( t + ( 0 .. n - 1 ) )  [access in range: t bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_522/vitis/base/original",
+      "detail": [
+        "P4: requires n >= 0 && \\valid ( t + ( 0 .. n - 1 ) )  [access in range: t bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_523/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_526/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_527/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid ( t + ( 0 .. taille - 1 ) ) && taille > 0 && 2 * ( taille - 1 ) < 2147483647  [access in range: t bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_528/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid ( t + ( 0 .. taille - 1 ) ) && taille > 0  [access in range: t bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "task_529/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P7: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "task_530/vitis/base/original",
+      "detail": [
+        "P4: requires length > 0 && \\valid ( a + ( 0 .. length - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_538/vitis/base/original",
+      "detail": [
+        "P4: requires size >= 0 && \\valid ( t + ( 0 .. size - 1 ) )  [access in range: t bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_539/vitis/base/original",
+      "detail": [
+        "P8: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "task_540/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid ( p + ( 0 .. n - 1 ) )  [access in range: p bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_544/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_545/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P9: requires \\valid ( b + ( 0 .. n - 1 ) )  [access in range: b bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_551/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_554/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid ( t + ( 0 .. n - 1 ) ) && n > 0  [access in range: t bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_557/vitis/base/original",
+      "detail": [
+        "P5: requires n >= 0 && \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_560/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid ( t + ( 0 .. taille - 1 ) ) && taille > 0  [access in range: t bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "task_561/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid_read ( arr + ( 0 .. n - 1 ) )  [access in range: arr bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_567/vitis/base/original",
+      "detail": [
+        "P4: requires n > 0 && \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_569/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid ( t + ( 0 .. n - 1 ) )  [access in range: t bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_570/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid ( t + ( 0 .. n - 1 ) ) && 0 <= k < n  [access in range: t bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_573/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid ( t + ( 0 .. size - 1 ) )  [access in range: t bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_575/vitis/base/original",
+      "detail": [
+        "P5: requires n > 0 && \\valid ( s + ( 0 .. n - 1 ) ) && \\valid ( t + ( 0 .. n - 1 ) )  [access in range: s bank 0 port 0]",
+        "P8: requires n > 0 && \\valid ( s + ( 0 .. n - 1 ) ) && \\valid ( t + ( 0 .. n - 1 ) )  [access in range: t bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_576/vitis/base/original",
+      "detail": [
+        "P5: requires \\valid_read ( arr + ( 0 .. size - 1 ) )  [access in range: arr bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_587/vitis/base/original",
+      "detail": [
+        "P7: requires \\valid ( t + ( 0 .. n - 1 ) ) && n > 0  [access in range: t bank 0 port 1]"
+      ]
+    },
+    {
+      "case": "task_588/vitis/base/original",
+      "detail": [
+        "P6: requires 0 < x0 < 100 && 0 < x1 < 100 && \\valid ( x2 + ( 0 .. x0 * x1 - 1 ) ) && ( \\forall integer i ; 0 <= i < x0 * x1 ==> 0 <= * ( x2 + i ) < 256 )  [access in range: x2 bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_589/vitis/base/original",
+      "detail": [
+        "P4: requires n >= 0 && \\valid ( t + ( 0 .. n - 1 ) )  [access in range: t bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_596/vitis/base/original",
+      "detail": [
+        "P6: requires \\valid ( t + ( 0 .. n - 1 ) )  [access in range: t bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_597/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    },
+    {
+      "case": "task_80/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+      ]
+    }
+  ],
+  "latency": {
+    "established": 338,
+    "report_undefined": 133,
+    "not_established": 14
+  }
+}

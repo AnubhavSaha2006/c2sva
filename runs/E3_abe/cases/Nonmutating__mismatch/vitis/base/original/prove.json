@@ -1,0 +1,87 @@
+{
+  "latency": 16,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "TIMEOUT",
+    "secs": 300.1,
+    "k": 8
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.0
+  },
+  "candidates": {
+    "total": 83,
+    "by_origin": {
+      "structural": 46,
+      "call-requires": 2,
+      "call-frame": 2,
+      "loop-invariant": 18,
+      "loop-variant": 9,
+      "loop-assigns": 6
+    },
+    "loops": 1,
+    "loop_invariants": 2,
+    "skipped": []
+  },
+  "houdini": {
+    "candidates": 83,
+    "base_dropped": 23,
+    "ind_dropped": 1,
+    "rounds": 9,
+    "status": "inductive",
+    "base_depth": 20,
+    "k": 4,
+    "secs": 42.7,
+    "invariants": 59,
+    "by_origin": {
+      "structural": 22,
+      "call-requires": 2,
+      "call-frame": 2,
+      "loop-invariant": 18,
+      "loop-variant": 9,
+      "loop-assigns": 6
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant bound: 0 <= i <= n",
+      "loop 1: loop invariant equal: Equal { Here , Here } ( a , i , b )"
+    ],
+    "k_tried": [
+      4
+    ]
+  },
+  "kind+inv": {
+    "status": "PASS",
+    "secs": 1.8,
+    "k": 4
+  },
+  "ablation": {
+    "hls": {
+      "candidates": 46,
+      "invariants": 22,
+      "houdini": "inductive",
+      "k": 4,
+      "status": "UNKNOWN",
+      "secs": 1.5
+    },
+    "hls+contract": {
+      "candidates": 50,
+      "invariants": 26,
+      "houdini": "inductive",
+      "k": 4,
+      "status": "UNKNOWN",
+      "secs": 1.6
+    }
+  },
+  "unbounded": true,
+  "proved_by": [
+    "kind+inv"
+  ],
+  "deep_cex": [],
+  "secs": 680.9
+}

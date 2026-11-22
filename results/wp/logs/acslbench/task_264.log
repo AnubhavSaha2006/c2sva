@@ -1,0 +1,18 @@
+frama-c -warn-unsigned-overflow -warn-unsigned-downcast -wp -wp-rte -wp-split -wp-model Typed -wp-prover alt-ergo,z3,cvc5 -wp-timeout 10 -wp-par 2 /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_264.c
+
+[kernel] Parsing /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_264.c (with preprocessing)
+[wp] Running WP plugin...
+[wp] Warning: Skipped RTE guards: unaligned pointers (\aligned not supported)
+[wp] Warning: Skipped RTE guards: invalid function pointer calls (\valid_function not supported)
+[rte:annot] annotating function findDouble
+[wp] 33 goals scheduled
+[wp] [Cache] updated:14
+[wp] Proved goals:   35 / 35
+  Terminating:       1
+  Unreachable:       1
+  Qed:              20 (12ms-19ms-79ms)
+  Alt-Ergo 2.6.4:   12 (44ms-143ms-435ms)
+  CVC5 :             1 (138ms)
+[wp:pedantic-assigns] /home/anubhavsaha/cbv/benchmarks/raw/acslbench/ACSL_C/task_264.c:34: Warning: 
+  No 'assigns' specification for function 'findDouble'.
+  Callers assumptions might be imprecise.

@@ -1,0 +1,112 @@
+{
+  "by_tool_config": [
+    {
+      "tool": "vitis",
+      "config": "base",
+      "designs": 1,
+      "frontend_ok": 1,
+      "hls_ok": 1,
+      "checked": 1,
+      "pass_full": 0,
+      "pass_partial": 0,
+      "fail": 1,
+      "bounded": 0,
+      "vacuous": 0,
+      "agree": 0,
+      "disagree": 1,
+      "clauses": "14/14",
+      "clause_rate": 100.0,
+      "access_speculative": 1,
+      "access_out_of_memory": 0,
+      "overlap_mode": 0,
+      "mutants": 1,
+      "mutants_checked": 0,
+      "killed": 0,
+      "mutation_score": null,
+      "survivors": 0,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_untranslated": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 0,
+      "median_total_s": 679.2
+    }
+  ],
+  "details": {
+    "vitis/base": {
+      "original_outcomes": {
+        "fail": 1
+      },
+      "failure_replay": {
+        "rtl-c-divergence": 1
+      },
+      "kill_replay": {},
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.5,
+        "wp": 13.3,
+        "hls": 14.7,
+        "latency": 11.5,
+        "bmc": 625.4,
+        "access": 5.0,
+        "cover": 1.5,
+        "total": 679.2
+      }
+    }
+  },
+  "not_checked_reasons": [],
+  "untranslated_clause_reasons": [],
+  "translation_strategies": [
+    [
+      "\\forall v_4",
+      1
+    ],
+    [
+      "\\separated holds by construction (separate RTL memories/registers)",
+      1
+    ],
+    [
+      "cell of a outside 0..3",
+      1
+    ],
+    [
+      "exact frame over all 4 element(s) of a",
+      1
+    ],
+    [
+      "exact frame over all 4 element(s) of seed",
+      1
+    ],
+    [
+      "recursive logic cut off",
+      1
+    ]
+  ],
+  "disagreements": [
+    {
+      "case": "Mutating__shuffle/vitis/base/original",
+      "outcome": "fail",
+      "ref": true,
+      "failed": [
+        "P13: assigns * ( a + ( 0 .. n - 1 ) ) , * ( seed + ( 0 .. 2 ) )  [frame of a]"
+      ],
+      "replay": "rtl-c-divergence"
+    }
+  ],
+  "access_violations": [
+    {
+      "case": "Mutating__shuffle/vitis/base/original",
+      "detail": [
+        "P4: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]",
+        "P6: requires \\valid ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 1]"
+      ]
+    }
+  ],
+  "latency": {
+    "established": 1,
+    "report_undefined": 1,
+    "not_established": 0
+  }
+}

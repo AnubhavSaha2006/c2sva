@@ -1,0 +1,40 @@
+{
+  "design": "abs",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "5/7",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures \\result >= 0",
+    "P4: ensures \\old ( a ) < 0 ==> \\result == - \\old ( a )"
+  ],
+  "access": null,
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "proven",
+  "clauses": "4/4",
+  "skipped": [],
+  "times": {
+    "frontend": 0.5,
+    "wp": 1.1,
+    "hls": 20.0,
+    "latency": 0.4,
+    "bmc": 0.5,
+    "cover": 0.5,
+    "total": 23.0
+  },
+  "error": null,
+  "top": "spec_abs",
+  "discharged": 0,
+  "pre_dropped": 0,
+  "latency_report": [
+    0,
+    0
+  ],
+  "cex_step": 2
+}

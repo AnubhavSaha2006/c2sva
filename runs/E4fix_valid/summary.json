@@ -1,0 +1,131 @@
+{
+  "by_tool_config": [
+    {
+      "tool": "vitis",
+      "config": "base",
+      "designs": 3,
+      "frontend_ok": 3,
+      "hls_ok": 3,
+      "checked": 3,
+      "pass_full": 3,
+      "pass_partial": 0,
+      "fail": 0,
+      "bounded": 0,
+      "vacuous": 0,
+      "agree": 3,
+      "disagree": 0,
+      "clauses": "24/24",
+      "clause_rate": 100.0,
+      "access_speculative": 1,
+      "access_out_of_memory": 0,
+      "overlap_mode": 0,
+      "mutants": 4,
+      "mutants_checked": 4,
+      "killed": 2,
+      "mutation_score": 66.7,
+      "survivors": 1,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 1,
+      "equivalent_pass": 1,
+      "kills_confirmed_in_C": 2,
+      "median_total_s": 28.3
+    }
+  ],
+  "details": {
+    "vitis/base": {
+      "original_outcomes": {
+        "pass": 3
+      },
+      "failure_replay": {},
+      "kill_replay": {
+        "c-contract-violation": 2
+      },
+      "survived_c_unproven": [
+        "task_369/vitis/base/mutant-2"
+      ],
+      "stage_median_s": {
+        "frontend": 0.6,
+        "wp": 2.0,
+        "hls": 19.0,
+        "latency": 0.9,
+        "bmc": 3.7,
+        "access": 0.8,
+        "cover": 0.8,
+        "total": 28.3
+      }
+    }
+  },
+  "not_checked_reasons": [],
+  "untranslated_clause_reasons": [],
+  "translation_strategies": [
+    [
+      "\\valid inside an expression",
+      2
+    ],
+    [
+      "holds by construction",
+      2
+    ],
+    [
+      "\\forall k_1",
+      1
+    ],
+    [
+      "cell of t outside 0..3",
+      1
+    ],
+    [
+      "exact frame over all 4 element(s) of t",
+      1
+    ],
+    [
+      "\\forall x22_2",
+      1
+    ],
+    [
+      "\\forall x22_3",
+      1
+    ],
+    [
+      "cell of x15 outside 0..3",
+      1
+    ],
+    [
+      "cell of x17 outside 0..3",
+      1
+    ],
+    [
+      "\\forall x23_8",
+      1
+    ],
+    [
+      "\\forall x23_9",
+      1
+    ],
+    [
+      "cell of x16 outside 0..3",
+      1
+    ],
+    [
+      "cell of x18 outside 0..3",
+      1
+    ]
+  ],
+  "disagreements": [],
+  "access_violations": [
+    {
+      "case": "task_312/vitis/base/original",
+      "detail": [
+        "P10: requires \\valid ( t + j )  [access in range: t bank 0 port 1]",
+        "P3: requires \\valid ( t + i )  [access in range: t bank 0 port 0]"
+      ]
+    }
+  ],
+  "latency": {
+    "established": 3,
+    "report_undefined": 2,
+    "not_established": 0
+  }
+}

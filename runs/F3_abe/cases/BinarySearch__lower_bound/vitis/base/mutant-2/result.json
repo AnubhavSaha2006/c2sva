@@ -1,0 +1,90 @@
+{
+  "design": "BinarySearch/lower_bound",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "19/21",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P2: ensures 0 <= \\result <= \\old ( n )"
+  ],
+  "access": "speculative",
+  "access_failed": [
+    "P6: requires \\valid_read ( a + ( 0 .. n - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 128,
+  "latency_status": "not established within cap",
+  "clauses": "8/8",
+  "translated": 8,
+  "total_clauses": 8,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 2.0,
+    "hls": 14.6,
+    "latency": 367.8,
+    "bmc": 0.5,
+    "access": 0.5,
+    "phys": 10.0,
+    "cover": 0.5,
+    "total": 399.8
+  },
+  "error": null,
+  "top": "lower_bound",
+  "mode": "overlapping calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "n": 4,
+        "v": -1241513981
+      },
+      "pre": {
+        "a": [
+          -1694498814,
+          -1610612736,
+          -1610612736,
+          0
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          -1694498814,
+          -1610612736,
+          -1610612736,
+          0
+        ]
+      },
+      "rtl_result": 4294967295,
+      "completed": true
+    },
+    "c_result": null,
+    "c_post": {},
+    "eacsl": [],
+    "checker": "native+sanitizers (E-ACSL stopped at unsigned wrap-around)",
+    "class": "c-runtime-error",
+    "detail": "ERROR: AddressSanitizer: SEGV"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "\\forall i_826,j_827: enumerated over 0..4 (weaker assumption)",
+    "\\forall i_828: symbolic (solver-chosen) value, exact",
+    "\\forall i_829: symbolic (solver-chosen) value, exact",
+    "cell of a outside 0..3: solver-chosen value",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": 0,
+  "depth": 140,
+  "cex_step": 3,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}

@@ -1,0 +1,213 @@
+{
+  "latency": 16,
+  "ks": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "kind": {
+    "status": "UNKNOWN",
+    "secs": 218.4,
+    "k": 16
+  },
+  "pdr": {
+    "status": "TIMEOUT",
+    "secs": 300.0
+  },
+  "candidates": {
+    "total": 509,
+    "by_origin": {
+      "structural": 219,
+      "call-requires": 3,
+      "call-frame": 1,
+      "loop-invariant": 249,
+      "loop-variant": 24,
+      "loop-assigns": 13
+    },
+    "loops": 1,
+    "loop_invariants": 6,
+    "skipped": [
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy; c=tv_0, v=tv_6]",
+        "reason": "candidate too large (28320 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy & ap_CS_fsm_state1; c=tv_0, v=tv_6]",
+        "reason": "candidate too large (28329 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy & ap_CS_fsm_state2; c=tv_0, v=tv_6]",
+        "reason": "candidate too large (28329 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy & ap_CS_fsm_state3; c=tv_0, v=tv_6]",
+        "reason": "candidate too large (28329 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy & ap_CS_fsm_state4; c=tv_0, v=tv_6]",
+        "reason": "candidate too large (28329 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy & ap_CS_fsm_state5; c=tv_0, v=tv_6]",
+        "reason": "candidate too large (28329 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy & grp_push_heap_Pipeline_VITIS_LOOP_30_1_fu_92.ap_start; c=tv_0, v=tv_6]",
+        "reason": "candidate too large (28330 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy & grp_push_heap_Pipeline_VITIS_LOOP_30_1_fu_92.ap_CS_fsm_pp0_stage0; c=tv_0, v=tv_6]",
+        "reason": "candidate too large (28329 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy & grp_push_heap_Pipeline_VITIS_LOOP_30_1_fu_92.ap_start & grp_push_heap_Pipeline_VITIS_LOOP_30_1_fu_92.ap_CS_fsm_pp0_stage0; c=tv_0, v=tv_6]",
+        "reason": "candidate too large (28337 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy & grp_push_heap_Pipeline_VITIS_LOOP_30_1_fu_92.ap_CS_fsm_pp0_stage1; c=tv_0, v=tv_6]",
+        "reason": "candidate too large (28329 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy & grp_push_heap_Pipeline_VITIS_LOOP_30_1_fu_92.ap_start & grp_push_heap_Pipeline_VITIS_LOOP_30_1_fu_92.ap_CS_fsm_pp0_stage1; c=tv_0, v=tv_6]",
+        "reason": "candidate too large (28337 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy & grp_push_heap_Pipeline_VITIS_LOOP_30_1_fu_92.ap_CS_fsm_pp0_stage2; c=tv_0, v=tv_6]",
+        "reason": "candidate too large (28329 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy & grp_push_heap_Pipeline_VITIS_LOOP_30_1_fu_92.ap_start & grp_push_heap_Pipeline_VITIS_LOOP_30_1_fu_92.ap_CS_fsm_pp0_stage2; c=tv_0, v=tv_6]",
+        "reason": "candidate too large (28337 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy; c=tv_0, v=tv_7]",
+        "reason": "candidate too large (28329 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy & ap_CS_fsm_state1; c=tv_0, v=tv_7]",
+        "reason": "candidate too large (28338 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy & ap_CS_fsm_state2; c=tv_0, v=tv_7]",
+        "reason": "candidate too large (28338 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy & ap_CS_fsm_state3; c=tv_0, v=tv_7]",
+        "reason": "candidate too large (28338 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy & ap_CS_fsm_state4; c=tv_0, v=tv_7]",
+        "reason": "candidate too large (28338 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy & ap_CS_fsm_state5; c=tv_0, v=tv_7]",
+        "reason": "candidate too large (28338 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy & grp_push_heap_Pipeline_VITIS_LOOP_30_1_fu_92.ap_start; c=tv_0, v=tv_7]",
+        "reason": "candidate too large (28339 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy & grp_push_heap_Pipeline_VITIS_LOOP_30_1_fu_92.ap_CS_fsm_pp0_stage0; c=tv_0, v=tv_7]",
+        "reason": "candidate too large (28338 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy & grp_push_heap_Pipeline_VITIS_LOOP_30_1_fu_92.ap_start & grp_push_heap_Pipeline_VITIS_LOOP_30_1_fu_92.ap_CS_fsm_pp0_stage0; c=tv_0, v=tv_7]",
+        "reason": "candidate too large (28346 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy & grp_push_heap_Pipeline_VITIS_LOOP_30_1_fu_92.ap_CS_fsm_pp0_stage1; c=tv_0, v=tv_7]",
+        "reason": "candidate too large (28338 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy & grp_push_heap_Pipeline_VITIS_LOOP_30_1_fu_92.ap_start & grp_push_heap_Pipeline_VITIS_LOOP_30_1_fu_92.ap_CS_fsm_pp0_stage1; c=tv_0, v=tv_7]",
+        "reason": "candidate too large (28346 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy & grp_push_heap_Pipeline_VITIS_LOOP_30_1_fu_92.ap_CS_fsm_pp0_stage2; c=tv_0, v=tv_7]",
+        "reason": "candidate too large (28338 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy & grp_push_heap_Pipeline_VITIS_LOOP_30_1_fu_92.ap_start & grp_push_heap_Pipeline_VITIS_LOOP_30_1_fu_92.ap_CS_fsm_pp0_stage2; c=tv_0, v=tv_7]",
+        "reason": "candidate too large (28346 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy; c=tv_1, v=tv_6]",
+        "reason": "candidate too large (28329 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy & ap_CS_fsm_state1; c=tv_1, v=tv_6]",
+        "reason": "candidate too large (28338 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy & ap_CS_fsm_state2; c=tv_1, v=tv_6]",
+        "reason": "candidate too large (28338 chars)"
+      },
+      {
+        "source": "loop 1: loop invariant reorder: MultisetParity { Pre , Here } ( a , n , * ( a + c ) , v )  [busy & ap_CS_fsm_state3; c=tv_1, v=tv_6]",
+        "reason": "candidate too large (28338 chars)"
+      }
+    ]
+  },
+  "houdini": {
+    "candidates": 509,
+    "base_dropped": 350,
+    "ind_dropped": 15,
+    "rounds": 9,
+    "status": "inductive",
+    "base_depth": 20,
+    "k": 12,
+    "secs": 858.4,
+    "invariants": 144,
+    "by_origin": {
+      "structural": 48,
+      "call-requires": 3,
+      "call-frame": 1,
+      "loop-invariant": 55,
+      "loop-variant": 24,
+      "loop-assigns": 13
+    },
+    "c_invariants_survived": [
+      "loop 1: loop invariant bound: 0 <= c < n - 1",
+      "loop 1: loop invariant heap: Heap ( a , n )",
+      "loop 1: loop invariant less: * ( a + c ) < v",
+      "loop 1: loop invariant parent: p == HeapParent ( c )",
+      "loop 1: loop invariant unchanged: Unchanged { Pre , Here } ( a , c )"
+    ],
+    "k_tried": [
+      4,
+      8,
+      12
+    ]
+  },
+  "kind+inv": {
+    "status": "PASS",
+    "secs": 65.7,
+    "k": 12
+  },
+  "ablation": {
+    "hls": {
+      "candidates": 219,
+      "invariants": 40,
+      "houdini": "inductive",
+      "k": 12,
+      "status": "UNKNOWN",
+      "secs": 58.7
+    },
+    "hls+contract": {
+      "candidates": 223,
+      "invariants": 43,
+      "houdini": "inductive",
+      "k": 12,
+      "status": "UNKNOWN",
+      "secs": 79.9
+    }
+  },
+  "unbounded": true,
+  "proved_by": [
+    "kind+inv"
+  ],
+  "deep_cex": [],
+  "secs": 1762.4
+}

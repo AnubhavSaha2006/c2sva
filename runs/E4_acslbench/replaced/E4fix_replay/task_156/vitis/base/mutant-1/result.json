@@ -1,0 +1,101 @@
+{
+  "design": "task_156",
+  "variant": "mutant-1",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "36/37",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P3: ensures \\result == - 1"
+  ],
+  "access": "out-of-memory",
+  "access_failed": [
+    "P6: requires \\valid ( a + ( 0 .. len - 1 ) )  [access in range: a bank 0 port 0]"
+  ],
+  "cover": "reached",
+  "latency": 128,
+  "latency_status": "established",
+  "clauses": "8/8",
+  "translated": 8,
+  "total_clauses": 8,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 2.3,
+    "hls": 13.6,
+    "latency": 336.6,
+    "bmc": 165.0,
+    "access": 86.7,
+    "phys": 199.4,
+    "cover": 40.3,
+    "total": 845.6
+  },
+  "error": null,
+  "top": "pair",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "len": 1
+      },
+      "pre": {
+        "a": [
+          0,
+          -2147483632,
+          43,
+          11
+        ]
+      },
+      "rtl_post": {
+        "a": [
+          0,
+          -2147483632,
+          43,
+          11
+        ]
+      },
+      "rtl_result": 0,
+      "completed": true
+    },
+    "c_result": -1,
+    "c_post": {
+      "a": [
+        0,
+        -2147483632,
+        43,
+        11
+      ]
+    },
+    "eacsl": [],
+    "checker": "native+sanitizers",
+    "oracle": {
+      "requires_violated": [],
+      "violated": [],
+      "unknown": [],
+      "checked": 5
+    },
+    "class": "rtl-c-divergence"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "\\exists i: enumerated over 0..4 (stronger assertion)",
+    "\\exists i_29,j_30: enumerated over 0..4 (stronger assertion)",
+    "\\exists i_31,j_32: symbolic (solver-chosen) value, exact",
+    "\\forall i: enumerated over 0..4 (weaker assumption)",
+    "cell of a outside 0..3: solver-chosen value",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": null,
+  "interval_report": null,
+  "depth": 132,
+  "cex_step": 107,
+  "outcome": "fail"
+}

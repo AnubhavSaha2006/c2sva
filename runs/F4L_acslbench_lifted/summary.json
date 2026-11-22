@@ -1,0 +1,80 @@
+{
+  "by_tool_config": [
+    {
+      "tool": "vitis",
+      "config": "base",
+      "designs": 3,
+      "frontend_ok": 3,
+      "hls_ok": 3,
+      "checked": 1,
+      "pass_full": 0,
+      "pass_partial": 0,
+      "fail": 1,
+      "bounded": 2,
+      "vacuous": 0,
+      "agree": 0,
+      "disagree": 0,
+      "clauses": "9/9",
+      "clause_rate": 100.0,
+      "access_speculative": 0,
+      "access_out_of_memory": 0,
+      "overlap_mode": 3,
+      "mutants": 6,
+      "mutants_checked": 5,
+      "killed": 5,
+      "mutation_score": 100.0,
+      "survivors": 0,
+      "survivors_missed_bug": 0,
+      "survivors_safety_only": 0,
+      "survivors_untranslated": 0,
+      "survivors_no_violation": 0,
+      "survivors_not_analysed": 0,
+      "equivalent_pass": 0,
+      "kills_confirmed_in_C": 3,
+      "median_total_s": 821.6
+    }
+  ],
+  "details": {
+    "vitis/base": {
+      "original_outcomes": {
+        "bounded": 2,
+        "fail-inconclusive": 1
+      },
+      "failure_replay": {
+        "translation-error": 1
+      },
+      "kill_replay": {
+        "c-contract-violation": 2,
+        "translation-error": 1,
+        "undetermined": 1,
+        "c-runtime-error": 1
+      },
+      "survived_c_unproven": [],
+      "stage_median_s": {
+        "frontend": 0.3,
+        "wp": 1.3,
+        "hls": 12.8,
+        "latency": 113.3,
+        "bmc": 690.4,
+        "access": null,
+        "cover": 3.0,
+        "total": 821.6
+      }
+    }
+  },
+  "not_checked_reasons": [],
+  "untranslated_clause_reasons": [],
+  "translation_strategies": [
+    [
+      "recursive logic cut off",
+      3
+    ]
+  ],
+  "disagreements": [],
+  "access_violations": [],
+  "latency": {
+    "established": 1,
+    "report_undefined": 1,
+    "not_established": 2
+  }
+}

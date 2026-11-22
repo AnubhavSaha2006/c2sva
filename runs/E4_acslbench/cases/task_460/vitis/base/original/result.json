@@ -1,0 +1,52 @@
+{
+  "design": "task_460",
+  "variant": "original",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "9/9",
+  "c_ok": true,
+  "rtl": "PASS",
+  "failed": [],
+  "access": null,
+  "access_failed": [],
+  "cover": "fail",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "7/7",
+  "translated": 7,
+  "total_clauses": 7,
+  "skipped": [],
+  "times": {
+    "frontend": 0.3,
+    "wp": 0.4,
+    "hls": 12.4,
+    "latency": 0.3,
+    "bmc": 0.3,
+    "cover": 0.3,
+    "total": 14.0
+  },
+  "error": null,
+  "top": "incr_a_by_b",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": null,
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 1,
+  "pre_dropped": 0,
+  "notes": [
+    "exact frame over all 1 element(s) of a",
+    "holds by construction: the RTL cannot write this object"
+  ],
+  "latency_report": [
+    1,
+    1
+  ],
+  "interval_report": 2,
+  "depth": 6,
+  "cex_step": null,
+  "outcome": "vacuous"
+}

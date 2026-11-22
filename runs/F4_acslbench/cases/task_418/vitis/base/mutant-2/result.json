@@ -1,0 +1,76 @@
+{
+  "design": "task_418",
+  "variant": "mutant-2",
+  "tool": "vitis",
+  "config": "base",
+  "stage": "done",
+  "status": "ok",
+  "c_proof": "7/9",
+  "c_ok": false,
+  "rtl": "FAIL",
+  "failed": [
+    "P1: ensures \\result == \\max ( \\old ( a ) , \\old ( b ) ) - \\min ( \\old ( a ) , \\old ( b ) )"
+  ],
+  "access": null,
+  "access_failed": [],
+  "cover": "reached",
+  "latency": 2,
+  "latency_status": "established",
+  "clauses": "1/1",
+  "translated": 1,
+  "total_clauses": 1,
+  "skipped": [],
+  "times": {
+    "frontend": 0.4,
+    "wp": 1.0,
+    "hls": 13.5,
+    "latency": 0.5,
+    "bmc": 0.5,
+    "cover": 0.5,
+    "total": 17.5
+  },
+  "error": null,
+  "top": "distance",
+  "mode": "sequential calls",
+  "bounded_to": null,
+  "replay": {
+    "witness": {
+      "inputs": {
+        "a": 2147483648,
+        "b": 1073741824
+      },
+      "pre": {},
+      "rtl_post": {},
+      "rtl_result": 3221225472,
+      "completed": true
+    },
+    "c_result": 3221225472,
+    "c_post": {},
+    "eacsl": [],
+    "checker": "native+sanitizers",
+    "oracle": {
+      "requires_violated": [],
+      "violated": [
+        "ensures \\result == \\max ( \\old ( a ) , \\old ( b ) ) - \\min ( \\old ( a ) , \\old ( b ) )"
+      ],
+      "unknown": [],
+      "checked": 2
+    },
+    "class": "c-contract-violation"
+  },
+  "engine": "yices",
+  "width": 72,
+  "fifo_depth": 8,
+  "discharged": 0,
+  "pre_dropped": 0,
+  "notes": [],
+  "latency_report": [
+    0,
+    0
+  ],
+  "interval_report": 1,
+  "depth": 6,
+  "cex_step": 2,
+  "failed_cutoff": [],
+  "outcome": "fail"
+}
